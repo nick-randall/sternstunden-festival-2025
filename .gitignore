@@ -2,3 +2,4 @@
 node_modules/*
 git-archive/*
 .DS_Store
+node_modules/*
