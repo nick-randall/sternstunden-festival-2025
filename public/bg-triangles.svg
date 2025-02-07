@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 0 1235 3455">
+  <defs>
+    <style>
+      .cls-1 {
+        mix-blend-mode: soft-light;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fbfbf0;
+      }
+
+      .cls-3 {
+        isolation: isolate;
+      }
+
+      .cls-2, .cls-4 {
+        opacity: .3;
+      }
+    </style>
+  </defs>
+  <g class="cls-3">
+    <g id="Ebene_7" data-name="Ebene 7">
+      <polygon class="cls-2" points="705.65 1.4 780.44 1168.54 56.24 1.4 705.65 1.4"/>
+      <polygon class="cls-2" points="934.93 1.4 676.84 1249.98 285.53 1.4 934.93 1.4"/>
+      <polygon class="cls-2" points="201.04 0 9 0 9 1052.18 201.04 0"/>
+      <polygon class="cls-2" points="705.65 3454.58 780.44 2287.44 56.24 3454.58 705.65 3454.58"/>
+      <polygon class="cls-2" points="934.93 3454.58 676.84 2206 285.53 3454.58 934.93 3454.58"/>
+      <polygon class="cls-2" points="201.04 3455.98 9 3455.98 9 2403.79 201.04 3455.98"/>
+      <polygon class="cls-2" points="1053.44 1730.39 1245 1909 1245.48 678.21 1053.44 1730.39"/>
+      <polygon class="cls-2" points="1121.78 1163.98 10.61 1275.23 8.55 898.57 8.55 898.57 1121.78 1163.98"/>
+      <polygon class="cls-2" points="9 1184.08 9 1575.25 1129.02 481.17 9 1184.08"/>
+      <polygon class="cls-2" points="9 251.1 9 642.26 1010.18 1354.01 9 251.1"/>
+      <polygon class="cls-2" points="1242.13 112.92 1005 533.66 1245 1018.75 1242.13 112.92"/>
+      <polygon class="cls-2" points="353.87 1728.64 666.74 771.02 999.82 1728.94 353.87 1728.64"/>
+      <polygon class="cls-2" points="13.29 983.91 1122.48 583.92 10 663.32 13.29 983.91"/>
+      <polygon class="cls-2" points="1245 590.61 1245 1280.23 269.55 1156.97 1245 590.61"/>
+      <polygon class="cls-2" points="9 429.03 9 840 247.76 604 9 429.03"/>
+      <polygon class="cls-2" points="1245 1168.54 1245 757.17 1035.76 877.64 1245 1168.54"/>
+      <polygon class="cls-2" points="133.04 2291.25 1245 2179 1245 2557 1246.27 2556.66 133.04 2291.25"/>
+      <polygon class="cls-2" points="1245 3206.13 1245 2814.97 243.82 2103.22 1245 3206.13"/>
+      <g class="cls-4">
+        <polygon class="cls-1" points="8.87 3343.3 246 2922.57 9 2435 8.87 3343.3"/>
+      </g>
+      <polygon class="cls-2" points="999.95 1729.3 687.09 2686.92 354.01 1729 999.95 1729.3"/>
+      <polygon class="cls-2" points="1241.71 2472.32 132.52 2872.31 1245 2792.91 1241.71 2472.32"/>
+      <polygon class="cls-2" points="1245 3027.19 1245 2615.82 1006.24 2852.23 1245 3027.19"/>
+      <polygon class="cls-2" points="7.34 2287.69 7.34 2699.06 216.58 2578.59 7.34 2287.69"/>
+    </g>
+  </g>
+</svg>

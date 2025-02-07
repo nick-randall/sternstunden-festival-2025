@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  font-family: 'NunitoSans';
+}
+
+@font-face {
+  font-family: 'SofiaProLight';
+  src: url('Sofia Pro Light.otf');
+}
+
+@font-face {
+  font-family: 'NunitoSans';
+  src: url('NunitoSans.ttf');
+}

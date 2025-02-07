@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+  <defs>
+
+      <linearGradient id="bg-gradient" gradientTransform="rotate(90)">
+        <stop offset="0%" stop-color="#6bbbf2" />
+        <stop offset="25%" stop-color="#f4e3aa" />
+        <stop offset="50%" stop-color="#ed7948" />
+        <stop offset="75%" stop-color="#f4e3aa" />
+        <stop offset="100%" stop-color="#6bbbf2" />
+      </linearGradient>
+    
+  </defs>
+  <rect width="100" height="100" fill="url(#bg-gradient)" />
+</svg>
