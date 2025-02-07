@@ -1,3 +1,4 @@
-/.next/*
-/node_modules/*
-/git-archive/*
+.next/*
+node_modules/*
+git-archive/*
+.DS_Store
