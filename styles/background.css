@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* .bg-gradient {
+  background-image: url("../public/bg-gradient.svg");
+  background-size: 200%;
+  background-repeat: repeat;
+} */
+
+/* .bg-gradient {
+  background: linear-gradient(to bottom right,  #31adff 45%, #f6bd00, rgb(235, 93, 55));
+  background-size: 100%;
+  background-repeat: repeat;
+} */
+
+
+.bg-gradient {
+  background-image: linear-gradient(to bottom right, rgb(0, 168, 225, .8),  rgb(135, 188, 200, .8) 30%, rgb(240, 202, 102, .7) 50%, #f39641 75%, #ec6f42 100% );
+  /* background-image: linear-gradient(to bottom right,  #31adff 45%, #f6bd00, rgb(235, 93, 55), #f6bd00, #31adff); */
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+
+
+@media (max-width: 768px) {
+  /* Mobile gradient must be longer, otherwise too much gradient change onscreen */
+  /* .bg-gradient {
+    background-size: 200%;
+  } */
+}
+
+.bg-triangles { 
+  background-image: url("../public/bg-triangles.svg");
+  height: 100%;
+  background-size: 100vw;
+  background-attachment: fixed;
+  /* background-repeat: repeat; */
+}
+
+.bg-distortion {
+  background-image: url("../public/bg-distortion.svg");
+  /* height: 100%; */
+  background-size: 400px;
+  background-repeat: repeat;
+  /* filter: contrast(170%) brightness(1000%);   */
+
+  /* filter: contrast(100%) brightness(100%); */
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 20px;
+  align-items: center;
+  overflow: hidden;
+}
