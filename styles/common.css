@@ -1,14 +1,32 @@
 * {
   box-sizing: border-box;
-  font-family: 'NunitoSans';
+  font-family: "NunitoSans";
+}
+
+
+@font-face {
+  font-family: "SofiaProLight";
+  src: url("Sofia Pro Light.otf");
 }
 
 @font-face {
-  font-family: 'SofiaProLight';
-  src: url('Sofia Pro Light.otf');
+  font-family: "NunitoSans";
+  src: url("NunitoSans.ttf");
 }
 
-@font-face {
-  font-family: 'NunitoSans';
-  src: url('NunitoSans.ttf');
+.header-logo {
+  height: 400px;
+}
+
+.footer-logo {
+  height: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .header-logo {
+    height: 300px;
+  }
+  .footer-logo {
+    height: 150px;
+  }
 }

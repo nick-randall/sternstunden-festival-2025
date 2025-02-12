@@ -1,7 +1,8 @@
 import { Property } from "csstype";
-import { CSSProperties } from "react";
+import { CSSProperties, JSX } from "react";
 
 interface FlexProps {
+  children: JSX.Element[];
   justifyContent?: Property.JustifyContent;
   flexDirection?: Property.FlexDirection;
   flexGrow?: Property.FlexGrow;
@@ -34,5 +35,7 @@ const Flex: React.FC<FlexProps> = props => (
       height: props.height || "auto",
       maxWidth: props.maxWidth || "none",
     }}
-  ></div>
+  >{props.children}</div>
 );
+
+export default Flex;
