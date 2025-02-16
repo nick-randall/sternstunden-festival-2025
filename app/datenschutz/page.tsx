@@ -47,7 +47,7 @@ export default function DatenSchutz() {
         </li>
       </ul>
       <h1>Wie sammeln wir Daten?</h1>
-      Nachstehend sind die wichtigsten Methoden aufgeführt, die wir zur Sammlung von Daten verwenden:
+      <h3>Nachstehend sind die wichtigsten Methoden aufgeführt, die wir zur Sammlung von Daten verwenden:</h3>
       <ul>
         <li>
           Wir erfassen Daten bei der Nutzung unserer Dienste. Wenn Sie also unsere digitalen Assets besuchen und Dienste nutzen, können wir die
@@ -65,7 +65,7 @@ export default function DatenSchutz() {
       </ul>
       <h1>Warum erfassen wir diese Daten?</h1> <div>Wir können Ihre Daten für folgende Zwecke verwenden:</div>
       <ul>
-        <li>um unsere Dienste zur Verfügung zu stellen und zu betreiben;</li> <li>um unsere Dienste zu entwickeln, anzupassen und zu verbessern;</li>{" "}
+        <li>um unsere Dienste zur Verfügung zu stellen und zu betreiben;</li> <li>um unsere Dienste zu entwickeln, anzupassen und zu verbessern;</li>
         <li>um auf Ihr Feedback, Ihre Anfragen und Wünsche zu reagieren und Hilfe anzubieten;</li> um Anforderungs- und Nutzungsmuster zu analysieren;
         <li>für sonstige interne, statistische und Recherchezwecke;</li>
         <li>um unsere Möglichkeiten zur Datensicherheit und Betrugsprävention verbessern zu können;</li>
@@ -81,7 +81,7 @@ export default function DatenSchutz() {
       </ul>
       <h3>An wen geben wir diese Daten weiter?</h3>
       Wir können Ihre Daten an unsere Dienstleister weitergeben, um unsere Dienste zu betreiben (z. B. Speicherung von Daten über Hosting-Dienste
-      Dritter, Bereitstellung technischer Unterstützung usw.). Wir können Ihre Daten auch unter folgenden Umständen offenlegen:{" "}
+      Dritter, Bereitstellung technischer Unterstützung usw.). Wir können Ihre Daten auch unter folgenden Umständen offenlegen:
       <ol type="i">
         <li>um rechtswidrige Aktivitäten oder sonstiges Fehlverhalten zu untersuchen, aufzudecken, zu verhindern oder dagegen vorzugehen;</li>
         <li>um unsere Rechte auf Verteidigung zu begründen oder auszuüben;</li>
@@ -105,29 +105,43 @@ export default function DatenSchutz() {
       Technologien und Analysedienste („Tracking-Technologien“) einzusetzen. Diese Tracking-Technologien können es Dritten ermöglichen, Ihre Daten
       automatisch zu erfassen, um das Navigationserlebnis auf unseren digitalen Assets zu verbessern, deren Performance zu optimieren und ein
       maßgeschneidertes Nutzererlebnis zu gewährleisten, sowie zu Zwecken der Sicherheit und der Betrugsprävention.
-      <div>Um mehr darüber zu erfahren, lesen Sie bitte unsere Cookie-Richtlinie.</div>{" "}
+      <div>Um mehr darüber zu erfahren, lesen Sie bitte unsere Cookie-Richtlinie.</div>
       <div>
         Ohne Ihre Zustimmung werden wir Ihre E-Mail-Adresse oder andere personenbezogenen Daten nicht an Werbeunternehmen oder Werbenetzwerke
         weitergeben.
       </div>
-      <h1>Wo speichern wir die Daten?</h1> <h3>Nicht personenbezogene Daten</h3> Bitte beachten Sie, dass unsere Unternehmen sowie unsere
-      vertrauenswürdigen Partner und Dienstanbieter auf der ganzen Welt ansässig sind. Zu den in dieser Datenschutzrichtlinie erläuterten Zwecke
-      speichern und verarbeiten wir alle nicht personenbezogenen Daten, die wir erfassen, in unterschiedlichen Rechtsordnungen. Wie lange werden die
-      Daten vorgehalten? Bitte beachten Sie, dass wir die erfassten Daten so lange aufbewahren, wie es für die Bereitstellung unserer Dienste, zur
-      Einhaltung unserer gesetzlichen und vertraglichen Verpflichtungen gegenüber Ihnen, zur Beilegung von Streitigkeiten und zur Durchsetzung unserer
-      Vereinbarungen erforderlich ist. Wir können unrichtige oder unvollständige Daten jederzeit nach eigenem Ermessen berichtigen, ergänzen oder
-      löschen. Wie schützen wir die Daten? Der Hosting-Dienst für unserer digitalen Assets stellt uns die Online-Plattform zu Verfügung, über die wir
-      Ihnen unsere Dienste anbieten können. Ihre Daten können über die Datenspeicherung, Datenbanken und allgemeine Anwendungen unseres
-      Hosting-Anbieters gespeichert werden. Er speichert Ihre Daten auf sicheren Servern hinter einer Firewall und er bietet sicheren HTTPS-Zugriff
-      auf die meisten Bereiche seiner Dienste. Kategorie: Nutzer akzeptiert Zahlungen/eCom Alle von uns und unserem Hosting-Anbieter für unsere
-      digitalen Assets angebotenen Zahlungsmöglichkeiten halten die Vorschriften des PCI-DSS (Datensicherheitsstandard der Kreditkartenindustrie) des
-      PCI Security Standards Council (Rat für Sicherheitsstandards der Kreditkartenindustrie) ein. Dabei handelt es sich um die Zusammenarbeit von
-      Marken wie Visa, MasterCard, American Express und Discover. PCI-DSS-Anforderungen helfen, den sicheren Umgang mit Kreditkartendaten (u. a.
-      physische, elektronische und verfahrenstechnische Maßnahmen) durch unseren Shop und die Dienstanbieter zu gewährleisten. ​ Ungeachtet der von
-      uns und unserem Hosting-Anbieter ergriffenen Maßnahmen und Bemühungen können und werden wir keinen absoluten Schutz und keine absolute
-      Sicherheit der Daten garantieren, die Sie hochladen, veröffentlichen oder anderweitig an uns oder andere weitergeben. Aus diesem Grund möchten
-      wir Sie bitten, sichere Passwörter festzulegen und uns oder anderen nach Möglichkeit keine vertraulichen Informationen zu übermitteln, deren
-      Offenlegung Ihnen Ihrer Meinung nach erheblich bzw. nachhaltig schaden könnte. Da E-Mail und Instant Messaging nicht als sichere
+      <h1>Wo speichern wir die Daten?</h1>
+      <h3>Nicht personenbezogene Daten</h3>
+      <div>
+        Bitte beachten Sie, dass unsere Unternehmen sowie unsere vertrauenswürdigen Partner und Dienstanbieter auf der ganzen Welt ansässig sind. Zu
+        den in dieser Datenschutzrichtlinie erläuterten Zwecke speichern und verarbeiten wir alle nicht personenbezogenen Daten, die wir erfassen, in
+        unterschiedlichen Rechtsordnungen.
+      </div>
+      <h1>Wie lange werden die Daten vorgehalten?</h1>
+      <div>
+        Bitte beachten Sie, dass wir die erfassten Daten so lange aufbewahren, wie es für die Bereitstellung unserer Dienste, zur Einhaltung unserer
+        gesetzlichen und vertraglichen Verpflichtungen gegenüber Ihnen, zur Beilegung von Streitigkeiten und zur Durchsetzung unserer Vereinbarungen
+        erforderlich ist.
+      </div>
+      <div>Wir können unrichtige oder unvollständige Daten jederzeit nach eigenem Ermessen berichtigen, ergänzen oder löschen.</div>
+      <h1>Wie schützen wir die Daten?</h1>
+      <div>
+        Der Hosting-Dienst für unserer digitalen Assets stellt uns die Online-Plattform zu Verfügung, über die wir Ihnen unsere Dienste anbieten
+        können. Ihre Daten können über die Datenspeicherung, Datenbanken und allgemeine Anwendungen unseres Hosting-Anbieters gespeichert werden. Er
+        speichert Ihre Daten auf sicheren Servern hinter einer Firewall und er bietet sicheren HTTPS-Zugriff auf die meisten Bereiche seiner Dienste.
+      </div>
+      <h3>Kategorie: Nutzer akzeptiert Zahlungen/eCom</h3>
+      <div>
+        Alle von uns und unserem Hosting-Anbieter für unsere digitalen Assets angebotenen Zahlungsmöglichkeiten halten die Vorschriften des PCI-DSS
+        (Datensicherheitsstandard der Kreditkartenindustrie) des PCI Security Standards Council (Rat für Sicherheitsstandards der
+        Kreditkartenindustrie) ein. Dabei handelt es sich um die Zusammenarbeit von Marken wie Visa, MasterCard, American Express und Discover.
+        PCI-DSS-Anforderungen helfen, den sicheren Umgang mit Kreditkartendaten (u. a. physische, elektronische und verfahrenstechnische Maßnahmen)
+        durch unseren Shop und die Dienstanbieter zu gewährleisten.
+      </div>
+      Ungeachtet der von uns und unserem Hosting-Anbieter ergriffenen Maßnahmen und Bemühungen können und werden wir keinen absoluten Schutz und keine
+      absolute Sicherheit der Daten garantieren, die Sie hochladen, veröffentlichen oder anderweitig an uns oder andere weitergeben. Aus diesem Grund
+      möchten wir Sie bitten, sichere Passwörter festzulegen und uns oder anderen nach Möglichkeit keine vertraulichen Informationen zu übermitteln,
+      deren Offenlegung Ihnen Ihrer Meinung nach erheblich bzw. nachhaltig schaden könnte. Da E-Mail und Instant Messaging nicht als sichere
       Kommunikationsformen gelten, bitten wir Sie außerdem, keine vertraulichen Informationen über einen dieser Kommunikationskanäle weiterzugeben.
       Wie gehen wir mit Minderjährigen um? Die Dienste sind nicht für Nutzer bestimmt, die noch nicht die gesetzliche Volljährigkeit erreicht haben.
       Wir werden wissentlich keine Daten von Kindern erfassen. Wenn Sie noch nicht volljährig sind, sollten Sie die Dienste nicht herunterladen oder
