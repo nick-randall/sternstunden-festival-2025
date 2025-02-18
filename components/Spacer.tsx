@@ -1,3 +1,4 @@
+'use client';
 interface SpacerProps {
   height?: number;
   width?: number;

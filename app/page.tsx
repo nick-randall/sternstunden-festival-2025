@@ -6,7 +6,6 @@ import Spacer from "../components/Spacer";
 export default function Page() {
   return (
     <>
-      <img className="header-logo" src="logo-with-dates.png" alt="Sternstunden Festival Logo" />
       <div className="content-box">
         <div className="text-box">
           <div>
@@ -39,7 +38,7 @@ export default function Page() {
       <Spacer height={32}/>
       <div className="footer">
         <div>(c)2023-2025 Sternstunden Festival</div>
-        <a href="/impresseum">IMPRESSUM</a>
+        <a href="/impressum">IMPRESSUM</a>
         <a href="/datenschutz">DATENSCHUTZ</a>
         <a href="/agb">AGB</a>
         <a href="/faq">FAQ</a>

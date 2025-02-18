@@ -1,6 +1,9 @@
+'use client';
 import { Property } from "csstype";
+import { CSSProperties, JSX } from "react";
 
 interface FlexProps {
+  children: JSX.Element[];
   justifyContent?: Property.JustifyContent;
   flexDirection?: Property.FlexDirection;
   flexGrow?: Property.FlexGrow;
@@ -14,11 +17,14 @@ interface FlexProps {
   width?: Property.Width;
   height?: Property.Height;
   maxWidth?: Property.MaxWidth;
+  textAlign? :Property.TextAlign; 
 }
 
-const Flex: React.FC<FlexProps> = props => (
+const Flex: React.FC<FlexProps> = props => 
+(
   <div
     style={{
+      display: "flex",
       justifyContent: props.justifyContent || "flex-start",
       flexDirection: props.flexDirection || "row",
       flexGrow: props.flexGrow || 0,
@@ -32,8 +38,9 @@ const Flex: React.FC<FlexProps> = props => (
       width: props.width || "auto",
       height: props.height || "auto",
       maxWidth: props.maxWidth || "none",
+      textAlign: props.textAlign || "justify"
     }}
-  ></div>
-);
+  >{props.children}</div>
+)
 
 export default Flex;

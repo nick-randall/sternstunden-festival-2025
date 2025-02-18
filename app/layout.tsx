@@ -9,7 +9,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="bg-distortion">
           <div className="bg-gradient">
             <div className="bg-triangles">
-              <div className="page-wrapper">{children}</div>
+              <div className="page-wrapper">
+              <img className="header-logo" src="logo-with-dates.png" alt="Sternstunden Festival Logo" />
+
+                {children}</div>
             </div>
           </div>
         </div>
