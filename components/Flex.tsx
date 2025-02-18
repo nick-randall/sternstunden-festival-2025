@@ -1,6 +1,6 @@
 'use client';
 import { Property } from "csstype";
-import { CSSProperties, JSX } from "react";
+import { JSX } from "react";
 
 interface FlexProps {
   children: JSX.Element[];
