@@ -4,7 +4,7 @@ body {
   width: 100%;
 }
 
-.bg-gradient {
+/* .bg-gradient {
   background-image: linear-gradient(
     to bottom right,
     rgb(0, 168, 225, 0.8),
@@ -16,34 +16,38 @@ body {
   background-repeat: repeat;
   background-size: cover;
   background-attachment: fixed;
+} */
+
+.bg {
+  background-image: url(../public/back.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  z-index: -1;
 }
 
-@media (max-width: 768px) {
-  /* Mobile gradient must be longer, otherwise too much gradient change onscreen */
-  /* .bg-gradient {
-    background-size: 200%;
-  } */
-}
-
-
-.bg-distortion {
+/* .bg-distortion {
   background-image: url("../public/bg-distortion.svg");
   background-size: 400px;
   background-repeat: repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; */
   /* filter: contrast(170%) brightness(1000%);   */
 
   /* filter: contrast(100%) brightness(100%); */
-}
+/* } */
 
-.bg-triangles {
+/* .bg-triangles {
   background-image: url("../public/bg-triangles.svg");
   height: 100%;
   background-size: 100vw;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
-}
+} */
 
 .page-wrapper {
   display: flex;

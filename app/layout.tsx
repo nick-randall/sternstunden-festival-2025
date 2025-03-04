@@ -7,9 +7,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Sternstunden Festival 2025</title>
-          <style>
-          {
-            `@media screen and (max-width: 1080px) {
+        <style>
+          {`@media screen and (max-width: 1080px) {
               .content-box {
                 flex-direction: column;
               }
@@ -22,31 +21,48 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 flex-direction: column;
                 align-items: center;
               }
-            }  
-            @media screen and (max-width: 768px) {
               .header-logo {
                 height: 300px;
               }
               .footer-logo {
                 height: 150px;
               }
-            }   
-            `}
-  </style>
-      </head>
-      
-      <body>
-        <div className="bg-distortion">
-          <div className="bg-gradient">
-            <div className="bg-triangles">
-              <div className="page-wrapper">
-                <img className="header-logo" src="logo-with-dates.png" alt="Sternstunden Festival Logo" />
+              .bg {
+                background-image: url('background_mobile.jpg');
+              }
+              .video {
+                min-height: 30vh;
+              }
 
-                {children}
-              </div>
-            </div>
+            }
+            @media screen and (min-width: 1080px) { 
+              .centered-wrapper {
+                  position: absolute;
+                  margin-top: 5rem;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  width: 80%;
+                }
+              }
+            `}
+        </style>
+      </head>
+
+      <body>
+        <div className="bg"></div>
+        <div className="centered-wrapper">
+          {/* <div className="bg-distortion">
+          <div className="bg-gradient">
+            <div className="bg-triangles"> */}
+          <div className="page-wrapper">
+            <img className="header-logo" src="logo-with-dates.png" alt="Sternstunden Festival Logo" />
+
+            {children}
           </div>
         </div>
+        {/* </div>
+          </div>
+        </div> */}
       </body>
     </html>
   );
