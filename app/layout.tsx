@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/background.css";
+import Spacer from "@/components/Spacer";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -22,10 +23,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 align-items: center;
               }
               .header-logo {
-                height: 300px;
+                width: 100%;
               }
               .footer-logo {
-                height: 150px;
+                height: 60px;
               }
               .bg {
                 background-image: url('background_mobile.jpg');
@@ -51,18 +52,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <div className="bg"></div>
         <div className="centered-wrapper">
-          {/* <div className="bg-distortion">
-          <div className="bg-gradient">
-            <div className="bg-triangles"> */}
           <div className="page-wrapper">
             <img className="header-logo" src="logo-with-dates.png" alt="Sternstunden Festival Logo" />
-
+            <Spacer height={32}/>
             {children}
           </div>
         </div>
-        {/* </div>
-          </div>
-        </div> */}
       </body>
     </html>
   );

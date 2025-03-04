@@ -44,7 +44,11 @@ export default function Page() {
         <a href="/faq">FAQ</a>
         <a href="/kontakt">KONTAKT</a>
       </div>
+      <Spacer height={32}/>
+
       <img className="footer-logo" src="logo-simple.png" alt="Sternstunden Festival Logo"></img>
+      <Spacer height={32}/>
+
     </>
   );
 }

@@ -1,10 +1,7 @@
 .content-box {
   display: flex;
   flex-direction: row;
-  /* background: linear-gradient(to right, rgb(232, 0, 57, 0.3), rgb(37, 3, 192, 0.3)); */
   background: linear-gradient(to right, rgb(253, 244, 219, 0.3), rgb(239, 132, 84, 0.3)); /* same as #fdf4db, #ef8454 */
-
-  /* margin-top: 20px; */
   padding: 15px;
 }
 
@@ -79,9 +76,9 @@
 }
 
 @media screen and (max-width: 768px) {
-  .header-logo {
+  /* .header-logo {
     height: 300px;
-  }
+  } */
 
   .content-box .child {
     margin: 12px;

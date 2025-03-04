@@ -16,17 +16,19 @@
 }
 
 .header-logo {
-  height: 400px;
+  /* height: 400px; */
+  /* height: 60%; */
+  width: 45%
 }
 
 .footer-logo {
-  height: 200px;
+  height: 100px;
 }
 
 @media screen and (max-width: 768px) {
-  .header-logo {
+  /* .header-logo {
     height: 300px;
-  }
+  } */
   .footer-logo {
     height: 150px;
   }
