@@ -15,12 +15,15 @@
   font-size: 18px;
 
   padding: 15px;
+  hyphens: auto;
+  text-align: justify;
 }
 
 .content-box .text-box a {
   font-weight: 500;
   text-decoration: none;
   color: #000;
+
 }
 
 .content-box .home-image-container {

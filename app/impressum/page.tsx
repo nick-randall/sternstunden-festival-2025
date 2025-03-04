@@ -4,7 +4,7 @@ import "../../styles/common.css";
 
 export default function Impressum() {
   return (
-    <Flex flexDirection="column" alignItems="center">
+    <Flex flexDirection="column" alignItems="center" textAlign="center">
       <h2>Impressum</h2>
       <h3>Angaben gemäß § 5 TMG:</h3>
       <div>Förderverein der Unimusik Hamburg e.V.</div>
