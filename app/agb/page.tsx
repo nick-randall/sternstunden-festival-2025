@@ -1,3 +1,4 @@
+'use client'
 import "../../styles/common.css";
 import "../../styles/agb.css";
 import Flex from "../../components/Flex";

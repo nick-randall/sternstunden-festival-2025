@@ -49,7 +49,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 20px;
+  padding: 15px;
   align-items: center;
   overflow: hidden;
   max-width: 1200px;

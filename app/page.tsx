@@ -21,7 +21,7 @@ export default function Page() {
             MEHR INFOS
           </a>
         </div>
-        <div className="responsive-spacer-32"></div>
+        <div className="responsive-spacer-15"></div>
         <div className="home-image-container">
           <img style={{ maxWidth: "100%" }} src="demo-photo.png" alt="Demo Foto" />
         </div>

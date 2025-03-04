@@ -12,6 +12,7 @@
 @font-face {
   font-family: "NunitoSans";
   src: url("NunitoSans.ttf");
+  color: #151529;
 }
 
 .header-logo {
