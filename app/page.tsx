@@ -22,10 +22,19 @@ export default function Page() {
           </a>
         </div>
         <div className="responsive-spacer-15"></div>
+
         <div className="home-image-container">
-          <img style={{ maxWidth: "100%" }} src="demo-photo.png" alt="Demo Foto" />
+          {/* <img style={{ maxWidth: "100%" }} src="demo-photo.png" alt="Demo Foto" /> */}
+          <img src="./2024_images/ssf24m1.jpg" alt="Demo Foto" />
+          <Spacer width={300}/>
+          <img src="./2024_images/ssf24m2.jpg" alt="Demo Foto" />
+          <Spacer width={300}/>
+          <img src="./2024_images/ssf24m3.jpg" alt="Demo Foto" />
         </div>
       </div>
+      <div className="home-image-container stack">
+          <div className="arrow"></div>
+        </div>
       <Spacer height={32} />
       <div className="content-box video-container">
         <div>AFTERMOVIE 2024</div>
@@ -35,7 +44,7 @@ export default function Page() {
           src="https://www.youtube.com/embed/H_ZANaTi9Lo?autoplay=0&mute=0&controls=1&loop=0&origin=https%3A%2F%2Fwww.sternstundenfestival.de&playsinline=1&enablejsapi=1&widgetid=1"
         ></iframe>
       </div>
-      <Spacer height={32}/>
+      <Spacer height={32} />
       <div className="footer">
         <div>(c)2023-2025 Sternstunden Festival</div>
         <a href="/impressum">IMPRESSUM</a>
@@ -44,11 +53,10 @@ export default function Page() {
         <a href="/faq">FAQ</a>
         <a href="/kontakt">KONTAKT</a>
       </div>
-      <Spacer height={32}/>
+      <Spacer height={32} />
 
       <img className="footer-logo" src="logo-simple.png" alt="Sternstunden Festival Logo"></img>
-      <Spacer height={32}/>
-
+      <Spacer height={32} />
     </>
   );
 }

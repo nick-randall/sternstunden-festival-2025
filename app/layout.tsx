@@ -9,15 +9,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Sternstunden Festival 2025</title>
         <style>
-          {`@media screen and (max-width: 1080px) {
-              .content-box {
-                flex-direction: column;
-              }
-              .content-box .responsive-spacer-15 {
-                height: 15px;
-              }
-            }
+          {`
             @media screen and (max-width: 768px) {
+              .page-wrapper {
+                  display: unset;
+              }
               .footer {
                 flex-direction: column;
                 align-items: center;
@@ -36,13 +32,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               }
 
             }
-            @media screen and (min-width: 1080px) { 
+            @media screen and (max-width: 1080px) { 
               .centered-wrapper {
-                  position: absolute;
-                  margin-top: 5rem;
-                  left: 50%;
-                  transform: translateX(-50%);
-                  width: 80%;
+                  position: unset;
+                  margin-top: auto;
+                  left: auto;
+                  transform: none;
+                  width: auto;
+                }
+               .content-box {
+                  flex-direction: column;
+                }
+                .content-box .responsive-spacer-15 {
+                  height: 15px;
                 }
               }
             `}
