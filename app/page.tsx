@@ -22,19 +22,19 @@ export default function Page() {
           </a>
         </div>
         <div className="responsive-spacer-15"></div>
+        <div style={{position: "relative"}}>
+          <div className="home-image-container">
+            {/* <img style={{ maxWidth: "100%" }} src="demo-photo.png" alt="Demo Foto" /> */}
+            <img src="./2024_images/ssf24m1.jpg" alt="Demo Foto" />
+            <Spacer width={300}/>
+            <img src="./2024_images/ssf24m2.jpg" alt="Demo Foto" />
+            <Spacer width={300}/>
+            <img src="./2024_images/ssf24m3.jpg" alt="Demo Foto" />
+          </div>
+        <img src="./chevron-right.svg" alt="" className="arrow"/>
 
-        <div className="home-image-container">
-          {/* <img style={{ maxWidth: "100%" }} src="demo-photo.png" alt="Demo Foto" /> */}
-          <img src="./2024_images/ssf24m1.jpg" alt="Demo Foto" />
-          <Spacer width={300}/>
-          <img src="./2024_images/ssf24m2.jpg" alt="Demo Foto" />
-          <Spacer width={300}/>
-          <img src="./2024_images/ssf24m3.jpg" alt="Demo Foto" />
         </div>
       </div>
-      <div className="home-image-container stack">
-          <div className="arrow"></div>
-        </div>
       <Spacer height={32} />
       <div className="content-box video-container">
         <div>AFTERMOVIE 2024</div>
