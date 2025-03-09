@@ -24,12 +24,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               .footer-logo {
                 height: 60px;
               }
+              .arrow {
+                display: none;
+              }
               .bg {
                 background-image: url('background_mobile.jpg');
               }
               .video {
                 min-height: 30vh;
               }
+                .content-box .home-image-container img {
+                  height: 180px;
+                  width: auto;
+                }
 
             }
             @media screen and (max-width: 1080px) { 
@@ -46,6 +53,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 .content-box .responsive-spacer-15 {
                   height: 15px;
                 }
+                
+              }
+            @media screen and (min-width: 1580px) {
+                .centered-wrapper { 
+                  width: auto;
               }
             `}
         </style>
@@ -56,7 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="centered-wrapper">
           <div className="page-wrapper">
             <img className="header-logo" src="logo-with-dates.png" alt="Sternstunden Festival Logo" />
-            <Spacer height={32}/>
+            <Spacer height={32} />
             {children}
           </div>
         </div>

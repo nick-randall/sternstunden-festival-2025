@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/home.css";
 import "../styles/common.css";
 import Spacer from "../components/Spacer";
+import PhotoSlider from "./PhotoSlider";
 
 export default function Page() {
   return (
@@ -22,18 +23,22 @@ export default function Page() {
           </a>
         </div>
         <div className="responsive-spacer-15"></div>
-        <div style={{position: "relative"}}>
-          <div className="home-image-container">
-            {/* <img style={{ maxWidth: "100%" }} src="demo-photo.png" alt="Demo Foto" /> */}
-            <img src="./2024_images/ssf24m1.jpg" alt="Demo Foto" />
-            <Spacer width={300}/>
-            <img src="./2024_images/ssf24m2.jpg" alt="Demo Foto" />
-            <Spacer width={300}/>
-            <img src="./2024_images/ssf24m3.jpg" alt="Demo Foto" />
-          </div>
-        <img src="./chevron-right.svg" alt="" className="arrow"/>
+        <PhotoSlider
+          photoUrls={["./2024_images/ssf24m1.jpg", "./2024_images/ssf24m2.jpg", "./2024_images/ssf24m3.jpg", "./2024_images/ssf24m4.jpg"]}
+        />
+        {/* <div className="home-image-container">
+          <div className="img-spacer"></div>
+          <img src="./2024_images/ssf24m1.jpg" alt="Demo Foto" />
+          <div className="img-spacer"></div>
+          <img src="./2024_images/ssf24m2.jpg" alt="Demo Foto" />
+          <div className="img-spacer"></div>
+          <img src="./2024_images/ssf24m3.jpg" alt="Demo Foto" />
 
-        </div>
+          <div className="img-spacer"></div>
+          <img src="./2024_images/ssf24m4.jpg" alt="Demo Foto" />
+
+          <img src="./chevron-right.svg" alt="" className="arrow" />
+        </div> */}
       </div>
       <Spacer height={32} />
       <div className="content-box video-container">
