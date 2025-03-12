@@ -2,9 +2,18 @@ import React from "react";
 import "../styles/home.css";
 import "../styles/common.css";
 import Spacer from "../components/Spacer";
-import PhotoSlider from "./PhotoSlider";
+import PhotoSlider from "./NewPhotoSlider";
 
 export default function Page() {
+  const photoUrls = [];
+  for (let i = 1; i < 87; i++) {
+    if(i === 66) continue;
+    photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/ssf24${i}.jpg`);
+  }
+  for (let i = 1; i < 115; i++) {
+    if(i === 80) continue;
+    photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/ssf24m${i}.jpg`);
+  }
   return (
     <>
       <div className="content-box">
@@ -23,9 +32,9 @@ export default function Page() {
           </a>
         </div>
         <div className="responsive-spacer-15"></div>
-        <PhotoSlider
-          photoUrls={["./2024_images/ssf24m1.jpg", "./2024_images/ssf24m2.jpg", "./2024_images/ssf24m3.jpg", "./2024_images/ssf24m4.jpg"]}
-        />
+        <PhotoSlider photoUrls={photoUrls
+          // ["/2024_images/ssf24m10.jpg", "/2024_images/ssf24m2.jpg", "/2024_images/ssf24m3.jpg", "/2024_images/ssf24m4.jpg"]
+          } />
         {/* <div className="home-image-container">
           <div className="img-spacer"></div>
           <img src="./2024_images/ssf24m1.jpg" alt="Demo Foto" />
