@@ -1,3 +1,12 @@
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .content-box {
   display: flex;
   flex-direction: row;
@@ -23,11 +32,71 @@
   font-weight: 500;
   text-decoration: none;
   color: #000;
-
 }
 
 .content-box .home-image-container {
   flex-basis: 100%;
+  display: flex;
+  overflow-x: scroll;
+  /* overflow-y: hidden; */
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  position: relative; /* required for positioning arrow as absolute */
+
+  scroll-snap-type: x mandatory;
+  /* position: relative; */
+}
+
+.content-box .home-image-container img {
+  flex: 1 0 auto;
+  width: auto;
+  /* transition: 0.4s; */
+  /* animation: slide 30s linear infinite; */
+  /* scroll-snap-align: start; */
+}
+
+.content-box .home-image-container.tablet img {
+  width: 30%;
+}
+
+.content-box .home-image-container .img-spacer {
+  flex: 1 0 auto;
+  width: 10px;
+  /* background-color: black; */
+}
+
+.content-box .home-image-container .img-container {
+  flex: 1 0 auto;
+  width: auto;
+  /* transition: 0.4s; */
+}
+
+.content-box .home-image-container img:hover {
+  cursor: pointer;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.content-box .home-image-container::-webkit-scrollbar {
+  display: none;
+}
+
+.content-box .home-image-container .arrow {
+  position: fixed;
+  /* top: 50%;
+  transform: translateY(-50%); */
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1 px solid #000;
+  border-radius: 50%;
+  right: 0px;
+  z-index: 9;
+  padding: 10px;
+}
+
+.content-box .home-image-container .arrow-left {
+  transform: rotate(180deg) translateY(50%);
+  left: 0px;
 }
 
 .content-box.video-container {
@@ -56,9 +125,10 @@
   padding-bottom: 15px;
 }
 
-.footer a, .footer div {
+.footer a,
+.footer div {
   text-decoration: none;
-  font-weight: 600;  
+  font-weight: 600;
   color: #000;
 }
 
@@ -91,7 +161,7 @@
     min-height: 30vh;
   }
 
-  .footer{
+  .footer {
     flex-direction: column;
     align-items: center;
   }

@@ -8,11 +8,11 @@ export default function Page() {
   const photoUrls = [];
   for (let i = 1; i < 87; i++) {
     if(i === 66) continue;
-    photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/ssf24${i}.jpg`);
+    photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/Alte+Bilder+2024/ssf24${i}-sm.jpg`);
   }
   for (let i = 1; i < 115; i++) {
     if(i === 80) continue;
-    photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/ssf24m${i}.jpg`);
+    photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/Alte+Bilder+2024/ssf24m${i}-sm.jpg`);
   }
   return (
     <>

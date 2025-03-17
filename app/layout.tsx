@@ -49,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 }
                .content-box {
                   flex-direction: column;
+                  width: 100%;
                 }
                 .content-box .responsive-spacer-15 {
                   height: 15px;

@@ -16,6 +16,16 @@ body {
   z-index: -1;
 }
 
+.centered-wrapper {
+  position: absolute;
+  margin-top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
 .page-wrapper {
   display: flex;
   flex-direction: column;
@@ -26,8 +36,8 @@ body {
   max-width: 1200px;
 }
 
-@media (min-width: 786px) {
+/* @media (min-width: 786px) {
   .page-wrapper {
     align-self: center;
   }
-}
+} */
