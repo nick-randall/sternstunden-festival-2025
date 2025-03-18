@@ -19,22 +19,23 @@ const NewPhotoSlider: React.FC<NewPhotoSliderProps> = ({ photoUrls }) => {
 
   const margin = 10;
 
-  const loadImage = useCallback((url: string) => {
-    setLoadedSrc(prev => {
-      if (prev.includes(url)) {
-        console.log("URL " + url.slice(url.length - 7) + " already loaded");
-        return prev;
+  const loadImage = useCallback(
+    (url: string) => {
+      if (loadedSrc.includes(url)) {
+        return;
       }
 
       const img = new Image();
       img.src = url;
       img.onload = () => {
-        setLoadedSrc(prev => [...prev, url]);
+        setLoadedSrc(prev => {
+          const uniquePhotoUrls = prev.filter((src, index, self) => self.indexOf(src) === index);
+          return [...uniquePhotoUrls, url];
+        });
       };
-
-      return prev;
-    });
-  }, []);
+    },
+    [loadedSrc]
+  );
 
   useEffect(() => {
     loadImage(photoUrls[0]);
@@ -45,11 +46,9 @@ const NewPhotoSlider: React.FC<NewPhotoSliderProps> = ({ photoUrls }) => {
   }, [loadImage, photoUrls]);
 
   const handleRef = useCallback((node: HTMLImageElement | null) => {
-    console.log("handle ref called");
     if (node) {
       node.onload = () => {
         if (!node.width) return;
-        console.log("onload");
         setWidthMap(prev => ({ ...prev, [node.src]: node.width }));
       };
     }
@@ -63,23 +62,18 @@ const NewPhotoSlider: React.FC<NewPhotoSliderProps> = ({ photoUrls }) => {
     return offset || 0;
   };
 
-  const uniquePhotoUrls = loadedSrc.filter((src, index, self) => self.indexOf(src) === index);
-
   const getLeftVals = () => {
-    const widths = uniquePhotoUrls.map(url => widthMap[url] + margin);
+    const widths = loadedSrc.map(url => widthMap[url] + margin);
     const lefts = widths.reduce((acc, curr) => [...acc, acc[acc.length - 1] + curr], [0]);
     return lefts;
   };
 
   function findCurrImageIdx(scrollPos: number) {
-    console.log("finding curr index at scrollpos " + scrollPos);
     const lefts = getLeftVals();
-    // console.log(lefts);
     let smallestDiff = Infinity;
     let closestIdx = 0;
     for (let i = 0; i < lefts.length; i++) {
       const diff = scrollPos - lefts[i];
-      // console.log(diff);
       if (diff < smallestDiff && diff >= 0) {
         smallestDiff = diff;
         closestIdx = i;
@@ -101,6 +95,31 @@ const NewPhotoSlider: React.FC<NewPhotoSliderProps> = ({ photoUrls }) => {
     } else console.log("scroll too high. must be at end of images");
   };
 
+  // const scrollBackward = () => {
+  //   const container = containerRef.current;
+  //   if (!container) return;
+  //   const currImageIdx = findCurrImageIdx(container.scrollLeft);
+  //   if (currImageIdx < photoUrls.length - 1) {
+  //     const scrollTo = getLeftVals()[currImageIdx - 1];
+
+  //     container.scrollTo({ left: scrollTo, behavior: "smooth" });
+  //   } else console.log("scroll too high. must be at end of images");
+  // };
+
+  // const moveLeftArrowToFixedPos = (node: HTMLImageElement | null) => {
+  //   const leftArrow = node;
+  //   if (!leftArrow) return;
+  //   if (leftArrow) {
+  //     const container = containerRef.current;
+  //     if (!container) return;
+  //     const { height, left } = container.getBoundingClientRect();
+  //     const { height: arrowHeight } = leftArrow.getBoundingClientRect();
+  //     // leftArrow.style.transform = `rotateY(180deg) translateY(${height / 2 - arrowHeight / 2}px)`;
+  //     leftArrow.style.transform = `rotateY(180deg) translateY(${height / 2 - arrowHeight / 2}px)`;
+  //     leftArrow.style.left = `${left}px`;
+  //   }
+  // };
+
   const moveRightArrowToFixedPos = (node: HTMLImageElement | null) => {
     const rightArrow = node;
     if (!rightArrow) return;
@@ -113,20 +132,20 @@ const NewPhotoSlider: React.FC<NewPhotoSliderProps> = ({ photoUrls }) => {
     }
   };
 
-  // const tablet = screenWidth > 768 && screenWidth < 1080;
-
   const listenForScroll = useCallback(
     (scrollPos: number) => {
-      const leftmostLoaded = Math.max(...Object.values(widthMap));
-      if (scrollPos > leftmostLoaded - 500 && uniquePhotoUrls.length < photoUrls.length) {
-        console.log("unique photo urls length " + uniquePhotoUrls.length);
-        console.log("photo urls length " + photoUrls.length);
-        for (let i = uniquePhotoUrls.length; i < uniquePhotoUrls.length + 3; i++) {
+      const leftmostLoaded = Object.values(widthMap).reduce((acc, curr) => acc + curr + margin, 0);
+      if (scrollPos > leftmostLoaded - 500 && loadedSrc.length < photoUrls.length) {
+        for (let i = loadedSrc.length; i < loadedSrc.length + 3; i++) {
           loadImage(photoUrls[i]);
         }
       }
+      if (scrollPos > 200) {
+        const leftArrow = document.querySelector(".arrow-left");
+        leftArrow?.classList.remove("arrow-visible");
+      }
     },
-    [loadImage, photoUrls, uniquePhotoUrls.length, widthMap]
+    [loadImage, photoUrls, loadedSrc.length, widthMap]
   );
 
   useEffect(() => {
@@ -137,7 +156,6 @@ const NewPhotoSlider: React.FC<NewPhotoSliderProps> = ({ photoUrls }) => {
     });
   }, [listenForScroll]);
 
-
   useEffect(() => {
     const checkScreenSize = () => {
       if (window.innerWidth < 1080) {
@@ -145,44 +163,23 @@ const NewPhotoSlider: React.FC<NewPhotoSliderProps> = ({ photoUrls }) => {
       }
     };
 
-    checkScreenSize(); // Initial check
+
+
+    checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
     return () => window.removeEventListener("resize", checkScreenSize);
   }, [photoUrls]);
+  
 
-  let pics = containerRef.current?.children.length;
-  const lefts: number[] = [];
-  if (!pics) {
-    console.log("oops");
-    pics = 10;
-  }
-  for (let i = 0; i < pics; i++) {
-    const child = containerRef.current?.children[i];
-    if (child && child.tagName === "IMG") {
-      const { width } = child.getBoundingClientRect();
-
-      lefts.push(width + margin + (lefts[i - 1] || 0));
-    }
-  }
   if (mobilePhotoUrls.length > 0) {
     return <MobilePhotoSlider photoUrls={mobilePhotoUrls} />;
   }
   return (
     <div className="home-image-container" ref={containerRef}>
-      {/* <img onClick={() => changePhotoIndex(-1)} src="./chevron-right.svg" alt="" className="arrow arrow-left" />} */}
-      <button
-        onClick={() => {
-          console.log("width map ", widthMap);
-          console.log(getLeftVals());
-        }}
-        style={{ backgroundColor: "green", height: 300, position: "absolute", zIndex: 99 }}
-      >
-        SHOW WIDTH MAP
-      </button>
+      {/* <img ref={moveLeftArrowToFixedPos} onClick={scrollBackward} src="./chevron-right.svg" alt="" className="arrow arrow-left" /> */}
 
       {photoUrls.map((url, index) => {
-        const src = uniquePhotoUrls.length - 1 >= index ? uniquePhotoUrls[index] : undefined;
-        console.log(uniquePhotoUrls.length);
+        const src = loadedSrc.length - 1 >= index ? loadedSrc[index] : undefined;
         return (
           <img
             key={index}
