@@ -2,17 +2,25 @@ import React from "react";
 import "../styles/home.css";
 import "../styles/common.css";
 import Spacer from "../components/Spacer";
-import PhotoSlider from "./NewPhotoSlider";
+import NewPhotoSlider from "./NewPhotoSlider";
+
+const rootUrl = "https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/Alte+Bilder+2024/";
+const initial = ["ssf24m43-sm", "ssf24m115-sm", "ssf24m112-sm", "ssf24m113-sm", "ssf24m44-sm", "ssf24m108-sm"]
 
 export default function Page() {
   const photoUrls = [];
-  for (let i = 1; i < 87; i++) {
-    if(i === 66) continue;
-    photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/Alte+Bilder+2024/ssf24${i}-sm.jpg`);
+  for (
+    let i = 0; i < initial.length; i++) { 
+    photoUrls.push(`${rootUrl}${initial[i]}.jpg`);
   }
+
   for (let i = 1; i < 115; i++) {
-    if(i === 80) continue;
+    if (i === 80) continue;
     photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/Alte+Bilder+2024/ssf24m${i}-sm.jpg`);
+  }
+  for (let i = 1; i < 87; i++) {
+    if (i === 66) continue;
+    photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/Alte+Bilder+2024/ssf24${i}-sm.jpg`);
   }
   return (
     <>
@@ -32,9 +40,8 @@ export default function Page() {
           </a>
         </div>
         <div className="responsive-spacer-15"></div>
-        <PhotoSlider photoUrls={photoUrls
-          // ["/2024_images/ssf24m10.jpg", "/2024_images/ssf24m2.jpg", "/2024_images/ssf24m3.jpg", "/2024_images/ssf24m4.jpg"]
-          } />
+   
+        <NewPhotoSlider photoUrls={photoUrls} />
         {/* <div className="home-image-container">
           <div className="img-spacer"></div>
           <img src="./2024_images/ssf24m1.jpg" alt="Demo Foto" />

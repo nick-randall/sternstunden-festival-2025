@@ -1,6 +1,7 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
 import MobilePhotoSlider from "./MobilePhotoSlider";
+// import FeaturePhoto from "./FeaturePhoto";
 // import NextImage from "next/image";
 
 interface NewPhotoSliderProps {
@@ -16,6 +17,9 @@ const NewPhotoSlider: React.FC<NewPhotoSliderProps> = ({ photoUrls }) => {
   const [loadedSrc, setLoadedSrc] = useState<string[]>([]);
   const [widthMap, setWidthMap] = useState<WidthMap>({});
   const [mobilePhotoUrls, setMobilePhotoUrls] = useState<string[]>([]);
+  const [userScrolling, setUserScrolling] = useState(false);
+  // const [featuredPhoto, setFeaturedPhoto] = useState("");
+
 
   const margin = 10;
 
@@ -85,6 +89,8 @@ const NewPhotoSlider: React.FC<NewPhotoSliderProps> = ({ photoUrls }) => {
   const scrollForward = () => {
     const container = containerRef.current;
     if (!container) return;
+    setUserScrolling(true);
+    setTimeout(() => setUserScrolling(false), 3000);
     const currImageIdx = findCurrImageIdx(container.scrollLeft);
 
     // now scroll to
@@ -119,6 +125,14 @@ const NewPhotoSlider: React.FC<NewPhotoSliderProps> = ({ photoUrls }) => {
   //     leftArrow.style.left = `${left}px`;
   //   }
   // };
+
+  const pauseScroll = () => { 
+    setUserScrolling(true);
+  }
+
+  const resumeScroll = () => {
+    setUserScrolling(false);
+  }
 
   const moveRightArrowToFixedPos = (node: HTMLImageElement | null) => {
     const rightArrow = node;
@@ -162,19 +176,45 @@ const NewPhotoSlider: React.FC<NewPhotoSliderProps> = ({ photoUrls }) => {
         setMobilePhotoUrls(photoUrls);
       }
     };
-
-
-
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
     return () => window.removeEventListener("resize", checkScreenSize);
   }, [photoUrls]);
-  
 
-  if (mobilePhotoUrls.length > 0) {
+  useEffect(() => {
+    const stopAutoScroll = () => {
+      setUserScrolling(true);
+      setTimeout(() => setUserScrolling(false), 5000);
+    };
+    const container = containerRef.current;
+    if (!container) return;
+    container.addEventListener("wheel", stopAutoScroll);
+    container.addEventListener("touchstart", stopAutoScroll);
+    return () => {
+      container.removeEventListener("wheel", stopAutoScroll);
+      container.removeEventListener("touchstart", stopAutoScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    const interval = setInterval(() => {
+      console.log("scrolling");
+      if (userScrolling) return;
+      container.scrollBy({ left: 10, behavior: "smooth" });
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, [userScrolling]);
+  // if(featuredPhoto) {
+  //   return <FeaturePhoto url={featuredPhoto} removePhoto={() => setFeaturedPhoto("")}/>;
+  // }
+
+   if (mobilePhotoUrls.length > 0) {
     return <MobilePhotoSlider photoUrls={mobilePhotoUrls} />;
   }
-  return (
+   return (
     <div className="home-image-container" ref={containerRef}>
       {/* <img ref={moveLeftArrowToFixedPos} onClick={scrollBackward} src="./chevron-right.svg" alt="" className="arrow arrow-left" /> */}
 
@@ -187,6 +227,9 @@ const NewPhotoSlider: React.FC<NewPhotoSliderProps> = ({ photoUrls }) => {
             src={src}
             alt="Foto Sternstunde 2025"
             style={{ height: "100%", position: "absolute", left: getLeftOffset(index) }}
+            onMouseEnter={pauseScroll}
+            onMouseLeave={resumeScroll}
+            // onClick={() => setFeaturedPhoto(url)}
           />
         );
       })}
