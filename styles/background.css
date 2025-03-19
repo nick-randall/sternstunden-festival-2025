@@ -69,10 +69,17 @@ body {
   flex-direction: column;
   align-items: center;
   max-width: 1200px;
-  width: 80%;
+  width: 60%;
 }
 
 .footer-section .impressum-etc a{
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.sponsor-logo {
+  max-width: 100%; /* Shrinks the image to fit the container width */
+  height: auto;    /* Maintains the aspect ratio */
+  object-fit: contain; /* Ensures the image fits within its container */
+  padding: 20px;
 }

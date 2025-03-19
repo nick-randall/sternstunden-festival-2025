@@ -95,17 +95,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </a>
             <hr style={{ width: "30%" }} />
             <Spacer height={64} />
-            {/* <img className="footer-logo" src="logo-simple.png" alt="Sternstunden Festival Logo"></img> */}
-            <Flex>
-              <img src="/sponsors/excellenzcluster.avif" alt="Bucerius" style={{ height: "100%", width: "100%", padding: "20px" }} />
-              <img
+            <Flex alignItems="center">
+              <Image src="/sponsors/excellenzcluster.avif" alt="Excellenzcluster" width="400" height="78" className="sponsor-logo" />
+              <Image
                 src="/sponsors/bucerius.avif"
                 alt="Bucerius"
-                style={{ height: "100%", width: "100%", padding: "20px", backgroundColor: "rgb(208, 177, 213)" }}
+                height="136"
+                width="296"
+                style={{ backgroundColor: "rgb(208, 177, 213)" }}
+                className="sponsor-logo"
               />
-              <img src="/sponsors/unimusik.avif" alt="Bucerius" style={{ height: "100%", width: "100%", padding: "20px" }} />
-              <img src="/sponsors/uni-hamburg.avif" alt="Bucerius" style={{ height: "100%", width: "100%", padding: "20px" }} />
+              <Image src="/sponsors/unimusik-foerderverein.png" alt="Unimusik Förderverein" height="155" width="336" className="sponsor-logo" />
+              <Image src="/sponsors/uni-hamburg.png" alt="Bucerius" width="375" height="123" className="sponsor-logo" />
             </Flex>
+            <Spacer height={32} />
+
             <Flex justifyContent="space-between" width="100%">
               <div>©2023-2025 Sternstundenfestival</div>
               <div className="impressum-etc">
@@ -114,7 +118,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <a href="/agb">AGB</a>
               </div>
             </Flex>
-            <Spacer height={16} />
+            <Spacer height={32} />
           </div>
         </section>
       </body>

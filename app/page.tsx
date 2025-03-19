@@ -34,7 +34,7 @@ export default function Page() {
             Fachbereich Physik gehört.
           </div>
           <br />
-          <a className="more-info" href="#">
+          <a className="more-info" href="/info">
             MEHR INFOS
           </a>
         </div>
