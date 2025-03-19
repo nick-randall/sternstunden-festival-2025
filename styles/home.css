@@ -51,9 +51,13 @@
 .content-box .home-image-container img {
   flex: 1 0 auto;
   width: auto;
+  height: 400px;
   /* transition: 0.4s; */
   /* animation: slide 30s linear infinite; */
   /* scroll-snap-align: start; */
+}
+.content-box .home-image-container img:hover {
+  filter: brightness(120%);
 }
 
 .content-box .home-image-container.tablet img {
@@ -95,8 +99,15 @@
 }
 
 .content-box .home-image-container .arrow-left {
-  transform: rotate(180deg) translateY(50%);
   left: 0px;
+}
+
+.feature-photo {
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  /* position: absolute; */
 }
 
 .content-box.video-container {
@@ -166,3 +177,5 @@
     align-items: center;
   }
 }
+
+

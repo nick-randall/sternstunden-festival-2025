@@ -5,12 +5,11 @@ import Spacer from "../components/Spacer";
 import NewPhotoSlider from "./NewPhotoSlider";
 
 const rootUrl = "https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/Alte+Bilder+2024/";
-const initial = ["ssf24m43-sm", "ssf24m115-sm", "ssf24m112-sm", "ssf24m113-sm", "ssf24m44-sm", "ssf24m108-sm"]
+const initial = ["ssf24m43-sm", "ssf24m115-sm", "ssf24m112-sm", "ssf24m113-sm", "ssf24m44-sm", "ssf24m108-sm"];
 
 export default function Page() {
   const photoUrls = [];
-  for (
-    let i = 0; i < initial.length; i++) { 
+  for (let i = 0; i < initial.length; i++) {
     photoUrls.push(`${rootUrl}${initial[i]}.jpg`);
   }
 
@@ -40,7 +39,7 @@ export default function Page() {
           </a>
         </div>
         <div className="responsive-spacer-15"></div>
-   
+
         <NewPhotoSlider photoUrls={photoUrls} />
         {/* <div className="home-image-container">
           <div className="img-spacer"></div>
@@ -65,7 +64,7 @@ export default function Page() {
           src="https://www.youtube.com/embed/H_ZANaTi9Lo?autoplay=0&mute=0&controls=1&loop=0&origin=https%3A%2F%2Fwww.sternstundenfestival.de&playsinline=1&enablejsapi=1&widgetid=1"
         ></iframe>
       </div>
-      <Spacer height={32} />
+      {/* <Spacer height={32} />
       <div className="footer">
         <div>(c)2023-2025 Sternstunden Festival</div>
         <a href="/impressum">IMPRESSUM</a>
@@ -73,11 +72,8 @@ export default function Page() {
         <a href="/agb">AGB</a>
         <a href="/faq">FAQ</a>
         <a href="/kontakt">KONTAKT</a>
-      </div>
-      <Spacer height={32} />
-
-      <img className="footer-logo" src="logo-simple.png" alt="Sternstunden Festival Logo"></img>
-      <Spacer height={32} />
+      </div> */}
+  
     </>
   );
 }

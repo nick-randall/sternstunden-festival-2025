@@ -175,6 +175,9 @@ const NewPhotoSlider: React.FC<NewPhotoSliderProps> = ({ photoUrls }) => {
       if (window.innerWidth < 1080) {
         setMobilePhotoUrls(photoUrls);
       }
+      else {
+        setMobilePhotoUrls([]);
+      }
     };
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);

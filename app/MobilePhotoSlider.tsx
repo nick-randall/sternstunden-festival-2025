@@ -43,7 +43,7 @@ const MobilePhotoSlider: React.FC<MobilePhotoSliderProps> = ({ photoUrls }) => {
   }, [userScrolling]);
   // const { tablet } = useMediaQuery();
   return (
-    <div className={`home-image-container`} ref={containerRef}>
+    <div className="home-image-container" ref={containerRef} key="mobile-photo-slider">
       {photoUrls.map((url, index) => (
         <>
           <img key={index + "image"} src={url} alt="Foto Sternstunde 2025" onMouseEnter={pauseScroll} onMouseLeave={resumeScroll} />

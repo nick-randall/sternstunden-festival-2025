@@ -11,6 +11,13 @@ const nextConfig: NextConfig = {
         pathname: '/2024_photos/**',
         search: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'freepnglogo.com',
+        port: '',
+        pathname: '/images/all_img/**',
+        search: '',
+      },
     ],
   },
 };
