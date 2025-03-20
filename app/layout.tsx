@@ -96,17 +96,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <hr style={{ width: "30%" }} />
             <Spacer height={64} />
             <Flex alignItems="center">
-              <Image src="/sponsors/excellenzcluster.avif" alt="Excellenzcluster" width="400" height="78" className="sponsor-logo" />
-              <Image
-                src="/sponsors/bucerius.avif"
-                alt="Bucerius"
-                height="136"
-                width="296"
-                style={{ backgroundColor: "rgb(208, 177, 213)" }}
-                className="sponsor-logo"
-              />
-              <Image src="/sponsors/unimusik-foerderverein.png" alt="Unimusik Förderverein" height="155" width="336" className="sponsor-logo" />
-              <Image src="/sponsors/uni-hamburg.png" alt="Bucerius" width="375" height="123" className="sponsor-logo" />
+              <div className="sponsor-logo-container">
+                <Image src="/sponsors/excellenzcluster.avif" alt="Excellenzcluster" width="400" height="78" className="sponsor-logo" />
+              </div>
+              <div className="sponsor-logo-container">
+                <Image
+                  src="/sponsors/bucerius.avif"
+                  alt="Bucerius"
+                  height="136"
+                  width="296"
+                  style={{ backgroundColor: "rgb(208, 177, 213)" }}
+                  className="sponsor-logo"
+                />
+              </div>
+              <div className="sponsor-logo-container">
+                <a href="https://www.unimusik.uni-hamburg.de/ueber-unimusik/foerderverein-unimusik.html">
+                  <Image src="/sponsors/unimusik-foerderverein.png" alt="Unimusik Förderverein" height="155" width="336" className="sponsor-logo" />
+                </a>
+              </div>
+              <div className="sponsor-logo-container">
+                <a href="https://www.uni-hamburg.de/">
+                  <Image src="/sponsors/uni-hamburg.png" alt="Uni Hamburg Sponsor" width="375" height="123" className="sponsor-logo" />
+                </a>
+              </div>
             </Flex>
             <Spacer height={32} />
 
