@@ -55,13 +55,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   transform: none;
 
                 }
-               .content-box {
-                  flex-direction: column;
-                  width: 100%;
-                }
-                .content-box .responsive-spacer-15 {
-                  height: 15px;
-                }
+              .content-box {
+                flex-direction: column;
+                width: 100%;
+              }
+              .content-box .responsive-spacer-15 {
+                height: 15px;
+              }
+              .photo {
+                height: 250px;
+                width: auto;
+              }
+
                 
               }
             @media screen and (min-width: 1580px) {

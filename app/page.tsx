@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/home.css";
 import "../styles/common.css";
 import Spacer from "../components/Spacer";
-import NewPhotoSlider from "./NewPhotoSlider";
+import MobilePhotoSlider from "./MobilePhotoSlider";
 
 const rootUrl = "https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/Alte+Bilder+2024/";
 const initial = ["ssf24m43-sm", "ssf24m115-sm", "ssf24m112-sm", "ssf24m113-sm", "ssf24m44-sm", "ssf24m108-sm"];
@@ -40,7 +40,7 @@ export default function Page() {
         </div>
         <div className="responsive-spacer-15"></div>
 
-        <NewPhotoSlider photoUrls={photoUrls} />
+        <MobilePhotoSlider photoUrls={photoUrls} />
         {/* <div className="home-image-container">
           <div className="img-spacer"></div>
           <img src="./2024_images/ssf24m1.jpg" alt="Demo Foto" />
