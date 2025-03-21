@@ -107,7 +107,7 @@
   inset: 0;
   width: 100%;
   height: auto;
-  padding: 20%
+  padding: 20%;
   /* object-fit: cover; */
   /* position: absolute; */
 }
@@ -180,6 +180,25 @@
   }
 }
 
+.arrow {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1 px solid #000;
+  border-radius: 50%;
+  z-index: 9;
+  padding: 10px;
+  right: 0px;
+  top: 200px;
+  transform: translate(-0%, -50%);
+  pointer-events: auto;
+}
+
+.arrow-left {
+  transform: translate(-0%, -50%) rotateY(180deg);
+  right: auto;
+  left: 0px;
+}
+
 .photo-slider {
   display: flex;
   flex-direction: row;
@@ -187,6 +206,7 @@
   /* gap: 10px; */
 
   flex-basis: 60%;
+  scroll-snap-type: mandatory x;
 
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
