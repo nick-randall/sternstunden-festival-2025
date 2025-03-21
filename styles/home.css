@@ -45,7 +45,6 @@
   scrollbar-width: none; /* Firefox */
   position: relative; /* required for positioning arrow as absolute */
 
-  scroll-snap-type: x mandatory;
   /* position: relative; */
 }
 
@@ -191,6 +190,7 @@
   top: 200px;
   transform: translate(-0%, -50%);
   pointer-events: auto;
+  cursor: pointer;
 }
 
 .arrow-left {
@@ -206,7 +206,7 @@
   /* gap: 10px; */
 
   flex-basis: 60%;
-  scroll-snap-type: mandatory x;
+  scroll-snap-type: x;
 
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */

@@ -1,109 +1,51 @@
 "use client";
-import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 interface MobilePhotoSliderProps {
   photoUrls: string[];
 }
-interface WidthMap {
-  [url: string]: number;
-}
 
 const MobilePhotoSlider: React.FC<MobilePhotoSliderProps> = ({ photoUrls }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
   const [userScrolling, setUserScrolling] = useState(false);
-  const [widthMap, setWidthMap] = useState<WidthMap>({});
+  const containerRef = useRef<HTMLDivElement>(null);
+  const timer = useRef<NodeJS.Timeout | null>(null);
+  const autoScrollTimer = useRef<NodeJS.Timeout | null>(null);
 
-  const pauseScroll = useCallback(() => {
+  const pauseScroll = () => {
     setUserScrolling(true);
-    setTimeout(() => setUserScrolling(false), 3000);
-  }, []);
-
-  // const resumeScroll = () => {
-  //   setUserScrolling(false);
-  // };
-
-  // useEffect(() => {
-  //   const stopAutoScroll = () => {
-  //     setUserScrolling(true);
-  //     setTimeout(() => setUserScrolling(false), 3000);
-  //   };
-  //   const container = containerRef.current;
-  //   if (!container) return;
-  //   container.addEventListener("wheel", stopAutoScroll);
-  //   container.addEventListener("touchstart", stopAutoScroll);
-  //   return () => {
-  //     container.removeEventListener("wheel", stopAutoScroll);
-  //     container.removeEventListener("touchstart", stopAutoScroll);
-  //   };
-  // }, []);
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = setTimeout(() => {
+      setUserScrolling(false);
+    }, 3000);
+  };
 
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
-    const interval = setInterval(() => {
+    autoScrollTimer.current = setInterval(() => {
       if (userScrolling) return;
-      container.scrollBy({ left: 2, behavior: "smooth" });
-    }, 20);
+      container.scrollBy({ left: 10, behavior: "smooth" });
+    }, 50);
 
-    return () => clearInterval(interval);
+    return () => {
+      if (autoScrollTimer.current) clearInterval(autoScrollTimer.current);
+    };
   }, [userScrolling]);
 
-  const scrollForward = () => {
+  function scrollBackward(): void {
     const container = containerRef.current;
     if (!container) return;
-    setUserScrolling(true);
-    setTimeout(() => setUserScrolling(false), 3000);
-    const currImageIdx = findCurrImageIdx(container.scrollLeft);
-
-    // now scroll to
-    if (currImageIdx < photoUrls.length - 1) {
-      const scrollTo = getLeftVals()[currImageIdx + 1];
-
-      container.scrollTo({ left: scrollTo, behavior: "smooth" });
-    } else console.log("scroll too high. must be at end of images");
-  };
-
-  const scrollBackward = () => {
-    const container = containerRef.current;
-    if (!container) return;
-    const currImageIdx = findCurrImageIdx(container.scrollLeft);
-    if (currImageIdx < photoUrls.length - 1) {
-      const scrollTo = getLeftVals()[currImageIdx - 1];
-
-      container.scrollTo({ left: scrollTo, behavior: "smooth" });
-    } else console.log("scroll too high. must be at end of images");
-  };
-  const margin = 10;
-
-  const getLeftVals = () => {
-    const widths = photoUrls.map(url => widthMap[url] + margin);
-    const lefts = widths.reduce((acc, curr) => [...acc, acc[acc.length - 1] + curr], [0]);
-    return lefts;
-  };
-
-  function findCurrImageIdx(scrollPos: number) {
-    const lefts = getLeftVals();
-    let smallestDiff = Infinity;
-    let closestIdx = 0;
-    for (let i = 0; i < lefts.length; i++) {
-      const diff = scrollPos - lefts[i];
-      if (diff < smallestDiff && diff >= 0) {
-        smallestDiff = diff;
-        closestIdx = i;
-      }
-    }
-    return closestIdx;
+    pauseScroll();
+    container.scrollBy({ left: -container.clientWidth, behavior: "smooth" });
   }
 
-  const handleRef = useCallback((node: HTMLImageElement | null) => {
-    if (node) {
-      node.onload = () => {
-        if (!node.width) return;
-        setWidthMap(prev => ({ ...prev, [node.src]: node.width }));
-      };
-    }
-  }, []);
+  function scrollForward(): void {
+    const container = containerRef.current;
+    if (!container) return;
+    pauseScroll();
+    container.scrollBy({ left: container.clientWidth, behavior: "smooth" });
+  }
 
   return (
     <>
@@ -117,30 +59,14 @@ const MobilePhotoSlider: React.FC<MobilePhotoSliderProps> = ({ photoUrls }) => {
         }}
       >
         <div style={{ position: "relative" }}>
-          <Image
-            onClick={scrollBackward}
-            src="./chevron-right.svg"
-            alt=""
-            className="arrow arrow-left"
-            height="50"
-            width="50"
-            // style={{ position: "absolute", height: 50, left: 0, top: 200, transform: "translate(-0%, -50%) rotateY(180deg)", pointerEvents: "auto" }}
-          />
-          <Image
-            onClick={scrollForward}
-            src="./chevron-right.svg"
-            alt=""
-            height="50"
-            width="50"
-            className="arrow"
-            // style={{ position: "absolute", height: 50, right: 0, top: 200, transform: "translate(-0%, -50%)", pointerEvents: "auto" }}
-          />
+          <Image onClick={scrollBackward} src="./chevron-right.svg" alt="" className="arrow arrow-left" height="50" width="50" />
+          <Image onClick={scrollForward} src="./chevron-right.svg" alt="" height="50" width="50" className="arrow" />
         </div>
       </div>
       <div ref={containerRef} key="mobile-photo-slider" className="photo-slider" onWheel={pauseScroll} onTouchStart={pauseScroll}>
         {photoUrls.map((url, index) => (
           <>
-            <img ref={handleRef} className="photo" key={index + "image"} src={url} alt="Foto Sternstunde 2025" />
+            <img className="photo" key={index + "image"} src={url} alt="Foto Sternstunde 2025" />
             <div key={index + "spacer"} className="img-spacer"></div>
           </>
         ))}

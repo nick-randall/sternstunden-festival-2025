@@ -62,13 +62,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               .content-box .responsive-spacer-15 {
                 height: 15px;
               }
-              .photo {
+              .photo-slider .photo {
                 height: 250px;
                 width: auto;
               }
-
-                
+              .arrow {
+                display: none;  
               }
+                
+              .footer-section .container {
+                font-size: 0.8em;
+              
+              }
+            }
             @media screen and (min-width: 1580px) {
                 .centered-wrapper { 
                   width: auto;
