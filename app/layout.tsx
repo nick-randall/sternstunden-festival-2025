@@ -95,7 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Spacer height={64} />
 
         <section className="footer-section">
-          <div className="container">
+          <Flex flexDirection="column" alignItems="center">
             <Spacer height={32} />
 
             <a href="https://www.instagram.com/sternstundenfestival">
@@ -106,43 +106,48 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </a>
             <hr style={{ width: "30%" }} />
             <Spacer height={64} />
-            <Flex alignItems="center">
-              <div className="sponsor-logo-container">
-                <Image src="/sponsors/excellenzcluster.avif" alt="Excellenzcluster" width="400" height="78" className="sponsor-logo" />
+            <div className="sponsor-logo-wrap-section">
+              <div className="sponsor-logo-row">
+                <div className="sponsor-logo-container">
+                  <Image src="/sponsors/excellenzcluster.avif" alt="Excellenzcluster" width="400" height="78" className="sponsor-logo" />
+                </div>
+                <div className="sponsor-logo-container">
+                  <Image
+                    src="/sponsors/bucerius.avif"
+                    alt="Bucerius"
+                    height="136"
+                    width="296"
+                    style={{ backgroundColor: "rgb(208, 177, 213)" }}
+                    className="sponsor-logo"
+                  />
+                </div>
               </div>
-              <div className="sponsor-logo-container">
-                <Image
-                  src="/sponsors/bucerius.avif"
-                  alt="Bucerius"
-                  height="136"
-                  width="296"
-                  style={{ backgroundColor: "rgb(208, 177, 213)" }}
-                  className="sponsor-logo"
-                />
+              <div className="sponsor-logo-row">
+                <div className="sponsor-logo-container">
+                  <a href="https://www.unimusik.uni-hamburg.de/ueber-unimusik/foerderverein-unimusik.html">
+                    <Image src="/sponsors/unimusik-foerderverein.png" alt="Unimusik Förderverein" height="155" width="336" className="sponsor-logo" />
+                  </a>
+                </div>
+                <div className="sponsor-logo-container">
+                  <a href="https://www.uni-hamburg.de/">
+                    <Image src="/sponsors/uni-hamburg.png" alt="Uni Hamburg Sponsor" width="375" height="123" className="sponsor-logo" />
+                  </a>
+                </div>
               </div>
-              <div className="sponsor-logo-container">
-                <a href="https://www.unimusik.uni-hamburg.de/ueber-unimusik/foerderverein-unimusik.html">
-                  <Image src="/sponsors/unimusik-foerderverein.png" alt="Unimusik Förderverein" height="155" width="336" className="sponsor-logo" />
-                </a>
-              </div>
-              <div className="sponsor-logo-container">
-                <a href="https://www.uni-hamburg.de/">
-                  <Image src="/sponsors/uni-hamburg.png" alt="Uni Hamburg Sponsor" width="375" height="123" className="sponsor-logo" />
-                </a>
-              </div>
-            </Flex>
+            </div>
             <Spacer height={32} />
 
-            <Flex justifyContent="space-between" width="100%">
+            <div className="impressum-etc-row">
               <div>©2023-2025 Sternstundenfestival</div>
               <div className="impressum-etc">
                 <a href="/impressum">Impressum</a>
                 <a href="/datenschutz">Datenschutz</a>
                 <a href="/agb">AGB</a>
               </div>
-            </Flex>
+            </div>
             <Spacer height={32} />
-          </div>
+        
+            </Flex>
         </section>
       </body>
     </html>

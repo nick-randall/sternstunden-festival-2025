@@ -41,19 +41,6 @@ export default function Page() {
         <div className="responsive-spacer-15"></div>
 
         <MobilePhotoSlider photoUrls={photoUrls} />
-        {/* <div className="home-image-container">
-          <div className="img-spacer"></div>
-          <img src="./2024_images/ssf24m1.jpg" alt="Demo Foto" />
-          <div className="img-spacer"></div>
-          <img src="./2024_images/ssf24m2.jpg" alt="Demo Foto" />
-          <div className="img-spacer"></div>
-          <img src="./2024_images/ssf24m3.jpg" alt="Demo Foto" />
-
-          <div className="img-spacer"></div>
-          <img src="./2024_images/ssf24m4.jpg" alt="Demo Foto" />
-
-          <img src="./chevron-right.svg" alt="" className="arrow" />
-        </div> */}
       </div>
       <Spacer height={32} />
       <div className="content-box video-container">
@@ -64,16 +51,6 @@ export default function Page() {
           src="https://www.youtube.com/embed/H_ZANaTi9Lo?autoplay=0&mute=0&controls=1&loop=0&origin=https%3A%2F%2Fwww.sternstundenfestival.de&playsinline=1&enablejsapi=1&widgetid=1"
         ></iframe>
       </div>
-      {/* <Spacer height={32} />
-      <div className="footer">
-        <div>(c)2023-2025 Sternstunden Festival</div>
-        <a href="/impressum">IMPRESSUM</a>
-        <a href="/datenschutz">DATENSCHUTZ</a>
-        <a href="/agb">AGB</a>
-        <a href="/faq">FAQ</a>
-        <a href="/kontakt">KONTAKT</a>
-      </div> */}
-  
     </>
   );
 }

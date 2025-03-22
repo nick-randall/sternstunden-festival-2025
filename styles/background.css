@@ -4,6 +4,11 @@ body {
   width: 100%;
 }
 
+
+/* .bg and .outer-wrapper work together to achieve a "background-align: fixed" effect,
+  which unfortunately is not supported on mobile devices. */
+
+
 .bg {
   background-image: url(../public/back.jpg);
   background-repeat: no-repeat;
@@ -38,21 +43,6 @@ body {
   max-width: 1200px;
 }
 
-/* .page-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 15px;
-  align-items: center;
-  overflow: hidden;
-  max-width: 1200px;
-} */
-
-/* @media (min-width: 786px) {
-  .page-wrapper {
-    align-self: center;
-  }
-} */
 
 .footer-section {
   background-color: rgba(243, 119, 18, 0.21);
@@ -63,17 +53,29 @@ body {
   align-items: center;
 }
 
-.footer-section .container {
+ .sponsor-logo-row {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  max-width: 800px;
- 
 }
+
+.sponsor-logo-wrap-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+ 
 
 .footer-section .impressum-etc a {
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.impressum-etc-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 /*
