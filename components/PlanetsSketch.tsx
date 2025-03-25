@@ -4,7 +4,6 @@ import { useEffect, useMemo, useRef } from "react";
 import p5 from "p5";
 
 const Planets: React.FC = () => {
-
   const sketchRef = useRef<HTMLDivElement>(null);
   const planetUrls = useMemo(
     () => [
@@ -82,8 +81,20 @@ const Planets: React.FC = () => {
         }
       };
       p.mouseClicked = () => {
-        rotateTo = rotation + ((Math.PI * 2) / numPlanets);
-      }
+        if (rotateTo !== undefined) return;
+        const xMiddle = p.width / 2;
+        const centrePlanetLeft = xMiddle - planetSize - 20;
+        const centrePlanetRight = xMiddle + planetSize + 20;
+        console.log("clicked", p.mouseX, centrePlanetLeft, centrePlanetRight);
+        if (p.mouseX > centrePlanetLeft && p.mouseX < centrePlanetRight) {
+          console.log("clicked on centre planet");
+        } else if (p.mouseX < xMiddle) {
+          rotateTo = rotation - (Math.PI * 2) / numPlanets;
+        } else if (p.mouseX > xMiddle) {
+          console.log("other")
+          rotateTo = rotation + (Math.PI * 2) / numPlanets;
+        }
+      };
     };
 
     if (sketchRef.current === null) return;
