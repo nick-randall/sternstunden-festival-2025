@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'sternstunde.s3.ap-southeast-2.amazonaws.com',
         port: '',
-        pathname: '/2024_photos/**',
+        pathname: '/**',
         search: '',
       },
       {

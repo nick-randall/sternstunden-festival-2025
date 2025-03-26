@@ -5,30 +5,9 @@ import p5 from "p5";
 
 const Planets: React.FC = () => {
   const sketchRef = useRef<HTMLDivElement>(null);
-  const planetUrls = useMemo(
-    () => [
-      "/planets/merkur.png",
-      "/planets/venus.png",
-      "/planets/erde.png",
-      "/planets/mars.png",
-      "/planets/jupiter.png",
-      "/planets/saturn.png",
-      "/planets/uranus.png",
-      "/planets/neptun.png",
-      "/planets/pluto.png",
-      // "/planets/alpha.png"
-      // "https://static.wixstatic.com/media/4e9673_ea8d802639134ddb956fb341a28561f4~mv2.png/v1/fill/w_304,h_314,al_c,q_80,usm_0.66_1.00_0.01/4e9673_ea8d802639134ddb956fb341a28561f4~mv2.png",
-      // "https://static.wixstatic.com/media/4e9673_86378abffefa418896d694960dcc2139~mv2.png/v1/fill/w_304,h_314,al_c,q_80,usm_0.66_1.00_0.01/4e9673_86378abffefa418896d694960dcc2139~mv2.png",
-      // "https://static.wixstatic.com/media/4e9673_3be9bfb05a8c47078c1f40fb0727f53a~mv2.png/v1/fill/w_304,h_314,al_c,q_80,usm_0.66_1.00_0.01/4e9673_3be9bfb05a8c47078c1f40fb0727f53a~mv2.png",
-      // "https://static.wixstatic.com/media/4e9673_05721e09679945d78b1ce0756698b739~mv2.png/v1/fill/w_304,h_314,al_c,q_80,usm_0.66_1.00_0.01/4e9673_05721e09679945d78b1ce0756698b739~mv2.png",
-      // "https://static.wixstatic.com/media/4e9673_d6bf152709c5441096d58cb139b164b9~mv2.png/v1/fill/w_304,h_314,al_c,q_80,usm_0.66_1.00_0.01/4e9673_d6bf152709c5441096d58cb139b164b9~mv2.png",
-      // "https://static.wixstatic.com/media/4e9673_fe9d7c90cde3486bb3b53a60fd60ae54~mv2.png/v1/fill/w_304,h_314,al_c,q_80,usm_0.66_1.00_0.01/4e9673_fe9d7c90cde3486bb3b53a60fd60ae54~mv2.png",
-      // "https://static.wixstatic.com/media/4e9673_9c815a65d3b6420c92a08b9031e6ac32~mv2.png/v1/fill/w_304,h_314,al_c,q_80,usm_0.66_1.00_0.01/4e9673_9c815a65d3b6420c92a08b9031e6ac32~mv2.png",
-      // "https://static.wixstatic.com/media/4e9673_65cf5e1bf9a14c66953c0382b37300c4~mv2.png/v1/fill/w_304,h_314,al_c,q_80,usm_0.66_1.00_0.01/4e9673_65cf5e1bf9a14c66953c0382b37300c4~mv2.png",
-      // "https://static.wixstatic.com/media/4e9673_58efaa4a95b8408393fc22df21bba084~mv2.png/v1/fill/w_304,h_314,al_c,q_80,usm_0.66_1.00_0.01/4e9673_58efaa4a95b8408393fc22df21bba084~mv2.png",
-    ],
-    []
-  );
+  const rootUrl = "https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/";
+  const planets = useMemo(() => ["merkur", "venus", "erde", "mars", "jupiter", "saturn", "uranus", "neptun", "pluto"], []);
+  const planetUrls = useMemo(() => planets.map(planet => `${rootUrl}${planet}.png`), [planets]);
 
   useEffect(() => {
     import("p5").then(p5 => {
@@ -162,7 +141,9 @@ const Planets: React.FC = () => {
           } else if (p.mouseX > xMiddle) {
             currPlanet = (currPlanet + 1) % numPlanets;
           }
-          newRotation = angles[currPlanet];
+          if (currPlanet === 0) {
+            newRotation = Math.PI * 2;
+          } else newRotation = angles[currPlanet];
           // if (newRotation && Math.abs(newRotation) >= Math.PI * 2) {
           //   newRotation = 0;
           // }
