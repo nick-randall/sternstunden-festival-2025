@@ -42,6 +42,35 @@ const NewPlanetsSketch: React.FC = () => {
           gl.disable(gl.DEPTH_TEST); // Fix transparency overlap issues
         };
 
+        const rearrangeImages = () => {
+          const order = Array.from({length: numPlanets}, (_, i) => i);
+          const oppositePlanet = (currPlanet + 5) % numPlanets;
+          // move opposite planet to the middle
+          const before = order.slice(0, oppositePlanet);
+          const rest = order.slice(oppositePlanet);
+          const middleAtStart = [...rest, ...before];
+          console.log(middleAtStart)
+
+          const rearranged: number[] = []
+          for(let i = 0; i< Math.floor(numPlanets / 2); i++) {
+            // rearranged = [order[i], ...rearranged, order[numPlanets - 1 - i]]
+
+            const top = middleAtStart[i];
+            rearranged.push(top)
+            console.log(top)
+            console.log(rearranged)
+            const tail = middleAtStart[numPlanets - i - 1];
+            rearranged.push(tail)
+            console.log(tail)
+            console.log(rearranged)
+          }
+          rearranged.push(middleAtStart[Math.floor(numPlanets / 2)])
+
+          console.log("rearranged", rearranged)
+          
+
+        };
+
         const isCloseTo = (a: number, b: number, tolerance: number) => {
           return Math.abs(a - b) < tolerance;
         };
@@ -78,11 +107,10 @@ const NewPlanetsSketch: React.FC = () => {
             if (isCloseTo(angles[i], rotation, 0.03)) {
               currPlanet = i;
               console.log("curr  planet is now", currPlanet);
+              rearrangeImages();
             }
           }
-          if(currPlanet === newPlanet) return;
-
-          console.log("rotating", rotation);
+          if (currPlanet === newPlanet) return;
 
           const rotateToAngle = angles[newPlanet];
 
