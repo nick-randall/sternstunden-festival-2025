@@ -20,6 +20,33 @@ const NewPlanetsSketch: React.FC = () => {
       const angleInterval = (Math.PI * 2) / numPlanets;
       const angles = Array.from({ length: numPlanets }, (_, i) => angleInterval * i);
 
+      let drawOrder: number[] = [];
+
+      // Set draw order so the images closest to the front are drawn LAST
+      const rearrangeImages = () => {
+        const order = Array.from({length: numPlanets}, (_, i) => i);
+        const oppositePlanet = (currPlanet + 5) % numPlanets;
+        // Move opposite planet index to the middle [5, 6, 7, 8, 0, 1, 2, 3, 4]
+        const before = order.slice(0, oppositePlanet);
+        const rest = order.slice(oppositePlanet);
+        const middleAtStart = [...rest, ...before];
+        
+        // Move alternately add start and end of list to the 
+        // start of the new list ==> 5 (start), then 4 (last), 
+        // then 6 (first) etc
+        const rearranged: number[] = []
+        for(let i = 0; i< Math.floor(numPlanets / 2); i++) {
+          const top = middleAtStart[i];
+          rearranged.push(top)
+          const tail = middleAtStart[numPlanets - i - 1];
+          rearranged.push(tail)
+        }
+        rearranged.push(middleAtStart[Math.floor(numPlanets / 2)])
+
+        drawOrder = rearranged;        
+      };
+      rearrangeImages()
+
       const radiusX = 520; // X-axis stretch
       const radiusY = 190; // Y-axis stretch
       // let frontmostThreeIndexes = [0, 1, numPlanets - 1];
@@ -42,34 +69,7 @@ const NewPlanetsSketch: React.FC = () => {
           gl.disable(gl.DEPTH_TEST); // Fix transparency overlap issues
         };
 
-        const rearrangeImages = () => {
-          const order = Array.from({length: numPlanets}, (_, i) => i);
-          const oppositePlanet = (currPlanet + 5) % numPlanets;
-          // move opposite planet to the middle
-          const before = order.slice(0, oppositePlanet);
-          const rest = order.slice(oppositePlanet);
-          const middleAtStart = [...rest, ...before];
-          console.log(middleAtStart)
-
-          const rearranged: number[] = []
-          for(let i = 0; i< Math.floor(numPlanets / 2); i++) {
-            // rearranged = [order[i], ...rearranged, order[numPlanets - 1 - i]]
-
-            const top = middleAtStart[i];
-            rearranged.push(top)
-            console.log(top)
-            console.log(rearranged)
-            const tail = middleAtStart[numPlanets - i - 1];
-            rearranged.push(tail)
-            console.log(tail)
-            console.log(rearranged)
-          }
-          rearranged.push(middleAtStart[Math.floor(numPlanets / 2)])
-
-          console.log("rearranged", rearranged)
-          
-
-        };
+       
 
         const isCloseTo = (a: number, b: number, tolerance: number) => {
           return Math.abs(a - b) < tolerance;
@@ -99,14 +99,14 @@ const NewPlanetsSketch: React.FC = () => {
           p.rotateX(p.PI / 2 - 0.06); // Tilt entire scene
 
           for (let i = 0; i < numPlanets; i++) {
-            drawCircle(i);
+            const planetToDraw = drawOrder[i]
+            drawCircle(planetToDraw);
           }
           if (newPlanet === currPlanet) return;
 
           for (let i = 0; i < numPlanets; i++) {
             if (isCloseTo(angles[i], rotation, 0.03)) {
               currPlanet = i;
-              console.log("curr  planet is now", currPlanet);
               rearrangeImages();
             }
           }
