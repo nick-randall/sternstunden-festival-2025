@@ -6,7 +6,7 @@ import "../../styles/common.css";
 const PlanetsPage: React.FC = () => {
   const rootUrl = "https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/";
   const planets = ["merkur", "venus", "erde", "mars", "jupiter", "saturn", "uranus", "neptun", "pluto"];
-  const planetUrls = planets.map(planet => `${rootUrl}${planet}.png`);
+  // const planetUrls = planets.map(planet => `${rootUrl}${planet}.png`);
   const { screenWidth } = useMediaQuery();
   if(screenWidth === 0) {
     return null;
@@ -20,7 +20,7 @@ const PlanetsPage: React.FC = () => {
   }
   console.log("screen width", screenWidth);
   console.log("size factor", sizeFactor);
-  return <PlanetsSketch planetUrls={planetUrls} sizeFactor={sizeFactor} />;
+  return <PlanetsSketch planets={planets} sizeFactor={sizeFactor} rootUrl={rootUrl} />;
 };
 
 export default PlanetsPage;

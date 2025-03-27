@@ -52,7 +52,7 @@ const NewPlanetsSketch: React.FC<PlanetsSketchProps> = ({ planetUrls, sizeFactor
 
       let drawOrder = setDrawOrder(numPlanets, currPlanet);
 
-      const radiusX = sizeFactor < 1 ? 1220* sizeFactor : 520 * sizeFactor; // X-axis stretch
+      const radiusX = sizeFactor < 1 ? 1220 * sizeFactor : 520 * sizeFactor; // X-axis stretch
       const radiusY = sizeFactor < 1 ? 240 * sizeFactor : 190 * sizeFactor; // Y-axis stretch
 
       const sketch = (p: p5) => {
@@ -65,8 +65,8 @@ const NewPlanetsSketch: React.FC<PlanetsSketchProps> = ({ planetUrls, sizeFactor
         };
 
         p.setup = () => {
-          if(document.getElementById("planets-sketch")) {
-            return
+          if (document.getElementById("planets-sketch")) {
+            return;
           }
           const canvas = p.createCanvas(800 * sizeFactor, 500 * sizeFactor, p.WEBGL);
           canvas.style("width", "100%");
@@ -108,16 +108,7 @@ const NewPlanetsSketch: React.FC<PlanetsSketchProps> = ({ planetUrls, sizeFactor
             const planetToDraw = drawOrder[i];
             drawCircle(planetToDraw);
           }
-          // if (newPlanet === 8 && currPlanet === 0) {
-          //   if (isCloseTo(-angles[1], rotation, 0.03)) {
-          //     currPlanet = 8;
-          //     drawOrder = setDrawOrder(numPlanets, currPlanet);
-          //   }
-          //   console.log(rotation);
-          //   // 0
-          //   console.log(angles[newPlanet]);
-          //   // 5.585053606381854
-          // }
+
           if (newPlanet === currPlanet) return;
 
           for (let i = 0; i < numPlanets; i++) {
@@ -128,16 +119,12 @@ const NewPlanetsSketch: React.FC<PlanetsSketchProps> = ({ planetUrls, sizeFactor
           }
           const rotateToAngle = angles[newPlanet];
 
-          // if (currPlanet === 0 && newPlanet === 8) {
-          //   rotation -= 0.02;
-          // } else {
           if (rotateToAngle > rotation) {
             rotation += 0.02;
           }
           if (rotateToAngle < rotation) {
             rotation -= 0.02;
           }
-          // }
 
           if (rotation >= Math.PI * 2) {
             rotation = 0;
@@ -158,11 +145,6 @@ const NewPlanetsSketch: React.FC<PlanetsSketchProps> = ({ planetUrls, sizeFactor
           } else if (p.mouseX > xMiddle) {
             newPlanet = (currPlanet + 1) % numPlanets;
           }
-          console.log("curr planet", currPlanet);
-          console.log("new planet", newPlanet);
-
-          console.log("curr rotation", rotation);
-          console.log("new rotation", newPlanet && angles[newPlanet]);
         };
       };
 
@@ -176,10 +158,7 @@ const NewPlanetsSketch: React.FC<PlanetsSketchProps> = ({ planetUrls, sizeFactor
     });
   }, [planetUrls, sizeFactor]);
 
-  return <div>
-    <h1>{sizeFactor}</h1>
-    <div ref={sketchRef} />
-  </div>;
+  return <div ref={sketchRef} />;
 };
 
 export default NewPlanetsSketch;
