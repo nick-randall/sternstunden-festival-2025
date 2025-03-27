@@ -1,12 +1,14 @@
 "use client";
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useRef } from "react";
 import p5 from "p5";
 
-const NewPlanetsSketch: React.FC = () => {
+interface PlanetsSketchProps {
+  planetUrls: string[];
+  sizeFactor: number;
+}
+
+const NewPlanetsSketch: React.FC<PlanetsSketchProps> = ({ planetUrls, sizeFactor }) => {
   const sketchRef = useRef<HTMLDivElement>(null);
-  const rootUrl = "https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/";
-  const planets = useMemo(() => ["merkur", "venus", "erde", "mars", "jupiter", "saturn", "uranus", "neptun", "pluto"], []);
-  const planetUrls = useMemo(() => planets.map(planet => `${rootUrl}${planet}.png`), [planets]);
 
   const isCloseTo = (a: number, b: number, tolerance: number) => {
     return Math.abs(a - b) < tolerance;
@@ -41,7 +43,7 @@ const NewPlanetsSketch: React.FC = () => {
       const numPlanets = planetUrls.length;
       let rotation = 0;
       const planetImgs: p5.Image[] = [];
-      const planetSize = 120;
+      const planetSize = 120 * sizeFactor;
       let currPlanet = 0;
       let newPlanet = 0;
 
@@ -50,8 +52,8 @@ const NewPlanetsSketch: React.FC = () => {
 
       let drawOrder = setDrawOrder(numPlanets, currPlanet);
 
-      const radiusX = 520; // X-axis stretch
-      const radiusY = 190; // Y-axis stretch
+      const radiusX = sizeFactor < 1 ? 1220* sizeFactor : 520 * sizeFactor; // X-axis stretch
+      const radiusY = sizeFactor < 1 ? 240 * sizeFactor : 190 * sizeFactor; // Y-axis stretch
 
       const sketch = (p: p5) => {
         p.preload = () => {
@@ -63,9 +65,13 @@ const NewPlanetsSketch: React.FC = () => {
         };
 
         p.setup = () => {
-          const canvas = p.createCanvas(800, 500, p.WEBGL);
+          if(document.getElementById("planets-sketch")) {
+            return
+          }
+          const canvas = p.createCanvas(800 * sizeFactor, 500 * sizeFactor, p.WEBGL);
           canvas.style("width", "100%");
           canvas.style("height", "auto");
+          canvas.id("planets-sketch");
           drawOrder = setDrawOrder(numPlanets, currPlanet);
           p.setAttributes("alpha", true); // Enables transparency
           const g = p as unknown as { _renderer: { GL: WebGLRenderingContext } };
@@ -125,12 +131,12 @@ const NewPlanetsSketch: React.FC = () => {
           // if (currPlanet === 0 && newPlanet === 8) {
           //   rotation -= 0.02;
           // } else {
-            if (rotateToAngle > rotation) {
-              rotation += 0.02;
-            }
-            if (rotateToAngle < rotation) {
-              rotation -= 0.02;
-            }
+          if (rotateToAngle > rotation) {
+            rotation += 0.02;
+          }
+          if (rotateToAngle < rotation) {
+            rotation -= 0.02;
+          }
           // }
 
           if (rotation >= Math.PI * 2) {
@@ -140,8 +146,8 @@ const NewPlanetsSketch: React.FC = () => {
 
         p.mouseClicked = () => {
           const xMiddle = p.width / 2;
-          const centrePlanetLeft = xMiddle - planetSize - 20;
-          const centrePlanetRight = xMiddle + planetSize + 20;
+          const centrePlanetLeft = xMiddle - planetSize - 20 * sizeFactor;
+          const centrePlanetRight = xMiddle + planetSize + 20 * sizeFactor;
           console.log("clicked", p.mouseX, centrePlanetLeft, centrePlanetRight);
           if (p.mouseX > centrePlanetLeft && p.mouseX < centrePlanetRight) {
             console.log("clicked on centre planet");
@@ -168,9 +174,12 @@ const NewPlanetsSketch: React.FC = () => {
         myP5.remove();
       };
     });
-  }, [planetUrls]);
+  }, [planetUrls, sizeFactor]);
 
-  return <div ref={sketchRef} />;
+  return <div>
+    <h1>{sizeFactor}</h1>
+    <div ref={sketchRef} />
+  </div>;
 };
 
 export default NewPlanetsSketch;
