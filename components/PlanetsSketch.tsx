@@ -1,28 +1,57 @@
 "use client";
-
 import { useEffect, useMemo, useRef } from "react";
 import p5 from "p5";
 
-const Planets: React.FC = () => {
+const NewPlanetsSketch: React.FC = () => {
   const sketchRef = useRef<HTMLDivElement>(null);
   const rootUrl = "https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/";
   const planets = useMemo(() => ["merkur", "venus", "erde", "mars", "jupiter", "saturn", "uranus", "neptun", "pluto"], []);
   const planetUrls = useMemo(() => planets.map(planet => `${rootUrl}${planet}.png`), [planets]);
 
+  const isCloseTo = (a: number, b: number, tolerance: number) => {
+    return Math.abs(a - b) < tolerance;
+  };
+
+  // Set draw order so the images closest to the front are drawn LAST
+  const setDrawOrder = (numPlanets: number, currPlanet: number) => {
+    const order = Array.from({ length: numPlanets }, (_, i) => i);
+    const oppositePlanet = (currPlanet + 5) % numPlanets;
+    // Move opposite planet index to the middle [5, 6, 7, 8, 0, 1, 2, 3, 4]
+    const before = order.slice(0, oppositePlanet);
+    const rest = order.slice(oppositePlanet);
+    const middleAtStart = [...rest, ...before];
+
+    // Move alternately add start and end of list to the
+    // start of the new list ==> 5 (start), then 4 (last),
+    // then 6 (first) etc
+    const rearranged: number[] = [];
+    for (let i = 0; i < Math.floor(numPlanets / 2); i++) {
+      const top = middleAtStart[i];
+      rearranged.push(top);
+      const tail = middleAtStart[numPlanets - i - 1];
+      rearranged.push(tail);
+    }
+    rearranged.push(middleAtStart[Math.floor(numPlanets / 2)]);
+
+    return rearranged;
+  };
+
   useEffect(() => {
     import("p5").then(p5 => {
       const numPlanets = planetUrls.length;
       let rotation = 0;
-      let rotateTo: number | undefined = undefined;
       const planetImgs: p5.Image[] = [];
       const planetSize = 120;
       let currPlanet = 0;
+      let newPlanet = 0;
+
       const angleInterval = (Math.PI * 2) / numPlanets;
       const angles = Array.from({ length: numPlanets }, (_, i) => angleInterval * i);
 
+      let drawOrder = setDrawOrder(numPlanets, currPlanet);
+
       const radiusX = 520; // X-axis stretch
       const radiusY = 190; // Y-axis stretch
-      let frontmostThreeIndexes = [0, 1, numPlanets - 1];
 
       const sketch = (p: p5) => {
         p.preload = () => {
@@ -32,40 +61,18 @@ const Planets: React.FC = () => {
             });
           }
         };
+
         p.setup = () => {
-          p.createCanvas(800, 500, p.WEBGL);
+          const canvas = p.createCanvas(800, 500, p.WEBGL);
+          canvas.style("width", "100%");
+          canvas.style("height", "auto");
+          drawOrder = setDrawOrder(numPlanets, currPlanet);
           p.setAttributes("alpha", true); // Enables transparency
           const g = p as unknown as { _renderer: { GL: WebGLRenderingContext } };
           const gl = g._renderer.GL; // ✅ Correct way to access WebGL in p5.js
           gl.enable(gl.BLEND);
           gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
           gl.disable(gl.DEPTH_TEST); // Fix transparency overlap issues
-        };
-
-        const getFrontMost = () => {
-          let frontMostIndex = 0;
-          for (let i = 0; i < numPlanets; i++) {
-            const rads = (Math.PI * 2) / numPlanets;
-            const angle = rads * i;
-            if (Math.abs(rotation) - Math.abs(angle) < 0.1) {
-              frontMostIndex = i;
-              console.log("frontmost", frontMostIndex);
-              break;
-            }
-          }
-          let left = frontMostIndex - 1;
-          if (left < 0) {
-            left = numPlanets - 1;
-          }
-
-          let twoLeft = frontMostIndex - 2;
-          if (twoLeft < 0) {
-            twoLeft = numPlanets - 2;
-          }
-          const twoRight = (frontMostIndex + 2) % numPlanets;
-          const right = (frontMostIndex + 1) % numPlanets;
-          frontmostThreeIndexes = [twoLeft, twoRight, right, left, frontMostIndex];
-          console.log("frontmost three", frontmostThreeIndexes);
         };
 
         const drawCircle = (index: number) => {
@@ -80,9 +87,6 @@ const Planets: React.FC = () => {
           p.translate(x, y, 0);
           p.rotateX(-p.PI / 2 - 0.06);
 
-          // p.texture(planetImgs[index]);
-          // p.noStroke();
-          // p.circle(0, 0, planetSize);
           p.tint(255, 255);
           p.image(planetImgs[index], -planetSize / 2, -planetSize / 2, planetSize, planetSize);
           p.pop();
@@ -92,65 +96,67 @@ const Planets: React.FC = () => {
           if (planetImgs.length < 8) return;
           p.clear();
 
-          p.rotateX(p.PI / 2 - 0.06);
+          p.rotateX(p.PI / 2 - 0.06); // Tilt entire scene
 
           for (let i = 0; i < numPlanets; i++) {
-            if (frontmostThreeIndexes.includes(i)) {
-              continue;
-            }
-            drawCircle(i);
+            const planetToDraw = drawOrder[i];
+            drawCircle(planetToDraw);
           }
-          for (let i = 0; i < frontmostThreeIndexes.length; i++) {
-            drawCircle(frontmostThreeIndexes[i]);
-          }
+          // if (newPlanet === 8 && currPlanet === 0) {
+          //   if (isCloseTo(-angles[1], rotation, 0.03)) {
+          //     currPlanet = 8;
+          //     drawOrder = setDrawOrder(numPlanets, currPlanet);
+          //   }
+          //   console.log(rotation);
+          //   // 0
+          //   console.log(angles[newPlanet]);
+          //   // 5.585053606381854
+          // }
+          if (newPlanet === currPlanet) return;
 
-          if (rotation > Math.PI * 2) {
-            rotation = 0;
+          for (let i = 0; i < numPlanets; i++) {
+            if (isCloseTo(angles[i], rotation, 0.03)) {
+              currPlanet = i;
+              drawOrder = setDrawOrder(numPlanets, currPlanet);
+            }
           }
-          if (rotateTo && Math.abs(rotateTo) - Math.abs(rotation) < 0.01) {
-            // console.log("rotated to", rotateTo);
-            rotateTo = undefined;
-            getFrontMost();
-          }
-          if (rotateTo && rotateTo < rotation) {
-            rotation -= 0.02;
-          } else if (rotateTo && rotateTo > rotation) {
-            rotation += 0.02;
-          }
-          if (rotation && rotation >= Math.PI * 2) {
+          const rotateToAngle = angles[newPlanet];
+
+          // if (currPlanet === 0 && newPlanet === 8) {
+          //   rotation -= 0.02;
+          // } else {
+            if (rotateToAngle > rotation) {
+              rotation += 0.02;
+            }
+            if (rotateToAngle < rotation) {
+              rotation -= 0.02;
+            }
+          // }
+
+          if (rotation >= Math.PI * 2) {
             rotation = 0;
           }
         };
 
         p.mouseClicked = () => {
-          // if (rotateTo !== undefined) {
-          //   console.log("already rotating");
-          //   return;
-          // }
           const xMiddle = p.width / 2;
           const centrePlanetLeft = xMiddle - planetSize - 20;
           const centrePlanetRight = xMiddle + planetSize + 20;
-          let newRotation = undefined;
           console.log("clicked", p.mouseX, centrePlanetLeft, centrePlanetRight);
           if (p.mouseX > centrePlanetLeft && p.mouseX < centrePlanetRight) {
             console.log("clicked on centre planet");
             return;
           }
           if (p.mouseX <= xMiddle) {
-            currPlanet = (currPlanet - 1 + numPlanets) % numPlanets;
+            newPlanet = (currPlanet - 1 + numPlanets) % numPlanets;
           } else if (p.mouseX > xMiddle) {
-            currPlanet = (currPlanet + 1) % numPlanets;
+            newPlanet = (currPlanet + 1) % numPlanets;
           }
-          if (currPlanet === 0) {
-            newRotation = Math.PI * 2;
-          } else newRotation = angles[currPlanet];
-          // if (newRotation && Math.abs(newRotation) >= Math.PI * 2) {
-          //   newRotation = 0;
-          // }
-          console.log("curr rotation", rotation);
-          console.log("new rotation", newRotation);
           console.log("curr planet", currPlanet);
-          rotateTo = newRotation;
+          console.log("new planet", newPlanet);
+
+          console.log("curr rotation", rotation);
+          console.log("new rotation", newPlanet && angles[newPlanet]);
         };
       };
 
@@ -167,4 +173,4 @@ const Planets: React.FC = () => {
   return <div ref={sketchRef} />;
 };
 
-export default Planets;
+export default NewPlanetsSketch;
