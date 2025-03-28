@@ -18,8 +18,6 @@ const PlanetsPage: React.FC = () => {
   if (screenWidth < 768) {
     sizeFactor = 0.3;
   }
-  console.log("screen width", screenWidth);
-  console.log("size factor", sizeFactor);
   return <PlanetsSketch planets={planets} sizeFactor={sizeFactor} rootUrl={rootUrl} />;
 };
 

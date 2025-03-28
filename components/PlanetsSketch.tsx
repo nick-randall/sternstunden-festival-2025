@@ -1,13 +1,16 @@
 "use client";
 import { useEffect, useRef } from "react";
 import p5 from "p5";
+import { useRouter } from "next/navigation";
 
 interface PlanetsSketchProps {
-  planetUrls: string[];
+  rootUrl: string;
+  planets: string[];
   sizeFactor: number;
 }
 
-const NewPlanetsSketch: React.FC<PlanetsSketchProps> = ({ planetUrls, sizeFactor }) => {
+const PlanetsSketch: React.FC<PlanetsSketchProps> = ({rootUrl, planets, sizeFactor }) => {
+  const router = useRouter();
   const sketchRef = useRef<HTMLDivElement>(null);
 
   const isCloseTo = (a: number, b: number, tolerance: number) => {
@@ -15,9 +18,9 @@ const NewPlanetsSketch: React.FC<PlanetsSketchProps> = ({ planetUrls, sizeFactor
   };
 
   // Set draw order so the images closest to the front are drawn LAST
-  const setDrawOrder = (numPlanets: number, currPlanet: number) => {
+  const setDrawOrder = (numPlanets: number, currPlanetIndex: number) => {
     const order = Array.from({ length: numPlanets }, (_, i) => i);
-    const oppositePlanet = (currPlanet + 5) % numPlanets;
+    const oppositePlanet = (currPlanetIndex + 5) % numPlanets;
     // Move opposite planet index to the middle [5, 6, 7, 8, 0, 1, 2, 3, 4]
     const before = order.slice(0, oppositePlanet);
     const rest = order.slice(oppositePlanet);
@@ -40,17 +43,17 @@ const NewPlanetsSketch: React.FC<PlanetsSketchProps> = ({ planetUrls, sizeFactor
 
   useEffect(() => {
     import("p5").then(p5 => {
-      const numPlanets = planetUrls.length;
+      const numPlanets = planets.length;
       let rotation = 0;
       const planetImgs: p5.Image[] = [];
       const planetSize = 120 * sizeFactor;
-      let currPlanet = 0;
+      let currPlanetIndex = 0;
       let newPlanet = 0;
 
       const angleInterval = (Math.PI * 2) / numPlanets;
       const angles = Array.from({ length: numPlanets }, (_, i) => angleInterval * i);
 
-      let drawOrder = setDrawOrder(numPlanets, currPlanet);
+      let drawOrder = setDrawOrder(numPlanets, currPlanetIndex);
 
       const radiusX = sizeFactor < 1 ? 1220 * sizeFactor : 520 * sizeFactor; // X-axis stretch
       const radiusY = sizeFactor < 1 ? 240 * sizeFactor : 190 * sizeFactor; // Y-axis stretch
@@ -58,7 +61,7 @@ const NewPlanetsSketch: React.FC<PlanetsSketchProps> = ({ planetUrls, sizeFactor
       const sketch = (p: p5) => {
         p.preload = () => {
           for (let i = 0; i < numPlanets; i++) {
-            p.loadImage(planetUrls[i], img => {
+            p.loadImage(`${rootUrl}${planets[i]}.png`, img => {
               planetImgs.push(img);
             });
           }
@@ -72,7 +75,7 @@ const NewPlanetsSketch: React.FC<PlanetsSketchProps> = ({ planetUrls, sizeFactor
           canvas.style("width", "100%");
           canvas.style("height", "auto");
           canvas.id("planets-sketch");
-          drawOrder = setDrawOrder(numPlanets, currPlanet);
+          drawOrder = setDrawOrder(numPlanets, currPlanetIndex);
           p.setAttributes("alpha", true); // Enables transparency
           const g = p as unknown as { _renderer: { GL: WebGLRenderingContext } };
           const gl = g._renderer.GL; // ✅ Correct way to access WebGL in p5.js
@@ -109,12 +112,12 @@ const NewPlanetsSketch: React.FC<PlanetsSketchProps> = ({ planetUrls, sizeFactor
             drawCircle(planetToDraw);
           }
 
-          if (newPlanet === currPlanet) return;
+          if (newPlanet === currPlanetIndex) return;
 
           for (let i = 0; i < numPlanets; i++) {
             if (isCloseTo(angles[i], rotation, 0.03)) {
-              currPlanet = i;
-              drawOrder = setDrawOrder(numPlanets, currPlanet);
+              currPlanetIndex = i;
+              drawOrder = setDrawOrder(numPlanets, currPlanetIndex);
             }
           }
           const rotateToAngle = angles[newPlanet];
@@ -135,15 +138,15 @@ const NewPlanetsSketch: React.FC<PlanetsSketchProps> = ({ planetUrls, sizeFactor
           const xMiddle = p.width / 2;
           const centrePlanetLeft = xMiddle - planetSize - 20 * sizeFactor;
           const centrePlanetRight = xMiddle + planetSize + 20 * sizeFactor;
-          console.log("clicked", p.mouseX, centrePlanetLeft, centrePlanetRight);
           if (p.mouseX > centrePlanetLeft && p.mouseX < centrePlanetRight) {
             console.log("clicked on centre planet");
+            router.push(`/planeten/${planets[currPlanetIndex]}`);
             return;
           }
           if (p.mouseX <= xMiddle) {
-            newPlanet = (currPlanet - 1 + numPlanets) % numPlanets;
+            newPlanet = (currPlanetIndex - 1 + numPlanets) % numPlanets;
           } else if (p.mouseX > xMiddle) {
-            newPlanet = (currPlanet + 1) % numPlanets;
+            newPlanet = (currPlanetIndex + 1) % numPlanets;
           }
         };
       };
@@ -156,9 +159,9 @@ const NewPlanetsSketch: React.FC<PlanetsSketchProps> = ({ planetUrls, sizeFactor
         myP5.remove();
       };
     });
-  }, [planetUrls, sizeFactor]);
+  }, [planets, rootUrl, router, sizeFactor]);
 
   return <div ref={sketchRef} />;
 };
 
-export default NewPlanetsSketch;
+export default PlanetsSketch;
