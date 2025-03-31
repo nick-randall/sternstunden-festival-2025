@@ -8,9 +8,10 @@ interface PlanetsSketchProps {
   planets: string[];
   planetImageMap: { [key: string]: p5.Image | undefined };
   sizeFactor: number;
+  setCurrPlanetIndex: (index: number) => void
 }
 
-const PlanetsSketch: React.FC<PlanetsSketchProps> = ({rootUrl, planets, sizeFactor, planetImageMap }) => {
+const PlanetsSketch: React.FC<PlanetsSketchProps> = ({rootUrl, planets, sizeFactor, planetImageMap, setCurrPlanetIndex }) => {
   const router = useRouter();
   const sketchRef = useRef<HTMLDivElement>(null);
 
@@ -121,6 +122,7 @@ const PlanetsSketch: React.FC<PlanetsSketchProps> = ({rootUrl, planets, sizeFact
             if (isCloseTo(angles[i], rotation, 0.03)) {
               currPlanetIndex = i;
               drawOrder = setDrawOrder(numPlanets, currPlanetIndex);
+              setCurrPlanetIndex(i)
             }
           }
           const rotateToAngle = angles[newPlanet];
@@ -139,6 +141,10 @@ const PlanetsSketch: React.FC<PlanetsSketchProps> = ({rootUrl, planets, sizeFact
 
         p.mouseClicked = () => {
           const xMiddle = p.width / 2;
+          const yMiddle =   p.height / 2;
+          const planetsTop = yMiddle - planetSize 
+          const planetsBottom = yMiddle + planetSize;
+          if(p.mouseY > planetsBottom || p.mouseY < planetsTop) return;
           const centrePlanetLeft = xMiddle - planetSize - 20 * sizeFactor;
           const centrePlanetRight = xMiddle + planetSize + 20 * sizeFactor;
           if (p.mouseX > centrePlanetLeft && p.mouseX < centrePlanetRight) {
@@ -162,7 +168,7 @@ const PlanetsSketch: React.FC<PlanetsSketchProps> = ({rootUrl, planets, sizeFact
         myP5.remove();
       };
     });
-  }, [planets, rootUrl, router, sizeFactor]);
+  }, [planetImageMap, planets, rootUrl, router, sizeFactor, setCurrPlanetIndex]);
 
   return <div ref={sketchRef} />;
 };

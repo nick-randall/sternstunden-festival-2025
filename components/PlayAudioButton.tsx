@@ -10,7 +10,8 @@ const PlayAudioButton: React.FC<PlayAudioButtonProps> = ({ audioUrl }) => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [playing, setPlaying] = useState(false)
 
-  const handleClick = () => {
+  const handleClick = (ev: React.MouseEvent) => {
+    ev.stopPropagation()
     if (audioRef.current) {
       if (playing) {
         audioRef.current.pause();

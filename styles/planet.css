@@ -15,9 +15,15 @@
   align-items: center;
   width: 100%;
 }
+.planets-page-wrapper h1 {
+  font-size: 50px;
+  font-family: NunitoSans;
+  font-weight: 12pt;
+  text-align: center;
+}
 
 .planets-sketch-wrapper {
-  transform: translateY(-30%);
+  /* transform: translateY(-30%); */
   position: relative;
 }
 
@@ -39,6 +45,7 @@
   gap: 10px;
   flex-basis:100%;
   padding: 5px;
+  z-index: 99;
 }
 
 .audio-player-image {
