@@ -8,3 +8,50 @@
   }
   
 }
+
+.planets-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.planets-sketch-wrapper {
+  transform: translateY(-30%);
+  position: relative;
+}
+
+.planets-sketch-wrapper .child {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.planets-audio-player {
+  background-color: rgba(21,19,43,1);
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  border-radius: 10px;
+  gap: 10px;
+  flex-basis:100%;
+  padding: 5px;
+}
+
+.audio-player-image {
+  height: 100%;
+  width: auto;
+}
+
+.planets-audio-player span {
+  color: white;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

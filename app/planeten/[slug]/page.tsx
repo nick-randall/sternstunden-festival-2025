@@ -1,4 +1,3 @@
-import Flex from "@/components/Flex";
 import "../../../styles/common.css";
 import "../../../styles/planet.css";
 import Image from "next/image";
@@ -24,10 +23,17 @@ const IndividualPlanet: React.FC<IndividualPlanetProps> = async ({ params }) => 
   };
 
   return (
-    <Flex flexDirection="column" alignItems="center" justifyContent="center">
+    <div className="planets-page-wrapper">
       <h1>{titles[slug] || slug}</h1>
 
-      <div style={{ position: "relative", width: "100%", maxWidth: "600px", animation: "gentle-bounce 1.5s ease-in-out infinite", }}>
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          maxWidth: "600px",
+          animation: "gentle-bounce 1.5s ease-in-out infinite",
+        }}
+      >
         <Image
           src={imageUrl}
           alt={slug}
@@ -37,12 +43,13 @@ const IndividualPlanet: React.FC<IndividualPlanetProps> = async ({ params }) => 
             width: "100%", // Make the image take up the full width of its container
             height: "auto", // Maintain the aspect ratio
             maxWidth: "600px", // Optional: Limit the maximum width
-            
           }}
         />
-        <PlayAudioButton audioUrl={`https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/${slug}.mp3`} />
+        <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>
+          <PlayAudioButton audioUrl={`https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/${slug}.mp3`} />
+        </div>
       </div>
-    </Flex>
+    </div>
   );
 };
 
