@@ -15,12 +15,12 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoUrls }) => {
   const pauseScroll = () => {
     const container = containerRef.current;
     if (!container) return;
-    container.style.scrollSnapType = "x mandatory"; 
+    // container.style.scrollSnapType = "x mandatory"; 
     setUserScrolling(true);
     if (timer.current) clearTimeout(timer.current);
     timer.current = setTimeout(() => {
       setUserScrolling(false);
-      container.style.scrollSnapType = "none";
+      // container.style.scrollSnapType = "none";
 
     }, 3000);
   };

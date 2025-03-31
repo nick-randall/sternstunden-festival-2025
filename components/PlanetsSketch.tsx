@@ -57,9 +57,12 @@ const PlanetsSketch: React.FC<PlanetsSketchProps> = ({rootUrl, planets, sizeFact
 
       let drawOrder = setDrawOrder(numPlanets, currPlanetIndex);
 
-      const radiusX = sizeFactor < 1 ? 1220 * sizeFactor : 520 * sizeFactor; // X-axis stretch
-      const radiusY = sizeFactor < 1 ? 240 * sizeFactor : 190 * sizeFactor; // Y-axis stretch
-
+      let radiusX = sizeFactor < 1 ? 800 * sizeFactor : 520 * sizeFactor; // X-axis stretch
+      let radiusY = sizeFactor < 1 ? 240 * sizeFactor : 190 * sizeFactor; // Y-axis stretch
+      if (sizeFactor === 0.5) {
+        radiusX = 500 * sizeFactor;
+        radiusY = 200 * sizeFactor;
+      } 
       const sketch = (p: p5) => {
         p.preload = () => {
           for (let i = 0; i < numPlanets; i++) {
@@ -70,6 +73,7 @@ const PlanetsSketch: React.FC<PlanetsSketchProps> = ({rootUrl, planets, sizeFact
         };
 
         p.setup = () => {
+          console.log("setup");
           if (document.getElementById("planets-sketch")) {
             return;
           }

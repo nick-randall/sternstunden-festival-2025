@@ -32,7 +32,7 @@ const PlanetsPage: React.FC = () => {
     <div className="planets-page-wrapper">
       <AudioPlayer />
       <audio src="https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/hoerspielversion.mp3"></audio>
-      <div className="planets-sketch-wrapper" style={{transform: sizeFactor === 1 ? "translateY(-20%)": "" }}>
+      <div className="planets-sketch-wrapper" style={{transform:  `translateY(-${20 * sizeFactor}%)` }}>
         <PlanetsSketch
           planets={planets}
           planetImageMap={planetImageMap}
