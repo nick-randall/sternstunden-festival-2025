@@ -87,7 +87,7 @@
   overflow-x: scroll;
 
   flex-basis: 60%;
-  scroll-snap-type: x;
+  /* scroll-snap-type: x; */
 
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -101,4 +101,5 @@
   max-height: 400px;
   width: auto;
   padding-right: 10px;
+  scroll-snap-align: start;
 }

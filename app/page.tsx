@@ -2,10 +2,10 @@ import React from "react";
 import "../styles/home.css";
 import "../styles/common.css";
 import Spacer from "../components/Spacer";
-import MobilePhotoSlider from "./MobilePhotoSlider";
+import MobilePhotoSlider from "./PhotoSlider";
 
-const rootUrl = "https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/Alte+Bilder+2024/";
-const initial = ["ssf24m43-sm", "ssf24m115-sm", "ssf24m112-sm", "ssf24m113-sm", "ssf24m44-sm", "ssf24m108-sm"];
+const rootUrl = "https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/";
+const initial = ["ssf24m43", "ssf24m115", "ssf24m112", "ssf24m113", "ssf24m44", "ssf24m108"];
 
 export default function Page() {
   const photoUrls = [];
@@ -15,11 +15,11 @@ export default function Page() {
 
   for (let i = 1; i < 115; i++) {
     if (i === 80) continue;
-    photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/Alte+Bilder+2024/ssf24m${i}-sm.jpg`);
+    photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/ssf24m${i}.jpg`);
   }
   for (let i = 1; i < 87; i++) {
     if (i === 66) continue;
-    photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/Alte+Bilder+2024/ssf24${i}-sm.jpg`);
+    photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/ssf24${i}.jpg`);
   }
   return (
     <>
