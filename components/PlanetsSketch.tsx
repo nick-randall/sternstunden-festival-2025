@@ -6,10 +6,11 @@ import { useRouter } from "next/navigation";
 interface PlanetsSketchProps {
   rootUrl: string;
   planets: string[];
+  planetImageMap: { [key: string]: p5.Image | undefined };
   sizeFactor: number;
 }
 
-const PlanetsSketch: React.FC<PlanetsSketchProps> = ({rootUrl, planets, sizeFactor }) => {
+const PlanetsSketch: React.FC<PlanetsSketchProps> = ({rootUrl, planets, sizeFactor, planetImageMap }) => {
   const router = useRouter();
   const sketchRef = useRef<HTMLDivElement>(null);
 
@@ -45,7 +46,7 @@ const PlanetsSketch: React.FC<PlanetsSketchProps> = ({rootUrl, planets, sizeFact
     import("p5").then(p5 => {
       const numPlanets = planets.length;
       let rotation = 0;
-      const planetImgs: p5.Image[] = [];
+      // const planetImgs: p5.Image[] = [];
       const planetSize = 120 * sizeFactor;
       let currPlanetIndex = 0;
       let newPlanet = 0;
@@ -62,7 +63,7 @@ const PlanetsSketch: React.FC<PlanetsSketchProps> = ({rootUrl, planets, sizeFact
         p.preload = () => {
           for (let i = 0; i < numPlanets; i++) {
             p.loadImage(`${rootUrl}${planets[i]}-small.png`, img => {
-              planetImgs.push(img);
+              planetImageMap[planets[i]] = img;
             });
           }
         };
@@ -97,12 +98,14 @@ const PlanetsSketch: React.FC<PlanetsSketchProps> = ({rootUrl, planets, sizeFact
           p.rotateX(-p.PI / 2 - 0.06);
 
           p.tint(255, 255);
-          p.image(planetImgs[index], -planetSize / 2, -planetSize / 2, planetSize, planetSize);
+          const planetImage = planetImageMap[planets[index]];
+          if (!planetImage) return;
+          p.image(planetImage, -planetSize / 2, -planetSize / 2, planetSize, planetSize);
           p.pop();
         };
 
         p.draw = () => {
-          if (planetImgs.length < 8) return;
+          // if (planetImgs.length < 8) return;
           p.clear();
 
           p.rotateX(p.PI / 2 - 0.06); // Tilt entire scene

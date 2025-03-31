@@ -37,7 +37,7 @@ const IndividualPlanet: React.FC<IndividualPlanetProps> = async ({ params }) => 
         }}
       />
 
-      <audio src={`https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/${slug}.mp3`} autoPlay={true}></audio>
+      <audio src={`https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/${slug}.mp3`} ></audio>
       <script>
         {`
           // clear any previous audio
