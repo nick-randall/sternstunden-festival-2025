@@ -1,6 +1,8 @@
 import Flex from "@/components/Flex";
 import "../../../styles/common.css";
+import "../../../styles/planet.css";
 import Image from "next/image";
+import PlayAudioButton from "@/components/PlayAudioButton";
 
 interface IndividualPlanetProps {
   params: Promise<{ slug: string }>;
@@ -25,36 +27,21 @@ const IndividualPlanet: React.FC<IndividualPlanetProps> = async ({ params }) => 
     <Flex flexDirection="column" alignItems="center" justifyContent="center">
       <h1>{titles[slug] || slug}</h1>
 
-      <Image
-        src={imageUrl}
-        alt={slug}
-        width={860}
-        height={770}
-        style={{
-          width: "100%", // Make the image take up the full width of its container
-          height: "auto", // Maintain the aspect ratio
-          maxWidth: "600px", // Optional: Limit the maximum width
-        }}
-      />
-
-      <audio src={`https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/${slug}.mp3`} ></audio>
-      <script>
-        {`
-          // clear any previous audio
-          const previousAudio = document.querySelector("audio");
-          if (previousAudio) {
-            previousAudio.pause();
-            previousAudio.src = "";
-          }
-          // play the new audio
-          const audio = document.querySelector("audio");
-          console.log(audio);
-          if (audio) {
-            audio.src = \`https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/${slug}.mp3\`;
-            audio.play();
-          }
-        `}
-      </script>
+      <div style={{ position: "relative", width: "100%", maxWidth: "600px", animation: "gentle-bounce 1.5s ease-in-out infinite", }}>
+        <Image
+          src={imageUrl}
+          alt={slug}
+          width={860}
+          height={770}
+          style={{
+            width: "100%", // Make the image take up the full width of its container
+            height: "auto", // Maintain the aspect ratio
+            maxWidth: "600px", // Optional: Limit the maximum width
+            
+          }}
+        />
+        <PlayAudioButton audioUrl={`https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/${slug}.mp3`} />
+      </div>
     </Flex>
   );
 };
