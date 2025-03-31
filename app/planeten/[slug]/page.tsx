@@ -1,3 +1,4 @@
+import Flex from "@/components/Flex";
 import "../../../styles/common.css";
 import Image from "next/image";
 
@@ -7,17 +8,54 @@ interface IndividualPlanetProps {
 
 const IndividualPlanet: React.FC<IndividualPlanetProps> = async ({ params }) => {
   const { slug } = await params;
-  const imageUrl = `https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/${slug}.png`;
+  const imageUrl = `https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/${slug}.avif`;
+  const titles: { [key: string]: string } = {
+    merkur: "Merles Märchen von Merkur",
+    venus: "Vivi würdigt die Venus",
+    erde: "Erde ohne Erklärung",
+    mars: "Marv malt den Mars",
+    jupiter: "Julia jubelt mit Jupiter",
+    saturn: "Sara sinniert über Saturn",
+    uranus: "Ursula untersucht den Uranus",
+    neptun: "Nils News vom Neptun",
+    pluto: "Kein Plan von Pluto",
+  };
 
   return (
-    <div style={{ maxHeight: "100%", width: "auto", position: "relative" }}>
-      <Image src={imageUrl} alt={slug} height="400" width="400" />
-      <button id="play-icon" style={{ position: "absolute", top: "50%", left: "50%" }}>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 57" className="twoColors"><g fill="none"><path fill="#2B328C" d="M28.5 0C12.76 0 0 12.76 0 28.5S12.76 57 28.5 57 57 44.24 57 28.5 44.24 0 28.5 0"></path><path fill="#999DC8" d="M21 38V19l17 9.5z"></path></g></svg>
+    <Flex flexDirection="column" alignItems="center" justifyContent="center">
+      <h1>{titles[slug] || slug}</h1>
 
-      </button>
-      <audio src=""></audio>
-    </div>
+      <Image
+        src={imageUrl}
+        alt={slug}
+        width={860}
+        height={770}
+        style={{
+          width: "100%", // Make the image take up the full width of its container
+          height: "auto", // Maintain the aspect ratio
+          maxWidth: "600px", // Optional: Limit the maximum width
+        }}
+      />
+
+      <audio src={`https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/${slug}.mp3`} autoPlay={true}></audio>
+      <script>
+        {`
+          // clear any previous audio
+          const previousAudio = document.querySelector("audio");
+          if (previousAudio) {
+            previousAudio.pause();
+            previousAudio.src = "";
+          }
+          // play the new audio
+          const audio = document.querySelector("audio");
+          console.log(audio);
+          if (audio) {
+            audio.src = \`https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/${slug}.mp3\`;
+            audio.play();
+          }
+        `}
+      </script>
+    </Flex>
   );
 };
 

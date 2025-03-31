@@ -61,7 +61,7 @@ const PlanetsSketch: React.FC<PlanetsSketchProps> = ({rootUrl, planets, sizeFact
       const sketch = (p: p5) => {
         p.preload = () => {
           for (let i = 0; i < numPlanets; i++) {
-            p.loadImage(`${rootUrl}${planets[i]}.png`, img => {
+            p.loadImage(`${rootUrl}${planets[i]}-small.png`, img => {
               planetImgs.push(img);
             });
           }
