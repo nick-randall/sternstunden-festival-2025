@@ -15,13 +15,12 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoUrls }) => {
   const pauseScroll = () => {
     const container = containerRef.current;
     if (!container) return;
-    // container.style.scrollSnapType = "x mandatory"; 
+    // container.style.scrollSnapType = "x mandatory";
     setUserScrolling(true);
     if (timer.current) clearTimeout(timer.current);
     timer.current = setTimeout(() => {
       setUserScrolling(false);
       // container.style.scrollSnapType = "none";
-
     }, 3000);
   };
 
@@ -78,10 +77,7 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoUrls }) => {
       </div>
       <div ref={containerRef} key="mobile-photo-slider" className="photo-slider" onWheel={pauseScroll} onTouchStart={pauseScroll}>
         {photoUrls.map((url, index) => (
-          <>
-            <Image height="400" width="400" className="photo" key={index + "image"} src={url} alt="Foto Sternstunde 2025" />
-            <div key={index + "spacer"} className="img-spacer"></div>
-          </>
+          <Image height="400" width="400" key={index + "image"} src={url} alt="Foto Sternstunde 2025" priority={index < 4} />
         ))}
       </div>
     </>

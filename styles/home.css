@@ -97,7 +97,7 @@
   display: none;
 }
 
-.photo-slider .photo {
+.photo-slider img {
   max-height: 400px;
   width: auto;
   padding-right: 10px;
