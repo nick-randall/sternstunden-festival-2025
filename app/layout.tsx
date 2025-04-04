@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/background.css";
+import "../styles/layout.css";
 import Spacer from "@/components/Spacer";
 import Image from "next/image";
 import Flex from "@/components/Flex";
@@ -10,6 +10,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Sternstunden Festival 2025</title>
+        {/* Media queries don't seem to work currently on some mobile devices, as
+                a workaround I've put them here in the page layout style tag*/}
+
         <style>
           {`
             @media screen and (max-width: 768px) {
@@ -69,12 +72,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               .arrow {
                 display: none;  
               }
-                
+
               .footer-section .container {
                 font-size: 0.8em;
-              
               }
-            }
+              .sponsor-logo-wrap-section {
+                flex-wrap: wrap;
+              }
+              .sponsor-logo-row {
+                padding-left: 20px;
+                padding-right: 20px;
+              }
             @media screen and (min-width: 1580px) {
                 .centered-wrapper { 
                   width: auto;
@@ -87,7 +95,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="bg"></div>
         <div className="outer-wrapper">
           <div className="page-wrapper">
-            <img className="header-logo" src="logo-with-dates.png" alt="Sternstunden Festival Logo" />
+            <Spacer height={32} />
+            <Image className="header-logo" src="/logo-with-dates.png" alt="Sternstunden Festival Logo" width="827" height="434" />
             <Spacer height={32} />
             {children}
           </div>
@@ -109,32 +118,34 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="sponsor-logo-wrap-section">
               <div className="sponsor-logo-row">
                 <div className="sponsor-logo-container">
-                  <Image src="/sponsors/excellenzcluster.avif" alt="Excellenzcluster" width="400" height="78" className="sponsor-logo" />
+                  <a href="https://www.uni-hamburg.de/">
+                    <Image src="/sponsors/uni-hamburg.png" alt="Uni Hamburg Sponsor" width="375" height="123" className="sponsor-logo" />
+                  </a>
                 </div>
-                <div className="sponsor-logo-container">
-                  <Image
-                    src="/sponsors/bucerius.avif"
-                    alt="Bucerius"
-                    height="136"
-                    width="296"
-                    style={{ backgroundColor: "rgb(208, 177, 213)" }}
-                    className="sponsor-logo"
-                  />
-                </div>
-              </div>
-              <div className="sponsor-logo-row">
+
                 <div className="sponsor-logo-container">
                   <a href="https://www.unimusik.uni-hamburg.de/ueber-unimusik/foerderverein-unimusik.html">
                     <Image src="/sponsors/unimusik-foerderverein.png" alt="Unimusik Förderverein" height="155" width="336" className="sponsor-logo" />
                   </a>
                 </div>
+              </div>
+
+              <div className="sponsor-logo-row">
                 <div className="sponsor-logo-container">
-                  <a href="https://www.uni-hamburg.de/">
-                    <Image src="/sponsors/uni-hamburg.png" alt="Uni Hamburg Sponsor" width="375" height="123" className="sponsor-logo" />
-                  </a>
+                  <Image src="/sponsors/zeit-stiftung-bucerius.png" alt="Zeit Stiftung Bucerius" height="136" width="296" className="sponsor-logo" />
+                </div>
+                <div className="sponsor-logo-container">
+                  <Image src="/sponsors/claussen-simon-stiftung.png" alt="Claussen Simon Stiftung" height="669" width="1720" className="sponsor-logo" />
+                 </div> 
+              </div>
+
+              <div className="sponsor-logo-row">
+                <div className="sponsor-logo-container">
+                  <Image src="/sponsors/excellenzcluster.avif" alt="Excellenzcluster" width="400" height="78" className="sponsor-logo" />
                 </div>
               </div>
             </div>
+
             <Spacer height={32} />
 
             <div className="impressum-etc-row">
@@ -146,8 +157,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </div>
             </div>
             <Spacer height={32} />
-        
-            </Flex>
+          </Flex>
         </section>
       </body>
     </html>

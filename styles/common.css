@@ -15,16 +15,6 @@
   color: #151529;
 }
 
-.header-logo {
-  /* height: 400px; */
-  /* height: 60%; */
-  width: 45%
-}
-
-.footer-logo {
-  height: 100px;
-}
-
 @media screen and (max-width: 768px) {
   /* .header-logo {
     height: 300px;

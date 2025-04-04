@@ -60,14 +60,14 @@ body {
 
 .sponsor-logo-wrap-section {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  max-width: 800px;
 }
- 
 
 .footer-section .impressum-etc a {
   padding-left: 10px;
   padding-right: 10px;
+  color: black;
 }
 
 .impressum-etc-row {
@@ -78,10 +78,6 @@ body {
   padding: 20px;
 }
 
-/*
-Responsive fix for the Next.js Image component
-https://dev.to/felixhaeberle/responsive-fix-for-the-next-js-image-component-1351
-*/
 .sponsor-logo-container {
   width: 100%;
 }
@@ -94,10 +90,7 @@ https://dev.to/felixhaeberle/responsive-fix-for-the-next-js-image-component-1351
   padding: 20px;
 }
 
-/*
-.sponsor-logo {
-  max-width: 100%; /* Shrinks the image to fit the container width 
-  height: auto;    /* Maintains the aspect ratio
-  object-fit: contain; /* Ensures the image fits within its container 
-  padding: 20px;
-}*/
+.header-logo {
+  width: 45%;
+  height: auto;
+}
