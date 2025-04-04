@@ -53,7 +53,7 @@ const PlayAudioButton: React.FC<PlayAudioButtonProps> = ({ audioUrl }) => {
       <Image
         id="play-button"
         src={playing ? "/pause-button.svg": "/play-button.svg"}
-        alt="Play"
+        alt={playing ? "Pause" : "Play"}
         width={50}
         height={50}
         style={{ cursor: "pointer"}}

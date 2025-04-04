@@ -65,7 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               .content-box .responsive-spacer-15 {
                 height: 15px;
               }
-              .photo-slider .photo {
+              .photo-slider img {
                 height: 250px;
                 width: auto;
               }

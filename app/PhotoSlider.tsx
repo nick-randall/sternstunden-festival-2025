@@ -25,13 +25,16 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoUrls }) => {
   };
 
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-    autoScrollTimer.current = setInterval(() => {
-      if (userScrolling) return;
-      container.scrollBy({ left: 10, behavior: "smooth" });
-    }, 50);
-
+    const scroll = () => {
+      const container = containerRef.current;
+      if (!container) return;
+      autoScrollTimer.current = setTimeout(() => {
+        if (userScrolling) return;
+        container.scrollBy({ left: 20, behavior: "smooth" });
+        scroll();
+      }, 150);
+    };
+    scroll();
     return () => {
       if (autoScrollTimer.current) clearInterval(autoScrollTimer.current);
     };
@@ -71,8 +74,8 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoUrls }) => {
         }}
       >
         <div style={{ position: "relative" }}>
-          <Image onClick={scrollBackward} src="./chevron-right.svg" alt="" className="arrow arrow-left" height="50" width="50" />
-          <Image onClick={scrollForward} src="./chevron-right.svg" alt="" height="50" width="50" className="arrow" />
+          <Image onClick={scrollBackward} src="./chevron-right.svg" alt="Scroll Back" className="arrow arrow-left" height="50" width="50" />
+          <Image onClick={scrollForward} src="./chevron-right.svg" alt="Scroll Forward" height="50" width="50" className="arrow" />
         </div>
       </div>
       <div ref={containerRef} key="mobile-photo-slider" className="photo-slider" onWheel={pauseScroll} onTouchStart={pauseScroll}>
