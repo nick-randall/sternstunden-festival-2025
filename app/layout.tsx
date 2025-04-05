@@ -141,7 +141,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
               <div className="sponsor-logo-row">
                 <div className="sponsor-logo-container">
-                  <Image src="/sponsors/excellenzcluster.avif" alt="Excellenzcluster" width="400" height="78" className="sponsor-logo" />
+                  <Image src="/sponsors/excellenzcluster.png" alt="Excellenzcluster" width="400" height="78" className="sponsor-logo" />
                 </div>
               </div>
             </div>

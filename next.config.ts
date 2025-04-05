@@ -11,11 +11,26 @@ const nextConfig: NextConfig = {
         pathname: '/**',
         search: '',
       },
+     
       {
         protocol: 'https',
         hostname: 'freepnglogo.com',
         port: '',
         pathname: '/images/all_img/**',
+        search: '',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost:8080',
+        port: '',
+        pathname: '/get-artists',
+        search: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'sternstunde.fly.dev',
+        port: '',
+        pathname: '/get-artists',
         search: '',
       },
     ],

@@ -1,0 +1,43 @@
+.artists-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.artist-card {
+  background-color: rgba(243, 119, 18, 0.2);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  width: 308px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-card img {
+  /* width: 100%;
+  height: auto; */
+  object-fit: cover;
+}
+
+.artist-card .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.artist-card .artist-name {
+  font-family: 'NunitoSans';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+
+
+
