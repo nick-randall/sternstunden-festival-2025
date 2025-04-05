@@ -1,7 +1,9 @@
+interface ArtistPageProps {
+  params: Promise<{ id: string }>;
+}
 
-
-const ArtistPage = async ({ params }: { params: { id: string } }) => {
-  const { id } = params;
+const ArtistPage: React.FC<ArtistPageProps> = async ({ params }) => {
+  const { id } = await params;
   let artist: Artist | null = null;
 
   try {
