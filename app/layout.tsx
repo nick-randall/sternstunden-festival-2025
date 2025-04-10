@@ -39,10 +39,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               .video {
                 min-height: 30vh;
               }
-                .content-box .home-image-container img {
-                  height: 180px;
-                  width: auto;
-                }
+              .content-box .home-image-container img {
+                height: 180px;
+                width: auto;
+              }
+              .banner-text {
+                  animation: slide-left-mobile 25s infinite linear;
+              }
 
             }
             @media screen and (max-width: 1080px) { 

@@ -89,7 +89,7 @@
 }
 
 .photo-slider img {
-  max-height: 400px;
+  height: 400px;
   width: auto;
   padding-right: 10px;
   scroll-snap-align: start;
@@ -101,6 +101,15 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-left-mobile {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-600%);
   }
 }
 

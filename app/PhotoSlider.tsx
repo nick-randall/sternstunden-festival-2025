@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface PhotoSliderProps {
   photoUrls: string[];
@@ -11,6 +11,7 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoUrls }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const timer = useRef<NodeJS.Timeout | null>(null);
   const autoScrollTimer = useRef<NodeJS.Timeout | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const pauseScroll = () => {
     const container = containerRef.current;
@@ -36,11 +37,13 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoUrls }) => {
     };
     scroll();
     return () => {
-      if (autoScrollTimer.current) clearInterval(autoScrollTimer.current);
+      if (autoScrollTimer.current) {
+        clearInterval(autoScrollTimer.current);
+      }
     };
   }, [userScrolling]);
 
-  function scrollBackward(): void {
+  const scrollBackward = () => {
     const container = containerRef.current;
     if (!container) return;
     container.style.scrollSnapType = "x mandatory";
@@ -49,9 +52,9 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoUrls }) => {
     setTimeout(() => {
       container.style.scrollSnapType = "none";
     }, 500);
-  }
+  };
 
-  function scrollForward(): void {
+  const scrollForward = () => {
     const container = containerRef.current;
     if (!container) return;
     container.style.scrollSnapType = "x mandatory";
@@ -60,7 +63,37 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoUrls }) => {
     setTimeout(() => {
       container.style.scrollSnapType = "none";
     }, 500);
-  }
+  };
+
+  const handleScroll = useCallback(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    const scrollLeft = container.scrollLeft;
+    let left = 0;
+    for (let i = 0; i < container.children.length; i++) {
+      const child = container.children[i];
+      left += child.clientWidth;
+      if (left > scrollLeft) {
+        setCurrentImageIndex(i);
+        break;
+      }
+    }
+  }, [setCurrentImageIndex]);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    container.addEventListener("scroll", handleScroll);
+    return () => {
+      container.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
+
+  const getLoadingType = (index: number) => {
+    if (index === 0) return undefined;
+    if (currentImageIndex + 2 > index) return "eager";
+    return "lazy";
+  };
 
   return (
     <>
@@ -80,7 +113,15 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoUrls }) => {
       </div>
       <div ref={containerRef} key="mobile-photo-slider" className="photo-slider" onWheel={pauseScroll} onTouchStart={pauseScroll}>
         {photoUrls.map((url, index) => (
-          <Image height="400" width="400" key={index + "image"} src={url} alt="Foto Sternstunde 2025" priority={index < 4} />
+          <Image
+            height="400"
+            width="400"
+            key={index + "image"}
+            src={url}
+            alt="Foto Sternstunde 2025"
+            priority={index === 0}
+            loading={getLoadingType(index)}
+          />
         ))}
       </div>
     </>
