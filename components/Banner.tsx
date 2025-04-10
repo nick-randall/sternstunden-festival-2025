@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import Image from "next/image";
 
@@ -12,21 +12,18 @@ const Banner: React.FC = () => {
   }, []);
 
   const handleRef = () => {
-    const bannerSlot = document.querySelector("#banner-slot");
-    if (!bannerSlot) return;
-    const { top } = bannerSlot.getBoundingClientRect();
-    setTopPosition(top);
-    window.addEventListener("scroll", handleScroll);
+    setTop();
+    window.addEventListener("scroll", setTop);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", setTop);
     };
   };
-  const handleScroll = () => {
+  const setTop = useCallback(() => {
     const bannerSlot = document.querySelector("#banner-slot");
     if (!bannerSlot) return;
     const { top } = bannerSlot.getBoundingClientRect();
     setTopPosition(top);
-  };
+  }, [setTopPosition]);
 
   if (!isMounted) return null;
 
