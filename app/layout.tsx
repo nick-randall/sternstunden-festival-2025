@@ -10,6 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Sternstunden Festival 2025</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         {/* Media queries don't seem to work currently on some mobile devices, as
                 a workaround I've put them here in the page layout style tag*/}
 
