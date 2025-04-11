@@ -114,7 +114,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <a href="https://www.instagram.com/sternstundenfestival">
               <Image src="https://freepnglogo.com/images/all_img/1715966654instagram-logo-png-white.png" alt="" height="40" width="40" />
             </a>
-            <a href="mailto:info@sternstundenfestival.de" style={{ textDecoration: "none" }}>
+            <a href="mailto:info@sternstundenfestival.de" style={{ textDecoration: "none", color: "#15152A" }}>
               info@sternstundenfestival.de
             </a>
             <hr style={{ width: "30%" }} />
