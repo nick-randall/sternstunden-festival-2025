@@ -1,0 +1,56 @@
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  font-family: "NunitoSans";
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.contact-form-container h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.contact-form-container a {
+  font-weight: 200;
+  text-decoration: none;
+  color: #000;
+}
+
+.contact-form-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-form-row .item {
+  flex: 1;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-row .item input,
+textarea {
+  border-radius: 8px;
+  border: solid black 3px;
+  height: 45px;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.contact-form-row .item textarea {
+  height: 200px;
+}
+
+.contact-form-row button {
+  background-color: #000;
+  height: 45px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
