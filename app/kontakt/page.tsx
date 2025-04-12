@@ -47,7 +47,7 @@ const KontaktPage: React.FC = () => {
     if (status === 200) {
       setFormValues({ firstname: "", lastname: "", email: "", message: "" });
     }
-    if (status === 404) {
+    else {
       alert("Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später erneut.");
       setErrorMessage("Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später erneut.");
     }}
