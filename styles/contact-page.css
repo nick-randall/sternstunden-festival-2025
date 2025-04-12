@@ -40,6 +40,7 @@ textarea {
   height: 45px;
   background-color: transparent;
   padding: 10px;
+  font-size: 20px;
 }
 
 .contact-form-row .item textarea {
@@ -53,4 +54,11 @@ textarea {
   color: white;
   cursor: pointer;
   font-size: 20px;
+}
+
+.contact-form-row .error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: 200;
 }
