@@ -10,7 +10,7 @@ import Spacer from "@/components/Spacer";
 const rootUrl = "https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/";
 
 // const urls = ["ssf2486", "ssf24m43", "ssf24m45", "ssf24m56"].map((url) => `${rootUrl}${url}.jpg`);
-
+// bilder von ssfm1 bis ssfm114 und ssf86
 const urls = [
   "ssf2486",
   "ssf24m43",
@@ -37,6 +37,17 @@ const urls = [
   "ssf2434",
   "ssf2464",
   "ssf2481",
+  "ssf2482",
+  "ssf24m83",
+  "ssf2447",
+  "ssf24m33",
+  "ssf2439",
+  "ssf24m1",
+  "ssf24m22",
+  "ssf24m9",
+  "ssf24m113",
+  "ssf249",
+
 ].map(url => `${rootUrl}${url}.jpg`);
 
 const ImpressionsPage: React.FC = () => {
@@ -93,10 +104,28 @@ const ImpressionsPage: React.FC = () => {
         <Image src={urls[23]} alt="" height="300" width="200" />
         <Image src={urls[24]} alt="" height="400" width="600" />
         <Image src={urls[25]} alt="" height="300" width="200" />
-        <Image src={urls[26]} alt="" height="300" width="200" />
-
+        <Image src={urls[28]} alt="" height="400" width="600" />
+        <Image src={urls[32]} alt="" height="300" width="200" />
       </div>
+        <Spacer height={5} />
+        <div className="three-even-grid">
+            <Image src={urls[27]} alt="" height="400" width="600" />
+            <Image src={urls[26]} alt="" height="400" width="600" />
+            <Image src={urls[29]} alt="" height="400" width="600" />
+        </div>
+        <Spacer height={5}/>
+        <div className="left-large-right-small-grid">
+            <Image src={urls[30]} alt="" height="400" width="600" />
+            <Image src={urls[33]} alt="" height="400" width="600" />
+        </div>
+        <Spacer height={5} />
+        <div className={"one-wide"}>
+            <Image src={urls[31]} alt="" height="400" width="600" />
+        </div>
+        <Spacer height={15} />
+        <div className="title">Impressionen &apos;23</div>
     </div>
+
   );
 };
 

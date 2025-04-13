@@ -7,11 +7,11 @@ const MoreInfoPage = () => {
    <div className="boring-page-wrapper">
       
         <p>
-          Das Sternstunden Festival: eine musikalisch-wissenschaftliche Liaison unter Hamburgs sommerlichem Sternenhimmel. Klassische Chor- und
-          Ensemblemusik, Open Air Brass und Big Bands, wissenschaftliche Vorträge und Führungen, Klanginstallationen: für eineinhalb Tage wird der
-          historische Astronomiepark der Hamburger Sternwarte in Bergedorf Heimat für eine besondere Verbindung von Kultur und Astrophysik, die den
-          Besucher:innen einen einzigartigen Mix aus Konzerten, Entdeckungen und Festivalatmosphäre beschert. Die Gebäude und das Außengelände werden
-          vielfältig genutzt, um Musikalisches und Akademisches zu präsentieren.
+            Das Sternstunden Festival: eine musikalisch-wissenschaftliche Liaison unter Hamburgs sommerlichem Sternenhimmel.
+            Klassische Chor- und Ensemblemusik, Open Air Brass und Big Bands, wissenschaftliche Vorträge und Führungen, Klanginstallationen:
+            für eineinhalb Tage wird der historische Astronomiepark der Hamburger Sternwarte in Bergedorf Heimat für eine besondere Verbindung
+            von Kultur und Astrophysik, die den Besucher:innen einen einzigartigen Mix aus Konzerten, Entdeckungen und Festivalatmosphäre beschert.
+            Die Gebäude und das Außengelände werden vielfältig genutzt, um Musikalisches und Akademisches zu präsentieren.
         </p>
         <p>
           Abwechslungsreiche Musik von Kammerchor- und Orchestermitgliedern erklingt in den charaktervollen Räumlichkeiten der Sternwarte, die alleine
@@ -24,9 +24,8 @@ const MoreInfoPage = () => {
           Universität Hamburg gehört.
         </p>
         <p>
-          Nachdem wir letztes Jahr gemeinsam mit Euch eine wunderschöne erste Version dieses Festivals gestaltet haben und auf den Geschmack gekommen
-          sind, freuen wir uns umso mehr auf tolle neue Ideen und Verbesserungen in diesem Jahr! Es wird getanzt, gesungen, gefragt und gelernt und
-          gestaunt. Visuelle Eindrücke vom ersten Sternstundenfestival gibt es hier.
+            Es wird getanzt, gesungen, gefragt und gelernt und gestaunt. Bilder von den letzten beiden Jahren gibt es
+            <a href={"/../rueckblick"}> hier</a>.
         </p>
     </div>
   );
