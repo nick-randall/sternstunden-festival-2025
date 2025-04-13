@@ -32,8 +32,10 @@ const KontaktPage: React.FC = () => {
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    if(sending) return;
+    if (sending) return;
     setSending(true);
+    setErrorMessage("");
+    setSent(false);
     e.preventDefault();
     // Handle form submission logic here
     console.log("Form submitted:", formValues);
@@ -42,19 +44,23 @@ const KontaktPage: React.FC = () => {
   };
 
   const handleSend = async () => {
-   try{ const resp = await fetch("https://sternstunde.fly.dev/send-email", { method: "POST", body: JSON.stringify(formValues) });
-    const status = resp.status;
-    if (status === 200) {
-      setFormValues({ firstname: "", lastname: "", email: "", message: "" });
-    }
-    else {
-      alert("Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später erneut.");
-      setErrorMessage("Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später erneut.");
-    }}
-    catch (error) {
+    try {
+      const resp = await fetch("https://sternstunde.fly.dev/send-email", { method: "POST", body: JSON.stringify(formValues) });
+      const status = resp.status;
+      if (status === 200) {
+        setFormValues({ firstname: "", lastname: "", email: "", message: "" });
+      } else {
+        alert("Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später erneut.");
+        setErrorMessage("Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später erneut.");
+        setSending(false);
+        return;
+      }
+    } catch (error) {
       console.error("Error sending email:", error);
       alert("Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später erneut.");
       setErrorMessage("Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später erneut.");
+      setSending(false);
+      return;
     }
     setSending(false);
     setSent(true);
@@ -90,12 +96,14 @@ const KontaktPage: React.FC = () => {
         </div>
         <div className="contact-form-row">
           <div className="item">
-            {sent && errorMessage === "" ? <div>Erfolgreich gesendet!</div> : <button type="submit">{sending ? "Wird abgesendet..." : "Absenden"}</button>}
+            {sent && errorMessage === "" ? (
+              <div>Erfolgreich gesendet!</div>
+            ) : (
+              <button type="submit">{sending ? "Wird abgesendet..." : "Absenden"}</button>
+            )}
           </div>
         </div>
-        <div className="contact-form-row">
-        {errorMessage && <div className="error-message">{errorMessage}</div>}
-        </div>
+        <div className="contact-form-row">{errorMessage && <div className="error-message">{errorMessage}</div>}</div>
       </div>
     </form>
   );
