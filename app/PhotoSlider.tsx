@@ -118,7 +118,7 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoUrls }) => {
             width="400"
             key={index + "image"}
             src={url}
-            alt="Foto Sternstunde 2025"
+            alt="Rückblick Foto Sternstunden Festival 2024"
             priority={index === 0}
             loading={getLoadingType(index)}
           />
