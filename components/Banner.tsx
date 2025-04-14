@@ -13,16 +13,12 @@ const Banner: React.FC = () => {
 
   const handleRef = () => {
     setTop();
-    window.addEventListener("scroll", setTop);
-    return () => {
-      window.removeEventListener("scroll", setTop);
-    };
   };
   const setTop = useCallback(() => {
     const bannerSlot = document.querySelector("#banner-slot");
     if (!bannerSlot) return;
     const { top } = bannerSlot.getBoundingClientRect();
-    setTopPosition(top);
+    setTopPosition(top + scrollY);
   }, [setTopPosition]);
 
   if (!isMounted) return null;

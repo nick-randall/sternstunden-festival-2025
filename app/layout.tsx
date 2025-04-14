@@ -3,6 +3,7 @@ import "../styles/layout.css";
 import Spacer from "@/components/Spacer";
 import Image from "next/image";
 import Flex from "@/components/Flex";
+import Link from "next/link";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -98,6 +99,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <div className="bg"></div>
         <div className="outer-wrapper">
+          <div className="menu-bar">
+            <div className="menu-wrapper">
+              <div className="menu-item-container">
+                <div className="menu-item">Tickets</div>
+              </div>
+              <div className="menu-item-container">
+                <div className="menu-item">Programm</div>
+              </div>
+
+                <Link href="/" className="menu-item-container">
+                  <Image className="menu-item logo" src="/logo-simple.png" alt="Sternstunden Festival Logo" width="826" height="483" />
+                </Link>
+              <div className="menu-item-container">
+                <div className="menu-item">Info</div>
+              </div>
+              <div className="menu-item-container">
+                <div className="menu-item">Kontakt</div>
+              </div>
+            </div>
+          </div>
           <div className="page-wrapper">
             <Spacer height={32} />
             <Image className="header-logo" src="/logo-with-dates.png" alt="Sternstunden Festival Logo" width="827" height="434" />
@@ -139,8 +160,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <Image src="/sponsors/zeit-stiftung-bucerius.png" alt="Zeit Stiftung Bucerius" height="136" width="296" className="sponsor-logo" />
                 </div>
                 <div className="sponsor-logo-container">
-                  <Image src="/sponsors/claussen-simon-stiftung.png" alt="Claussen Simon Stiftung" height="669" width="1720" className="sponsor-logo" />
-                 </div> 
+                  <Image
+                    src="/sponsors/claussen-simon-stiftung.png"
+                    alt="Claussen Simon Stiftung"
+                    height="669"
+                    width="1720"
+                    className="sponsor-logo"
+                  />
+                </div>
               </div>
 
               <div className="sponsor-logo-row">

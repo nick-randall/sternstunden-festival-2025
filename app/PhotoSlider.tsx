@@ -1,4 +1,5 @@
 "use client";
+import useMediaQuery from "@/components/useMediaQuery";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
@@ -95,6 +96,8 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoUrls }) => {
     return "lazy";
   };
 
+  const {screenWidth} = useMediaQuery()
+
   return (
     <>
       <div
@@ -114,8 +117,8 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoUrls }) => {
       <div ref={containerRef} key="mobile-photo-slider" className="photo-slider" onWheel={pauseScroll} onTouchStart={pauseScroll}>
         {photoUrls.map((url, index) => (
           <Image
-            height="400"
-            width="400"
+            height={screenWidth / 2}
+            width={screenWidth / 2}
             key={index + "image"}
             src={url}
             alt="Rückblick Foto Sternstunden Festival 2024"
