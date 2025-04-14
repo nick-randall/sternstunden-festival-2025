@@ -10,6 +10,7 @@ interface ShrinkingMenuLogoProps {
 
 const ShrinkingMenuLogo: React.FC<ShrinkingMenuLogoProps> = ({setBigLogoParent}) => {
   const [bigLogo, setBigLogo] = useState(true);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleScroll = () => {
     if (window.scrollY > 0) {
       setBigLogo(false);
@@ -24,18 +25,18 @@ const ShrinkingMenuLogo: React.FC<ShrinkingMenuLogoProps> = ({setBigLogoParent})
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
   // const logo = bigLogo ? "/logo-without-dates.png" : "/logo-simple.png";
   // const padding = bigLogo ? 0 : 20;
   return (
     <Link href="/" className="menu-item-container" style={{ position: "relative" }}>
       <Image
         className={`menu-item logo ${bigLogo ? "big" : ""}`}
-        src="/logo-without-dates.png"
+        src="/logo-with-dates.png"
         alt="Sternstunden Festival Logo"
         width="826"
         height="483"
-        style={{ opacity: bigLogo ? 1 : 0, position: "absolute", padding: "0" }}
+        style={{ opacity: bigLogo ? 1 : 0, position: "absolute" }}
       />
       <Image
         className={`menu-item logo ${bigLogo ? "big" : ""}`}
