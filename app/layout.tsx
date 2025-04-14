@@ -3,7 +3,7 @@ import "../styles/layout.css";
 import Spacer from "@/components/Spacer";
 import Image from "next/image";
 import Flex from "@/components/Flex";
-import ShrinkingMenuLogo from "@/components/ShrinkingMenuLogo";
+import Menu from "@/components/Menu";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -99,47 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <div className="bg"></div>
         <div className="outer-wrapper">
-          <div className="menu-wrapper">
-            <div className="menu-bar">
-              <div className="menu-items-wrapper">
-                <a href="/tickets" className="menu-item-container">
-                  <div className="menu-item">Tickets</div>
-                </a>
-                <div className="menu-item-container">
-                  <div className="menu-item">Programm</div>
-                </div>
-                <ShrinkingMenuLogo />
-                <div className="menu-item-container">
-                  <div className="menu-item">Info</div>
-                </div>
-                <div className="menu-item-container">
-                  <div className="menu-item">Kontakt</div>
-                </div>
-              </div>
-            </div>
-            <div className="menu-dropdown">
-              <div className="menu-dropdown-item">
-                <a href="/tickets" className="menu-dropdown-link">
-                  Tickets
-                </a>
-              </div>
-              <div className="menu-dropdown-item">
-                <a href="/programm" className="menu-dropdown-link">
-                  Programm
-                </a>
-              </div>
-              <div className="menu-dropdown-item">
-                <a href="/info" className="menu-dropdown-link">
-                  Info
-                </a>
-              </div>
-              <div className="menu-dropdown-item">
-                <a href="/kontakt" className="menu-dropdown-link">
-                  Kontakt
-                </a>
-              </div>
-            </div>
-          </div>
+         <Menu />
           <div className="page-wrapper">
             {/* <Spacer height={32} />
             <Image className="header-logo" src="/logo-with-dates.png" alt="Sternstunden Festival Logo" width="827" height="434" /> */}

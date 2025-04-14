@@ -4,10 +4,8 @@ body {
   width: 100%;
 }
 
-
 /* .bg and .outer-wrapper work together to achieve a "background-align: fixed" effect,
   which unfortunately is not supported on mobile devices. */
-
 
 .bg {
   background-image: url(../public/back.jpg);
@@ -43,7 +41,6 @@ body {
   max-width: 1200px;
 }
 
-
 .footer-section {
   background-color: rgba(243, 119, 18, 0.21);
   width: 100%;
@@ -53,7 +50,7 @@ body {
   align-items: center;
 }
 
- .sponsor-logo-row {
+.sponsor-logo-row {
   display: flex;
   align-items: center;
 }
@@ -94,61 +91,4 @@ body {
 .header-logo {
   width: 45%;
   height: auto;
-}
-
-.menu-wrapper {
-  background: linear-gradient(to right, rgb(253, 244, 219, 0.3), rgb(239, 132, 84, 0.3)); /* same as #fdf4db, #ef8454 */
-  position: fixed;
-  z-index: 100;
-  width: 100%;
-
-}
-
-.menu-bar {
-  /* background-color: rgba(243, 119, 18, 0.21); */
-  display: flex;
-  justify-content: center;
-  transition: height 1s ease;
-}
-
-.menu-items-wrapper {
-  max-width: 600px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  gap: 20px;
-}
-
-.menu-item {
-  max-height: 100%;
-  width: auto;
-  flex-grow: 1;
-  text-transform: uppercase;
-  font-weight: 800;
-}
-
-.menu-item-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.menu-item.logo{
-  padding: 10px;
-  height: 50px;
-  transition: 600ms ease;
-}
-
-.menu-item.logo.big{
-  height: 140px;
-}
-
-.menu-dropdown {
-  display: flex;
-  width: 100%;
-  top: 100%;
-  background: linear-gradient(to right, rgb(232, 0, 233, 0.12), rgb(37, 3, 192, 0.12)); /* same as #e800e9, #2503c0 */
 }

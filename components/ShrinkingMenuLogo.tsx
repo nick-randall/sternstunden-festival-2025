@@ -2,13 +2,21 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-const ShrinkingMenuLogo: React.FC = () => {
+
+interface ShrinkingMenuLogoProps {
+  setBigLogoParent: (bigLogo: boolean) => void;
+}
+// }
+
+const ShrinkingMenuLogo: React.FC<ShrinkingMenuLogoProps> = ({setBigLogoParent}) => {
   const [bigLogo, setBigLogo] = useState(true);
   const handleScroll = () => {
     if (window.scrollY > 0) {
       setBigLogo(false);
+      setBigLogoParent(false);
     } else {
       setBigLogo(true);
+      setBigLogoParent(true);
     }
   };
   useEffect(() => {
