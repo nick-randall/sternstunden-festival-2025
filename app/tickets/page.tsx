@@ -5,12 +5,50 @@ const Tickets: React.FC = () => {
     <div className="content-box">
       <div className="text-box">
         <div>
-          <h1>Tickets</h1>
+          <h1>Tickets 2025</h1>
           <p>
-            Tickets sind ab dem 01.09.2024 erhältlich. Der Ticketpreis beträgt 15 Euro.
-            <br />
-            <br />
-            Das Ticket beinhaltet den Eintritt zu allen Konzerten und Vorträgen, sowie den Zugang zu den Sternenbeobachtungen.
+
+            Für das Sternstunden Festival gibt es zwei Preisstufen: Vorverkauf und Abendkasse.
+            Außerdem gibt es wieder ermäßigte* Tickets und kostenlosen Eintritt für geflüchtete Personen*** sowie für Kinder unter 14 Jahren**.<br/>
+            <br/>
+            <b>Reguläre Tickets im Vorverkauf: </b><br/>
+            Freitags-Ticket: 10 € <br/>
+            Samstags-Ticket: 15 € <br/>
+            Festivalticket (Fr & Sa) 20 € <br/>
+            <br/>
+            <b>Reguläre Tickets an der Abendkasse:</b><br/>
+            Freitags-Ticket: 15 €<br/>
+            Samstags-Ticket: 20 €<br/>
+            Festivalticket (Fr & Sa) 25 €<br/>
+            <br/>
+            <b>Ermäßigte* Tickets im Vorverkauf:</b><br/>
+            Freitags-Ticket: 7 €<br/>
+            Samstags-Ticket: 10 €<br/>
+            Festivalticket (Fr & Sa) 15 €<br/>
+            <br/>
+            <b>Ermäßige Tickets an der Abendkasse:</b><br/>
+            Freitags-Ticket: 10 €<br/>
+            Samstags-Ticket: 14 €<br/>
+            Festivalticket (Fr & Sa) 19 €<br/>
+            <br/>
+            <span style={{fontSize:14}}>
+            *Ermäßigungsberechtigt sind Studierende, Senior:innen, Schüler:innen, Auszubildende, Erwerbslose, Menschen
+            mit Schwerbehinderung (ab GdB 50; bei eingetragenem Merkzeichen „B“ erhält eine Begleitperson freien
+            Eintritt).<br/>
+            ** Kinder bis 14 Jahre kostenlos (bitte trotzdem hier für eure Kinder ein kostenloses Ticket bestellen).<br/>
+            *** Geflüchtete erhalten freien Eintritt gegen Vorlage einer gültigen Aufenthaltserlaubnis nach § 24
+            AufenthG oder § 25 Abs. 1, 2 oder 3AufenthG oder jeweils in Verbindung mit einer gültigen
+            Fiktionsbescheinigung. Für Geflüchtete aus der Ukraine gilt die Vorlage eines ukrainischen Reisepasses oder
+            eines anderen Ausweisdokuments.
+            </span>
+        <br/><br/>
+
+          <b>**/***Hinweis</b>: Bestellt bitte auch bei freiem Eintritt ein 0-Euro-Ticket!
+            Der Vorverkauf endet am 17. Juli
+
+            <br/>
+            <br/>
+
           </p>
         </div>
         <br />

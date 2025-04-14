@@ -123,7 +123,7 @@ const Menu: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="/impressionen-2024" className="menu-dropdown-link">
+                <a href="/rueckblick" className="menu-dropdown-link">
                   Rückblick 23/24
                 </a>
               </li>

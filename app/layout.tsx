@@ -139,25 +139,37 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
               <div className="sponsor-logo-row">
                 <div className="sponsor-logo-container">
+                  <a href="https://www.zeit-stiftung.de">
                   <Image src="/sponsors/zeit-stiftung-bucerius.png" alt="Zeit Stiftung Bucerius" height="136" width="296" className="sponsor-logo" />
+                  </a>
                 </div>
                 <div className="sponsor-logo-container">
+                  <a href="https://www.claussen-simon-stiftung.de/de">
                   <Image
                     src="/sponsors/claussen-simon-stiftung.png"
                     alt="Claussen Simon Stiftung"
                     height="669"
                     width="1720"
                     className="sponsor-logo"
-                  />
+                  /> </a>
                 </div>
               </div>
 
               <div className="sponsor-logo-row">
                 <div className="sponsor-logo-container">
+                  <a href="https://www.uni-hamburg.de/exzellenz/exzellenzcluster.html">
                   <Image src="/sponsors/excellenzcluster.png" alt="Excellenzcluster" width="400" height="78" className="sponsor-logo" />
+                  </a>
                 </div>
               </div>
+            <div className="sponsor-logo-row">
+              <div className="sponsor-logo-container">
+                <a href="https://www.physik.uni-hamburg.de/hs.html">
+                  <Image src="/sponsors/UHH_Wortmarke_Sternwarte.png" alt="Hamburger Sternwarte" width="400" height="78" className="sponsor-logo" />
+                </a>
+              </div>
             </div>
+          </div>
 
             <Spacer height={32} />
 
