@@ -36,10 +36,14 @@ const Menu: React.FC = () => {
   };
 
   return (
-    <div className="menu-wrapper" onMouseLeave={handleMouseLeave}>
+    <div
+      className="menu-wrapper"
+      style={{ background: bigLogo ? "linear-gradient(to right, rgb(253, 244, 219, 0.3), rgb(239, 132, 84, 0.3))" : "" }}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="menu-bar">
         <div className="menu-items-wrapper">
-        {/* <div className="menu-items-wrapper" style={{ alignItems: bigLogo ? "center" : "end" }}> */}
+          {/* <div className="menu-items-wrapper" style={{ alignItems: bigLogo ? "center" : "end" }}> */}
 
           <a href="/tickets" className="menu-item-container">
             <div className={`menu-item ${currDropdown === "tickets" && "hovered"}`} onMouseEnter={() => handleMouseEnter("tickets")}>
@@ -51,7 +55,7 @@ const Menu: React.FC = () => {
               Programm
             </div>
           </div>
-          <ShrinkingMenuLogo setBigLogoParent={(isBig: boolean) => setBigLogo(isBig)}/>
+          <ShrinkingMenuLogo setBigLogoParent={(isBig: boolean) => setBigLogo(isBig)} />
           <div className="menu-item-container" onMouseEnter={() => handleMouseEnter("info")}>
             <div className={`menu-item ${currDropdown === "info" && "hovered"}`} ref={infoHoverRef}>
               Info

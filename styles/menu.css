@@ -1,6 +1,7 @@
-
 .menu-wrapper {
-  background: linear-gradient(to right, rgb(253, 244, 219, 0.3), rgb(239, 132, 84, 0.3)); /* same as #fdf4db, #ef8454 */
+  /* background: linear-gradient(to right, rgb(253, 244, 219, 0.3), rgb(239, 132, 84, 0.3));  */
+  background-color: rgba(251, 252, 240, 0.5);
+
   position: fixed;
   z-index: 100;
   width: 100%;
@@ -35,7 +36,7 @@
 
 .menu-item.hovered,
 .menu-dropdown-list li a:hover {
-  color: white;
+  color: rgba(240,129,54);
 }
 
 .menu-item-container {
@@ -62,7 +63,8 @@
   width: 100%;
   /* background: linear-gradient(to right, rgb(232, 0, 233, 0.12), rgb(37, 3, 192, 0.12));  */
   /* same as #e800e9, #2503c0 */
-  background-color: orange;
+  background-color: rgba(251,252,240,.7);
+
   transition: 1s ease;
 }
 
@@ -77,7 +79,6 @@
   color: #000;
   list-style: none;
   font-size: 18px;
-
 }
 
 .menu-dropdown-list li a {

@@ -26,8 +26,7 @@ const ShrinkingMenuLogo: React.FC<ShrinkingMenuLogoProps> = ({setBigLogoParent})
       window.removeEventListener("scroll", handleScroll);
     };
   }, [handleScroll]);
-  // const logo = bigLogo ? "/logo-without-dates.png" : "/logo-simple.png";
-  // const padding = bigLogo ? 0 : 20;
+
   return (
     <Link href="/" className="menu-item-container" style={{ position: "relative" }}>
       <Image
