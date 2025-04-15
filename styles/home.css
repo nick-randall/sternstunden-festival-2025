@@ -77,7 +77,7 @@
   flex-direction: row;
   overflow-x: scroll;
 
-  flex-basis: 60%;
+  flex-basis: 100%;
   /* scroll-snap-type: x; */
 
   -ms-overflow-style: none; /* IE and Edge */

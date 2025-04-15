@@ -4,6 +4,7 @@ import "../styles/common.css";
 import Spacer from "../components/Spacer";
 import PhotoSlider from "./PhotoSlider";
 import Banner from "@/components/Banner";
+import Image from "next/image";
 
 const rootUrl = "https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/";
 const initial = ["ssf24m43", "ssf24m115", "ssf24m112", "ssf24m113", "ssf24m44", "ssf24m108"];
@@ -31,23 +32,22 @@ export default function Page() {
         <div className="content-box">
           <div className="text-box">
             <div>
-              Das Sternstunden Festival vereint inspirierende Konzerterlebnisse in besonderer Umgebung mit spannenden
-              astrophysikalischen Einblicken
-              unter Hamburgs Sternenhimmel in einzigartiger Festivalatmosphäre.
-              <br/>
-              <br/>
-              Das Festival ist eine Initiative der Unimusik der Universität Hamburg in Zusammenarbeit mit der Hamburger
-              Sternwarte in Bergedorf, die zum
-              Fachbereich Physik gehört.
+                Zum dritten Mal wird die Hamburger Sternwarte in Bergedorf zu einer Begegnungsstätte der Klänge und Sterne.
+                Das junge Festival bietet in einer einzigartigen Location ein vielfältiges Programm, das sowohl Musik als auch Wissenschaft umfasst.
+                Mit seinem bunten Angebot an Konzerten, Vorträgen, Himmelsbeobachtungen und Kinderaktivitäten ist auf dem
+                Sternstunden Festival für alle Altersgruppen etwas dabei. Das Festival ist eine ehrenamtliche Initiative der Unimusik der
+                Universität Hamburg in Zusammenarbeit mit der Hamburger Sternwarte in Bergedorf, die zum Fachbereich Physik gehört.
             </div>
             <br/>
             <a className="more-info" href="/info">
               MEHR INFOS
             </a>
           </div>
+            <div className="responsive-spacer-15"></div>
+                <Image src="/sternstunden_festival_home.jpg" alt="" width="625" height="416" />
           <div className="responsive-spacer-15"></div>
 
-          <PhotoSlider photoUrls={photoUrls}/>
+
         </div>
         <Spacer height={32}/>
         <div className="content-box video-container">
@@ -57,6 +57,8 @@ export default function Page() {
               frameBorder="0"
               src="https://www.youtube-nocookie.com/embed/H_ZANaTi9Lo?si=Rnq-__7u6C3o3eiM"
           ></iframe>
+        <div className="content-box"> <PhotoSlider photoUrls={photoUrls}/> </div>
+
 
         </div>
       </>
