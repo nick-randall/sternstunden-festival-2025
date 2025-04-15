@@ -26,7 +26,7 @@ const Tickets: React.FC = () => {
             Samstags-Ticket: 10 €<br/>
             Festivalticket (Fr & Sa) 15 €<br/>
             <br/>
-            <b>Ermäßige Tickets an der Abendkasse:</b><br/>
+            <b>Ermäßigte* Tickets an der Abendkasse:</b><br/>
             Freitags-Ticket: 10 €<br/>
             Samstags-Ticket: 14 €<br/>
             Festivalticket (Fr & Sa) 19 €<br/>
