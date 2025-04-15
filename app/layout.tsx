@@ -84,10 +84,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               .sponsor-logo-wrap-section {
                 flex-wrap: wrap;
               }
-              .sponsor-logo-row {
-                padding-left: 20px;
-                padding-right: 20px;
-              }
             @media screen and (min-width: 1580px) {
                 .centered-wrapper { 
                   width: auto;

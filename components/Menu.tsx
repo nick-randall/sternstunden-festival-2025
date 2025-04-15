@@ -1,6 +1,6 @@
 "use client";
 
-import { RefObject, useRef, useState } from "react";
+import { RefObject, useEffect, useRef, useState } from "react";
 import ShrinkingMenuLogo from "./ShrinkingMenuLogo";
 import Link from "next/link";
 import "../styles/menu.css";
@@ -9,8 +9,21 @@ const Menu: React.FC = () => {
   const [currDropdown, setCurrDropdown] = useState<string>("");
   const [left, setLeft] = useState<number>(0);
 
-  const [bigLogo, setBigLogo] = useState<boolean>(false);
-  console.log("bigLogo", bigLogo);
+  const [scrollIsAtTopOfPage, setScrollIsAtTopOfPage] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrollIsAtTopOfPage(false);
+      } else {
+        setScrollIsAtTopOfPage(true);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const programHoverRef = useRef<HTMLDivElement>(null);
   const infoHoverRef = useRef<HTMLDivElement>(null);
@@ -38,12 +51,12 @@ const Menu: React.FC = () => {
   return (
     <div
       className="menu-wrapper"
-      style={{ background: bigLogo ? "linear-gradient(to right, rgb(253, 244, 219, 0.3), rgb(239, 132, 84, 0.3))" : "" }}
+      style={{ background: scrollIsAtTopOfPage ? "linear-gradient(to right, rgb(253, 244, 219, 0.3), rgb(239, 132, 84, 0.3))" : "" }}
       onMouseLeave={handleMouseLeave}
     >
       <div className="menu-bar">
         <div className="menu-items-wrapper">
-          {/* <div className="menu-items-wrapper" style={{ alignItems: bigLogo ? "center" : "end" }}> */}
+          {/* <div className="menu-items-wrapper" style={{ alignItems: scrollIsAtTopOfPage ? "center" : "end" }}> */}
 
           <a href="/tickets" className="menu-item-container">
             <div className={`menu-item ${currDropdown === "tickets" && "hovered"}`} onMouseEnter={() => handleMouseEnter("tickets")}>
@@ -55,7 +68,7 @@ const Menu: React.FC = () => {
               Programm
             </div>
           </div>
-          <ShrinkingMenuLogo setBigLogoParent={(isBig: boolean) => setBigLogo(isBig)} />
+          <ShrinkingMenuLogo scrollIsAtTopOfPage={scrollIsAtTopOfPage} />
           <div className="menu-item-container" onMouseEnter={() => handleMouseEnter("info")}>
             <div className={`menu-item ${currDropdown === "info" && "hovered"}`} ref={infoHoverRef}>
               Info

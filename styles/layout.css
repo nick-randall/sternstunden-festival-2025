@@ -50,16 +50,7 @@ body {
   align-items: center;
 }
 
-.sponsor-logo-row {
-  display: flex;
-  align-items: center;
-}
 
-.sponsor-logo-wrap-section {
-  display: flex;
-  justify-content: center;
-  max-width: 800px;
-}
 
 .footer-section .impressum-etc a {
   padding-left: 10px;
@@ -76,8 +67,22 @@ body {
   color: black;
 }
 
+.sponsor-logo-row {
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.sponsor-logo-wrap-section {
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+}
+
 .sponsor-logo-container {
   width: 100%;
+  min-width: 150px;
+  max-width: 180px;
 }
 
 .sponsor-logo {
