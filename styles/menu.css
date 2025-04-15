@@ -1,17 +1,16 @@
 .menu-wrapper {
   /* background: linear-gradient(to right, rgb(253, 244, 219, 0.3), rgb(239, 132, 84, 0.3));  */
   background-color: rgba(251, 252, 240, 0.5);
-
   position: fixed;
   z-index: 100;
   width: 100%;
 }
 
-.menu-bar {
-  /* background-color: rgba(243, 119, 18, 0.21); */
+.mobile-menu-bar {
   display: flex;
-  justify-content: center;
-  transition: height 1s ease;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
 }
 
 .menu-items-wrapper {
@@ -22,6 +21,50 @@
   align-items: center;
   height: 100%;
   gap: 20px;
+}
+
+
+.menu-bar {
+  background-color: rgba(251, 252, 240, 0.5);
+  display: flex;
+  justify-content: center;
+  transition: height 1s ease;
+}
+
+
+.mobile-menu-item {
+  height: 0px;
+  transition: 0.3s ease;
+  overflow: hidden;
+  background-color: rgba(251, 252, 240, 0.7);
+}
+
+.mobile-menu-item.open {
+  height: 100px;
+  transition: all 0.3s ease;
+}
+
+
+
+
+.hamburger-line {
+  background-color: #000;
+  height: 4px;
+  width: 30px;
+  margin: 3.5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-line.invisible {
+  opacity: 0;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .menu-item {
@@ -36,7 +79,7 @@
 
 .menu-item.hovered,
 .menu-dropdown-list li a:hover {
-  color: rgba(240,129,54);
+  color: rgba(240, 129, 54);
 }
 
 .menu-item-container {
@@ -63,7 +106,7 @@
   width: 100%;
   /* background: linear-gradient(to right, rgb(232, 0, 233, 0.12), rgb(37, 3, 192, 0.12));  */
   /* same as #e800e9, #2503c0 */
-  background-color: rgba(251,252,240,.7);
+  background-color: rgba(251, 252, 240, 0.7);
 
   transition: 1s ease;
 }
