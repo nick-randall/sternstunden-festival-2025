@@ -35,7 +35,8 @@ const Faqs = () => {
             A: Das Gelände selbst ist barrierefrei, leider ist jedoch nicht alles auf dem Gelände barrierefrei. Die Gebäude sind von 1900 und haben teils einige Stufen, über die man in die Kuppeln gelangt. Jedoch gibt es zum Gelangen in die Bibliothek einen rollstuhlgerecheten Treppenlift.
 
                 <h3>F: Kann ich dort gut parken? </h3>
-            A: Nein, einen öffentlichen Parkplatz gibt es nicht und da sich um das Gelände herum ein Wohngebiet befindet, ist das Parkplatzangebot sehr eingeschränkt. Wir schlagen für PKW-Reisende das Park & Ride-Angebot am Bahnhof Bergedorf und die Fahrt von dort mit dem Bus zur Sternwarte vor, Details findest du unter "Anreise".
+            A: Nein, einen öffentlichen Parkplatz gibt es nicht und da sich um das Gelände herum ein Wohngebiet befindet, ist das Parkplatzangebot sehr eingeschränkt. Wir schlagen für PKW-Reisende das Park & Ride-Angebot am Bahnhof Bergedorf und die Fahrt von dort mit dem Bus zur Sternwarte vor, Details findest du unter
+            <a href={"/../anfahrt"} > Anfahrt </a>
 
                 <h3> F: Gibt es auf dem Festival Essen und Getränke?</h3>
             A: Ja, es wird ein Angebot an Speisen und Getränken geben.
