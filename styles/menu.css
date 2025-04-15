@@ -40,6 +40,9 @@
   transition: 0.3s ease;
   overflow: hidden;
   background-color: rgba(251, 252, 240, 0.7);
+  cursor: pointer;
+  padding-left: 50px;
+  
 }
 
 .mobile-menu-item.open {

@@ -6,4 +6,4 @@ interface Artist {
   imageUrl: string;
 }
 
-type MenuItem = "tickets" | "programm" | "info" | "kontakt" | "";
+type MenuItem = "tickets" | "programm" | "info" | "kontakt" | "" | "closing";
