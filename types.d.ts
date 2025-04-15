@@ -5,3 +5,5 @@ interface Artist {
   description: string;
   imageUrl: string;
 }
+
+type MenuItem = "tickets" | "programm" | "info" | "kontakt" | "";
