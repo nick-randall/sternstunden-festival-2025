@@ -3,12 +3,12 @@ import "../../styles/common.css";
 import "../../styles/boring-pages.css";
 
 
-const Faqs = () => {
+const SupportUs = () => {
     return (
         <div className="boring-page-wrapper">
-            <h1>FAQs - Kommt bald!</h1>
+            <h1>Support us - Kommt bald!</h1>
 
         </div>
     );
 };
-export default Faqs;
+export default SupportUs;

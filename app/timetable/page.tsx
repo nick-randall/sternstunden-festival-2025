@@ -3,12 +3,12 @@ import "../../styles/common.css";
 import "../../styles/boring-pages.css";
 
 
-const AstroProgramm = () => {
+const Timetable = () => {
     return (
         <div className="boring-page-wrapper">
-            <h1>Astroprogramm - Kommt bald!</h1>
+            <h1>Timetable - Kommt bald!</h1>
 
         </div>
     );
 };
-export default AstroProgramm;
+export default Timetable;
