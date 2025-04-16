@@ -9,8 +9,9 @@ const Tickets: React.FC = () => {
           <p>
 
             Für das Sternstunden Festival gibt es zwei Preisstufen: Vorverkauf und Abendkasse.
-            Außerdem gibt es wieder ermäßigte* Tickets und kostenlosen Eintritt für geflüchtete Personen*** sowie für Kinder unter 14 Jahren**.<br/>
-            <br/>
+            Außerdem gibt es wieder ermäßigte* Tickets und kostenlosen Eintritt für geflüchtete Personen*** sowie für Kinder unter 14 Jahren**.
+            <br/> <br/>Der Vorverkauf endet am 17. Juli.
+            <br/><br/>
             <b>Reguläre Tickets im Vorverkauf: </b><br/>
             Freitags-Ticket: 10 € <br/>
             Samstags-Ticket: 15 € <br/>
@@ -26,7 +27,7 @@ const Tickets: React.FC = () => {
             Samstags-Ticket: 10 €<br/>
             Festivalticket (Fr & Sa) 15 €<br/>
             <br/>
-            <b>Ermäßige Tickets an der Abendkasse:</b><br/>
+            <b>Ermäßigte* Tickets an der Abendkasse:</b><br/>
             Freitags-Ticket: 10 €<br/>
             Samstags-Ticket: 14 €<br/>
             Festivalticket (Fr & Sa) 19 €<br/>
@@ -44,7 +45,7 @@ const Tickets: React.FC = () => {
         <br/><br/>
 
           <b>**/***Hinweis</b>: Bestellt bitte auch bei freiem Eintritt ein 0-Euro-Ticket!
-            Der Vorverkauf endet am 17. Juli
+
 
             <br/>
             <br/>

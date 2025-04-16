@@ -90,7 +90,7 @@ const KontaktPage: React.FC = () => {
         </div>
         <div className="contact-form-row">
           <div className="item">
-            <label htmlFor="message">Nachricht Schreiben</label>
+            <label htmlFor="message">Nachricht schreiben</label>
             <textarea name="message" className="message" value={formValues.message} onChange={handleChange} />
           </div>
         </div>
@@ -105,7 +105,12 @@ const KontaktPage: React.FC = () => {
         </div>
         <div className="contact-form-row">{errorMessage && <div className="error-message">{errorMessage}</div>}</div>
       </div>
+      <div className="text-box">
+        <br/>
+        <span style={{fontSize:14}}>
+      (&lowast;) benötigt.</span></div>
     </form>
+
   );
 };
 
