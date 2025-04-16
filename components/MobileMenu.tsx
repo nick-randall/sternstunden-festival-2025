@@ -1,11 +1,10 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-import ShrinkingMenuLogo from "./ShrinkingMenuLogo";
+import Image from "next/image";
+import { useRef, useState } from "react";
 
 const MobileMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrollIsAtTopOfPage, setScrollIsAtTopOfPage] = useState<boolean>(true);
   const [currSubMenu, setCurrSubMenu] = useState<MenuItem>("");
   const [closingSubMenu, setClosingSubMenu] = useState<boolean>(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
@@ -35,47 +34,17 @@ const MobileMenu: React.FC = () => {
         setCurrSubMenu("");
         menuRef.current?.removeEventListener("transitionend", handleMenuClosed);
         setClosingSubMenu(false);
-
       };
       menuRef.current?.addEventListener("transitionend", handleMenuClosed);
     }
-  
-  }
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScrollIsAtTopOfPage(false);
-      } else {
-        setScrollIsAtTopOfPage(true);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  console.log(currSubMenu);
+  };
 
   return (
-    <div
-      className="menu-wrapper"
-      style={{ background: scrollIsAtTopOfPage ? "linear-gradient(to right, rgb(253, 244, 219, 0.3), rgb(239, 132, 84, 0.3))" : "" }}
-    >
+    <div className="menu-wrapper">
       <div className="mobile-menu-bar">
-        {
-          // Add an invisible hamburger to the left,
-          // ensuring the centered logo is correctly centered
-          scrollIsAtTopOfPage && (
-            <div className="menu-item-container">
-              <div className="menu-item hamburger">
-                <div className="hamburger-line invisible"></div>
-              </div>
-            </div>
-          )
-        }
-        <ShrinkingMenuLogo scrollIsAtTopOfPage={scrollIsAtTopOfPage} />
+        <Link href="/" className="menu-item-container" style={{ position: "relative" }}>
+          <Image className="menu-item logo" src="/logo-simple.png" alt="Sternstunden Festival Logo" width="826" height="483" />
+        </Link>
         <div className="menu-item-container" onClick={toggleMenu}>
           <div className="menu-item hamburger">
             <div className="hamburger-line"></div>
@@ -108,7 +77,13 @@ const MobileMenu: React.FC = () => {
         <div className="mobile-sub-menu">
           <div className={`mobile-menu-item ${isOpen ? "open" : ""}`}>
             <div onClick={handleBackToMainMenu}>
-              <div style= {{display:"flex", alignItems: "center"}}><img src="https://www.pinclipart.com/picdir/big/544-5440422_back-arrow-icon-transparent-png-clipart-free-download.png" alt="" style={{height: 30}}/></div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <img
+                  src="https://www.pinclipart.com/picdir/big/544-5440422_back-arrow-icon-transparent-png-clipart-free-download.png"
+                  alt=""
+                  style={{ height: 30 }}
+                />
+              </div>
             </div>
           </div>
           {currSubMenu === "programm" && (
