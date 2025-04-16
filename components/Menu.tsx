@@ -8,7 +8,7 @@ import MobileMenu from "./MobileMenu";
 const Menu: React.FC = () => {
   const { screenWidth } = useMediaQuery();
 
-  if (screenWidth > 768) {
+  if (screenWidth > 1080) {
     return <DesktopMenu />;
   }
   return <MobileMenu />;

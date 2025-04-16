@@ -51,9 +51,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               }
               .header-logo {
                 display: block;
-              }
-              .gap-for-desktop-only {
-                height: 0px; 
+              }              
+              .contact-form-row {
+                flex-direction: column;
+                align-items: start;
               }
 
             }
@@ -65,12 +66,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 position: relative;
               }
               .page-wrapper {
-                  margin-top: auto;
-                  width: auto;
-                  left: auto;
-                  transform: none;
-
-                }
+                margin-top: auto;
+                width: auto;
+                left: auto;
+                transform: none;
+              }
               .content-box {
                 flex-direction: column;
                 width: 100%;
@@ -91,6 +91,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               }
               .sponsor-logo-wrap-section {
                 flex-wrap: wrap;
+              }
+                .gap-for-desktop-only {
+                height: 0px; 
               }
             @media screen and (min-width: 1580px) {
                 .centered-wrapper { 
