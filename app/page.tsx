@@ -30,39 +30,40 @@ export default function Page() {
       <Banner />
       <Spacer height={64} />
 
-        <div className="content-box">
-          <div className="text-box">
-            <div>
-                Zum dritten Mal wird die Hamburger Sternwarte in Bergedorf zu einer Begegnungsstätte der Klänge und Sterne.
-                Das junge Festival bietet in einer einzigartigen Location ein vielfältiges Programm, das sowohl Musik als auch Wissenschaft umfasst.
-                Mit seinem bunten Angebot an Konzerten, Vorträgen, Himmelsbeobachtungen und Kinderaktivitäten ist auf dem
-                Sternstunden Festival für alle Altersgruppen etwas dabei. Das Festival ist eine ehrenamtliche Initiative der Unimusik der
-                Universität Hamburg in Zusammenarbeit mit der Hamburger Sternwarte in Bergedorf, die zum Fachbereich Physik gehört.
-            </div>
-            <br/>
-            <a className="more-info" href="/info">
-              MEHR INFOS
-            </a>
+      <div className="content-box split-box">
+        <div className="text-box">
+          <div>
+            Zum dritten Mal wird die Hamburger Sternwarte in Bergedorf zu einer Begegnungsstätte der Klänge und Sterne. Das junge Festival bietet in
+            einer einzigartigen Location ein vielfältiges Programm, das sowohl Musik als auch Wissenschaft umfasst. Mit seinem bunten Angebot an
+            Konzerten, Vorträgen, Himmelsbeobachtungen und Kinderaktivitäten ist auf dem Sternstunden Festival für alle Altersgruppen etwas dabei. Das
+            Festival ist eine ehrenamtliche Initiative der Unimusik der Universität Hamburg in Zusammenarbeit mit der Hamburger Sternwarte in
+            Bergedorf, die zum Fachbereich Physik gehört.
           </div>
-            <div className="responsive-spacer-15"></div>
-                <Image src="/sternstunden_festival_home.jpg" alt="" width="625" height="416" />
-          <div className="responsive-spacer-15"></div>
-
-
+          <br />
+          <a className="more-info" href="/info">
+            MEHR INFOS
+          </a>
         </div>
-        <Spacer height={32}/>
-        <div className="content-box video-container">
-          <div>AFTERMOVIE 2024</div>
-          <iframe
-              className="video"
-              frameBorder="0"
-              src="https://www.youtube-nocookie.com/embed/H_ZANaTi9Lo?si=Rnq-__7u6C3o3eiM"
-          ></iframe>
-        <div className="content-box"> <PhotoSlider photoUrls={photoUrls}/> </div>
-
-
+        <div className="responsive-spacer-15"></div>
+        <div className="home-image-wrapper">
+          <Image
+            src="/sternstunden_festival_home.jpg"
+            alt="Foto mit dem Text: 2 Tage 5 Bühnen über 30 Konzerte mehr als 20 Vorträge über 1000 Besucher:innen buntes Kinderprogramm Besichtigungen Foodtrucks und und und"
+            width="625"
+            height="416"
+            className="home-image"
+          />
         </div>
-      </>
+        <div className="responsive-spacer-15"></div>
+      </div>
+      <Spacer height={32} />
+      <div className="content-box video-container">
+        <div>AFTERMOVIE 2024</div>
+        <iframe className="video" frameBorder="0" src="https://www.youtube-nocookie.com/embed/H_ZANaTi9Lo?si=Rnq-__7u6C3o3eiM"></iframe>
+        <div className="content-box">
+          <PhotoSlider photoUrls={photoUrls} />
+        </div>
+      </div>
+    </>
   );
 }
-

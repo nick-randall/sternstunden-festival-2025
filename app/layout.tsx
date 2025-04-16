@@ -78,9 +78,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               .content-box .responsive-spacer-15 {
                 height: 15px;
               }
+              .content-box.split-box {
+                padding: 15px;
+              }
               .photo-slider img {
                 height: 250px;
                 width: auto;
+              }
+              .home-image {
+                height: auto;
+                width: 100%;
               }
               .arrow {
                 display: none;  
@@ -92,8 +99,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               .sponsor-logo-wrap-section {
                 flex-wrap: wrap;
               }
-                .gap-for-desktop-only {
-                height: 0px; 
+              .gap-for-desktop-only {
+              height: 0px; 
               }
             @media screen and (min-width: 1580px) {
                 .centered-wrapper { 
@@ -109,9 +116,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Menu />
           <Spacer height={76} />
           <div className="gap-for-desktop-only" />
-          <div className="page-wrapper">
-            {children}
-          </div>
+          <div className="page-wrapper">{children}</div>
         </div>
         <Spacer height={64} />
 
