@@ -21,6 +21,17 @@ const Banner: React.FC = () => {
     setTopPosition(top + scrollY);
   }, [setTopPosition]);
 
+  const handleResize = useCallback(() => {
+    setTop();
+  }, [setTop]);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [handleResize]);
+
   if (!isMounted) return null;
 
   return ReactDOM.createPortal(

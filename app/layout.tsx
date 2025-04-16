@@ -56,6 +56,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 flex-direction: column;
                 align-items: start;
               }
+              .gap-for-tablet-and-desktop {
+                height: 0px; 
+              }
 
             }
             @media screen and (max-width: 1080px) { 
@@ -99,9 +102,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               .sponsor-logo-wrap-section {
                 flex-wrap: wrap;
               }
-              .gap-for-desktop-only {
-              height: 0px; 
-              }
+             
             @media screen and (min-width: 1580px) {
                 .centered-wrapper { 
                   width: auto;
@@ -115,7 +116,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="outer-wrapper">
           <Menu />
           <Spacer height={76} />
-          <div className="gap-for-desktop-only" />
+          <div className="gap-for-tablet-and-desktop" />
           <div className="page-wrapper">{children}</div>
         </div>
         <Spacer height={64} />

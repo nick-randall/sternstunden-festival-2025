@@ -104,8 +104,7 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoUrls }) => {
         style={{
           position: "absolute",
           height: 400,
-          width: "calc(60% - 53px)",
-          left: "calc(40% + 20px)",
+          width: "calc(100% - 100px)",
           pointerEvents: "none",
         }}
       >

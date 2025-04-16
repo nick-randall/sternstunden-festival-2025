@@ -57,27 +57,27 @@ const DesktopMenu: React.FC = () => {
       <div className="menu-bar">
         <div className="menu-items-wrapper">
 
-          <a href="/tickets" className="menu-item-container">
+          <Link href="/tickets" className="menu-item-container">
             <div className={`menu-item ${currDropdown === "tickets" && "hovered"}`} onMouseEnter={() => handleMouseEnter("tickets")}>
               Tickets
             </div>
-          </a>
-          <div className="menu-item-container" onMouseEnter={() => handleMouseEnter("programm")}>
+          </Link>
+          <Link href="/lineup" className="menu-item-container" onMouseEnter={() => handleMouseEnter("programm")}>
             <div className={`menu-item ${currDropdown === "programm" && "hovered"}`} ref={programHoverRef}>
               Programm
             </div>
-          </div>
+          </Link>
           <ShrinkingMenuLogo scrollIsAtTopOfPage={scrollIsAtTopOfPage} />
-          <div className="menu-item-container" onMouseEnter={() => handleMouseEnter("info")}>
+          <Link href="/info" className="menu-item-container" onMouseEnter={() => handleMouseEnter("info")}>
             <div className={`menu-item ${currDropdown === "info" && "hovered"}`} ref={infoHoverRef}>
-              Info
+               Info
             </div>
-          </div>
-          <div className="menu-item-container" onMouseEnter={() => handleMouseEnter("kontakt")}>
+          </Link>
+          <Link href="/kontakt" className="menu-item-container" onMouseEnter={() => handleMouseEnter("kontakt")}>
             <div className={`menu-item ${currDropdown === "kontakt" && "hovered"}`} ref={kontaktHoverRef}>
               Kontakt
             </div>
-          </div>
+          </Link>
         </div>
       </div>
       <div className={`menu-dropdown ${currDropdown === "" && "hidden"}`}>
