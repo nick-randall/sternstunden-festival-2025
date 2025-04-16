@@ -9,6 +9,7 @@ interface ContactFormValues {
   firstname: string;
   lastname: string;
   email: string;
+  subject: string;
   message: string;
 }
 
@@ -17,6 +18,7 @@ const KontaktPage: React.FC = () => {
     firstname: "",
     lastname: "",
     email: "",
+    subject: "",
     message: "",
   });
   const [sending, setSending] = useState(false);
@@ -48,7 +50,7 @@ const KontaktPage: React.FC = () => {
       const resp = await fetch("https://sternstunde.fly.dev/send-email", { method: "POST", body: JSON.stringify(formValues) });
       const status = resp.status;
       if (status === 200) {
-        setFormValues({ firstname: "", lastname: "", email: "", message: "" });
+        setFormValues({ firstname: "", lastname: "", email: "", subject: "", message: "" });
       } else {
         alert("Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später erneut.");
         setErrorMessage("Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später erneut.");
@@ -86,6 +88,12 @@ const KontaktPage: React.FC = () => {
           <div className="item">
             <label htmlFor="email">Email-Adresse *</label>
             <input name="email" type="email" required value={formValues.email} onChange={handleChange} />
+          </div>
+        </div>
+        <div className="contact-form-row">
+          <div className="item">
+            <label htmlFor="subject">Betreff</label>
+            <input name="subject" className="subject" value={formValues.subject} onChange={handleChange} />
           </div>
         </div>
         <div className="contact-form-row">
