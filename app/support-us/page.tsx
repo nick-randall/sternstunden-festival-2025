@@ -9,7 +9,6 @@ const SupportUs = () => {
             <h1>Sponsoring</h1>
 
             <h3> Sponsor werden? Sehr gern!</h3>
-                <strong>Sponsor werden? Sehr gern!</strong> <br/>
             <br/>
 
             Das Sternstunden Festival lebt von Engagement – auch von Partner:innen aus Wirtschaft und Gesellschaft.

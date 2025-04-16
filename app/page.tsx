@@ -60,10 +60,12 @@ export default function Page() {
       <div className="content-box video-container">
         <div>AFTERMOVIE 2024</div>
         <iframe className="video" frameBorder="0" src="https://www.youtube-nocookie.com/embed/H_ZANaTi9Lo?si=Rnq-__7u6C3o3eiM"></iframe>
+      </div>
+      <Spacer height={32} />
         <div className="content-box">
           <PhotoSlider photoUrls={photoUrls} />
         </div>
-      </div>
+
     </>
   );
 }
