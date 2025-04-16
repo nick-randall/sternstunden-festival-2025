@@ -96,4 +96,10 @@ body {
 .header-logo {
   width: 45%;
   height: auto;
+  padding: 0px 0px 32px 0px;
+  display: none;
+}
+.gap-for-desktop-only {
+  height: 100px;
+  /* display: none; */
 }

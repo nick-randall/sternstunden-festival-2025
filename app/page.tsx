@@ -4,6 +4,7 @@ import "../styles/common.css";
 import Spacer from "../components/Spacer";
 import PhotoSlider from "./PhotoSlider";
 import Banner from "@/components/Banner";
+import Image from "next/image";
 
 const rootUrl = "https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/";
 const initial = ["ssf24m43", "ssf24m115", "ssf24m112", "ssf24m113", "ssf24m44", "ssf24m108"];
@@ -24,6 +25,7 @@ export default function Page() {
   }
   return (
     <>
+      <Image className="header-logo" src="/logo-with-dates.png" alt="Sternstunden Festival Logo" width="827" height="434" />
       <div id="banner-slot" />
       <Banner />
       <Spacer height={64} />

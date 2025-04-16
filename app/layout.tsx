@@ -4,6 +4,8 @@ import Spacer from "@/components/Spacer";
 import Image from "next/image";
 import Flex from "@/components/Flex";
 import Menu from "@/components/Menu";
+import "../styles/menu.css";
+import "../styles/common.css";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -45,7 +47,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 width: auto;
               }
               .banner-text {
-                  animation: slide-left-mobile 25s infinite linear;
+                animation: slide-left-mobile 25s infinite linear;
+              }
+              .header-logo {
+                display: block;
+              }
+              .gap-for-desktop-only {
+                height: 0px; 
               }
 
             }
@@ -95,12 +103,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <div className="bg"></div>
         <div className="outer-wrapper">
-         <Menu />
+          <Menu />
+          <Spacer height={76} />
+          <div className="gap-for-desktop-only" />
           <div className="page-wrapper">
-            {/* <Spacer height={32} />
-            <Image className="header-logo" src="/logo-with-dates.png" alt="Sternstunden Festival Logo" width="827" height="434" /> */}
-            {/* <Spacer height={32} /> */}
-            <Spacer height={200} />
             {children}
           </div>
         </div>
@@ -136,36 +142,43 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className="sponsor-logo-row">
                 <div className="sponsor-logo-container">
                   <a href="https://www.zeit-stiftung.de">
-                  <Image src="/sponsors/zeit-stiftung-bucerius.png" alt="Zeit Stiftung Bucerius" height="136" width="296" className="sponsor-logo" />
+                    <Image
+                      src="/sponsors/zeit-stiftung-bucerius.png"
+                      alt="Zeit Stiftung Bucerius"
+                      height="136"
+                      width="296"
+                      className="sponsor-logo"
+                    />
                   </a>
                 </div>
                 <div className="sponsor-logo-container">
                   <a href="https://www.claussen-simon-stiftung.de/de">
-                  <Image
-                    src="/sponsors/claussen-simon-stiftung.png"
-                    alt="Claussen Simon Stiftung"
-                    height="669"
-                    width="1720"
-                    className="sponsor-logo"
-                  /> </a>
+                    <Image
+                      src="/sponsors/claussen-simon-stiftung.png"
+                      alt="Claussen Simon Stiftung"
+                      height="669"
+                      width="1720"
+                      className="sponsor-logo"
+                    />{" "}
+                  </a>
                 </div>
               </div>
 
               <div className="sponsor-logo-row">
                 <div className="sponsor-logo-container">
                   <a href="https://www.uni-hamburg.de/exzellenz/exzellenzcluster.html">
-                  <Image src="/sponsors/excellenzcluster.png" alt="Excellenzcluster" width="400" height="78" className="sponsor-logo" />
+                    <Image src="/sponsors/excellenzcluster.png" alt="Excellenzcluster" width="400" height="78" className="sponsor-logo" />
                   </a>
                 </div>
               </div>
-            <div className="sponsor-logo-row">
-              <div className="sponsor-logo-container">
-                <a href="https://www.physik.uni-hamburg.de/hs.html">
-                  <Image src="/sponsors/UHH_Wortmarke_Sternwarte.png" alt="Hamburger Sternwarte" width="400" height="78" className="sponsor-logo" />
-                </a>
+              <div className="sponsor-logo-row">
+                <div className="sponsor-logo-container">
+                  <a href="https://www.physik.uni-hamburg.de/hs.html">
+                    <Image src="/sponsors/UHH_Wortmarke_Sternwarte.png" alt="Hamburger Sternwarte" width="400" height="78" className="sponsor-logo" />
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
 
             <Spacer height={32} />
 
