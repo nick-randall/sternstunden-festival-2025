@@ -36,6 +36,11 @@
   line-height: normal;
   letter-spacing: normal;
   text-transform: uppercase;
+  text-decoration: none ;
+}
+.artist-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 

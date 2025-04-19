@@ -5,6 +5,17 @@ import Spacer from "@/components/Spacer";
 import Link from "next/link";
 
 const Artists: React.FC = async () => {
+  const getDayPlus24HourTimeString = (date: string) => {
+    const dateObj = new Date(date);
+    const day = dateObj.getDay();
+    const germanDay = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"][day];
+
+    const hours = dateObj.getHours();
+    const minutes = dateObj.getMinutes();
+    const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+
+    return `${germanDay} ${hours}:${formattedMinutes}`;
+  };
   const artists = [];
   try {
     const response = await fetch("https://sternstunde.fly.dev/get-artists");
@@ -16,15 +27,23 @@ const Artists: React.FC = async () => {
     const errorMessage = error as Error;
     console.error("Error fetching artists:", errorMessage.message);
   }
-  artists.sort((a: Artist, b: Artist) => a.index - b.index);
+  artists.sort((a: ArtistWithEvents, b: ArtistWithEvents) => a.artist.index - b.artist.index);
+  console.log("Artists:", artists);
   return (
     <div className="artists-grid">
-      {artists.map((artist: Artist) => (
-        <Link key={artist.id} href={`/kuenstlerinnen/${artist.id}`} className="artist-link">
-          <div key={artist.id} className="artist-card">
-            <Image src={artist.imageUrl} alt={artist.name} width="265" height="265" />
+      {artists.map((a: ArtistWithEvents) => (
+        <Link key={a.artist.id} href={`/kuenstlerinnen/${a.artist.id}`} className="artist-link">
+          <div key={a.artist.id} className="artist-card">
+            <Image src={a.artist.imageUrl} alt={a.artist.name} width="265" height="265" />
             <Spacer height={5} />
-            <div className="artist-name">{artist.name}</div>
+            <div className="artist-name">{a.artist.name}</div>
+            <Spacer height={5} />
+            {a.events.map((e: ArtistEvent) => (
+              <div key={e.id} className="artist-event">
+                <div className="artist-event-time">{getDayPlus24HourTimeString(e.startDateTime)}</div>
+                <div className="artist-event-stage">{e.stage.name}</div>
+              </div>
+            ))}
           </div>
         </Link>
       ))}
