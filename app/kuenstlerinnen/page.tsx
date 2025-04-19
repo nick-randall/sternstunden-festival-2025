@@ -27,8 +27,12 @@ const Artists: React.FC = async () => {
     const errorMessage = error as Error;
     console.error("Error fetching artists:", errorMessage.message);
   }
-  artists.sort((a: ArtistWithEvents, b: ArtistWithEvents) => a.artist.index - b.artist.index);
-  console.log("Artists:", artists);
+  artists.sort((a: ArtistWithEvents, b: ArtistWithEvents) => {
+    if (a.artist.index === undefined || b.artist.index === undefined) {
+      return 0;
+    }
+    return a.artist.index - b.artist.index;
+  });
   return (
     <div className="artists-grid">
       {artists.map((a: ArtistWithEvents) => (
