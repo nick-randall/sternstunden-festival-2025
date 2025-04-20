@@ -44,5 +44,17 @@
 }
 
 
+.artist-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100vh;
+}
 
-
+.artist-page img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}

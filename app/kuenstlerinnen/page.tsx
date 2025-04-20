@@ -3,19 +3,10 @@ import "../../styles/common.css";
 import "../../styles/artists.css";
 import Spacer from "@/components/Spacer";
 import Link from "next/link";
+import { getDayPlus24HourTimeString } from "@/helper_functions/helperFunctions";
 
 const Artists: React.FC = async () => {
-  const getDayPlus24HourTimeString = (date: string) => {
-    const dateObj = new Date(date);
-    const day = dateObj.getDay();
-    const germanDay = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"][day];
 
-    const hours = dateObj.getHours();
-    const minutes = dateObj.getMinutes();
-    const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
-
-    return `${germanDay} ${hours}:${formattedMinutes}`;
-  };
   const artists = [];
   try {
     const response = await fetch("https://sternstunde.fly.dev/get-artists" , { headers: { Accept: "application/json" } });
