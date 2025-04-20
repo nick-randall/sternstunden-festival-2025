@@ -2,6 +2,7 @@ import Image from "next/image";
 import "../../../styles/common.css";
 import "../../../styles/artists.css";
 import { getDayPlus24HourTimeString } from "@/helper_functions/helperFunctions";
+import { notFound } from "next/navigation";
 
 interface ArtistPageProps {
   params: Promise<{ id: string }>;
@@ -12,9 +13,14 @@ const ArtistPage: React.FC<ArtistPageProps> = async ({ params }) => {
   let a: ArtistWithEvents | null = null;
 
   try {
-    console.log("Fetching artist with ID:", id);
     const response = await fetch(`https://sternstunde.fly.dev/get-artist/${id}`, { headers: { Accept: "application/json" } });
     // const response = await fetch(`http://localhost:8080/get-artist/${id}`, { headers: { Accept: "application/json" } });
+    if (response.status === 404) {
+      notFound();
+    }
+    if (!response.ok) {
+      throw new Error(`Failed to fetch artist: ${response.statusText}`);
+    }
     a = await response.json();
   } catch (error) {
     const errorMessage = error as Error;
@@ -22,7 +28,7 @@ const ArtistPage: React.FC<ArtistPageProps> = async ({ params }) => {
   }
 
   if (!a) {
-    return <div>Artist not found</div>;
+    return <div>Die Künstlerin konnte nicht gefunden werden</div>;
   }
 
   return (
