@@ -1,8 +1,9 @@
 .artists-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: space-between;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, 308px);
+  gap: 40px;
+  width: 100%;
+  justify-content: center;
 }
 
 .artist-card {
@@ -10,7 +11,7 @@
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6);
   padding: 20px;
   width: 308px;
-  height: auto;
+  height: 400px;
   display: flex;
   flex-direction: column;
 }
@@ -29,20 +30,19 @@
 }
 
 .artist-card .artist-name {
-  font-family: 'NunitoSans';
+  font-family: "NunitoSans";
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: normal;
   text-transform: uppercase;
-  text-decoration: none ;
+  text-decoration: none;
 }
 .artist-link {
   text-decoration: none;
   color: inherit;
 }
-
 
 .artist-page {
   display: flex;
