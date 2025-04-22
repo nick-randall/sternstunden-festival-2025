@@ -27,11 +27,16 @@ const SupportUs = () => {
             <h3>Auch Privatleute können uns unterstützen!</h3>
             Als <strong> ehrenamtlich organisierte Non-Profit-Veranstaltung</strong> sind wir auf  <strong> gemeinschaftliche Unterstützung</strong>  angewiesen, um unser Festival möglich zu machen.
             Das Sternstunden Festival kannst du auch  mit einer Spende als Privatperson fördern. So leistest du deinen Beitrag, die Kultur und Wissenschaft Hamburgs abseits des Mainstreams zu bereichern.
-            Wenn du uns unter die Arme greifen möchtest, freuen wir uns sehr über deine Spende – <strong>schreib uns dazu gerne</strong> <a href="../kontakt">
-            <strong>hier</strong></a> mit dem Betreff <strong> “Spenden”</strong>.<br/>
-            <br/>
-            Auf Wunsch stellen wir euch gerne eine <strong>Spendenbescheinigung</strong>  aus.<br/>
-            <br/>
+            Wenn du uns unter die Arme greifen möchtest, freuen wir uns sehr über deine Spende auf folgendes Konto:
+
+            Förderverein der Unimusik Hamburg e.V.
+            DE39 8306 5408 0004 1718 96
+            GENODEF1SLR
+            Deutsche Skatbank
+            
+            Eine Spendenbescheinigung können wir auf Wunsch ausstellen. Bitte kontaktiere uns dafür unter:  <a href="mailto:info@foerderverein-unimusik-hamburg.de?subject=Spendenbescheinigung%20Sternstunden">
+            <strong>info@foerderverein-unimusik-hamburg.de</strong></a> mit dem Betreff <strong> “Spendenbescheinigung Sternstunden”</strong>.<br/>
+            
 
             <h1>Helfen</h1>
 
