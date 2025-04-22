@@ -6,7 +6,7 @@ import "../../styles/boring-pages.css";
 const MissionStatement = () => {
     return (
         <div className="boring-page-wrapper">
-            <h1>Mission-Statement</h1>
+            <h1>Mission Statement</h1>
             Wir verstehen uns als spartenübergreifendes Kulturfestival, mit dem wir eine Brücke insbesondere zwischen
             unterschiedlichen Musikgenres und Astrophysik schlagen möchten.
             So sollen Ideen und Gedanken miteinander verknüpft und präsentiert werden. Ungehörtes, Ungesehenes erlaubt uns,
