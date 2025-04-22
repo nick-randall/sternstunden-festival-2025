@@ -50,6 +50,23 @@ const Faqs = () => {
                 <h3>F: Sind Hunde auf dem Gelände erlaubt? </h3>
             A: Hunde dürfen leider nicht auf das Gelände der Sternwarte. Ausgenommen davon sind natürlich Blindenführhunde und Hunde in ihrer Funktion als Begleit-Hund.
 
+                <h3>F: Bienen auf dem Gelände der Sternwarte </h3>
+            A: Im Astronomiepark der Sternwarte Bergedorf wurden mit unserer Unterstützung über das Jahr 2023 verschiedene Maßnahmen zur Förderung heimischer Wildbienenarten umgesetzt. Es wurden Blühwiesen und Beete mit heimischen Wildsträuchern und Wildstauden als Nektar- und Pollenquellen für die Wildbienen angelegt.
+            <br/><br/><strong>Was muss ich beachten, wenn ich eine Bienenallergie habe?</strong>
+            <br/>Bitte bring im Falle einer bekannten Allergie dein Notfallset mit und halte ausreichend Abstand zu den Bienenstöcken. Im Zweifelsfall informiere unser Team vor Ort.
+            <br/>
+            <br/><strong>Kann ich barfuß über das Gelände laufen?</strong>
+            <br/>Aus Sicherheitsgründen raten wir dringend davon ab, barfuß zu laufen – es besteht die Gefahr, versehentlich auf eine Biene zu treten.
+
+            <h3> F: Gibt es vor Ort eine Erste-Hilfe-Station?</h3>
+            A: Ja, es gibt ein Erste-Hilfe-Zelt auf dem Gelände. Du findest es gut sichtbar ausgeschildert in der Nähe de Toiletten. Im Notfall wende dich bitte an das Personal – wir helfen dir sofort weiter.
+
+            <h3> F: Welchen Eingang soll ich benutzen?</h3>
+            A: Bitte benutze ausschließlich den Haupteingang der Sternwarte, wie er auch auf dem Lageplan gekennzeichnet ist. Der Eingang von der August-Bebel-Straße kommend wird nur als Notausgang genutzt.
+
+            <h3> F: Wie geht die Sternwarte mit Awareness um?</h3>
+            A: Uns ist ein respektvolles und achtsames Miteinander wichtig. Wenn du dich unwohl fühlst oder Unterstützung brauchst, kannst du dich jederzeit an unser Awareness-Team wenden (in den lila Westen). Wir nehmen eure Anliegen ernst und setzen uns für einen sicheren Raum für alle ein. Auch wenn es dir schlecht geht, kannst du dich an unser Awareness Team wenden.
+            
                 <h3> F: Kann ich auf dem Gelände grillen?</h3>
             A: Nein, von Feuerstellen jeglicher Art ist abzusehen. Da das Gelände viel aus Rasenfläche besteht und die im Juli sehr trocken sein kann, bitten wir euch mit allem, was das Gras entzünden könnte, sehr vorsichtig zu sein. Das gilt dann auch für das Rauchen. Bitte achtet darauf, keine glühende Asche in trockenes Gras fallen zu lassen. Gegrilltes wird aber vom ansässigen Café angeboten.
             <br/> <br/>

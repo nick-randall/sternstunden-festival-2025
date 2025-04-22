@@ -48,7 +48,7 @@ export default function Page() {
         <div className="home-image-wrapper">
           <Image
             src="/sternstunden_festival_home.jpg"
-            alt="Foto mit dem Text: 2 Tage 5 Bühnen über 30 Konzerte mehr als 20 Vorträge über 1000 Besucher:innen buntes Kinderprogramm Besichtigungen Foodtrucks und und und"
+            alt="Foto mit dem Text: 2 Tage Science Slam über 30 Konzerte mehr als 20 Vorträge über 1000 Besucher:innen buntes Kinderprogramm Besichtigungen Foodtrucks und und und"
             width="625"
             height="416"
             className="home-image"

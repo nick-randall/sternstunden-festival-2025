@@ -35,20 +35,21 @@ const Banner: React.FC = () => {
   if (!isMounted) return null;
 
   return ReactDOM.createPortal(
-    <a href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAZAAIzJRyZUQ1RHV0hTSThCSUUwSjI2TFg2WURMU1NRWC4u&origin=lprLink&route=shorturl">
+    <a href="../tickets">
       <div className="banner" ref={handleRef} style={{ top: topPosition }}>
         <div className="banner-text">
           <div className="star-wrapper">
             <Image src="/star.svg" alt="star symbol" width="20" height="20" />
           </div>
-          <span>OPEN CALL ARTISTS: Bewerbt euch jetzt beim Sternstunden Festival 2025&nbsp;</span>
+          <span>TICKETS TICKETS TICKETS!</span>
           <div className="star-wrapper">
             <Image src="/star.svg" alt="star symbol" width="20" height="20" />
           </div>
-          <span>OPEN CALL ARTISTS: Bewerbt euch jetzt beim Sternstunden Festival 2025</span>
+          <span>TICKETS TICKETS TICKETS!</span>
           <div className="star-wrapper">
             <Image src="/star.svg" alt="star symbol" width="20" height="20" />
           </div>
+          <span>TICKETS TICKETS TICKETS!</span>
         </div>
       </div>
     </a>,
