@@ -48,12 +48,14 @@
 .plus-minus-button {
   color: #ecf0f1;
   background: transparent;
-  height: 30px;
+  height: 40px;
   border: 0;
   font-size: 1.5em;
   position: relative;
   flex-basis: 30px;
+  width: 40px;
   flex-shrink: 0;
+  align-self: center;
 }
 
 .plus-minus-button span {
@@ -64,23 +66,22 @@
 
 /* Create the "+" shape by positioning the spans absolutely */
 .plus-minus-button span:first-child {
-  top: 0%;
-  bottom: 0%;
-  width: 20%;
-  left: 40%;
+  top: 0;
+  bottom: 10px;
+  width: 8px;
+  left: -9px;
   background-color: white;
 }
 
 .plus-minus-button span:last-child {
-  left: 0%;
-  right: 0%;
-  height: 20%;
-  top: 40%;
+  left: -20px;
+  right: 0px;
+  height: 8px;
+  top: 11px;
   background-color: white;
 
 }
 
-/* Morph the shape when the .plus-minus-button is hovered over */
 .plus-minus-button.minus span {
   transform: rotate(90deg);
 }
