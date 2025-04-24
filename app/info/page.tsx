@@ -6,26 +6,56 @@ const MoreInfoPage = () => {
   return (
    <div className="boring-page-wrapper">
         <h1>Das Sternstunden Festival</h1>
+        <h3>Musik trifft Kosmos</h3>
         <p>
-            Das Sternstunden Festival: eine musikalisch-wissenschaftliche Liaison unter Hamburgs sommerlichem Sternenhimmel.
-            Klassische Chor- und Ensemblemusik, Open Air Brass und Big Bands, wissenschaftliche Vorträge und Führungen, Klanginstallationen:
-            für eineinhalb Tage wird der historische Astronomiepark der Hamburger Sternwarte in Bergedorf Heimat für eine besondere Verbindung
-            von Kultur und Astrophysik, die den Besucher:innen einen einzigartigen Mix aus Konzerten, Entdeckungen und Festivalatmosphäre beschert.
-            Die Gebäude und das Außengelände werden vielfältig genutzt, um Musikalisches und Akademisches zu präsentieren.
+        <strong>Klangvolle Nächte unter dem Sternenzelt, faszinierende Einblicke in die Weiten des Universums und ein Ort voller Geschichte – Willkommen auf dem Sternstunden Festival!</strong>
+
+<br/>
+<br/>
+Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das Gelände der historischen <strong>Hamburger Sternwarte in Bergedorf</strong> ein. <strong>Freitags ab dem Nachmittag und samstags ab dem Mittag</strong> verwandelt sich die weitläufige Parkanlage rund um die denkmalgeschützten Teleskopgebäude in einen Ort der Begegnung mit Musik und Astronomie.
+<br/>
+<br/>
+
+<h3>Ein Festival zwischen Kosmos und Klang</h3>
+
         </p>
         <p>
-          Abwechslungsreiche Musik von Kammerchor- und Orchestermitgliedern erklingt in den charaktervollen Räumlichkeiten der Sternwarte, die alleine
-          oder in qualifizierten Führungen zu erkunden sind. Das Open-Air-Programm lädt abends zum Tanzen ein, unter freiem Himmel mit Blick in die
-          Sterne, die durch die Teleskope der Sternwarte noch genauer erforscht werden können. Drinnen Konzerte und Fachvorträge, draußen entdeckendes
-          Lernen, Beats und Bands, dazu ein buntes Kinderprogramm, Foodtrucks und gekühlte Getränke. Von Bibliothek bis Refraktor, von Kammermusik bis
-          zur Soundinstallation, von jung bis alt, von Hängemattenzone bis Disco - zwei laue Sommernächte und ein ganzer Sternenhimmel voller
-          Überraschungen, eine Einladung an alle, sich vom All faszinieren und von Musik bezaubern zu lassen. Das Sternstunden Festival ist eine
-          Initiative der Unimusik der Universität Hamburg in Kooperation mit der Hamburger Sternwarte in Bergedorf, die zum Fachbereich Physik der
-          Universität Hamburg gehört.
-        </p>
-        <p>
-            Es wird getanzt, gesungen, gefragt und gelernt und gestaunt. Bilder von den letzten beiden Jahren gibt es
-            <a href={"/../rueckblick"}> hier</a>.
+        Das Sternstunden Festival schlägt Brücken – zwischen Genres, Generationen und Galaxien. Im Fokus steht eine musikalische Vielfalt, die von <strong>klassischer Kammermusik</strong> über <strong>gregorianische Gesänge</strong>, <strong>Jazz</strong> bis hin zu <strong>Elektro-Pop</strong> reicht. Dabei wird das Festival maßgeblich von <strong>Künstler:innen aus den Chören und dem Sinfonieorchester der Universität Hamburg</strong> sowie <strong>Musikschaffenden aus der Region</strong> gestaltet.
+In den vergangenen Jahren begeisterten unter anderem das <strong>Orchester im Treppenhaus</strong> oder das energetische Ensemble <strong>Hepta Polka</strong> das Publikum. 
+Doch das Festival geht über Musik hinaus: Es möchte Wissenschaft nahbar machen, Astronomie erlebbar gestalten – und das in einem ganz besonderen Rahmen. Im <strong>wissenschaftlichen Begleitprogramm</strong> erwarten die Besucher:innen:
+<br/> - Führungen durch die historischen Kuppelgebäude
+<br/> - ein Blick durch Teleskope des letzten Jahrhunderts (bei entsprechendem Wetter und klarem Himmel ab ca. 22 Uhr)
+<br/> - Experimente zum Mitmachen
+<br/> - Vorträge zu aktuellen Forschungsthemen, zur Geschichte des Universums und spannenden Fragen der modernen Astrophysik
+<br/> - und vieles mehr
+<br/>
+<br/>
+<h3>Für alle Generationen</h3>
+Das Sternstunden Festival versteht sich als<strong> Ort für alle – von jung bis alt</strong>. Mit einem eigenen <strong>Kinderprogramm</strong> wird auch der jüngste Nachwuchs auf galaktische Reisen geschickt:
+Ob beim <strong>Kinderkonzert</strong>,einer <strong>Kinderführung</strong> durch die Sternwarte, auf dem <strong>musikalischen Planetenrundgang</strong> oder bei der <strong>Sternstunden-Rallye</strong> – hier wird gestaunt, gelacht und entdeckt.
+<br/>
+<br/>
+<h3>Kultur für alle </h3>
+Um Kultur möglichst vielen Menschen zugänglich zu machen, legt das Festival großen Wert auf <strong>niedrigschwellige Preise</strong>. Es gibt die <strong>Tages- und Kombitickets, ermäßigte Tickets</strong> sowie alle Infos und Buchungsmöglichkeiten im <a href="../tickets">
+<strong>Ticketshop</strong></a>.
+Mit jeweils rund <strong>1.500 Besucher:innen in den ersten beiden Jahren</strong> entwickelt sich das Festival hin zu einem neuen Fixpunkt im Hamburger Kulturkalender entwickelt – und begeistert ein buntes, vielfältiges Publikum.
+<br/>
+<br/>
+<h3>Ort mit Geschichte und Atmosphäre</h3>
+Die Hamburger Sternwarte öffnete ihre Tore zu Beginn des 20. Jahrhunderts und zählt zu den besonderen historischen Orten in Hamburg. Ihre imposanten Gebäude stehen unter Denkmalschutz und verleihen dem Festival eine einzigartige Kulisse – umgeben von einer malerischen Parkanlage und einer besonderen Atmosphäre.
+<br/>
+<br/>
+<a href="../sternwarte"><strong>Mehr zur Geschichte der Sternwarte gibt es hier</strong></a>.
+<br/>
+<br/>
+<h3>Von der Idee zur Sternstunde</h3>
+Das Sternstunden Festival ist ein Herzensprojekt. Organisiert und getragen wird es <strong>ehrenamtlich</strong> von Studierenden und Engagierten aus der <strong>Unimusik Hamburg</strong>, der <strong>Hamburger Sternwarte</strong>.
+Hinter dem Festival steht der Wunsch, <strong>Wissenschaft und Musik zu verknüpfen</strong>, Raum für Begegnung zu schaffen und astronomische Themen <strong>in einem neuen Kontext </strong>erlebbar zu machen.
+<br/>
+<br/>
+<h3>Schenk dir eine Sternstunde.<br/>
+Im Juli, in Bergedorf, unter den Sternen.</h3>
+
         </p>
     </div>
   );

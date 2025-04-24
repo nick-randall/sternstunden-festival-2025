@@ -32,12 +32,19 @@ export default function Page() {
 
       <div className="content-box split-box">
         <div className="text-box">
-          <div>
-            Zum dritten Mal wird die Hamburger Sternwarte in Bergedorf zu einer Begegnungsstätte der Klänge und Sterne. Das junge Festival bietet in
-            einer einzigartigen Location ein vielfältiges Programm, das sowohl Musik als auch Wissenschaft umfasst. Mit seinem bunten Angebot an
-            Konzerten, Vorträgen, Himmelsbeobachtungen und Kinderaktivitäten ist auf dem Sternstunden Festival für alle Altersgruppen etwas dabei. Das
-            Festival ist eine ehrenamtliche Initiative der Unimusik der Universität Hamburg in Zusammenarbeit mit der Hamburger Sternwarte in
-            Bergedorf, die zum Fachbereich Physik gehört.
+        
+        <div>
+        <h3>MUSIK TRIFFT KOSMOS</h3>
+          
+    
+      </div>
+      <br/><div>
+            
+          <strong>Klangvolle Nächte unter dem Sternenzelt, faszinierende Einblicke in die Weiten des Universums und ein Ort voller Geschichte – Willkommen auf dem Sternstunden Festival!</strong>
+<br/>
+<br/>
+Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das Gelände der historischen <strong>Hamburger Sternwarte in Bergedorf</strong> ein. <strong>Freitags ab dem Nachmittag und samstags ab dem Mittag</strong> verwandelt sich die weitläufige Parkanlage rund um die denkmalgeschützten Teleskopgebäude in einen Ort der Begegnung mit Musik und Astronomie.
+
           </div>
           <br />
           <a className="more-info" href="/info">

@@ -81,7 +81,7 @@ const ImpressionsPage: React.FC = () => {
   // const p = "https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/ssf24m45.jpg";
   return (
     <div>
-      <div className="title">Impressionen &apos;24</div>
+      <div className="boring-page-wrapper"><h1>Impressionen 24</h1></div>
       <div className="left-small-right-large-grid">
         <Image src={urls24[0]} alt="" height="300" width="200" />
         <Image src={urls24[1]} alt="" height="400" width="600" />

@@ -5,9 +5,9 @@
 }
 
 .boring-page-wrapper h1{
-  font-size: 50px;
+  font-size: 35px;
   font-family: NunitoSans;
-  font-weight: 300;
+  font-weight: 700;
   overflow-wrap: break-word;
   hyphens: auto;
 }
