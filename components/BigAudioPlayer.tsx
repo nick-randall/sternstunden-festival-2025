@@ -1,3 +1,4 @@
+"use client";
 import "../styles/planet.css";
 import Image from "next/image";
 import PlayAudioButton from "./PlayAudioButton";

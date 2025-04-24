@@ -3,3 +3,11 @@
   line-height: 1.8;
   font-weight: 300;
 }
+
+.boring-page-wrapper h1{
+  font-size: 50px;
+  font-family: NunitoSans;
+  font-weight: 12pt;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}

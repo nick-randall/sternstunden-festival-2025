@@ -32,11 +32,11 @@ const MobileMenu: React.FC = () => {
             <Image className="menu-item logo" src="/logo-simple.png" alt="Sternstunden Festival Logo" width="826" height="483" />
           </Link>
           <div className="menu-item-container" onClick={toggleMenu}>
-            <div className="menu-item hamburger">
-              <div className="hamburger-line"></div>
-              <div className="hamburger-line"></div>
-              <div className="hamburger-line"></div>
-            </div>
+            <button className="hamburger">
+              <span className={`hamburger-line-top ${isOpen ? "open" : ""}`}></span>
+              <span className={`hamburger-line-middle ${isOpen ? "open" : ""} `}></span>
+              <span className={`hamburger-line-bottom ${isOpen ? "open" : ""}`}></span>
+            </button>
           </div>
         </div>
         <div className={`mobile-menu ${isOpen ? "open" : ""}`} ref={menuRef}>
@@ -83,11 +83,6 @@ const MobileMenu: React.FC = () => {
             <div className={`mobile-sub-menu-item`} onClick={toggleMenu}>
               <Link href="/faq" className="mobile-menu-item-container">
                 <div className="mobile-menu-item-text">FAQ</div>
-              </Link>
-            </div>
-            <div className={`mobile-sub-menu-item`}>
-              <Link href="/kontakt" className="mobile-menu-item-container" onClick={toggleMenu}>
-                <div className="mobile-menu-item-text">Kontakt</div>
               </Link>
             </div>
           </div>

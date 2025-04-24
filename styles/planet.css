@@ -15,11 +15,13 @@
   align-items: center;
   width: 100%;
 }
+
 .planets-page-wrapper h1 {
   font-size: 50px;
   font-family: NunitoSans;
   font-weight: 12pt;
-  text-align: center;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .planets-sketch-wrapper {

@@ -1,8 +1,5 @@
-"use client";
 import "../../styles/common.css";
 import AudioPlayer from "@/components/BigAudioPlayer";
-
-import "../../styles/common.css";
 import PlanetScene from "@/components/PlanetScene";
 
 const PlanetsPage: React.FC = () => {
