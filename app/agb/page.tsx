@@ -1,15 +1,14 @@
-'use client'
+"use client";
 import "../../styles/common.css";
-import "../../styles/agb.css";
+import "../../styles/boring-pages.css";
 import Flex from "../../components/Flex";
 
 export default function AGB() {
   return (
-    <div className="agb-wrapper">
+    <div className="boring-page-wrapper">
       <Flex alignItems="center" flexDirection="column">
-        <h1 style={{ textAlign: "center" }}>
-          SternstundenFestival <br /> Allgemeine Geschäftsbedingungen des Veranstalters
-        </h1>
+        <h1>Sternstunden Festival</h1>
+        <h2>Allgemeine Geschäftsbedingungen des Veranstalters</h2>
         <p>Stand: 18.06.2024</p>
         <Flex alignItems="start" flexDirection="column">
           <div>

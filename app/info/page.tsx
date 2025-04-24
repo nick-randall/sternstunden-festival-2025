@@ -5,7 +5,7 @@ import "../../styles/boring-pages.css";
 const MoreInfoPage = () => {
   return (
    <div className="boring-page-wrapper">
-      
+        <h1>Das Sternstunden Festival</h1>
         <p>
             Das Sternstunden Festival: eine musikalisch-wissenschaftliche Liaison unter Hamburgs sommerlichem Sternenhimmel.
             Klassische Chor- und Ensemblemusik, Open Air Brass und Big Bands, wissenschaftliche Vorträge und Führungen, Klanginstallationen:

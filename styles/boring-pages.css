@@ -7,7 +7,11 @@
 .boring-page-wrapper h1{
   font-size: 50px;
   font-family: NunitoSans;
-  font-weight: 12pt;
+  font-weight: 300;
   overflow-wrap: break-word;
   hyphens: auto;
+}
+
+.boring-page-wrapper h2 {
+  text-align:start;
 }

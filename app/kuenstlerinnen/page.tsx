@@ -25,23 +25,26 @@ const Artists: React.FC = async () => {
     return a.artist.index - b.artist.index;
   });
   return (
-    <div className="artists-grid">
-      {artists.map((a: ArtistWithEvents) => (
-        <Link key={a.artist.id} href={`/kuenstlerinnen/${a.artist.id}`} className="artist-link">
-          <div key={a.artist.id} className="artist-card">
-            <Image src={a.artist.imageUrl} alt={a.artist.name} width="265" height="265" />
-            <Spacer height={5} />
-            <div className="artist-name">{a.artist.name}</div>
-            <Spacer height={5} />
-            {a.events &&  a.events.map((e: ArtistEvent) => (
-              <div key={e.id} className="artist-event">
-                <div className="artist-event-time">{getDayPlus24HourTimeString(e.startDateTime)}</div>
-                <div className="artist-event-stage">{e.stage.name}</div>
-              </div>
-            ))}
-          </div>
-        </Link>
-      ))}
+    <div>
+      <h1>Artists</h1>
+      <div className="artists-grid">
+        {artists.map((a: ArtistWithEvents) => (
+          <Link key={a.artist.id} href={`/kuenstlerinnen/${a.artist.id}`} className="artist-link">
+            <div key={a.artist.id} className="artist-card">
+              <Image src={a.artist.imageUrl} alt={a.artist.name} width="265" height="265" />
+              <Spacer height={5} />
+              <div className="artist-name">{a.artist.name}</div>
+              <Spacer height={5} />
+              {a.events &&  a.events.map((e: ArtistEvent) => (
+                <div key={e.id} className="artist-event">
+                  <div className="artist-event-time">{getDayPlus24HourTimeString(e.startDateTime)}</div>
+                  <div className="artist-event-stage">{e.stage.name}</div>
+                </div>
+              ))}
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
