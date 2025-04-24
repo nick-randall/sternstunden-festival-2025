@@ -1,3 +1,4 @@
+"use client";
 import { useFrame } from "@react-three/fiber";
 import { Vector3 } from "three";
 import { Suspense, useState } from "react";
@@ -39,6 +40,9 @@ function MyScene() {
   const [leftIndex, setLeftIndex] = useState(8);
   const [rightIndex, setRightIndex] = useState(1);
 
+  const [launchedPlanet, setLaunchedPlanet] = useState(-1);
+  const [launchedPlanetScale, setLaunchedPlanetScale] = useState(1);
+
   const router = useRouter();
 
   const setLeftAndRightIndex = (currPlanet: number) => {
@@ -78,7 +82,14 @@ function MyScene() {
   const launchPlanet = (index: number) => {
     const planet = planets[index];
     router.push(`/planeten/${planet}`);
+    setLaunchedPlanet(index);
   };
+
+  useFrame((_, delta) => {
+    if (launchedPlanet !== -1) {
+      setLaunchedPlanetScale(p => p + delta);
+    }
+  });
 
   const getClickAction = (index: number) => {
     if (index === leftIndex || index === rightIndex) {
@@ -105,15 +116,16 @@ function MyScene() {
               const x = Math.sin(angle) * distFromCentre;
               const y = Math.cos(angle) * distFromCentre;
               return (
-                <Planet
-                  key={planet}
-                  planet={planet}
-                  position={new Vector3(x, y - 2, 3)}
-                  counterTilt={tilt}
-                  counterFlip={flip}
-                  index={index}
-                  onClick={getClickAction(index)}
-                />
+                <group key={planet} scale={index === launchedPlanet ? launchedPlanetScale : 1}>
+                  <Planet
+                    planet={planet}
+                    position={new Vector3(x, y - 2, 3)}
+                    counterTilt={tilt}
+                    counterFlip={flip}
+                    index={index}
+                    onClick={getClickAction(index)}
+                  />
+                </group>
               );
             })}
           </group>
