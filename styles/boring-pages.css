@@ -15,3 +15,7 @@
 .boring-page-wrapper h2 {
   text-align:start;
 }
+
+.boring-page-wrapper .collapsible-text-boxes div {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,91 @@
+.collapsible-text {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.title-box {
+  background: linear-gradient(to right, rgb(232, 0, 233, 0.12), rgb(37, 3, 192, 0.12)); /* same as #e800e9, #2503c0 */
+  font-family: "NunitoSans";
+  font-weight: 500;
+  font-size: 18px;
+  padding: 15px;
+
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+
+}
+
+.title-box a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #000;
+}
+
+
+
+.collapsible-text-box {
+  font-weight: 350;
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(to right, rgb(253, 244, 219, 0.3), rgb(239, 132, 84, 0.3)); /* same as #fdf4db, #ef8454 */
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, padding 1s ease;
+}
+
+.collapsible-text-box.open{
+  padding: 15px;
+  flex-grow: 1;
+  max-height: 100vh;
+  transition: max-height 0.3s ease-in-out, padding 0s ease;
+
+}
+
+
+.plus-minus-button {
+  color: #ecf0f1;
+  background: transparent;
+  height: 30px;
+  border: 0;
+  font-size: 1.5em;
+  position: relative;
+  flex-basis: 30px;
+  flex-shrink: 0;
+}
+
+.plus-minus-button span {
+  position: absolute;
+  transition: 300ms;
+  background: white;
+}
+
+/* Create the "+" shape by positioning the spans absolutely */
+.plus-minus-button span:first-child {
+  top: 0%;
+  bottom: 0%;
+  width: 20%;
+  left: 40%;
+  background-color: white;
+}
+
+.plus-minus-button span:last-child {
+  left: 0%;
+  right: 0%;
+  height: 20%;
+  top: 40%;
+  background-color: white;
+
+}
+
+/* Morph the shape when the .plus-minus-button is hovered over */
+.plus-minus-button.minus span {
+  transform: rotate(90deg);
+}
+
+.plus-minus-button.minus span:last-child {
+  left: 50%;
+  right: 50%;
+}
