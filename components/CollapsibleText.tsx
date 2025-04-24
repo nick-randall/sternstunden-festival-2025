@@ -1,5 +1,6 @@
 import "../styles/collapsible-text.css";
 import { FC } from "react";
+import Spacer from "./Spacer";
 
 interface CollapsibleTextProps {
   title: string;
@@ -13,7 +14,8 @@ const CollapsibleText: FC<CollapsibleTextProps> = ({ title, text, isOpen, handle
     <div className="collapsible-text">
       <div className="title-box">
         <div>{title}</div>
-        <button className={`plus-minus-button ${isOpen ? "minus" : "plus"}`} onClick={handleClick}>
+        <Spacer width={30}/>
+        <button className={`plus-minus-button ${isOpen ? "minus" : "plus"}`} style={{flexBasis: "10px"}} onClick={handleClick}>
           <span className={isOpen ? "minus" : "plus"}></span>
           <span className={isOpen ? "minus" : "plus"}></span>
         </button>

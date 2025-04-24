@@ -76,11 +76,6 @@
   color: rgba(240, 129, 54);
 }
 
-.mobile-menu-item.tickets {
-  width: 50%;
-  background-color: rgba(223, 98, 44, 1);
-}
-
 .hamburger {
   position: relative;
   border: 1px solid transparent;
