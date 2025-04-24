@@ -27,21 +27,21 @@
 
 
 .collapsible-text-box {
-  font-weight: 350;
-  display: flex;
-  flex-direction: row;
   background: linear-gradient(to right, rgb(253, 244, 219, 0.3), rgb(239, 132, 84, 0.3)); /* same as #fdf4db, #ef8454 */
   max-height: 0px;
   overflow: hidden;
-  transition: max-height 0.3s ease-in-out, padding 1s ease;
+  transition: max-height 0.3s ease-in-out;
 }
 
 .collapsible-text-box.open{
-  padding: 15px;
   flex-grow: 1;
   max-height: 100vh;
-  transition: max-height 0.3s ease-in-out, padding 0s ease;
+  transition: max-height 0.3s ease-in-out;
+}
 
+.collapsible-text-box .text-content {
+  font-weight: 350;
+  padding: 15px;
 }
 
 
