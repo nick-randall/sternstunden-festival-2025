@@ -17,9 +17,10 @@ const SupportUs = () => {
             Mehr Informationen und warum sich eine Partnerschaft lohnen kann in unserem <a
             href="https://drive.google.com/file/d/1tA0ZSmtFKyFFrA8xUp_mBrO4HznoVbEH/view?usp=sharing">
                 <strong>Sponsoring Folder</strong></a>.
-            Unternehmen können Förderbeträge von der Steuer absetzen!<br/>
             <br/>
-            <strong> Jetzt ansprechen & Teil des Festivals werden!</strong>
+            <br/>Unternehmen können Förderbeträge von der Steuer absetzen!<br/>
+            <br/>
+        
             <br/>
             <h1>Spenden</h1>
 
@@ -39,7 +40,7 @@ const SupportUs = () => {
             <strong>info@foerderverein-unimusik-hamburg.de</strong></a> mit dem Betreff <strong> “Spendenbescheinigung Sternstunden”</strong>.<br/>
             
             <br/>
-            <h1>Helfen</h1>
+            <h1>Mithelfen</h1>
 
             <h3>Hilf uns beim Festival!</h3>
             
