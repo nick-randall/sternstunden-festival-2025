@@ -20,14 +20,17 @@ Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das
 
         </p>
         <p>
-        Das Sternstunden Festival schlägt Brücken – zwischen Genres, Generationen und Galaxien. Im Fokus steht eine musikalische Vielfalt, die von <strong>klassischer Kammermusik</strong> über <strong>gregorianische Gesänge</strong>, <strong>Jazz</strong> bis hin zu <strong>Elektro-Pop</strong> reicht. Dabei wird das Festival maßgeblich von <strong>Künstler:innen aus den Chören und dem Sinfonieorchester der Universität Hamburg</strong> sowie <strong>Musikschaffenden aus der Region</strong> gestaltet.
-In den vergangenen Jahren begeisterten unter anderem das <strong>Orchester im Treppenhaus</strong> oder das energetische Ensemble <strong>Hepta Polka</strong> das Publikum. 
-Doch das Festival geht über Musik hinaus: Es möchte Wissenschaft nahbar machen, Astronomie erlebbar gestalten – und das in einem ganz besonderen Rahmen. Im <strong>wissenschaftlichen Begleitprogramm</strong> erwarten die Besucher:innen:
-<br/> - Führungen durch die historischen Kuppelgebäude
-<br/> - ein Blick durch Teleskope des letzten Jahrhunderts (bei entsprechendem Wetter und klarem Himmel ab ca. 22 Uhr)
-<br/> - Experimente zum Mitmachen
-<br/> - Vorträge zu aktuellen Forschungsthemen, zur Geschichte des Universums und spannenden Fragen der modernen Astrophysik
-<br/> - und vieles mehr
+        Das Sternstunden Festival schlägt Brücken – zwischen Genres, Generationen und Galaxien. 
+        <br/>
+        <br/>
+        Im Fokus steht einerseits die musikalische Vielfalt, die von <strong>klassischer Kammermusik</strong> über <strong>gregorianische Gesänge</strong>, <strong>Jazz</strong> bis hin zu <strong>Elektro-Pop</strong> reicht. Dabei wird das Festival maßgeblich von <strong>Künstler:innen aus den Chören und dem Sinfonieorchester der Universität Hamburg</strong> sowie <strong>Musikschaffenden aus der Region</strong> gestaltet. In den vergangenen Jahren begeisterten unter anderem das <strong>Orchester im Treppenhaus</strong> oder das energetische Ensemble <strong>Hepta Polka</strong> das Publikum. 
+<br/>
+<br/>Doch das Festival geht über Musik hinaus: Es möchte Wissenschaft nahbar machen, Astronomie erlebbar gestalten – und das in einem ganz besonderen Rahmen. Im <strong>wissenschaftlichen Programm</strong> erwarten die Besucher:innen:
+<br/> - <strong>Führungen durch die historischen Kuppelgebäude</strong>
+<br/> - <strong>ein Blick durch Teleskope des letzten Jahrhunderts</strong> (bei entsprechendem Wetter und klarem Himmel)
+<br/> - <strong>Experimente zum Mitmachen</strong>
+<br/> - <strong>Vorträge</strong> zu aktuellen Forschungsthemen, zur Geschichte des Universums und spannenden Fragen der modernen Astrophysik
+<br/> - <strong>und vieles mehr</strong>
 <br/>
 <br/>
 <h3>Für alle Generationen</h3>

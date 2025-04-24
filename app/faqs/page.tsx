@@ -48,8 +48,7 @@ const Faqs = () => {
         <CollapsibleText
           title="Wird man durch die Teleskope sehen können?"
           text=" Ja, durch ein oder zwei der Teleskope wird man sehen können. Teilweise werden diese aber noch für Forschung und Lehre verwendet, daher sind
-        nicht alle Teleskope und ihre Kuppelgebäude für Besucher*innen zugänglich. Außerdem muss bedacht werden, dass es im Juli erst spät dunkel wird,
-        sodass sich der Blick durch’s Teleskop zum Teil erst ab 22 bis 23 Uhr lohnt."
+        nicht alle Teleskope und ihre Kuppelgebäude für Besucher:innen zugänglich. Außerdem muss der Himmel klar genug ist, damit sich ein Blick lohnt."
           isOpen={currOpen === 3}
           handleClick={() => toggleOpen(3)}
         />
@@ -97,7 +96,7 @@ const Faqs = () => {
         />
         <CollapsibleText
           title="Bienen auf dem Gelände der Sternwarte"
-          text="Im Astronomiepark der Sternwarte Bergedorf wurden mit unserer Unterstützung über das Jahr 2023 verschiedene Maßnahmen zur Förderung
+          text="Im Astronomiepark der Sternwarte Bergedorf wurden über das Jahr 2023 verschiedene Maßnahmen zur Förderung
                 heimischer Wildbienenarten umgesetzt. Es wurden Blühwiesen und Beete mit heimischen Wildsträuchern und Wildstauden als Nektar- und Pollenquellen
                 für die Wildbienen angelegt.
                 <br />
@@ -129,7 +128,7 @@ const Faqs = () => {
           handleClick={() => toggleOpen(12)}
         />
         <CollapsibleText
-          title="Wie geht die Sternwarte mit Awareness um?"
+          title="Wie geht das Sternstunden Festival mit Awareness um?"
           text="Uns ist ein respektvolles und achtsames Miteinander wichtig. Wenn du dich unwohl fühlst oder Unterstützung brauchst, kannst du dich jederzeit
                 an unser Awareness-Team wenden (in den lila Westen). Wir nehmen eure Anliegen ernst und setzen uns für einen sicheren Raum für alle ein. Auch
                 wenn es dir schlecht geht, kannst du dich an unser Awareness Team wenden."
