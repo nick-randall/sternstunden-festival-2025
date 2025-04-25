@@ -35,6 +35,7 @@ export default PlanetScene;
 function MyScene() {
   const [currPlanet, setCurrPlanet] = useState(0);
   const [newPlanet, setNewPlanet] = useState(0);
+  const [targetRotation, setTargetRotation] = useState<number | undefined>(undefined);
 
   const [planetsRotation, setPlanetsRotation] = useState(0);
   const [leftIndex, setLeftIndex] = useState(8);
@@ -45,6 +46,23 @@ function MyScene() {
 
   const router = useRouter();
 
+  const setNewPlanetAndTargetRotation = (index: number) => {
+    setNewPlanet(index);
+    const circlePart = 1 / planets.length;
+    const angleDelta = circlePart * Math.PI * 2;
+    const sign = index < currPlanet ? 1 : -1;
+    const targetAngle = sign * angleDelta + planetsRotation;
+    console.log("Current angle = ", planetsRotation);
+    console.log("Target angle = ", targetAngle);
+    if (index === 8 && currPlanet === 0) {
+      setTargetRotation(angleDelta);
+    } else if (index === 0 && currPlanet === 8) {
+      setTargetRotation(planetsRotation - angleDelta);
+    } else {
+      setTargetRotation(targetAngle);
+    }
+  };
+
   const setLeftAndRightIndex = (currPlanet: number) => {
     const leftIndex = currPlanet - 1 < 0 ? planets.length - 1 : currPlanet - 1;
     const rightIndex = currPlanet + 1 > planets.length - 1 ? 0 : currPlanet + 1;
@@ -53,23 +71,17 @@ function MyScene() {
   };
 
   useFrame((_, delta) => {
-    if (newPlanet === currPlanet) return;
+    if (targetRotation === undefined) return;
     const threshold = 0.005;
-    const check = newPlanet < currPlanet ? planetsRotation : -planetsRotation;
-    for (let i = 0; i < planets.length; i++) {
-      const circleDist = i / planets.length;
-      const sign = newPlanet > currPlanet ? 1 : -1;
-      const angle = sign * (circleDist * Math.PI * 2);
-      if (Math.abs(check - angle) <= threshold) {
-        if (currPlanet !== i) {
-          console.log("New planet = ", planets[i]);
-        }
-        setCurrPlanet(i);
-        setLeftAndRightIndex(i);
-      }
+    if (Math.abs(targetRotation - planetsRotation) <= threshold) {
+      console.log("Target reached");
+      setPlanetsRotation(targetRotation);
+      setCurrPlanet(newPlanet);
+      setLeftAndRightIndex(newPlanet);
+      setTargetRotation(undefined);
     }
     setPlanetsRotation(p => {
-      if (newPlanet < currPlanet || newPlanet === 8) {
+      if (targetRotation > planetsRotation) {
         return p + delta;
       }
       return p - delta;
@@ -92,9 +104,12 @@ function MyScene() {
   });
 
   const getClickAction = (index: number) => {
+    // if(launchedPlanet !== -1 || targetRotation !== undefined) {
+    //   return () => {};
+    // }
     if (index === leftIndex || index === rightIndex) {
       return () => {
-        setNewPlanet(index);
+        setNewPlanetAndTargetRotation(index);
       };
     }
     if (index === currPlanet) {
