@@ -13,30 +13,23 @@
   padding: 15px;
 
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: space-between;
 
+
 }
-
-.title-box a {
-  font-weight: 500;
-  text-decoration: none;
-  color: #000;
-}
-
-
 
 .collapsible-text-box {
   background: linear-gradient(to right, rgb(253, 244, 219, 0.3), rgb(239, 132, 84, 0.3)); /* same as #fdf4db, #ef8454 */
   max-height: 0px;
   overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.3s;
 }
 
 .collapsible-text-box.open{
   flex-grow: 1;
   max-height: 100vh;
-  transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.3s;
 }
 
 .collapsible-text-box .text-content {
@@ -45,48 +38,35 @@
 }
 
 
-.plus-minus-button {
+.plus-minus-icon {
   color: #ecf0f1;
-  background: transparent;
-  height: 40px;
-  border: 0;
-  font-size: 1.5em;
+  height: 30px;
   position: relative;
+  /* Prevent from squishing up if no space -- force 30px width */
   flex-basis: 30px;
-  width: 40px;
   flex-shrink: 0;
-  align-self: center;
+  margin-left: 10px;
 }
 
-.plus-minus-button span {
+.plus-minus-icon span {
   position: absolute;
   transition: 300ms;
   background: white;
 }
 
-/* Create the "+" shape by positioning the spans absolutely */
-.plus-minus-button span:first-child {
-  top: 0;
-  bottom: 10px;
+/* Create the "+" shape */
+.plus-minus-icon span {
+  top: 0px;
+  bottom: 0px;
   width: 8px;
-  left: -9px;
+  left: 10px;
   background-color: white;
 }
 
-.plus-minus-button span:last-child {
-  left: -20px;
-  right: 0px;
-  height: 8px;
-  top: 11px;
-  background-color: white;
-
+.plus-minus-icon span:last-child {
+ transform: rotate(90deg);
 }
 
-.plus-minus-button.minus span {
+.plus-minus-icon.minus span:first-child {
   transform: rotate(90deg);
-}
-
-.plus-minus-button.minus span:last-child {
-  left: 50%;
-  right: 50%;
 }

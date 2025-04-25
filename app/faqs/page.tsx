@@ -1,8 +1,7 @@
 "use client";
-// import Flex from "@/components/Flex";
 import "../../styles/common.css";
 import "../../styles/boring-pages.css";
-import CollapsibleText from "@/components/CollapsibleText";
+import CollapsibleText from "@/components/CollapsibleTextBox";
 import { useState } from "react";
 
 const Faqs = () => {
@@ -96,20 +95,24 @@ const Faqs = () => {
         />
         <CollapsibleText
           title="Bienen auf dem Gelände der Sternwarte"
-          text="Im Astronomiepark der Sternwarte Bergedorf wurden über das Jahr 2023 verschiedene Maßnahmen zur Förderung
-                heimischer Wildbienenarten umgesetzt. Es wurden Blühwiesen und Beete mit heimischen Wildsträuchern und Wildstauden als Nektar- und Pollenquellen
-                für die Wildbienen angelegt.
-                <br />
-                <br />
-                <strong>Was muss ich beachten, wenn ich eine Bienenallergie habe?</strong>
-                <br />
-                Bitte bring im Falle einer bekannten Allergie dein Notfallset mit und halte ausreichend Abstand zu den Bienenstöcken. Im Zweifelsfall informiere
-                unser Team vor Ort.
-                <br />
-                <br />
-                <strong>Kann ich barfuß über das Gelände laufen?</strong>
-                <br />
-                Aus Sicherheitsgründen raten wir dringend davon ab, barfuß zu laufen – es besteht die Gefahr, versehentlich auf eine Biene zu treten."
+          text={
+            <div>
+              Im Astronomiepark der Sternwarte Bergedorf wurden über das Jahr 2023 verschiedene Maßnahmen zur Förderung heimischer Wildbienenarten
+              umgesetzt. Es wurden Blühwiesen und Beete mit heimischen Wildsträuchern und Wildstauden als Nektar- und Pollenquellen für die Wildbienen
+              angelegt.
+              <br />
+              <br />
+              <strong>Was muss ich beachten, wenn ich eine Bienenallergie habe?</strong>
+              <br />
+              Bitte bring im Falle einer bekannten Allergie dein Notfallset mit und halte ausreichend Abstand zu den Bienenstöcken. Im Zweifelsfall
+              informiere unser Team vor Ort.
+              <br />
+              <br />
+              <strong>Kann ich barfuß über das Gelände laufen?</strong>
+              <br />
+              Aus Sicherheitsgründen raten wir dringend davon ab, barfuß zu laufen – es besteht die Gefahr, versehentlich auf eine Biene zu treten.
+            </div>
+          }
           isOpen={currOpen === 10}
           handleClick={() => toggleOpen(10)}
         />
@@ -146,9 +149,11 @@ const Faqs = () => {
       </div>
       <br />
       <br />
-      
-      Hast du noch mehr Fragen? Dann nutze unser <a href="../kontakt">
-      <strong>Kontaktformular</strong></a> oder besuche uns auf{" "}
+      Hast du noch mehr Fragen? Dann nutze unser{" "}
+      <a href="../kontakt">
+        <strong>Kontaktformular</strong>
+      </a>{" "}
+      oder besuche uns auf{" "}
       <a href="https://www.instagram.com/sternstundenfestival/">
         <strong>Instagram</strong>
       </a>
