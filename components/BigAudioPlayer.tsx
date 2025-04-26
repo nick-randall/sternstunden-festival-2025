@@ -21,7 +21,7 @@ const AudioPlayer: React.FC = () => {
       <div className="planets-audio-player">
         <Image height="140" width="140" alt="Planet Audio Player Image" className="audio-player-image" src="/audio-player.png" />
         <PlayAudioButton audioUrl="https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/hoerspielversion.mp3" />
-        <span>Merle Juschka, Nilton Fonseca, Marvin J. Deitz, Vivien Rönneburg, Noemi Deitz, Julia Meier, Katja Lehmann, Sara Ricking</span>
+        <span>Planetenrundgang: Die Planeten von Gustav Holst</span>
       </div>
       <audio ref={audioRef} src="https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/hoerspielversion.mp3"></audio>
     </>
