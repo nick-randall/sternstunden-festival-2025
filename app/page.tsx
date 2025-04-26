@@ -32,19 +32,20 @@ export default function Page() {
 
       <div className="content-box split-box">
         <div className="text-box">
-        
-        <div>
-        <h3>MUSIK TRIFFT KOSMOS</h3>
-          
-    
-      </div>
-      <br/><div>
-            
-          <strong>Klangvolle Nächte unter dem Sternenzelt, faszinierende Einblicke in die Weiten des Universums und ein Ort voller Geschichte – Willkommen auf dem Sternstunden Festival!</strong>
-<br/>
-<br/>
-Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das Gelände der historischen <strong>Hamburger Sternwarte in Bergedorf</strong> ein. <strong>Freitags ab dem Nachmittag und samstags ab dem Mittag</strong> verwandelt sich die weitläufige Parkanlage rund um die denkmalgeschützten Teleskopgebäude in einen Ort der Begegnung mit Musik und Astronomie.
-
+          <div>
+            <h3>MUSIK TRIFFT KOSMOS</h3>
+          </div>
+          <br />
+          <div>
+            <strong>
+              Klangvolle Nächte unter dem Sternenzelt, faszinierende Einblicke in die Weiten des Universums und ein Ort voller Geschichte – Willkommen
+              auf dem Sternstunden Festival!
+            </strong>
+            <br />
+            <br />
+            Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das Gelände der historischen{" "}
+            <strong>Hamburger Sternwarte in Bergedorf</strong> ein. <strong>Freitags ab dem Nachmittag und samstags ab dem Mittag</strong> verwandelt
+            sich die weitläufige Parkanlage rund um die denkmalgeschützten Teleskopgebäude in einen Ort der Begegnung mit Musik und Astronomie.
           </div>
           <br />
           <a className="more-info" href="/info">
@@ -69,10 +70,10 @@ Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das
         <iframe className="video" frameBorder="0" src="https://www.youtube-nocookie.com/embed/H_ZANaTi9Lo?si=Rnq-__7u6C3o3eiM"></iframe>
       </div>
       <Spacer height={32} />
-        <div className="content-box">
-          <PhotoSlider photoUrls={photoUrls} />
-        </div>
-
+      <div className="content-box" style={{ flexDirection: "column" }}>
+        <PhotoSlider photoUrls={photoUrls} /> 
+        <a href="https://beyondportrait.de">Bilder (c) beyond.portrait</a>
+      </div>
     </>
   );
 }
