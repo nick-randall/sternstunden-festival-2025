@@ -28,7 +28,7 @@
 
 .collapsible-text-box.open{
   flex-grow: 1;
-  max-height: 100vh;
+  max-height: 500vh;
   transition: max-height 0.3s;
 }
 
