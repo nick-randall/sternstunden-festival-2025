@@ -15,10 +15,10 @@ const MoreInfoPage = () => {
 Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das Gelände der historischen <strong>Hamburger Sternwarte in Bergedorf</strong> ein. <strong>Freitags ab dem Nachmittag und samstags ab dem Mittag</strong> verwandelt sich die weitläufige Parkanlage rund um die denkmalgeschützten Teleskopgebäude in einen Ort der Begegnung mit Musik und Astronomie.
 <br/>
 <br/>
-
+</p>
 <h3>Ein Festival zwischen Kosmos und Klang</h3>
 
-        </p>
+        
         <p>
         Das Sternstunden Festival schlägt Brücken – zwischen Genres, Generationen und Galaxien. 
         <br/>
@@ -33,26 +33,30 @@ Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das
 <br/> - <strong>und vieles mehr</strong>
 <br/>
 <br/>
+</p>
 <h3>Für alle Generationen</h3>
+<p>
 Das Sternstunden Festival versteht sich als<strong> Ort für alle – von jung bis alt</strong>. Mit einem eigenen <strong>Kinderprogramm</strong> wird auch der jüngste Nachwuchs auf galaktische Reisen geschickt:
 Ob beim <strong>Kinderkonzert</strong>,einer <strong>Kinderführung</strong> durch die Sternwarte, auf dem <strong>musikalischen Planetenrundgang</strong> oder bei der <strong>Sternstunden-Rallye</strong> – hier wird gestaunt, gelacht und entdeckt.
 <br/>
 <br/>
+</p>
 <h3>Kultur für alle </h3>
-Um Kultur möglichst vielen Menschen zugänglich zu machen, legt das Festival großen Wert auf <strong>niedrigschwellige Preise</strong>. Es gibt die <strong>Tages- und Kombitickets, ermäßigte Tickets</strong> sowie alle Infos und Buchungsmöglichkeiten im <a href="../tickets">
+<p>Um Kultur möglichst vielen Menschen zugänglich zu machen, legt das Festival großen Wert auf <strong>niedrigschwellige Preise</strong>. Es gibt die <strong>Tages- und Kombitickets, ermäßigte Tickets</strong> sowie alle Infos und Buchungsmöglichkeiten im <a href="../tickets">
 <strong>Ticketshop</strong></a>.
 Mit jeweils rund <strong>1.500 Besucher:innen in den ersten beiden Jahren</strong> entwickelt sich das Festival hin zu einem neuen Fixpunkt im Hamburger Kulturkalender entwickelt – und begeistert ein buntes, vielfältiges Publikum.
 <br/>
 <br/>
+</p>
 <h3>Ort mit Geschichte und Atmosphäre</h3>
-Die Hamburger Sternwarte öffnete ihre Tore zu Beginn des 20. Jahrhunderts und zählt zu den besonderen historischen Orten in Hamburg. Ihre imposanten Gebäude stehen unter Denkmalschutz und verleihen dem Festival eine einzigartige Kulisse – umgeben von einer malerischen Parkanlage und einer besonderen Atmosphäre.
+<p>Die Hamburger Sternwarte öffnete ihre Tore zu Beginn des 20. Jahrhunderts und zählt zu den besonderen historischen Orten in Hamburg. Ihre imposanten Gebäude stehen unter Denkmalschutz und verleihen dem Festival eine einzigartige Kulisse – umgeben von einer malerischen Parkanlage und einer besonderen Atmosphäre.
 <br/>
 <br/>
 <a href="../sternwarte"><strong>Mehr zur Geschichte der Sternwarte gibt es hier</strong></a>.
 <br/>
-<br/>
+<br/></p>
 <h3>Von der Idee zur Sternstunde</h3>
-Das Sternstunden Festival ist ein Herzensprojekt. Organisiert und getragen wird es <strong>ehrenamtlich</strong> von Studierenden und Engagierten aus der <strong>Unimusik Hamburg</strong>, der <strong>Hamburger Sternwarte</strong>.
+<p>Das Sternstunden Festival ist ein Herzensprojekt. Organisiert und getragen wird es <strong>ehrenamtlich</strong> von Studierenden und Engagierten aus der <strong>Unimusik Hamburg</strong>, der <strong>Hamburger Sternwarte</strong>.
 Hinter dem Festival steht der Wunsch, <strong>Wissenschaft und Musik zu verknüpfen</strong>, Raum für Begegnung zu schaffen und astronomische Themen <strong>in einem neuen Kontext </strong>erlebbar zu machen.
 <br/>
 <br/>

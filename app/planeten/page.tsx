@@ -17,11 +17,15 @@ const PlanetsPage: React.FC = () => {
       <PlanetScene />
       <p>
         <span style={{ fontSize: 14 }}>
-          Konzept: <a href="https://www.deitz.eu/noemi"> Noemi Deitz</a> | Schnitt: Vincent Ritter | Design:{" "}
-          <a href="https://www.jakobtimm.de/"> Jakob Timm</a> | Umsetzung: Leonie Kurz / Nicholas Randall
+          <strong>Konzept:</strong> <a href="https://www.deitz.eu/noemi"> Noemi Deitz</a> <br/>
+           <strong>Sprecher:innen:</strong> Merle Juschka, Nilton Fonseca, Marvin J. Deitz, Vivien Rönneburg, Noemi Deitz, Julia Meier, Katja Lehmann, Sara Ricking | Schnitt: Vincent Ritter <br/>
+            <strong>Design:</strong> {" "}
+          <a href="https://www.jakobtimm.de/"> Jakob Timm</a> 
+          <br/><strong>Umsetzung:</strong> Leonie Kurz / Nicholas Randall
           <br />
           <br />
-          Dirigent: Thomas Posth | Sinfonieorchester der Universität Hamburg | Frauenchor des Kammerchors der Universität Hamburg [bei Neptun]{" "}
+          
+          <strong>Dirigent:</strong> Thomas Posth | Sinfonieorchester der Universität Hamburg | Frauenchor des Kammerchors der Universität Hamburg [bei Neptun]{" "}
         </span>
       </p>
     </div>

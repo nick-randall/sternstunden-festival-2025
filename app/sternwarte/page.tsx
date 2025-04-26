@@ -13,11 +13,11 @@ const Sternwarte = () => {
                 An der heutigen Sternwarte verbinden sich moderne Spitzenforschung mit einem historischen Umfeld. Das parkartige Gelände ist für die Öffentlichkeit täglich frei zugänglich, die historischen Gebäude und Instrumente können im Rahmen von Führungen besichtigt werden.
                 Die Forschung im Bereich der modernen Astrophysik reicht von Kosmologie über Dynamiken von Galaxien und Gravitationswellen bis zu Sternen und extrasolaren Planeten.
             </p>
-            <p>
+            
                 <a href="https://www.physik.uni-hamburg.de/hs.html">
-                    Hier
-                </a> geht es zur Seite der Hamburger Sternwarte in Bergedorf.
-            </p>
+                    Hier geht es zur Seite der Hamburger Sternwarte in Bergedorf.
+                </a> 
+            
         </div>
     );
 };
