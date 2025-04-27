@@ -28,12 +28,12 @@ export default function Page() {
       <Image className="header-logo" src="/logo-with-dates.png" alt="Sternstunden Festival Logo" width="827" height="434" />
       <div id="banner-slot" />
       <Banner />
-      <Spacer height={64} />
+      <Spacer height={96} />
 
       <div className="content-box split-box">
         <div className="text-box">
           <div>
-            <h3>MUSIK TRIFFT KOSMOS</h3>
+            <h2>MUSIK TRIFFT KOSMOS</h2>
           </div>
           <br />
           <div>
@@ -49,7 +49,7 @@ export default function Page() {
           </div>
           <br />
           <a className="more-info" href="/info">
-            MEHR INFOS
+            MEHR INFOS...
           </a>
         </div>
         <div className="responsive-spacer-15"></div>

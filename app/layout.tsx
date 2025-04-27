@@ -183,6 +183,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   </a>
                 </div>
               </div>
+              <div className="sponsor-logo-row">
+                <div className="sponsor-logo-container">
+                  <a href="https://www.bergedorf-bille.de/">
+                    <Image src="/sponsors/bergedorf_bille.png" alt="Bergedorf Bille" width="400" height="78" className="sponsor-logo" />
+                  </a>
+                </div>
+              </div>
             </div>
 
             <Spacer height={32} />

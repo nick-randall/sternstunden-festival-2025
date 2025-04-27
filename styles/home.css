@@ -29,9 +29,9 @@
 }
 
 .content-box .text-box a {
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
-  color: #000;
+  color: rgba(240, 129, 54);
 }
 
 .feature-photo {
