@@ -61,6 +61,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               }
 
             }
+              @media screen and (max-width: 1300px) { 
+                .content-box {
+                flex-direction: column;
+                width: 100%;
+              }
+              .content-box .responsive-spacer-15 {
+                height: 15px;
+              }
+              .content-box.split-box {
+                padding: 15px;
+              }
+              .home-image {
+                height: auto;
+                width: 100%;
+              }
+            }
             @media screen and (max-width: 1080px) { 
               .outer-wrapper { 
                 width: 100%;
@@ -74,23 +90,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 left: auto;
                 transform: none;
               }
-              .content-box {
-                flex-direction: column;
-                width: 100%;
-              }
-              .content-box .responsive-spacer-15 {
-                height: 15px;
-              }
-              .content-box.split-box {
-                padding: 15px;
-              }
               .photo-slider img {
                 height: 250px;
                 width: auto;
-              }
-              .home-image {
-                height: auto;
-                width: 100%;
               }
               .arrow {
                 display: none;  

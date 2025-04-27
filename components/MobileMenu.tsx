@@ -40,96 +40,96 @@ const MobileMenu: React.FC = () => {
           </div>
         </div>
         <div className={`mobile-menu ${isOpen ? "open" : ""}`} ref={menuRef}>
-          <div className={`mobile-menu-item tickets`}>
+          <div className="mobile-menu-item">
             <Link href="/tickets" className="mobile-menu-item-container" onClick={toggleMenu}>
               <div className="mobile-menu-item-text">Tickets</div>
             </Link>
           </div>
-          <div className={`mobile-menu-item`}>
+          <div className="mobile-menu-item">
             <Link href="/timetable" className="mobile-menu-item-container" onClick={toggleMenu}>
               <div className="mobile-menu-item-text">Programm</div>
             </Link>
-            <div className={`mobile-sub-menu-item`}>
+            <div className="mobile-sub-menu-item">
               <Link href="/kuenstlerinnen" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Künstler:innen</div>
               </Link>
             </div>
-            <div className={`mobile-sub-menu-item`}>
+            <div className="mobile-sub-menu-item">
               <Link href="/planeten" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Planetenrundgang</div>
               </Link>
             </div>
-            <div className={`mobile-sub-menu-item`}>
+            <div className="mobile-sub-menu-item">
               <Link href="/astroprogramm" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Astroprogramm</div>
               </Link>
             </div>
           </div>
-          <div className={`mobile-menu-item`}>
+          <div className="mobile-menu-item">
             <Link href="/info" className="mobile-menu-item-container" onClick={toggleMenu}>
               <div className="mobile-menu-item-text">Info</div>
             </Link>
-            <div className={`mobile-sub-menu-item`}>
+            <div className="mobile-sub-menu-item">
               <Link href="/info" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Info</div>
               </Link>
             </div>
-            <div className={`mobile-sub-menu-item`}>
+            <div className="mobile-sub-menu-item">
               <Link href="/anfahrt" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Anfahrt</div>
               </Link>
             </div>
-            <div className={`mobile-sub-menu-item`}>
+            <div className="mobile-sub-menu-item">
               <Link href="/lageplan" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Lageplan</div>
               </Link>
             </div>
-            <div className={`mobile-sub-menu-item`} onClick={toggleMenu}>
+            <div className="mobile-sub-menu-item" onClick={toggleMenu}>
               <Link href="/faqs" className="mobile-menu-item-container">
                 <div className="mobile-menu-item-text">FAQs</div>
               </Link>
             </div>
-            <div className={`mobile-sub-menu-item`} onClick={toggleMenu}>
+            <div className="mobile-sub-menu-item" onClick={toggleMenu}>
               <Link href="/mission-statement" className="mobile-menu-item-container">
                 <div className="mobile-menu-item-text">Mission Statement</div>
               </Link>
-              <div className={`mobile-sub-menu-item`} onClick={toggleMenu}>
+              <div className="mobile-sub-menu-item" onClick={toggleMenu}>
               <Link href="/sternwarte" className="mobile-menu-item-container">
                 <div className="mobile-menu-item-text">Sternwarte</div>
               </Link>
             </div>
-            <div className={`mobile-sub-menu-item`} onClick={toggleMenu}>
+            <div className="mobile-sub-menu-item" onClick={toggleMenu}>
               <Link href="/rueckblick" className="mobile-menu-item-container">
                 <div className="mobile-menu-item-text">Rückblick</div>
               </Link>
             </div>
             </div>
           </div>
-          <div className={`mobile-menu-item`}>
+          <div className="mobile-menu-item">
             <Link href="/kontakt" className="mobile-menu-item-container" onClick={toggleMenu}>
               <div className="mobile-menu-item-text">Kontakt</div>
             </Link>
-            <div className={`mobile-sub-menu-item`}>
+            <div className="mobile-sub-menu-item">
               <Link href="/kontakt" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Kontakt</div>
               </Link>
             </div>
-            <div className={`mobile-sub-menu-item`}>
+            <div className="mobile-sub-menu-item">
               <Link href="/support-us" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Support Us!</div>
               </Link>
             </div>
-            <div className={`mobile-sub-menu-item`}>
+            <div className="mobile-sub-menu-item">
               <Link href="/impressum" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Impressum</div>
               </Link>
             </div>
-            <div className={`mobile-sub-menu-item`}>
+            <div className="mobile-sub-menu-item">
               <Link href="/datenschutz" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Datenschutz</div>
               </Link>
             </div>
-            <div className={`mobile-sub-menu-item`}>
+            <div className="mobile-sub-menu-item">
               <Link href="/agb" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">AGB</div>
               </Link>
