@@ -1,14 +1,26 @@
-// import Flex from "@/components/Flex";
+"use client";
 import "../../styles/common.css";
 import "../../styles/boring-pages.css";
+import CollapsibleText from "@/components/CollapsibleTextBox";
+import { useState } from "react";
 
-
-const SupportUs = () => {
-    return (
-        <div className="boring-page-wrapper">
-            <h1>Sponsoring</h1>
-
-            <h3> Sponsor werden? Sehr gern!</h3>
+const Faqs = () => {
+  const [currOpen, setCurrOpen] = useState(-1);
+  const toggleOpen = (index: number) => {
+    if (currOpen === index) {
+      setCurrOpen(-1);
+    } else {
+      setCurrOpen(index);
+    }
+  };
+  return (
+    <div className="boring-page-wrapper">
+      <div className="collapsible-text-boxes">
+        <CollapsibleText
+          title="SPONSORING"
+          text={
+                    <div>
+                    <h3> Sponsor werden? Sehr gern!</h3>
             
             Das Sternstunden Festival lebt von Engagement – auch von Partner:innen aus Wirtschaft und Gesellschaft.
             Ob mit finanzieller Unterstützung oder Sachleistungen wie Technik, Materialien oder Verpflegung:
@@ -19,11 +31,16 @@ const SupportUs = () => {
                 <strong>Sponsoring Folder</strong></a>.
             <br/>
             <br/>Unternehmen können Förderbeträge von der Steuer absetzen!<br/>
-            <br/>
-        
-            <br/>
-            <h1>Spenden</h1>
 
+                   </div>
+                  }
+          isOpen={currOpen === 0}
+          handleClick={() => toggleOpen(0)}
+        />
+        <CollapsibleText
+          title="SPENDEN"
+          text={
+            <div>
             <h3>Auch Privatleute können uns unterstützen!</h3>
             
             Als <strong> ehrenamtlich organisierte Non-Profit-Veranstaltung</strong> sind wir auf  <strong> gemeinschaftliche Unterstützung</strong>  angewiesen, um unser Festival möglich zu machen.
@@ -39,9 +56,17 @@ const SupportUs = () => {
             Eine Spendenbescheinigung können wir auf Wunsch ausstellen. Bitte kontaktiere uns dafür unter:  <a href="mailto:info@foerderverein-unimusik-hamburg.de?subject=Spendenbescheinigung%20Sternstunden">
             <strong>info@foerderverein-unimusik-hamburg.de</strong></a> mit dem Betreff <strong> “Spendenbescheinigung Sternstunden”</strong>.<br/>
             
-            <br/>
-            <h1>Mithelfen</h1>
 
+
+           </div>
+          }
+          isOpen={currOpen === 1}
+          handleClick={() => toggleOpen(1)}
+        />
+        <CollapsibleText
+          title="MITHELFEN"
+          text={
+            <div>
             <h3>Hilf uns beim Festival!</h3>
             
             Wir möchten unsere Verbindung zu unseren Nachbar:innen stärken.
@@ -53,14 +78,24 @@ const SupportUs = () => {
             <strong>Kontaktformular</strong></a>  mit dem Betreff <strong> „Mithelfen“ </strong>.<br/>
             <br/>
             Ein paar Beispiele, wie ihr euch einbringen könnt:<br/>
-            - Flyer verteilen & Plakate aufhängen<br/>
-            - Auf- und Abbau vor Ort<br/>
-            - Snacks & Gerichte für Künstler:innen und Helfer:innen vorbereiten<br/>
-            ...und vieles mehr!<br/><br/>
-            <strong> Gemeinsam wird’s am schönsten – danke für euren Support! 💛 </strong> <br/>
+            <ul>
+                <li>Flyer verteilen & Plakate aufhängen</li>
+                <li>Auf- und Abbau vor Ort</li>
+                 <li>Snacks & Gerichte für Künstler:innen und Helfer:innen vorbereiten</li>
+                 <li>...und vieles mehr! </li>
+            </ul> 
 
-
-        </div>
-    );
+            <br/>
+            <strong> Gemeinsam wird’s am schönsten – danke für euren Support! 💛 </strong>
+           </div>
+          }
+          isOpen={currOpen === 2}
+          handleClick={() => toggleOpen(2)}
+        />
+      </div>
+      <br />
+    
+    </div>
+  );
 };
-export default SupportUs;
+export default Faqs;

@@ -50,6 +50,58 @@ const Banner: React.FC = () => {
             <Image src="/star.svg" alt="star symbol" width="20" height="20" />
           </div>
           <span>TICKETS TICKETS TICKETS!</span>
+          <div className="star-wrapper">
+            <Image src="/star.svg" alt="star symbol" width="20" height="20" />
+          </div>
+          <span>TICKETS TICKETS TICKETS!</span>
+          <div className="star-wrapper">
+            <Image src="/star.svg" alt="star symbol" width="20" height="20" />
+          </div>
+          <span>TICKETS TICKETS TICKETS!</span>
+          <div className="star-wrapper">
+            <Image src="/star.svg" alt="star symbol" width="20" height="20" />
+          </div>
+          <span>TICKETS TICKETS TICKETS!</span>
+          <div className="star-wrapper">
+            <Image src="/star.svg" alt="star symbol" width="20" height="20" />
+          </div>
+          <span>TICKETS TICKETS TICKETS!</span>
+          <div className="star-wrapper">
+            <Image src="/star.svg" alt="star symbol" width="20" height="20" />
+          </div>
+          <span>TICKETS TICKETS TICKETS!</span>
+          <div className="star-wrapper">
+            <Image src="/star.svg" alt="star symbol" width="20" height="20" />
+          </div>
+          <span>TICKETS TICKETS TICKETS!</span>
+          <div className="star-wrapper">
+            <Image src="/star.svg" alt="star symbol" width="20" height="20" />
+          </div>
+          <span>TICKETS TICKETS TICKETS!</span>
+          <div className="star-wrapper">
+            <Image src="/star.svg" alt="star symbol" width="20" height="20" />
+          </div>
+          <span>TICKETS TICKETS TICKETS!</span>
+          <div className="star-wrapper">
+            <Image src="/star.svg" alt="star symbol" width="20" height="20" />
+          </div>
+          <span>TICKETS TICKETS TICKETS!</span>
+          <div className="star-wrapper">
+            <Image src="/star.svg" alt="star symbol" width="20" height="20" />
+          </div>
+          <span>TICKETS TICKETS TICKETS!</span>
+          <div className="star-wrapper">
+            <Image src="/star.svg" alt="star symbol" width="20" height="20" />
+          </div>
+          <span>TICKETS TICKETS TICKETS!</span>
+          <div className="star-wrapper">
+            <Image src="/star.svg" alt="star symbol" width="20" height="20" />
+          </div>
+          <span>TICKETS TICKETS TICKETS!</span>
+          <div className="star-wrapper">
+            <Image src="/star.svg" alt="star symbol" width="20" height="20" />
+          </div>
+          <span>TICKETS TICKETS TICKETS!</span>
         </div>
       </div>
     </a>,
