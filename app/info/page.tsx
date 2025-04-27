@@ -26,12 +26,13 @@ Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das
         Im Fokus steht einerseits die musikalische Vielfalt, die von <strong>klassischer Kammermusik</strong> über <strong>gregorianische Gesänge</strong>, <strong>Jazz</strong> bis hin zu <strong>Elektro-Pop</strong> reicht. Dabei wird das Festival maßgeblich von <strong>Künstler:innen aus den Chören und dem Sinfonieorchester der Universität Hamburg</strong> sowie <strong>Musikschaffenden aus der Region</strong> gestaltet. In den vergangenen Jahren begeisterten unter anderem das <strong>Orchester im Treppenhaus</strong> oder das energetische Ensemble <strong>Hepta Polka</strong> das Publikum. 
 <br/>
 <br/>Doch das Festival geht über Musik hinaus: Es möchte Wissenschaft nahbar machen, Astronomie erlebbar gestalten – und das in einem ganz besonderen Rahmen. Im <strong>wissenschaftlichen Programm</strong> erwarten die Besucher:innen:
-<br/> - <strong>Führungen durch die historischen Kuppelgebäude</strong>
-<br/> - <strong>ein Blick durch Teleskope des letzten Jahrhunderts</strong> (bei entsprechendem Wetter und klarem Himmel)
-<br/> - <strong>Experimente zum Mitmachen</strong>
-<br/> - <strong>Vorträge</strong> zu aktuellen Forschungsthemen, zur Geschichte des Universums und spannenden Fragen der modernen Astrophysik
-<br/> - <strong>und vieles mehr</strong>
-<br/>
+<ul>
+  <li><strong>Führungen durch die historischen Kuppelgebäude</strong></li>
+  <li><strong>ein Blick durch Teleskope des letzten Jahrhunderts</strong> (bei entsprechendem Wetter und klarem Himmel)</li>
+  <li><strong>Experimente zum Mitmachen</strong></li>
+  <li><strong>Vorträge</strong> zu aktuellen Forschungsthemen, zur Geschichte des Universums und spannenden Fragen der modernen Astrophysik</li>
+  <li><strong>und vieles mehr</strong></li>
+</ul> 
 <br/>
 </p>
 <h3>Für alle Generationen</h3>
@@ -44,7 +45,7 @@ Ob beim <strong>Kinderkonzert</strong>,einer <strong>Kinderführung</strong> dur
 <h3>Kultur für alle </h3>
 <p>Um Kultur möglichst vielen Menschen zugänglich zu machen, legt das Festival großen Wert auf <strong>niedrigschwellige Preise</strong>. Es gibt die <strong>Tages- und Kombitickets, ermäßigte Tickets</strong> sowie alle Infos und Buchungsmöglichkeiten im <a href="../tickets">
 <strong>Ticketshop</strong></a>.
-Mit jeweils rund <strong>1.500 Besucher:innen in den ersten beiden Jahren</strong> entwickelt sich das Festival hin zu einem neuen Fixpunkt im Hamburger Kulturkalender entwickelt – und begeistert ein buntes, vielfältiges Publikum.
+Mit jeweils rund <strong>1.500 Besucher:innen in den ersten beiden Jahren</strong> hat sich das Festival hin zu einem neuen Fixpunkt im Hamburger Kulturkalender entwickelt – und begeistert ein buntes, vielfältiges Publikum.
 <br/>
 <br/>
 </p>

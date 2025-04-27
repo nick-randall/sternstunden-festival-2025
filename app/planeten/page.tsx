@@ -5,7 +5,7 @@ import PlanetScene from "@/components/PlanetScene";
 const PlanetsPage: React.FC = () => {
   return (
     <div className="planets-page-wrapper">
-      <h1>Planetenrundgang</h1>
+      <h1>PLANETENRUNDGANG</h1>
 
       <AudioPlayer />
       <audio src="https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/hoerspielversion.mp3"></audio>
