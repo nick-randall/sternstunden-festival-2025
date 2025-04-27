@@ -125,15 +125,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Flex flexDirection="column" alignItems="center">
             <Spacer height={32} />
 
-            <a href="https://www.instagram.com/sternstundenfestival">
-              <Image src="https://freepnglogo.com/images/all_img/1715966654instagram-logo-png-white.png" alt="" height="40" width="40" />
-            </a>
-            <a href="mailto:info@sternstundenfestival.de" style={{ textDecoration: "none", color: "#15152A" }}>
-              info@sternstundenfestival.de
-            </a>
-            <hr style={{ width: "30%" }} />
-            <Spacer height={64} />
-            <div className="sponsor-logo-wrap-section">
+        
+            <Spacer height={32} />
+            <div><strong>Unsere Sponsor:innen und Förder:innen</strong></div>
+            <Spacer height={32} />
+              <div className="sponsor-logo-wrap-section">
               <div className="sponsor-logo-row">
                 <div className="sponsor-logo-container">
                   <a href="https://www.uni-hamburg.de/">
@@ -190,10 +186,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
 
             <Spacer height={32} />
-
+            <a href="https://www.instagram.com/sternstundenfestival">
+              <Image src="https://freepnglogo.com/images/all_img/1715966654instagram-logo-png-white.png" alt="" height="40" width="40" />
+            </a>
+    
             <div className="impressum-etc-row">
               <div>©2023-2025 Sternstundenfestival</div>
               <div className="impressum-etc">
+                <a href="/kontakt">Kontakt</a>
                 <a href="/impressum">Impressum</a>
                 <a href="/datenschutz">Datenschutz</a>
                 <a href="/agb">AGB</a>

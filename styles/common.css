@@ -25,6 +25,6 @@
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: strong;
+  color: rgba(240, 129, 54);
 }

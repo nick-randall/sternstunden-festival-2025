@@ -72,7 +72,7 @@ export default function Page() {
       <Spacer height={32} />
       <div className="content-box" style={{ flexDirection: "column" }}>
         <PhotoSlider photoUrls={photoUrls} /> 
-        <a href="https://beyondportrait.de">Bilder (c) beyond.portrait</a>
+        <strong><a href="https://beyondportrait.de">Bilder (c) beyond.portrait</a></strong>
       </div>
     </>
   );
