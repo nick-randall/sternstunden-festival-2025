@@ -70,6 +70,11 @@
   margin-top: 2rem;
   font-size: 1.8rem;
   text-transform: uppercase;
+  text-decoration: none;
+}
+
+.mobile-menu-item-text {
+  color: black;
 }
 
 .mobile-menu-item-text:hover {
@@ -126,11 +131,13 @@
 .mobile-sub-menu-item{
   font-size: 1.4rem;  
   text-transform: none;
+  text-decoration: none;
+  color: black;
 
 }
 
 .mobile-sub-menu-item:hover{
-  color: rgba(240, 129, 54);
+  color: black;
 }
 
 .menu-item {
@@ -145,7 +152,7 @@
 
 .menu-item.hovered,
 .menu-dropdown-list li a:hover {
-  color: rgba(240, 129, 54);
+  color: rgba(240, 129, 54)
 }
 
 .menu-item-container {

@@ -69,7 +69,11 @@ const MobileMenu: React.FC = () => {
             <Link href="/info" className="mobile-menu-item-container" onClick={toggleMenu}>
               <div className="mobile-menu-item-text">Info</div>
             </Link>
-
+            <div className={`mobile-sub-menu-item`}>
+              <Link href="/info" className="mobile-menu-item-container" onClick={toggleMenu}>
+                <div className="mobile-menu-item-text">Info</div>
+              </Link>
+            </div>
             <div className={`mobile-sub-menu-item`}>
               <Link href="/anfahrt" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Anfahrt</div>
@@ -85,11 +89,31 @@ const MobileMenu: React.FC = () => {
                 <div className="mobile-menu-item-text">FAQs</div>
               </Link>
             </div>
+            <div className={`mobile-sub-menu-item`} onClick={toggleMenu}>
+              <Link href="/mission-statement" className="mobile-menu-item-container">
+                <div className="mobile-menu-item-text">Mission Statement</div>
+              </Link>
+              <div className={`mobile-sub-menu-item`} onClick={toggleMenu}>
+              <Link href="/sternwarte" className="mobile-menu-item-container">
+                <div className="mobile-menu-item-text">Sternwarte</div>
+              </Link>
+            </div>
+            <div className={`mobile-sub-menu-item`} onClick={toggleMenu}>
+              <Link href="/rueckblick" className="mobile-menu-item-container">
+                <div className="mobile-menu-item-text">Rückblick</div>
+              </Link>
+            </div>
+            </div>
           </div>
           <div className={`mobile-menu-item`}>
             <Link href="/kontakt" className="mobile-menu-item-container" onClick={toggleMenu}>
               <div className="mobile-menu-item-text">Kontakt</div>
             </Link>
+            <div className={`mobile-sub-menu-item`}>
+              <Link href="/kontakt" className="mobile-menu-item-container" onClick={toggleMenu}>
+                <div className="mobile-menu-item-text">Kontakt</div>
+              </Link>
+            </div>
             <div className={`mobile-sub-menu-item`}>
               <Link href="/support-us" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Support Us!</div>

@@ -26,5 +26,6 @@
 
 a {
   text-decoration: strong;
+  text-decoration: none;
   color: rgba(240, 129, 54);
 }

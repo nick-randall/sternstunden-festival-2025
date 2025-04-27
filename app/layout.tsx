@@ -198,7 +198,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </a>
     
             <div className="impressum-etc-row">
-              <div>©2023-2025 Sternstundenfestival</div>
+              
               <div className="impressum-etc">
                 <a href="/kontakt">Kontakt</a>
                 <a href="/impressum">Impressum</a>
@@ -206,6 +206,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <a href="/agb">AGB</a>
               </div>
             </div>
+           
+            <div>©2023-2025 Sternstunden Festival</div>
             <Spacer height={32} />
           </Flex>
         </section>
