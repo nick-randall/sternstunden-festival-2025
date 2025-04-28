@@ -32,6 +32,7 @@ type ArtistWithEvents = {
     name: string;
     description: string;
     imageUrl: string;
+    artistUrl: string;
     code: string;
   };
   eventStartDateTime: string;
