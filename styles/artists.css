@@ -1,7 +1,15 @@
+.artists-page-wrapper {
+  width: 100%;
+}
+
+.artists-page-wrapper h1 {
+  text-align: center;
+}
+
 .artists-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, 308px);
-  gap: 40px;
+  gap: 25px;
   width: 100%;
   justify-content: center;
 }
@@ -17,16 +25,25 @@
 }
 
 .artist-card img {
-  /* width: 100%;
-  height: auto; */
   object-fit: cover;
+}
+
+.artists-grid :nth-child(3n+1) .artist-card img {
+  border: 2px solid #3af0f3;
+}
+
+.artists-grid :nth-child(3n+2) .artist-card img {
+  border: 2px solid #f3f318;
+}
+
+.artists-grid :nth-child(3n) .artist-card img {
+  border: 2px solid white;
 }
 
 .artist-card .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
 }
 
 .artist-card .artist-name {
@@ -39,6 +56,7 @@
   text-transform: uppercase;
   text-decoration: none;
 }
+
 .artist-link {
   text-decoration: none;
   color: inherit;
@@ -57,4 +75,8 @@
   width: 400px;
   height: 400px;
   object-fit: cover;
+}
+
+.artist-event-time {
+  font-weight: 700;
 }

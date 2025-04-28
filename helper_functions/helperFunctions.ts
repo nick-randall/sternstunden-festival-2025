@@ -1,7 +1,7 @@
 export const getDayPlus24HourTimeString = (date: string) => {
   const dateObj = new Date(date);
   const day = dateObj.getDay();
-  const germanDay = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"][day];
+  const germanDay = ["SO", "MO", "DI", "MI", "DO", "FR", "SA"][day];
 
   const hours = dateObj.getHours();
   const minutes = dateObj.getMinutes();

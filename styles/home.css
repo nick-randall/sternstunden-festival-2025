@@ -1,4 +1,4 @@
-.content-box {
+  .content-box {
   display: flex;
   flex-direction: row;
   background: linear-gradient(to right, rgb(253, 244, 219, 0.3), rgb(239, 132, 84, 0.3)); /* same as #fdf4db, #ef8454 */
@@ -14,7 +14,7 @@
 .content-box .text-box {
   background: linear-gradient(to right, rgb(232, 0, 233, 0.12), rgb(37, 3, 192, 0.12)); /* same as #e800e9, #2503c0 */
   min-height: 100%;
-  flex-basis: 40%;
+  flex-basis: 50%;
   font-family: "NunitoSans";
   font-weight: 250;
   line-height: 1.3;

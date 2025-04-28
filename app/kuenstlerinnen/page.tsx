@@ -25,7 +25,7 @@ const Artists: React.FC = async () => {
     return a.artist.index - b.artist.index;
   });
   return (
-    <div>
+    <div className="artists-page-wrapper">
       <h1>Artists</h1>
       <div className="artists-grid">
         {artists.map((a: ArtistWithEvents) => (
