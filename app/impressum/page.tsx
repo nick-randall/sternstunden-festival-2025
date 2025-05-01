@@ -38,7 +38,7 @@ export default function Impressum() {
       <a href="https://ec.europa.eu/consumers/odr/">https://ec.europa.eu/consumers/odr/</a>
       <Spacer height={20}></Spacer>
       <p>
-        Das Impressum wurde mit dem <a href="https://www.activemind.de/datenschutz/impressums-generator/">Impressums-Generator der activeMind AG </a>
+        Das Impressum wurde mit dem <a href="https://www.activemind.de/datenschutz/impressums-generator/" title="Impressumsgenerator">Impressums-Generator der activeMind AG </a>
         erstellt.
       </p>
       <Spacer height={20}></Spacer>

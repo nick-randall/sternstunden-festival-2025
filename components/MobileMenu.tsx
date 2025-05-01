@@ -26,7 +26,7 @@ const MobileMenu: React.FC = () => {
 
   return (
     <>
-      <div className={`menu-wrapper mobile ${isOpen ? "open" : ""}`}>
+      <nav className={`menu-wrapper mobile ${isOpen ? "open" : ""}`}>
         <div className="mobile-menu-bar">
           <h1>
             <Link href="/" className="menu-item-container" onClick={() => setIsOpen(false)}>
@@ -139,7 +139,7 @@ const MobileMenu: React.FC = () => {
           </div>
           <Spacer height={200} />
         </div>
-      </div>
+      </nav>
     </>
   );
 };

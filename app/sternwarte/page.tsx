@@ -14,7 +14,7 @@ const Sternwarte = () => {
                 Die Forschung im Bereich der modernen Astrophysik reicht von Kosmologie über Dynamiken von Galaxien und Gravitationswellen bis zu Sternen und extrasolaren Planeten.
             </p>
             
-                <a href="https://www.physik.uni-hamburg.de/hs.html">
+                <a href="https://www.physik.uni-hamburg.de/hs.html" title="Hamburger Sternwarte">
                     Hier geht es zur Seite der Hamburger Sternwarte in Bergedorf.
                 </a> 
             

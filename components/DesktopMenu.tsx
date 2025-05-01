@@ -49,7 +49,7 @@ const DesktopMenu: React.FC = () => {
   };
 
   return (
-    <div
+    <nav
       className="menu-wrapper"
       style={{ background: scrollIsAtTopOfPage ? "linear-gradient(to right, rgb(253, 244, 219, 0.3), rgb(239, 132, 84, 0.3))" : "" }}
       onMouseLeave={handleMouseLeave}
@@ -177,7 +177,7 @@ const DesktopMenu: React.FC = () => {
           )}
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
