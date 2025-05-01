@@ -11,8 +11,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="de">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Sternstunden Festival 2025</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Sternstunden Festival 2025" />
+        <meta name="keywords" content="Musikfestival, Astronomie, Hamburg, Juli 2025" />
+        <meta name="author" content="Sternstunden Festival" />
+        <meta charSet="UTF-8" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         {/* Media queries don't seem to work currently on some mobile devices, as
                 a workaround I've put them here in the page layout style tag*/}
@@ -58,6 +62,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               }
               .gap-for-tablet-and-desktop {
                 height: 0px; 
+              }
+              .photo-grid {
+                display: block;
               }
 
             }
@@ -196,7 +203,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
             <Spacer height={32} />
             <a href="https://www.instagram.com/sternstundenfestival">
-              <Image src="https://freepnglogo.com/images/all_img/1715966654instagram-logo-png-white.png" alt="" height="40" width="40" />
+              <Image src="https://freepnglogo.com/images/all_img/1715966654instagram-logo-png-white.png" alt="instagram logo" height="40" width="40" />
             </a>
     
             <div className="impressum-etc-row">

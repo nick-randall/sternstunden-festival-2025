@@ -17,7 +17,7 @@ const Bewerbung = () => {
         </a>
       </p>
       <div style={{position: "relative", height: 500}}>
-        <Image src="https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/ssf24m43.jpg" alt="" fill={true}/>
+        <Image src="https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/ssf24m43.jpg" alt="Band auf der Bühne -- Sternstunden Festival 2024" fill={true}/>
       </div>
 
     </div>

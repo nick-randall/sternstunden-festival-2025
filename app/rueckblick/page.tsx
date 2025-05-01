@@ -82,121 +82,121 @@ const ImpressionsPage: React.FC = () => {
       <div className="boring-page-wrapper">
         <h1>Impressionen 24</h1>
       </div>
-      <div className="left-small-right-large-grid">
-        <Image src={urls24[0]} alt="" height="300" width="200" />
-        <Image src={urls24[1]} alt="" height="400" width="600" />
-        <Image src={urls24[2]} alt="" height="300" width="200" />
-        <Image src={urls24[3]} alt="" height="400" width="600" />
-        <Image className="two-wide" src={urls24[4]} alt="" height="400" width="600" />
+      <div className="left-small-right-large-grid photo-grid">
+        <Image src={urls24[0]} alt="Impression Sternstunden Festival 2024" height="300" width="200" />
+        <Image src={urls24[1]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
+        <Image src={urls24[2]} alt="Impression Sternstunden Festival 2024" height="300" width="200" />
+        <Image src={urls24[3]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
+        <Image className="two-wide" src={urls24[4]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
       </div>
       <Spacer height={5} />
 
-      <div className="left-large-right-small-grid">
-        <Image src={urls24[5]} alt="" height="400" width="600" />
-        <Image src={urls24[6]} alt="" height="400" width="600" />
+      <div className="left-large-right-small-grid photo-grid">
+        <Image src={urls24[5]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
+        <Image src={urls24[6]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
       </div>
       <Spacer height={5} />
 
-      <div className="two-small-one-large-grid">
-        <Image src={urls24[7]} alt="" height="400" width="600" />
-        <Image src={urls24[8]} alt="" height="400" width="600" />
-        <Image src={urls24[9]} alt="" height="400" width="600" />
-        <Image src={urls24[10]} alt="" height="400" width="600" />
-        <Image src={urls24[11]} alt="" height="400" width="600" />
-        <Image src={urls24[12]} alt="" height="400" width="600" />
+      <div className="two-small-one-large-grid photo-grid">
+        <Image src={urls24[7]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
+        <Image src={urls24[8]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
+        <Image src={urls24[9]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
+        <Image src={urls24[10]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
+        <Image src={urls24[11]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
+        <Image src={urls24[12]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
       </div>
       <Spacer height={5} />
-      <div className="three-even-grid">
-        <Image src={urls24[13]} alt="" height="400" width="600" />
-        <Image src={urls24[14]} alt="" height="400" width="600" />
-        <Image src={urls24[15]} alt="" height="400" width="600" />
-        <Image src={urls24[16]} alt="" height="400" width="600" />
-        <Image src={urls24[17]} alt="" height="400" width="600" />
-        <Image src={urls24[18]} alt="" height="400" width="600" />
+      <div className="three-even-grid photo-grid">
+        <Image src={urls24[13]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
+        <Image src={urls24[14]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
+        <Image src={urls24[15]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
+        <Image src={urls24[16]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
+        <Image src={urls24[17]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
+        <Image src={urls24[18]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
       </div>
       <Spacer height={5} />
-      <div className="left-small-right-large-grid">
-        <Image src={urls24[19]} alt="" height="300" width="200" />
-        <Image src={urls24[20]} alt="" height="400" width="600" />
-        <Image className="two-wide" src={urls24[21]} alt="" height="400" width="600" />
+      <div className="left-small-right-large-grid photo-grid">
+        <Image src={urls24[19]} alt="Impression Sternstunden Festival 2024" height="300" width="200" />
+        <Image src={urls24[20]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
+        <Image className="two-wide" src={urls24[21]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
       </div>
       <Spacer height={5} />
-      <div className="left-large-right-small-grid">
-        <Image src={urls24[22]} alt="" height="400" width="600" />
-        <Image src={urls24[23]} alt="" height="300" width="200" />
+      <div className="left-large-right-small-grid photo-grid">
+        <Image src={urls24[22]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
+        <Image src={urls24[23]} alt="Impression Sternstunden Festival 2024" height="300" width="200" />
       </div>
       <Spacer height={5} />
       <div className="one-wide">
-        <Image src={urls24[24]} alt="" height="400" width="600" />
+        <Image src={urls24[24]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
       </div>
       <Spacer height={5} />
-      <div className="left-large-right-small-grid">
-        <Image src={urls24[28]} alt="" height="400" width="600" />
-        <Image src={urls24[32]} alt="" height="300" width="200" />
+      <div className="left-large-right-small-grid photo-grid">
+        <Image src={urls24[28]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
+        <Image src={urls24[32]} alt="Impression Sternstunden Festival 2024" height="300" width="200" />
       </div>
 
       <Spacer height={5} />
-      <div className="three-even-grid">
-        <Image src={urls24[27]} alt="" height="400" width="600" />
-        <Image src={urls24[26]} alt="" height="400" width="600" />
-        <Image src={urls24[29]} alt="" height="400" width="600" />
+      <div className="three-even-grid photo-grid">
+        <Image src={urls24[27]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
+        <Image src={urls24[26]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
+        <Image src={urls24[29]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
       </div>
       <Spacer height={5} />
-      <div className="left-large-right-small-grid">
-        <Image src={urls24[30]} alt="" height="400" width="600" />
-        <Image src={urls24[33]} alt="" height="400" width="600" />
+      <div className="left-large-right-small-grid photo-grid">
+        <Image src={urls24[30]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
+        <Image src={urls24[33]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
       </div>
       <Spacer height={5} />
       <div className={"one-wide"}>
-        <Image src={urls24[31]} alt="" height="400" width="600" />
+        <Image src={urls24[31]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
       </div>
       <Spacer height={30} />
       <div className="title">Impressionen &apos;23</div>
       <Spacer height={5} />
       <div className={"one-wide"}>
-        <Image src={urls23[14]} alt="" height="400" width="600" />
+        <Image src={urls23[14]} alt="Impression aus dem Jahr 2023" height="400" width="600" />
       </div>
       <Spacer height={5} />
-      <div className="left-small-right-large-grid">
-        <Image src={urls23[3]} alt="" height="600" width="400" />
-        <Image src={urls23[2]} alt="" height="400" width="600" />
+      <div className="left-small-right-large-grid photo-grid">
+        <Image src={urls23[3]} alt="Impression Sternstunden Festival 2023" height="600" width="400" />
+        <Image src={urls23[2]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
       </div>
       <Spacer height={5} />
-      <div className="left-large-right-small-grid">
-        <Image src={urls23[9]} alt="" height="400" width="600" />
-        <Image src={urls23[10]} alt="" height="400" width="600" />
+      <div className="left-large-right-small-grid photo-grid">
+        <Image src={urls23[9]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
+        <Image src={urls23[10]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
       </div>
       <Spacer height={5} />
-      <div className="three-even-grid">
-        <Image src={urls23[0]} alt="" height="400" width="600" />
-        <Image src={urls23[5]} alt="" height="400" width="600" />
-        <Image src={urls23[7]} alt="" height="400" width="600" />
-      </div>
-      <Spacer height={5} />
-      <div className={"one-wide"}>
-        <Image src={urls23[16]} alt="" height="400" width="600" />
-      </div>
-      <Spacer height={5} />
-      <div className="left-large-right-small-grid">
-        <Image src={urls23[12]} alt="" height="400" width="600" />
-        <Image src={urls23[13]} alt="" height="300" width="200" />
-        <Image src={urls23[6]} alt="" height="400" width="600" />
-        <Image src={urls23[1]} alt="" height="600" width="400" />
+      <div className="three-even-grid photo-grid">
+        <Image src={urls23[0]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
+        <Image src={urls23[5]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
+        <Image src={urls23[7]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
       </div>
       <Spacer height={5} />
       <div className={"one-wide"}>
-        <Image src={urls23[11]} alt="" height="400" width="600" />
+        <Image src={urls23[16]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
       </div>
       <Spacer height={5} />
-      <div className="left-large-right-small-grid">
-        <Image src={urls23[15]} alt="" height="400" width="600" />
-        <Image src={urls23[1]} alt="" height="400" width="600" />
+      <div className="left-large-right-small-grid photo-grid">
+        <Image src={urls23[12]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
+        <Image src={urls23[13]} alt="Impression Sternstunden Festival 2023" height="300" width="200" />
+        <Image src={urls23[6]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
+        <Image src={urls23[1]} alt="Impression Sternstunden Festival 2023" height="600" width="400" />
       </div>
       <Spacer height={5} />
-      <div className="two-small-one-large-grid">
-        <Image src={urls23[4]} alt="" height="400" width="600" />
-        <Image src={urls23[8]} alt="" height="400" width="600" />
-        <Image src={urls23[17]} alt="" height="400" width="600" />
+      <div className={"one-wide"}>
+        <Image src={urls23[11]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
+      </div>
+      <Spacer height={5} />
+      <div className="left-large-right-small-grid photo-grid">
+        <Image src={urls23[15]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
+        <Image src={urls23[1]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
+      </div>
+      <Spacer height={5} />
+      <div className="two-small-one-large-grid photo-grid">
+        <Image src={urls23[4]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
+        <Image src={urls23[8]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
+        <Image src={urls23[17]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
       </div>
     </div>
   );
