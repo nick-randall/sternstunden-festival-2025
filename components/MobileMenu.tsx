@@ -28,9 +28,11 @@ const MobileMenu: React.FC = () => {
     <>
       <div className={`menu-wrapper mobile ${isOpen ? "open" : ""}`}>
         <div className="mobile-menu-bar">
-          <Link href="/" className="menu-item-container" onClick={() => setIsOpen(false)}>
-            <Image className="menu-item logo" src="/logo-simple.png" alt="Sternstunden Festival Logo" width="826" height="483" />
-          </Link>
+          <h1>
+            <Link href="/" className="menu-item-container" onClick={() => setIsOpen(false)}>
+              <Image className="menu-item logo" src="/logo-simple.png" alt="Sternstunden Festival Logo" width="826" height="483" />
+            </Link>
+          </h1>
           <div className="menu-item-container" onClick={toggleMenu}>
             <button className="hamburger">
               <span className={`hamburger-line-top ${isOpen ? "open" : ""}`}></span>

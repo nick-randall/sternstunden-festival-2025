@@ -29,7 +29,7 @@ export default function DatenSchutz() {
         <li>Wie wir mit Minderjährigen umgehen</li>
         <li>Aktualisierungen oder Änderungen der Datenschutzrichtlinie</li>
       </ul>
-      <h1>Welche Daten erfassen wir?</h1>
+      <h2>Welche Daten erfassen wir?</h2>
       <h3>Nachstehend erhalten Sie einen Überblick über die Daten, die wir erfassen können:</h3>
       <ul>
         <li>
@@ -46,7 +46,7 @@ export default function DatenSchutz() {
           personenbezogene Daten behandelt.
         </li>
       </ul>
-      <h1>Wie sammeln wir Daten?</h1>
+      <h3 className="section-title">Wie sammeln wir Daten?</h3>
       <h3>Nachstehend sind die wichtigsten Methoden aufgeführt, die wir zur Sammlung von Daten verwenden:</h3>
       <ul>
         <li>
@@ -63,7 +63,7 @@ export default function DatenSchutz() {
           anmelden.
         </li>
       </ul>
-      <h1>Warum erfassen wir diese Daten?</h1> <div>Wir können Ihre Daten für folgende Zwecke verwenden:</div>
+      <h3 className="section-title">Warum erfassen wir diese Daten?</h3> <div>Wir können Ihre Daten für folgende Zwecke verwenden:</div>
       <ul>
         <li>um unsere Dienste zur Verfügung zu stellen und zu betreiben;</li> <li>um unsere Dienste zu entwickeln, anzupassen und zu verbessern;</li>
         <li>um auf Ihr Feedback, Ihre Anfragen und Wünsche zu reagieren und Hilfe anzubieten;</li> um Anforderungs- und Nutzungsmuster zu analysieren;
@@ -110,21 +110,21 @@ export default function DatenSchutz() {
         Ohne Ihre Zustimmung werden wir Ihre E-Mail-Adresse oder andere personenbezogenen Daten nicht an Werbeunternehmen oder Werbenetzwerke
         weitergeben.
       </div>
-      <h1>Wo speichern wir die Daten?</h1>
+      <h3 className="section-title">Wo speichern wir die Daten?</h3>
       <h3>Nicht personenbezogene Daten</h3>
       <div>
         Bitte beachten Sie, dass unsere Unternehmen sowie unsere vertrauenswürdigen Partner und Dienstanbieter auf der ganzen Welt ansässig sind. Zu
         den in dieser Datenschutzrichtlinie erläuterten Zwecke speichern und verarbeiten wir alle nicht personenbezogenen Daten, die wir erfassen, in
         unterschiedlichen Rechtsordnungen.
       </div>
-      <h1>Wie lange werden die Daten vorgehalten?</h1>
+      <h3 className="section-title">Wie lange werden die Daten vorgehalten?</h3>
       <div>
         Bitte beachten Sie, dass wir die erfassten Daten so lange aufbewahren, wie es für die Bereitstellung unserer Dienste, zur Einhaltung unserer
         gesetzlichen und vertraglichen Verpflichtungen gegenüber Ihnen, zur Beilegung von Streitigkeiten und zur Durchsetzung unserer Vereinbarungen
         erforderlich ist.
       </div>
       <div>Wir können unrichtige oder unvollständige Daten jederzeit nach eigenem Ermessen berichtigen, ergänzen oder löschen.</div>
-      <h1>Wie schützen wir die Daten?</h1>
+      <h3 className="section-title">Wie schützen wir die Daten?</h3>
       <div>
         Der Hosting-Dienst für unserer digitalen Assets stellt uns die Online-Plattform zu Verfügung, über die wir Ihnen unsere Dienste anbieten
         können. Ihre Daten können über die Datenspeicherung, Datenbanken und allgemeine Anwendungen unseres Hosting-Anbieters gespeichert werden. Er

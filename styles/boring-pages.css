@@ -3,7 +3,7 @@
   line-height: 1.8;
 }
 
-.boring-page-wrapper h1{
+.boring-page-wrapper h1, .boring-page-wrapper .main-title{
   font-size: 25px;
   font-family: NunitoSans;
   font-weight: 800;
@@ -18,4 +18,13 @@
 
 .boring-page-wrapper .collapsible-text-boxes div {
   margin-bottom: 5px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-family: NunitoSans;
+  font-weight: 800;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  text-transform: uppercase;
 }

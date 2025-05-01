@@ -7,8 +7,8 @@ export default function AGB() {
   return (
     <div className="boring-page-wrapper">
       <Flex alignItems="center" flexDirection="column">
-        <h1>Sternstunden Festival</h1>
-        <h2>Allgemeine Geschäftsbedingungen des Veranstalters</h2>
+        <h2 className="main-title">Sternstunden Festival</h2>
+        <h1 className="subtitle">Allgemeine Geschäftsbedingungen des Veranstalters</h1>
         <p>Stand: 18.06.2024</p>
         <Flex alignItems="start" flexDirection="column">
           <div>

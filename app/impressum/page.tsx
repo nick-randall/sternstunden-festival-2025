@@ -1,11 +1,11 @@
-import Flex from "../../components/Flex";
 import Spacer from "../../components/Spacer";
 import "../../styles/common.css";
+import "../../styles/boring-pages.css";
 
 export default function Impressum() {
   return (
-    <Flex flexDirection="column" alignItems="center" textAlign="center">
-      <h2>Impressum</h2>
+    <div className="boring-page-wrapper">
+      <h1>Impressum</h1>
       <h3>Angaben gemäß § 5 TMG:</h3>
       <div>Förderverein der Unimusik Hamburg e.V.</div>
       <div>Postanschrift:</div>
@@ -18,9 +18,9 @@ export default function Impressum() {
       <div>Amtsgericht Hamburg VR23665</div>
       <h3>Umsatzsteuer-Identifikationsnummer</h3>
       <div>DE 245 584 140</div>
-      <h2>Hinweise zur Website</h2>
+      <h3 className="section-title" >Hinweise zur Website</h3 >
       <div>Urheberrechtliche Hinweise Design Jakob Timm</div>
-      <h2>Information gemäß § 36 VSBG</h2>
+      <h3 className="section-title" >Information gemäß § 36 VSBG</h3 >
       <div style={{ maxWidth: 800 }}>
         Gemäß § 36 VSBG (Verbraucherstreitbeilegungsgesetz - Gesetz über die alternative Streitbeilegung in Verbrauchersachen) erklärt der Betreiber
         dieser Website: Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
@@ -34,6 +34,6 @@ export default function Impressum() {
         erstellt.
       </p>
       <Spacer height={20}></Spacer>
-    </Flex>
+    </div>
   );
 }
