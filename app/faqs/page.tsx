@@ -3,6 +3,7 @@ import "../../styles/common.css";
 import "../../styles/boring-pages.css";
 import CollapsibleText from "@/components/CollapsibleTextBox";
 import { useState } from "react";
+import Link from "next/link";
 
 const Faqs = () => {
   const [currOpen, setCurrOpen] = useState(-1);
@@ -19,20 +20,20 @@ const Faqs = () => {
         <CollapsibleText
           title="Wie viel werden die Tickets an der Abendkasse kosten? "
           text={
-                    <div>
-                     Die Tickets werden für den Freitag 15€ (ermäßigt 10€) und für den Samstag 20€ (ermäßigt 14€) kosten.
-                  Das Kombiticket kostet 25€ (ermäßigt 19€).
-                  Ermäßigungsberechtigt sind Studierende, Senior*innen, Schüler*innen,
-                  Auszubildende, Erwerbslose, Menschen mit Schwerbehinderung (ab GdB 50, bei eingetragenem Merkzeichen „B“ erhält Begleitung freien Eintritt).
-                  Kinder bis 14 Jahre erhalten freien Eintritt und benötigen ein kostenloses Online-Ticket.
-                  Geflüchtete erhalten freien Eintritt gegen  Vorlage einer gültigen Aufenthaltserlaubnis
-                  nach § 24 AufenthG oder § 25 Abs. 1, 2 oder 3  AufenthG oder jeweils in Verbindung mit einer gültigen Fiktionsbescheinigung.
-                  Für Geflüchtete aus der Ukraine gilt die Vorlage eines ukrainischen Reisepasses oder eines anderen Ausweisdokuments.
-                  Bitte vorher ein kostenloses Online-Ticket bestellen. Tickets gibt es in unserem <a href="/tickets">
-        <strong>Ticketshop</strong>
-      </a>.
-                   </div>
-                  }
+            <div>
+              Die Tickets werden für den Freitag 15€ (ermäßigt 10€) und für den Samstag 20€ (ermäßigt 14€) kosten. Das Kombiticket kostet 25€
+              (ermäßigt 19€). Ermäßigungsberechtigt sind Studierende, Senior*innen, Schüler*innen, Auszubildende, Erwerbslose, Menschen mit
+              Schwerbehinderung (ab GdB 50, bei eingetragenem Merkzeichen „B“ erhält Begleitung freien Eintritt). Kinder bis 14 Jahre erhalten freien
+              Eintritt und benötigen ein kostenloses Online-Ticket. Geflüchtete erhalten freien Eintritt gegen Vorlage einer gültigen
+              Aufenthaltserlaubnis nach § 24 AufenthG oder § 25 Abs. 1, 2 oder 3 AufenthG oder jeweils in Verbindung mit einer gültigen
+              Fiktionsbescheinigung. Für Geflüchtete aus der Ukraine gilt die Vorlage eines ukrainischen Reisepasses oder eines anderen
+              Ausweisdokuments. Bitte vorher ein kostenloses Online-Ticket bestellen. Tickets gibt es in unserem
+              <Link href="/tickets">
+                <strong>Ticketshop</strong>
+              </Link>
+              .
+            </div>
+          }
           isOpen={currOpen === 0}
           handleClick={() => toggleOpen(0)}
         />
@@ -124,11 +125,15 @@ const Faqs = () => {
         />
         <CollapsibleText
           title="Gibt es vor Ort eine Erste-Hilfe-Station?"
-          text= {
+          text={
             <div>
-             Ja, es gibt ein Erste-Hilfe-Zelt auf dem Gelände. Du findest es gut sichtbar ausgeschildert in der Nähe der Toiletten. Im Notfall wende dich
-             bitte an das Personal – wir helfen dir sofort weiter. In unserem <a href="/lageplan"><strong>Lageplan</strong></a> ist es auch eingezeichnet.
-           </div>
+              Ja, es gibt ein Erste-Hilfe-Zelt auf dem Gelände. Du findest es gut sichtbar ausgeschildert in der Nähe der Toiletten. Im Notfall wende
+              dich bitte an das Personal – wir helfen dir sofort weiter. In unserem
+              <Link href="/lageplan">
+                <strong>Lageplan</strong>
+              </Link>
+              ist es auch eingezeichnet.
+            </div>
           }
           isOpen={currOpen === 11}
           handleClick={() => toggleOpen(11)}
@@ -137,9 +142,12 @@ const Faqs = () => {
           title="Welchen Eingang soll ich benutzen?"
           text={
             <div>
-             Bitte benutze ausschließlich den Haupteingang der Sternwarte, wie er auch auf dem <a href="/lageplan"><strong>Lageplan</strong></a>  gekennzeichnet ist.
-             Der Eingang von der August-Bebel-Straße kommend wird nur als Notausgang genutzt.
-           </div>
+              Bitte benutze ausschließlich den Haupteingang der Sternwarte, wie er auch auf dem
+              <Link href="/lageplan">
+                <strong>Lageplan</strong>
+              </Link>
+              gekennzeichnet ist. Der Eingang von der August-Bebel-Straße kommend wird nur als Notausgang genutzt.
+            </div>
           }
           isOpen={currOpen === 12}
           handleClick={() => toggleOpen(12)}
@@ -163,14 +171,14 @@ const Faqs = () => {
       </div>
       <br />
       <br />
-      Hast du noch mehr Fragen? Dann nutze unser{" "}
-      <a href="../kontakt">
+      Hast du noch mehr Fragen? Dann nutze unser
+      <Link href="../kontakt">
         <strong>Kontaktformular</strong>
-      </a>{" "}
-      oder besuche uns auf{" "}
-      <a href="https://www.instagram.com/sternstundenfestival/">
+      </Link>
+      oder besuche uns auf
+      <Link href="https://www.instagram.com/sternstundenfestival/">
         <strong>Instagram</strong>
-      </a>
+      </Link>
       .
     </div>
   );

@@ -6,6 +6,7 @@ import Flex from "@/components/Flex";
 import Menu from "@/components/Menu";
 import "../styles/menu.css";
 import "../styles/common.css";
+import Link from "next/link";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -147,7 +148,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </div>
 
                 <div className="sponsor-logo-container">
-                  <a href="https://www.unimusik.uni-hamburg.de/ueber-unimusik/foerderverein-unimusik.html">
+                  <a href="https://www.unimusik.uni-hamburg.de/ueber-unimusik/foerderverein-unimusik.html" title="Unimusik Förderverein">
                     <Image src="/sponsors/unimusik-foerderverein.png" alt="Unimusik Förderverein" height="155" width="336" className="sponsor-logo" />
                   </a>
                 </div>
@@ -155,7 +156,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
               <div className="sponsor-logo-row">
                 <div className="sponsor-logo-container">
-                  <a href="https://www.zeit-stiftung.de">
+                  <a href="https://www.zeit-stiftung.de" title="Zeit Stiftung Bucerius">
                     <Image
                       src="/sponsors/zeit-stiftung-bucerius.png"
                       alt="Zeit Stiftung Bucerius"
@@ -166,7 +167,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   </a>
                 </div>
                 <div className="sponsor-logo-container">
-                  <a href="https://www.claussen-simon-stiftung.de/de">
+                  <a href="https://www.claussen-simon-stiftung.de/de" title="Claussen Simon Stiftung">
                     <Image
                       src="/sponsors/claussen-simon-stiftung.png"
                       alt="Claussen Simon Stiftung"
@@ -180,21 +181,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
               <div className="sponsor-logo-row">
                 <div className="sponsor-logo-container">
-                  <a href="https://www.uni-hamburg.de/exzellenz/exzellenzcluster.html">
+                  <a href="https://www.uni-hamburg.de/exzellenz/exzellenzcluster.html" title="Exzellenzcluster">
                     <Image src="/sponsors/excellenzcluster.png" alt="Excellenzcluster" width="400" height="78" className="sponsor-logo" />
                   </a>
                 </div>
               </div>
               <div className="sponsor-logo-row">
                 <div className="sponsor-logo-container">
-                  <a href="https://www.physik.uni-hamburg.de/hs.html">
+                  <a href="https://www.physik.uni-hamburg.de/hs.html" title="Hamburger Sternwarte">
                     <Image src="/sponsors/UHH_Wortmarke_Sternwarte.png" alt="Hamburger Sternwarte" width="400" height="78" className="sponsor-logo" />
                   </a>
                 </div>
               </div>
               <div className="sponsor-logo-row">
                 <div className="sponsor-logo-container">
-                  <a href="https://www.bergedorf-bille.de/">
+                  <a href="https://www.bergedorf-bille.de/" title="Bergedorf Bille">
                     <Image src="/sponsors/bergedorf_bille.png" alt="Bergedorf Bille" width="400" height="78" className="sponsor-logo" />
                   </a>
                 </div>
@@ -202,17 +203,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
 
             <Spacer height={32} />
-            <a href="https://www.instagram.com/sternstundenfestival">
+            <a href="https://www.instagram.com/sternstundenfestival" target="_blank" rel="noopener noreferrer">
               <Image src="https://freepnglogo.com/images/all_img/1715966654instagram-logo-png-white.png" alt="instagram logo" height="40" width="40" />
             </a>
     
             <div className="impressum-etc-row">
               
               <div className="impressum-etc">
-                <a href="/kontakt">Kontakt</a>
-                <a href="/impressum">Impressum</a>
-                <a href="/datenschutz">Datenschutz</a>
-                <a href="/agb">AGB</a>
+                <Link href="/kontakt">Kontakt</Link>
+                <Link href="/impressum">Impressum</Link>
+                <Link href="/datenschutz">Datenschutz</Link>
+                <Link href="/agb">AGB</Link>
               </div>
             </div>
            

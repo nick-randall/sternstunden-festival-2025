@@ -5,6 +5,7 @@ import Spacer from "../components/Spacer";
 import PhotoSlider from "./PhotoSlider";
 import Banner from "@/components/Banner";
 import Image from "next/image";
+import Link from "next/link";
 
 const rootUrl = "https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/";
 const initial = ["ssf24m43", "ssf24m115", "ssf24m112", "ssf24m113", "ssf24m44", "ssf24m108"];
@@ -48,9 +49,9 @@ export default function Page() {
             sich die weitläufige Parkanlage rund um die denkmalgeschützten Teleskopgebäude in einen Ort der Begegnung mit Musik und Astronomie.
           </div>
           <br />
-          <a className="more-info" href="/info">
+          <Link className="more-info" href="/info">
             MEHR INFOS...
-          </a>
+          </Link>
         </div>
         <div className="responsive-spacer-15"></div>
         <div className="home-image-wrapper">

@@ -18,9 +18,17 @@ export default function Impressum() {
       <div>Amtsgericht Hamburg VR23665</div>
       <h3>Umsatzsteuer-Identifikationsnummer</h3>
       <div>DE 245 584 140</div>
-      <h3 className="section-title" >Hinweise zur Website</h3 >
-      <div>Urheberrechtliche Hinweise Design Jakob Timm</div>
-      <h3 className="section-title" >Information gemäß § 36 VSBG</h3 >
+      <h3 className="section-title">Hinweise zur Website</h3>
+      <div>
+        Urheberrechtliche Hinweise
+        <br />
+        Design: <a href="https://www.jakobtimm.de/"> Jakob Timm</a>
+        <br />
+        Umsetzung / Design: <a href="https://nick-codes.com"> Nicholas Randall</a>
+        <br />
+        Umsetzung: Katha Kögel
+      </div>
+      <h3 className="section-title">Information gemäß § 36 VSBG</h3>
       <div style={{ maxWidth: 800 }}>
         Gemäß § 36 VSBG (Verbraucherstreitbeilegungsgesetz - Gesetz über die alternative Streitbeilegung in Verbrauchersachen) erklärt der Betreiber
         dieser Website: Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
@@ -30,7 +38,7 @@ export default function Impressum() {
       <a href="https://ec.europa.eu/consumers/odr/">https://ec.europa.eu/consumers/odr/</a>
       <Spacer height={20}></Spacer>
       <p>
-        Das Impressum wurde mit dem <a href="https://www.activemind.de/datenschutz/impressums-generator/">Impressums-Generator der activeMind AG</a>
+        Das Impressum wurde mit dem <a href="https://www.activemind.de/datenschutz/impressums-generator/">Impressums-Generator der activeMind AG </a>
         erstellt.
       </p>
       <Spacer height={20}></Spacer>

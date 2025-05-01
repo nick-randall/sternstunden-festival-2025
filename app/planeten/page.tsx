@@ -21,7 +21,7 @@ const PlanetsPage: React.FC = () => {
            <strong>Sprecher:innen:</strong> Merle Juschka, Nilton Fonseca, Marvin J. Deitz, Vivien Rönneburg, Noemi Deitz, Julia Meier, Katja Lehmann, Sara Ricking | Schnitt: Vincent Ritter <br/>
             <strong>Design:</strong> {" "}
           <a href="https://www.jakobtimm.de/"> Jakob Timm</a> 
-          <br/><strong>Umsetzung:</strong> Leonie Kurz / Nicholas Randall
+          <br/><strong>Umsetzung:</strong> Leonie Kurz /<a href="https://nick-codes.com"> Nicholas Randall</a>
           <br />
           <br />
           

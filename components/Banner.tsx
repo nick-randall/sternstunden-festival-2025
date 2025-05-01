@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import Image from "next/image";
+import Link from "next/link";
 
 const Banner: React.FC = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -35,7 +36,7 @@ const Banner: React.FC = () => {
   if (!isMounted) return null;
 
   return ReactDOM.createPortal(
-    <a href="../tickets">
+    <Link href="../tickets">
       <div className="banner" ref={handleRef} style={{ top: topPosition }}>
         <div className="banner-text">
           <div className="star-wrapper">
@@ -104,7 +105,7 @@ const Banner: React.FC = () => {
           <span>TICKETS TICKETS TICKETS!</span>
         </div>
       </div>
-    </a>,
+    </Link>,
     document.body
   );
 };

@@ -85,9 +85,9 @@ const DesktopMenu: React.FC = () => {
           {currDropdown === "programm" && (
             <ul className="menu-dropdown-list">
               <li>
-                <a href="/timetable" className="menu-dropdown-link">
+                <Link href="/timetable" className="menu-dropdown-link">
                   Timetable
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/kuenstlerinnen" className="menu-dropdown-link">
@@ -95,9 +95,9 @@ const DesktopMenu: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <a href="/astroprogramm" className="menu-dropdown-link">
+                <Link href="/astroprogramm" className="menu-dropdown-link">
                   Astroprogramm
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/planeten" className="menu-dropdown-link">
@@ -110,68 +110,68 @@ const DesktopMenu: React.FC = () => {
           {currDropdown === "info" && (
             <ul className="menu-dropdown-list">
               <li>
-                <a href="/info" className="menu-dropdown-link">
+                <Link href="/info" className="menu-dropdown-link">
                   Info
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/anfahrt" className="menu-dropdown-link">
+                <Link href="/anfahrt" className="menu-dropdown-link">
                   Anfahrt
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/lageplan" className="menu-dropdown-link">
+                <Link href="/lageplan" className="menu-dropdown-link">
                   Lageplan
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/faqs" className="menu-dropdown-link">
+                <Link href="/faqs" className="menu-dropdown-link">
                   FAQs
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/mission-statement" className="menu-dropdown-link">
+                <Link href="/mission-statement" className="menu-dropdown-link">
                   Mission Statement
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/sternwarte" className="menu-dropdown-link">
+                <Link href="/sternwarte" className="menu-dropdown-link">
                   Sternwarte
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/rueckblick" className="menu-dropdown-link">
+                <Link href="/rueckblick" className="menu-dropdown-link">
                   Rückblick 23/24
-                </a>
+                </Link>
               </li>
             </ul>
           )}
           {currDropdown === "kontakt" && (
             <ul className="menu-dropdown-list">
               <li>
-                <a href="/kontakt" className="menu-dropdown-link">
+                <Link href="/kontakt" className="menu-dropdown-link">
                   Kontakt
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/support-us" className="menu-dropdown-link">
+                <Link href="/support-us" className="menu-dropdown-link">
                   Support us!
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/impressum" className="menu-dropdown-link">
+                <Link href="/impressum" className="menu-dropdown-link">
                   Impressum
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/agb" className="menu-dropdown-link">
+                <Link href="/agb" className="menu-dropdown-link">
                   AGB
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/datenschutz" className="menu-dropdown-link">
+                <Link href="/datenschutz" className="menu-dropdown-link">
                   Datenschutz
-                </a>
+                </Link>
               </li>
             </ul>
           )}
