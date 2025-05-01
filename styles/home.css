@@ -82,15 +82,21 @@
   padding: 10px;
   right: 0px;
   top: 200px;
-  transform: translate(-0%, -50%);
   pointer-events: auto;
   cursor: pointer;
+  width: 45px;
+  height: 45px;
 }
 
 .arrow-left {
   transform: translate(-0%, -50%) rotateY(180deg);
   right: auto;
   left: 0px;
+}
+
+.arrow-right {
+  transform: translate(0%, -50%) ;
+  right: -30px;
 }
 
 .photo-slider {

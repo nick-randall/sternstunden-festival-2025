@@ -110,7 +110,7 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoUrls }) => {
       >
         <div style={{ position: "relative" }}>
           <Image onClick={scrollBackward} src="./chevron-right.svg" alt="Scroll Back" className="arrow arrow-left" height="50" width="50" />
-          <Image onClick={scrollForward} src="./chevron-right.svg" alt="Scroll Forward" height="50" width="50" className="arrow" />
+          <Image onClick={scrollForward} src="./chevron-right.svg" alt="Scroll Forward" height="50" width="50" className="arrow arrow-right" />
         </div>
       </div>
       <div ref={containerRef} key="mobile-photo-slider" className="photo-slider" onWheel={pauseScroll} onTouchStart={pauseScroll}>
