@@ -62,7 +62,7 @@ const DesktopMenu: React.FC = () => {
               Tickets
             </div>
           </Link>
-          <Link href="/lineup" className="menu-item-container" onMouseEnter={() => handleMouseEnter("programm")}>
+          <Link href="/programm" className="menu-item-container" onMouseEnter={() => handleMouseEnter("programm")}>
             <div className={`menu-item ${currDropdown === "programm" && "hovered"}`} ref={programHoverRef}>
               Programm
             </div>
@@ -82,7 +82,7 @@ const DesktopMenu: React.FC = () => {
       </div>
       <div className={`menu-dropdown ${currDropdown === "" && "hidden"}`}>
         <div style={{ left, position: "relative", top: "100%" }}>
-          {currDropdown === "programm" && (
+          {/* {currDropdown === "programm" && (
             <ul className="menu-dropdown-list">
               <li>
                 <Link href="/timetable" className="menu-dropdown-link">
@@ -105,7 +105,7 @@ const DesktopMenu: React.FC = () => {
                 </Link>
               </li>
             </ul>
-          )}
+          )} */}
 
           {currDropdown === "info" && (
             <ul className="menu-dropdown-list">

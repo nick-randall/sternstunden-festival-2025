@@ -33,6 +33,9 @@
   text-decoration: none;
   color: rgba(240, 129, 54);
 }
+.content-box .text-box a:hover {
+  color: black;
+}
 
 .feature-photo {
   inset: 0;
@@ -171,7 +174,7 @@
 }
 
 .banner-text .star-wrapper {
-  width: 100;
+  width: 100px;
   height: 20px;
   display: flex;
   align-items: center;

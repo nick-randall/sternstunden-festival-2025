@@ -3,7 +3,6 @@
   font-family: "NunitoSans";
 }
 
-
 @font-face {
   font-family: "SofiaProLight";
   src: url("Sofia Pro Light.otf");
@@ -28,4 +27,8 @@ a {
   text-decoration: strong;
   text-decoration: none;
   color: rgba(240, 129, 54);
+}
+
+a:hover {
+  color: black;
 }
