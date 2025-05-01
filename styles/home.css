@@ -1,4 +1,4 @@
-  .content-box {
+.content-box {
   display: flex;
   flex-direction: row;
   background: linear-gradient(to right, rgb(253, 244, 219, 0.3), rgb(239, 132, 84, 0.3)); /* same as #fdf4db, #ef8454 */
@@ -8,7 +8,7 @@
 
 .content-box.split-box {
   /* prevent right padding */
- padding: 15px 0px 15px 15px;
+  padding: 15px 0px 15px 15px;
 }
 
 .content-box .text-box {
@@ -63,7 +63,7 @@
 }
 
 .home-image-wrapper {
-  overflow: hidden  ;
+  overflow: hidden;
 }
 
 .home-image {
@@ -95,7 +95,7 @@
 }
 
 .arrow-right {
-  transform: translate(0%, -50%) ;
+  transform: translate(0%, -50%);
   right: -30px;
 }
 

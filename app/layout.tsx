@@ -70,7 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
             }
               @media screen and (max-width: 1300px) { 
-                .content-box {
+              .content-box {
                 flex-direction: column;
                 width: 100%;
               }

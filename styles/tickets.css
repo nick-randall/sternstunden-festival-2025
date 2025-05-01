@@ -1,0 +1,41 @@
+
+.shop-container {
+
+}
+
+
+.content-box {
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(to right, rgb(253, 244, 219, 0.3), rgb(239, 132, 84, 0.3)); /* same as #fdf4db, #ef8454 */
+  padding: 15px;
+  width: 100%;
+}
+
+.content-box.split-box {
+  /* prevent right padding */
+  padding: 15px 0px 15px 15px;
+}
+
+.content-box .shop-container{
+  flex-grow: 1;
+  overflow: hidden;
+
+}
+
+
+.content-box .responsive-spacer-15 {
+  width: 15px;
+  flex-shrink: 0;
+  flex-basis: 15px;
+}
+
+#shop-frame{
+  max-width: 100%;
+}
+
+.content-box  .shop-container .no-load-tip {
+  position: absolute;
+  top: 50%;
+  width: 300px;
+}
