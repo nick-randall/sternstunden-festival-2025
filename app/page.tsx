@@ -54,14 +54,16 @@ export default function Page() {
           </Link>
         </div>
         <div className="responsive-spacer-15"></div>
-        <div className="home-image-wrapper">
-          <Image
-            src="/sternstunden_festival_home.jpg"
-            alt="Foto mit dem Text: 2 Tage Science Slam über 30 Konzerte mehr als 20 Vorträge über 1000 Besucher:innen buntes Kinderprogramm Besichtigungen Foodtrucks und und und"
-            width="625"
-            height="416"
-            className="home-image"
-          />
+        <div className="home-image-cropping-wrapper">
+          <div className="home-image-wrapper">
+            <Image
+              src="/sternstunden_festival_home.jpg"
+              alt="Foto mit dem Text: 2 Tage Science Slam über 30 Konzerte mehr als 20 Vorträge über 1000 Besucher:innen buntes Kinderprogramm Besichtigungen Foodtrucks und und und"
+              width="625"
+              height="416"
+              className="home-image"
+            />
+          </div>
         </div>
         <div className="responsive-spacer-15"></div>
       </div>

@@ -12,16 +12,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="de">
       <head>
-        <title>Sternstunden Festival 2025</title>
+        <title>Sternstunden Festival 202 | Musik und Astronomie</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Sternstunden Festival 2025" />
-        <meta name="keywords" content="Musikfestival, Astronomie, Hamburg, Juli 2025" />
+        <meta
+          name="description"
+          content="Das Sternstunden Festival vereint inspirierende Konzerterlebnisse in besonderer Umgebung mit spannenden astrophysikalischen Einblicken unter Hamburgs Sternenhimmel in einzigartiger Festivalatmosphäre. "
+        />
+        <meta
+          name="keywords"
+          content="Sternstunden Festival, Musikfestival Hamburg, Astronomie Festival, Hamburger Sternwarte, Festival Bergedorf, Musik und Wissenschaft, Kulturfestival, Sommerfestival Hamburg, Kammermusik Festival, Jazzfestival, Electro Pop Festival, Kinderprogramm Festival, Wissenschaft erleben, Teleskopführungen, Astronomie Vorträge, Familienfestival Hamburg, Kultur unter Sternen, Musik trifft Kosmos, Sternstunden Bergedorf, Festival unter Sternenhimmel"
+        />
         <meta name="author" content="Sternstunden Festival" />
         <meta charSet="UTF-8" />
+        <meta name="twitter:title" content="Sternstunden Festival | Musik und Astronomie" />
+        <meta
+          name="twitter:description"
+          content="Das Sternstunden Festival vereint inspirierende Konzerterlebnisse in besonderer Umgebung mit spannenden astrophysikalischen Einblicken unter Hamburgs Sternenhimmel in einzigartiger Festivalatmosphäre. "
+        /><meta name="twitter:image" content="/logo-without-dates.png"/>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         {/* Media queries don't seem to work currently on some mobile devices, as
                 a workaround I've put them here in the page layout style tag*/}
-
         <style>
           {`
             @media screen and (max-width: 768px) {
@@ -135,11 +145,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Flex flexDirection="column" alignItems="center">
             <Spacer height={32} />
 
-        
             <Spacer height={32} />
-            <div><strong>Unsere Sponsor:innen und Förder:innen</strong></div>
+            <div>
+              <strong>Unsere Sponsor:innen und Förder:innen</strong>
+            </div>
             <Spacer height={32} />
-              <div className="sponsor-logo-wrap-section">
+            <div className="sponsor-logo-wrap-section">
               <div className="sponsor-logo-row">
                 <div className="sponsor-logo-container">
                   <a href="https://www.uni-hamburg.de/">
@@ -204,11 +215,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
             <Spacer height={32} />
             <a href="https://www.instagram.com/sternstundenfestival" target="_blank" rel="noopener noreferrer">
-              <Image src="https://freepnglogo.com/images/all_img/1715966654instagram-logo-png-white.png" alt="instagram logo" height="40" width="40" />
+              <Image
+                src="https://freepnglogo.com/images/all_img/1715966654instagram-logo-png-white.png"
+                alt="instagram logo"
+                height="40"
+                width="40"
+              />
             </a>
-    
+
             <div className="impressum-etc-row">
-              
               <div className="impressum-etc">
                 <Link href="/kontakt">Kontakt</Link>
                 <Link href="/impressum">Impressum</Link>
@@ -216,7 +231,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link href="/agb">AGB</Link>
               </div>
             </div>
-           
+
             <div>©2023-2025 Sternstunden Festival</div>
             <Spacer height={32} />
           </Flex>

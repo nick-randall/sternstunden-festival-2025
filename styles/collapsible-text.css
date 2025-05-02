@@ -1,9 +1,9 @@
-.collapsible-text {
+.collapsible-text-component {
   font-size: 18px;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
-
 
 .title-box {
   background: linear-gradient(to right, rgb(232, 0, 233, 0.12), rgb(37, 3, 192, 0.12)); /* same as #e800e9, #2503c0 */
@@ -15,28 +15,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-
 }
 
-.collapsible-text-box {
+.collapsible-text-component .text-box {
   background: linear-gradient(to right, rgb(253, 244, 219, 0.3), rgb(239, 132, 84, 0.3)); /* same as #fdf4db, #ef8454 */
   max-height: 0px;
   overflow: hidden;
   transition: max-height 0.3s;
 }
 
-.collapsible-text-box.open{
+.collapsible-text-component .text-box.open {
   flex-grow: 1;
   max-height: 500vh;
   transition: max-height 0.3s;
 }
 
-.collapsible-text-box .text-content {
+.collapsible-text-component .text-box .text-content {
   font-weight: 350;
   padding: 15px;
 }
-
 
 .plus-minus-icon {
   color: #ecf0f1;
@@ -64,7 +61,7 @@
 }
 
 .plus-minus-icon span:last-child {
- transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .plus-minus-icon.minus span:first-child {

@@ -3,14 +3,14 @@ import { FC, JSX } from "react";
 
 interface CollapsibleTextBoxProps {
   title: string;
-  text: string| JSX.Element;
+  text: string | JSX.Element;
   isOpen: boolean;
   handleClick: () => void;
 }
 
 const CollapsibleTextBox: FC<CollapsibleTextBoxProps> = ({ title, text, isOpen, handleClick }) => {
   return (
-    <div className="collapsible-text">
+    <div className="collapsible-text-component">
       <div className="title-box" onClick={handleClick}>
         <div>{title}</div>
         <div className={`plus-minus-icon ${isOpen ? "minus" : "plus"}`}>
@@ -19,7 +19,7 @@ const CollapsibleTextBox: FC<CollapsibleTextBoxProps> = ({ title, text, isOpen, 
         </div>
       </div>
       <div style={{ height: isOpen ? 10 : 0, transition: "0.3s" }}></div>
-      <div className={`collapsible-text-box ${isOpen ? "open" : "closed"}`}>
+      <div className={`text-box ${isOpen ? "open" : "closed"}`}>
         <div className="text-content">{text}</div>
       </div>
     </div>

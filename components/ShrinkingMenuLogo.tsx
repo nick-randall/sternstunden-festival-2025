@@ -8,7 +8,7 @@ interface ShrinkingMenuLogoProps {
 
 const ShrinkingMenuLogo: React.FC<ShrinkingMenuLogoProps> = ({ scrollIsAtTopOfPage }) => {
   return (
-    <h1>
+    <h1 style={{ margin: 0}}>
       <Link href="/" className="menu-item-container" style={{ position: "relative" }}>
         <Image
           className={`menu-item logo ${scrollIsAtTopOfPage ? "big" : ""}`}

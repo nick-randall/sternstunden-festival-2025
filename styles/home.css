@@ -65,15 +65,18 @@
   flex-basis: 23px;
 }
 
-.home-image-wrapper {
+.home-image-cropping-wrapper {
   overflow: hidden;
 }
 
-.home-image {
-  /* width: 100%;
-  height: auto; */
+.home-image-wrapper {
+  flex-shrink: 0;
   height: 100%;
-  /* flex-shrink: 1; */
+  aspect-ratio: 3/2;
+}
+.home-image {
+  height: 100%;
+  width: auto;
 }
 
 .arrow {
