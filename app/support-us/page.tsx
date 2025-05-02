@@ -64,7 +64,7 @@ const Faqs = () => {
               <br />
               Eine Spendenbescheinigung können wir auf Wunsch ausstellen. Bitte kontaktiere uns dafür unter:
               <a href="mailto:info@foerderverein-unimusik-hamburg.de?subject=Spendenbescheinigung%20Sternstunden" title="Spendenbescheinigung">
-                <strong> info@foerderverein-unimusik-hamburg.de</strong>
+                <strong> info@foerderverein-unimusik-hamburg.de </strong>
               </a>
               mit dem Betreff <strong> “Spendenbescheinigung Sternstunden”</strong>.<br />
             </div>

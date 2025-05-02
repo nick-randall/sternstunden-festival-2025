@@ -109,11 +109,11 @@ const DesktopMenu: React.FC = () => {
 
           {currDropdown === "info" && (
             <ul className="menu-dropdown-list">
-              {/* <li>
+              <li>
                 <Link href="/info" className="menu-dropdown-link">
                   Info
                 </Link>
-              </li> */}
+              </li>
               <li>
                 <Link href="/anfahrt" className="menu-dropdown-link">
                   Anfahrt
@@ -148,11 +148,11 @@ const DesktopMenu: React.FC = () => {
           )}
           {currDropdown === "kontakt" && (
             <ul className="menu-dropdown-list">
-              {/* <li>
+              <li>
                 <Link href="/kontakt" className="menu-dropdown-link">
                   Kontakt
                 </Link>
-              </li> */}
+              </li>
               <li>
                 <Link href="/support-us" className="menu-dropdown-link">
                   Support us!

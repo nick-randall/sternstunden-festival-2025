@@ -71,11 +71,11 @@ const MobileMenu: React.FC = () => {
             <Link href="/info" className="mobile-menu-item-container" onClick={toggleMenu}>
               <div className="mobile-menu-item-text">Info</div>
             </Link>
-            {/* <div className="mobile-sub-menu-item">
+            <div className="mobile-sub-menu-item">
               <Link href="/info" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Info</div>
               </Link>
-            </div> */}
+            </div>
             <div className="mobile-sub-menu-item">
               <Link href="/anfahrt" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Anfahrt</div>
@@ -111,11 +111,11 @@ const MobileMenu: React.FC = () => {
             <Link href="/kontakt" className="mobile-menu-item-container" onClick={toggleMenu}>
               <div className="mobile-menu-item-text">Kontakt</div>
             </Link>
-            {/* <div className="mobile-sub-menu-item">
+            <div className="mobile-sub-menu-item">
               <Link href="/kontakt" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Kontakt</div>
               </Link>
-            </div> */}
+            </div>
             <div className="mobile-sub-menu-item">
               <Link href="/support-us" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Support Us!</div>

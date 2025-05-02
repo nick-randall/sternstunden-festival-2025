@@ -26,8 +26,8 @@ const MoreInfoPage = () => {
         </strong>
         <br />
         <br />
-        Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das Gelände der historischen
-        <strong>Hamburger Sternwarte in Bergedorf</strong> ein. <strong>Freitags ab dem Nachmittag und samstags ab dem Mittag</strong> verwandelt sich
+        Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das Gelände der historischen 
+        <strong> Hamburger Sternwarte in Bergedorf</strong> ein. <strong>Freitags ab dem Nachmittag und samstags ab dem Mittag</strong> verwandelt sich
         die weitläufige Parkanlage rund um die denkmalgeschützten Teleskopgebäude in einen Ort der Begegnung mit Musik und Astronomie.
         <br />
         <br />
@@ -39,10 +39,10 @@ const MoreInfoPage = () => {
         <br />
         <br />
         Im Fokus steht einerseits die musikalische Vielfalt, die von <strong>klassischer Kammermusik</strong> über
-        <strong>gregorianische Gesänge</strong>, <strong>Jazz</strong> bis hin zu <strong>Elektro-Pop</strong> reicht. Dabei wird das Festival
+        <strong> gregorianische Gesänge</strong>, <strong>Jazz</strong> bis hin zu <strong>Elektro-Pop</strong> reicht. Dabei wird das Festival
         maßgeblich von <strong>Künstler:innen aus den Chören und dem Sinfonieorchester der Universität Hamburg</strong> sowie
-        <strong>Musikschaffenden aus der Region</strong> gestaltet. In den vergangenen Jahren begeisterten unter anderem das
-        <strong>Orchester im Treppenhaus</strong> oder das energetische Ensemble <strong>Hepta Polka</strong> das Publikum.
+        <strong> Musikschaffenden aus der Region</strong> gestaltet. In den vergangenen Jahren begeisterten unter anderem das
+        <strong> Orchester im Treppenhaus</strong> oder das energetische Ensemble <strong>Hepta Polka</strong> das Publikum.
         <br />
         <br />
         Doch das Festival geht über Musik hinaus: Es möchte Wissenschaft nahbar machen, Astronomie erlebbar gestalten – und das in einem ganz
@@ -69,9 +69,9 @@ const MoreInfoPage = () => {
       <h3>Für alle Generationen</h3>
       <p>
         Das Sternstunden Festival versteht sich als<strong> Ort für alle – von jung bis alt</strong>. Mit einem eigenen
-        <strong>Kinderprogramm</strong> wird auch der jüngste Nachwuchs auf galaktische Reisen geschickt: Ob beim <strong>Kinderkonzert</strong>,einer
-        <strong>Kinderführung</strong> durch die Sternwarte, auf dem <strong>musikalischen Planetenrundgang</strong> oder bei der
-        <strong>Sternstunden-Rallye</strong> – hier wird gestaunt, gelacht und entdeckt.
+        <strong> Kinderprogramm</strong> wird auch der jüngste Nachwuchs auf galaktische Reisen geschickt: Ob beim <strong>Kinderkonzert</strong>,einer
+        <strong> Kinderführung</strong> durch die Sternwarte, auf dem <strong>musikalischen Planetenrundgang</strong> oder bei der 
+        <strong> Sternstunden-Rallye</strong> – hier wird gestaunt, gelacht und entdeckt.
         <br />
         <br />
       </p>
@@ -80,7 +80,7 @@ const MoreInfoPage = () => {
         Um Kultur möglichst vielen Menschen zugänglich zu machen, legt das Festival großen Wert auf <strong>niedrigschwellige Preise</strong>. Es gibt
         die <strong>Tages- und Kombitickets, ermäßigte Tickets</strong> sowie alle Infos und Buchungsmöglichkeiten im
         <Link href="/tickets">
-          <strong>Ticketshop</strong>
+          <strong> Ticketshop</strong>
         </Link>
         . Mit jeweils rund <strong>1.500 Besucher:innen in den ersten beiden Jahren</strong> hat sich das Festival hin zu einem neuen Fixpunkt im
         Hamburger Kulturkalender entwickelt – und begeistert ein buntes, vielfältiges Publikum.
@@ -105,8 +105,8 @@ const MoreInfoPage = () => {
       <p>
         Das Sternstunden Festival ist ein Herzensprojekt. Organisiert und getragen wird es <strong>ehrenamtlich</strong> von Studierenden und
         Engagierten aus der <strong>Unimusik Hamburg</strong>, der <strong>Hamburger Sternwarte</strong>. Hinter dem Festival steht der Wunsch,
-        <strong>Wissenschaft und Musik zu verknüpfen</strong>, Raum für Begegnung zu schaffen und astronomische Themen
-        <strong>in einem neuen Kontext </strong>erlebbar zu machen.
+        <strong> Wissenschaft und Musik zu verknüpfen</strong>, Raum für Begegnung zu schaffen und astronomische Themen
+        <strong> in einem neuen Kontext </strong>erlebbar zu machen.
         <br />
         <br />
         <h3>

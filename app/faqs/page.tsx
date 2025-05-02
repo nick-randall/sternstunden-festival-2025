@@ -29,7 +29,7 @@ const Faqs = () => {
               Fiktionsbescheinigung. Für Geflüchtete aus der Ukraine gilt die Vorlage eines ukrainischen Reisepasses oder eines anderen
               Ausweisdokuments. Bitte vorher ein kostenloses Online-Ticket bestellen. Tickets gibt es in unserem
               <Link href="/tickets">
-                <strong>Ticketshop</strong>
+                <strong> Ticketshop</strong>
               </Link>
               .
             </div>
@@ -130,7 +130,7 @@ const Faqs = () => {
               Ja, es gibt ein Erste-Hilfe-Zelt auf dem Gelände. Du findest es gut sichtbar ausgeschildert in der Nähe der Toiletten. Im Notfall wende
               dich bitte an das Personal – wir helfen dir sofort weiter. In unserem
               <Link href="/lageplan">
-                <strong>Lageplan</strong>
+                <strong> Lageplan </strong>
               </Link>
               ist es auch eingezeichnet.
             </div>
@@ -144,7 +144,7 @@ const Faqs = () => {
             <div>
               Bitte benutze ausschließlich den Haupteingang der Sternwarte, wie er auch auf dem
               <Link href="/lageplan">
-                <strong>Lageplan</strong>
+                <strong> Lageplan </strong>
               </Link>
               gekennzeichnet ist. Der Eingang von der August-Bebel-Straße kommend wird nur als Notausgang genutzt.
             </div>
@@ -173,11 +173,11 @@ const Faqs = () => {
       <br />
       Hast du noch mehr Fragen? Dann nutze unser
       <Link href="../kontakt">
-        <strong>Kontaktformular</strong>
+        <strong> Kontaktformular </strong>
       </Link>
       oder besuche uns auf
       <Link href="https://www.instagram.com/sternstundenfestival/">
-        <strong>Instagram</strong>
+        <strong> Instagram</strong>
       </Link>
       .
     </div>
