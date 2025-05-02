@@ -34,7 +34,7 @@ export default function Page() {
       <div className="content-box split-box">
         <div className="text-box">
           <div>
-            <h2>MUSIK TRIFFT KOSMOS</h2>
+            <h2 style={{textAlign: "left"}}>MUSIK TRIFFT KOSMOS</h2>
           </div>
           <br />
           <div>

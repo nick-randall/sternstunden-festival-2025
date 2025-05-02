@@ -28,7 +28,7 @@ const MobileMenu: React.FC = () => {
     <>
       <nav className={`menu-wrapper mobile ${isOpen ? "open" : ""}`}>
         <div className="mobile-menu-bar">
-          <h1>
+          <h1 style={{ margin: 0 }}>
             <Link href="/" className="menu-item-container" onClick={() => setIsOpen(false)}>
               <Image className="menu-item logo" src="/logo-simple.png" alt="Sternstunden Festival Logo" width="826" height="483" />
             </Link>
