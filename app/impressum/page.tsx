@@ -11,7 +11,8 @@ export default function Impressum() {
       <div>Postanschrift:</div>
       <div>Neue Rabenstraße 13 20354 Hamburg</div>
       <h3>Kontakt:</h3>
-      <div>Telefon: +49 40 42838-5773 E-Mail: info@sternstundenfestival.de</div>
+      <div>Telefon: +49 40 42838-5773 
+        <br/>E-Mail: info@sternstundenfestival.de</div>
       <h3>Vertreten durch:</h3>
       <div>Prof. Thomas Posth</div>
       <h3>Eingetragen am</h3>
