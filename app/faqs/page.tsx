@@ -22,13 +22,13 @@ const Faqs = () => {
           text={
             <div>
               Die Tickets werden für den Freitag 15€ (ermäßigt 10€) und für den Samstag 20€ (ermäßigt 14€) kosten. Das Kombiticket kostet 25€
-              (ermäßigt 19€). Ermäßigungsberechtigt sind Studierende, Senior*innen, Schüler*innen, Auszubildende, Erwerbslose, Menschen mit
+              (ermäßigt 19€). Ermäßigungsberechtigt sind Studierende, Senior:innen, Schüler:innen, Auszubildende, Erwerbslose, Menschen mit
               Schwerbehinderung (ab GdB 50, bei eingetragenem Merkzeichen „B“ erhält Begleitung freien Eintritt). Kinder bis 14 Jahre erhalten freien
               Eintritt und benötigen ein kostenloses Online-Ticket. Geflüchtete erhalten freien Eintritt gegen Vorlage einer gültigen
               Aufenthaltserlaubnis nach § 24 AufenthG oder § 25 Abs. 1, 2 oder 3 AufenthG oder jeweils in Verbindung mit einer gültigen
               Fiktionsbescheinigung. Für Geflüchtete aus der Ukraine gilt die Vorlage eines ukrainischen Reisepasses oder eines anderen
               Ausweisdokuments. Bitte vorher ein kostenloses Online-Ticket bestellen. Tickets gibt es in unserem
-              <Link href="/tickets">
+              <Link href="/tickets" target="_blank" >
                 <strong> Ticketshop</strong>
               </Link>
               .
@@ -129,7 +129,7 @@ const Faqs = () => {
             <div>
               Ja, es gibt ein Erste-Hilfe-Zelt auf dem Gelände. Du findest es gut sichtbar ausgeschildert in der Nähe der Toiletten. Im Notfall wende
               dich bitte an das Personal – wir helfen dir sofort weiter. In unserem
-              <Link href="/lageplan">
+              <Link href="/lageplan" target="_blank">
                 <strong> Lageplan </strong>
               </Link>
               ist es auch eingezeichnet.
@@ -143,7 +143,7 @@ const Faqs = () => {
           text={
             <div>
               Bitte benutze ausschließlich den Haupteingang der Sternwarte, wie er auch auf dem
-              <Link href="/lageplan">
+              <Link href="/lageplan" target="_blank">
                 <strong> Lageplan </strong>
               </Link>
               gekennzeichnet ist. Der Eingang von der August-Bebel-Straße kommend wird nur als Notausgang genutzt.
@@ -172,11 +172,11 @@ const Faqs = () => {
       <br />
       <br />
       Hast du noch mehr Fragen? Dann nutze unser
-      <Link href="../kontakt">
+      <Link href="../kontakt" target="_blank">
         <strong> Kontaktformular </strong>
       </Link>
       oder besuche uns auf
-      <Link href="https://www.instagram.com/sternstundenfestival/">
+      <Link href="https://www.instagram.com/sternstundenfestival/" target="_blank">
         <strong> Instagram</strong>
       </Link>
       .
