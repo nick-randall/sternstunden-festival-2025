@@ -16,7 +16,6 @@ const Anfahrt = () => {
         es dann nur noch jeweils 6 bis 10 Minuten zu Fuß.
         <br />
         <br />
-        <br />
         Da sich um das Gelände der Sternwarte vor allem Wohnhäuser befinden und es keine öffentlichen Parkplätze gibt, möchten wir euch von der
         Anreise mit dem Privat-PKW abraten und empfehlen die klimafreundliche Anreise mit den öffentlichen Verkehrsmitteln.
       </p>
