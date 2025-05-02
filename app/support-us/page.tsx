@@ -16,6 +16,9 @@ const Faqs = () => {
   };
   return (
     <div className="boring-page-wrapper">
+      <title>Support Us! | Sternstunden Festival</title>
+      <link rel="canonical" href="https://www.sternstundenfestival.de/support-us"/>
+      <meta name="description" content="Unterstütze das Sternstunden Festival 2025 mit einer Spende, als Sponsor oder als Helfer:in." />
       <div className="collapsible-text-boxes">
         <CollapsibleText
           title="SPONSORING"

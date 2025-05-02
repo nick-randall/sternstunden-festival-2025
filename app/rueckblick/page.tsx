@@ -129,7 +129,6 @@ const ImpressionsPage: React.FC = () => {
       <div className="one-wide">
         <Image src={urls24[24]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
       </div>
-      <Spacer height={5} />
       <div className="left-large-right-small-grid photo-grid">
         <Image src={urls24[28]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
         <Image src={urls24[32]} alt="Impression Sternstunden Festival 2024" height="300" width="200" />
@@ -156,10 +155,9 @@ const ImpressionsPage: React.FC = () => {
       <div className={"one-wide"}>
         <Image src={urls23[14]} alt="Impression aus dem Jahr 2023" height="400" width="600" />
       </div>
-      <Spacer height={5} />
       <div className="left-small-right-large-grid photo-grid">
         <Image src={urls23[3]} alt="Impression Sternstunden Festival 2023" height="600" width="400" />
-        <Image src={urls23[2]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
+        <Image src={urls23[2]} alt="Impression Sternstunden Festival 2023" height="358" width="640" />
       </div>
       <Spacer height={5} />
       <div className="left-large-right-small-grid photo-grid">
@@ -176,7 +174,6 @@ const ImpressionsPage: React.FC = () => {
       <div className={"one-wide"}>
         <Image src={urls23[16]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
       </div>
-      <Spacer height={5} />
       <div className="left-large-right-small-grid photo-grid">
         <Image src={urls23[12]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
         <Image src={urls23[13]} alt="Impression Sternstunden Festival 2023" height="300" width="200" />
@@ -187,7 +184,6 @@ const ImpressionsPage: React.FC = () => {
       <div className={"one-wide"}>
         <Image src={urls23[11]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
       </div>
-      <Spacer height={5} />
       <div className="left-large-right-small-grid photo-grid">
         <Image src={urls23[15]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
         <Image src={urls23[1]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />

@@ -7,8 +7,10 @@ import Spacer from "@/components/Spacer";
 const Tickets: React.FC = () => {
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-      <title>Tickets</title>
+      <title>TICKETS | Sternstunden Festival</title>
       <meta name="description" content="Tickets online bestellen für das Sternstunden Festival 2025" />
+      <meta name="twitter:image" content="/logo-without-dates.png" />
+      <meta name="twitter:title" content="Tickets | Sternstunden Festival" />
       <style>
         {`
         @media screen and (min-width: 1300px) {
