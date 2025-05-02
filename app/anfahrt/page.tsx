@@ -8,7 +8,7 @@ const Anfahrt = () => {
       <h1>Anfahrt</h1>
 
       <p>
-        Das Gelände der Sternwarte erreicht ihr am besten und direkt vom Bahnhof Bergedorf mit dem Bus der Linie 332 zur Haltestelle Sternwarte
+        Das Gelände der Sternwarte erreicht ihr am besten vom Bahnhof Bergedorf mit dem Bus der Linie 332 zur Haltestelle Sternwarte
         (Universität).
         <br />
         <br />

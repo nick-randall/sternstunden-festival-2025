@@ -150,8 +150,9 @@ const ImpressionsPage: React.FC = () => {
         <Image src={urls24[31]} alt="Impression Sternstunden Festival 2024" height="400" width="600" />
       </div>
       <Spacer height={30} />
-      <div className="title">Impressionen &apos;23</div>
-      <Spacer height={5} />
+      <div className="boring-page-wrapper">
+        <h1>Impressionen 23</h1>
+      </div>
       <div className={"one-wide"}>
         <Image src={urls23[14]} alt="Impression aus dem Jahr 2023" height="400" width="600" />
       </div>
