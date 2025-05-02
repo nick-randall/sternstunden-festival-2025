@@ -19,15 +19,14 @@ export default function Impressum() {
       <div>Amtsgericht Hamburg VR23665</div>
       <h3>Umsatzsteuer-Identifikationsnummer</h3>
       <div>DE 245 584 140</div>
+      
       <h3 className="section-title">Hinweise zur Website</h3>
       <div>
-        Urheberrechtliche Hinweise
+        Technische Umsetzung & Framework: <a href="https://nick-codes.com"> Nicholas Randall</a>
         <br />
-        Design: <a href="https://www.jakobtimm.de/"> Jakob Timm</a>
+        Design & Konzept: <a href="https://www.jakobtimm.de/"> Jakob Timm</a>
         <br />
-        Umsetzung / Design: <a href="https://nick-codes.com"> Nicholas Randall</a>
-        <br />
-        Umsetzung: Katha Kögel
+        Beteiligung Inhaltspflege: Katharina Kögel
       </div>
       <h3 className="section-title">Information gemäß § 36 VSBG</h3>
       <div style={{ maxWidth: 800 }}>
@@ -38,6 +37,8 @@ export default function Impressum() {
       <Spacer height={20}></Spacer>
       <a href="https://ec.europa.eu/consumers/odr/">https://ec.europa.eu/consumers/odr/</a>
       <Spacer height={20}></Spacer>
+      <h3 className="section-title">Wichtiger Hinweis</h3>
+      <p>Wir sind stets bemüht, Ihnen auf dieser Website richtige und vollständige Informationen zur Verfügung zu stellen. Wir übernehmen keine Haftung oder Garantie für die Aktualität oder Vollständigkeit der bereitgestellten Informationen und sind nicht verantwortlich für die Inhalte der Seiten im Internet, auf die wir verweisen oder die mit einem Link von unserer Website erreichbar sind. Wir distanzieren uns von allen Inhalten außerhalb unseres eigenen Angebotes.</p>
       <p>
         Das Impressum wurde mit dem <a href="https://www.activemind.de/datenschutz/impressums-generator/" title="Impressumsgenerator">Impressums-Generator der activeMind AG </a>
         erstellt.
