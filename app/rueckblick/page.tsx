@@ -186,14 +186,14 @@ const ImpressionsPage: React.FC = () => {
       </div>
       <div className="left-large-right-small-grid photo-grid">
         <Image src={urls23[15]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
-        <Image src={urls23[1]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
+        <Image src={urls23[17]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
       </div>
-      <Spacer height={5} />
+      {/* <Spacer height={5} />
       <div className="two-small-one-large-grid photo-grid">
         <Image src={urls23[4]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
         <Image src={urls23[8]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
         <Image src={urls23[17]} alt="Impression Sternstunden Festival 2023" height="400" width="600" />
-      </div>
+      </div> */}
     </div>
   );
 };
