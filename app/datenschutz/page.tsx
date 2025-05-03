@@ -272,7 +272,7 @@ Vor einer Bereitstellung personenbezogener Daten durch den Betroffenen muss sich
 <h2>17. Bestehen einer automatisierten Entscheidungsfindung</h2>
 <p>Als verantwortungsbewusstes Unternehmen verzichten wir auf eine automatische Entscheidungsfindung oder ein Profiling.</p>
 
-<p>Diese Datenschutzerklärung wurde durch den Datenschutzerklärungs-Generator der DGD Deutsche Gesellschaft für Datenschutz GmbH, die als <a href="https://dg-datenschutz.de/datenschutz-dienstleistungen/externer-datenschutzbeauftragter/">Externer Datenschutzbeauftragter Bayreuth</a> tätig ist, in Kooperation mit dem <a href="https://www.wbs.legal/it-recht/datenschutzrecht/">Anwalt für IT- und Datenschutzrecht</a> Christian Solmecke erstellt.
+<p>Diese Datenschutzerklärung wurde durch den Datenschutzerklärungs-Generator der DGD Deutsche Gesellschaft für Datenschutz GmbH, die als <a href="https://dg-datenschutz.de/datenschutz-dienstleistungen/externer-datenschutzbeauftragter/" target="_blank">Externer Datenschutzbeauftragter Bayreuth</a> tätig ist, in Kooperation mit dem <a href="https://www.wbs.legal/it-recht/datenschutzrecht/" target="_blank">Anwalt für IT- und Datenschutzrecht</a> Christian Solmecke erstellt.
 </p>
 
 </div>

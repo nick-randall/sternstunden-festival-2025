@@ -153,13 +153,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="sponsor-logo-wrap-section">
               <div className="sponsor-logo-row">
                 <div className="sponsor-logo-container">
-                  <a href="https://www.uni-hamburg.de/">
+                  <a href="https://www.uni-hamburg.de/" target="_blank" title="Universität Hamburg"> 
                     <Image src="/sponsors/uni-hamburg.png" alt="Uni Hamburg Sponsor" width="375" height="123" className="sponsor-logo" />
                   </a>
                 </div>
 
                 <div className="sponsor-logo-container">
-                  <a href="https://www.unimusik.uni-hamburg.de/ueber-unimusik/foerderverein-unimusik.html" title="Unimusik Förderverein">
+                  <a href="https://www.unimusik.uni-hamburg.de/ueber-unimusik/foerderverein-unimusik.html" target="_blank" title="Unimusik Förderverein">
                     <Image src="/sponsors/unimusik-foerderverein.png" alt="Unimusik Förderverein" height="155" width="336" className="sponsor-logo" />
                   </a>
                 </div>
@@ -167,7 +167,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
               <div className="sponsor-logo-row">
                 <div className="sponsor-logo-container">
-                  <a href="https://www.zeit-stiftung.de" title="Zeit Stiftung Bucerius">
+                  <a href="https://www.zeit-stiftung.de" target="_blank" title="Zeit Stiftung Bucerius">
                     <Image
                       src="/sponsors/zeit-stiftung-bucerius.png"
                       alt="Zeit Stiftung Bucerius"
@@ -178,7 +178,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   </a>
                 </div>
                 <div className="sponsor-logo-container">
-                  <a href="https://www.claussen-simon-stiftung.de/de" title="Claussen Simon Stiftung">
+                  <a href="https://www.claussen-simon-stiftung.de/de" target="_blank" title="Claussen Simon Stiftung">
                     <Image
                       src="/sponsors/claussen-simon-stiftung.png"
                       alt="Claussen Simon Stiftung"
@@ -192,21 +192,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
               <div className="sponsor-logo-row">
                 <div className="sponsor-logo-container">
-                  <a href="https://www.uni-hamburg.de/exzellenz/exzellenzcluster.html" title="Exzellenzcluster">
+                  <a href="https://www.uni-hamburg.de/exzellenz/exzellenzcluster.html" target="_blank" title="Exzellenzcluster">
                     <Image src="/sponsors/excellenzcluster.png" alt="Excellenzcluster" width="400" height="78" className="sponsor-logo" />
                   </a>
                 </div>
               </div>
               <div className="sponsor-logo-row">
                 <div className="sponsor-logo-container">
-                  <a href="https://www.physik.uni-hamburg.de/hs.html" title="Hamburger Sternwarte">
+                  <a href="https://www.physik.uni-hamburg.de/hs.html" target="_blank" title="Hamburger Sternwarte">
                     <Image src="/sponsors/UHH_Wortmarke_Sternwarte.png" alt="Hamburger Sternwarte" width="400" height="78" className="sponsor-logo" />
                   </a>
                 </div>
               </div>
               <div className="sponsor-logo-row">
                 <div className="sponsor-logo-container">
-                  <a href="https://www.bergedorf-bille.de/" title="Bergedorf Bille">
+                  <a href="https://www.bergedorf-bille.de/" target="_blank" title="Bergedorf Bille">
                     <Image src="/sponsors/bergedorf_bille.png" alt="Bergedorf Bille" width="400" height="78" className="sponsor-logo" />
                   </a>
                 </div>

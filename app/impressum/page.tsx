@@ -22,9 +22,9 @@ export default function Impressum() {
       
       <h3 className="section-title">Hinweise zur Website</h3>
       <div>
-        Technische Umsetzung & Framework: <a href="https://nick-codes.com"> Nicholas Randall</a>
+        Technische Umsetzung & Framework: <a href="https://nick-codes.com" target="_blank"> Nicholas Randall</a>
         <br />
-        Design & Konzept: <a href="https://www.jakobtimm.de/"> Jakob Timm</a>
+        Design & Konzept: <a href="https://www.jakobtimm.de/" target="_blank"> Jakob Timm</a>
         <br />
         Beteiligung Inhaltspflege: Katharina Kögel
       </div>
@@ -35,12 +35,12 @@ export default function Impressum() {
         Hinweis Die Plattform der EU zur außergerichtlichen Streitbeilegung finden Sie online unter:
       </div>
       <Spacer height={20}></Spacer>
-      <a href="https://ec.europa.eu/consumers/odr/">https://ec.europa.eu/consumers/odr/</a>
+      <a href="https://ec.europa.eu/consumers/odr/" target="_blank">https://ec.europa.eu/consumers/odr/</a>
       <Spacer height={20}></Spacer>
       <h3 className="section-title">Wichtiger Hinweis</h3>
       <p>Wir sind stets bemüht, Ihnen auf dieser Website richtige und vollständige Informationen zur Verfügung zu stellen. Wir übernehmen keine Haftung oder Garantie für die Aktualität oder Vollständigkeit der bereitgestellten Informationen und sind nicht verantwortlich für die Inhalte der Seiten im Internet, auf die wir verweisen oder die mit einem Link von unserer Website erreichbar sind. Wir distanzieren uns von allen Inhalten außerhalb unseres eigenen Angebotes.</p>
       <p>
-        Das Impressum wurde mit dem <a href="https://www.activemind.de/datenschutz/impressums-generator/" title="Impressumsgenerator">Impressums-Generator der activeMind AG </a>
+        Das Impressum wurde mit dem <a href="https://www.activemind.de/datenschutz/impressums-generator/" target="_blank" title="Impressumsgenerator">Impressums-Generator der activeMind AG </a>
         erstellt.
       </p>
       <Spacer height={20}></Spacer>

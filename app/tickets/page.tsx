@@ -33,27 +33,29 @@ const Tickets: React.FC = () => {
               kostenlosen Eintritt für geflüchtete Personen*** sowie für Kinder unter 14 Jahren**.
               <br /> <br />
               Der Vorverkauf endet am 17. Juli.
-              <br />
-              <br />
-              <b>Reguläre Tickets im Vorverkauf: </b>
+
+              <h2>Vorverkauf</h2>
+              <b>Reguläre Tickets: </b>
               <br />
               Freitags-Ticket: 10 € <br />
               Samstags-Ticket: 15 € <br />
               Festivalticket (Fr & Sa) 20 € <br />
               <br />
-              <b>Reguläre Tickets an der Abendkasse:</b>
+              <b>Ermäßigte* Tickets:</b>
+              <br />
+              Freitags-Ticket: 7 €<br />
+              Samstags-Ticket: 10 €<br />
+              Festivalticket (Fr & Sa) 15 €<br />
+            
+              <h2>Abendkasse</h2>
+               <b>Reguläre Tickets:</b>
               <br />
               Freitags-Ticket: 15 €<br />
               Samstags-Ticket: 20 €<br />
               Festivalticket (Fr & Sa) 25 €<br />
               <br />
-              <b>Ermäßigte* Tickets im Vorverkauf:</b>
-              <br />
-              Freitags-Ticket: 7 €<br />
-              Samstags-Ticket: 10 €<br />
-              Festivalticket (Fr & Sa) 15 €<br />
-              <br />
-              <b>Ermäßigte* Tickets an der Abendkasse:</b>
+             
+              <b>Ermäßigte* Tickets:</b>
               <br />
               Freitags-Ticket: 10 €<br />
               Samstags-Ticket: 14 €<br />
