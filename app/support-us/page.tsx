@@ -30,7 +30,7 @@ const Faqs = () => {
               für alle zugänglich zu machen. Wir bieten drei Sponsoring-Pakete – oder gestalten gemeinsam ein individuelles Modell. Mehr Informationen
               und warum sich eine Partnerschaft lohnen kann in unserem
               <a href="https://drive.google.com/file/d/1tA0ZSmtFKyFFrA8xUp_mBrO4HznoVbEH/view?usp=sharing" target="_blank" title="Sponsoring Folder">
-                <strong> Sponsoring Folder</strong>
+                <strong> Sponsoring Folder &#10154;</strong>
               </a>
               .
               <br />

@@ -15,7 +15,7 @@ const Sternwarte = () => {
             </p>
             
                 <a href="https://www.physik.uni-hamburg.de/hs.html" target="_blank" title="Hamburger Sternwarte">
-                    Hier geht es zur Seite der Hamburger Sternwarte in Bergedorf.
+                    Hier geht es zur Seite der Hamburger Sternwarte in Bergedorf. &#10154;
                 </a> 
             
         </div>

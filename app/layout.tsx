@@ -159,12 +159,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </div>
 
                 <div className="sponsor-logo-container">
-                  <a href="https://www.unimusik.uni-hamburg.de/" target="_blank" title="Univmusik Hamburg"> 
-                    <Image src="/sponsors/UHH_Wortmarken_Unimusik_DIN_A4.png" alt="Unimusik Hamburg Sponsor" width="375" height="123" className="sponsor-logo" />
-                  </a>
-                </div>
-
-                <div className="sponsor-logo-container">
                   <a href="https://www.unimusik.uni-hamburg.de/ueber-unimusik/foerderverein-unimusik.html" target="_blank" title="Unimusik Förderverein">
                     <Image src="/sponsors/unimusik-foerderverein.png" alt="Unimusik Förderverein" height="155" width="336" className="sponsor-logo" />
                   </a>
@@ -200,6 +194,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <div className="sponsor-logo-container">
                   <a href="https://www.uni-hamburg.de/exzellenz/exzellenzcluster.html" target="_blank" title="Exzellenzcluster">
                     <Image src="/sponsors/excellenzcluster.png" alt="Excellenzcluster" width="400" height="78" className="sponsor-logo" />
+                  </a>
+                  </div>
+                <div className="sponsor-logo-container">
+                  <a href="https://www.unimusik.uni-hamburg.de/" target="_blank" title="Univmusik Hamburg"> 
+                    <Image src="/sponsors/UHH_Wortmarken_Unimusik_DIN_A4.png" alt="Unimusik Hamburg Sponsor" width="375" height="123" className="sponsor-logo" />
                   </a>
                 </div>
               </div>

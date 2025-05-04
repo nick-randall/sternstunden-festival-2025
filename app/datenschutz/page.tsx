@@ -14,6 +14,8 @@ export default function DatenSchutz() {
 
 <p>Wir sammeln auf unserer Website keine nicht-notwendigen Cookies.</p>
 
+<p>Externe Links sind mit diesem Symbold gekennzeichnet: &#10154; . Diese Website enthält Links zu Websites Dritter. Wenn Sie einem Link zu einer dieser Websites (die außerhalb unserer Verantwortung liegen) folgen, seien Sie bitte darauf hingewiesen, dass diese Websites ihre eigneen Datenschutzregelungen haben und wir für diese Richtlinien keine Verantwortung oder Haftung übernehmen. Bitte überprüfen Sie diese Datenschutzrichlinien, bevor Sie freiwillig personenbezogene Daten an die Websites weitergeben. </p>
+
 <h2>1. Begriffsbestimmungen</h2>
 <p>Die Datenschutzerklärung der Sternstunden Festival beruht auf den Begrifflichkeiten, die durch den Europäischen Richtlinien- und Verordnungsgeber beim Erlass der Datenschutz-Grundverordnung (DS-GVO) verwendet wurden. Unsere Datenschutzerklärung soll sowohl für die Öffentlichkeit als auch für unsere Kunden und Geschäftspartner einfach lesbar und verständlich sein. Um dies zu gewährleisten, möchten wir vorab die verwendeten Begrifflichkeiten erläutern.</p>
 
@@ -272,7 +274,7 @@ Vor einer Bereitstellung personenbezogener Daten durch den Betroffenen muss sich
 <h2>17. Bestehen einer automatisierten Entscheidungsfindung</h2>
 <p>Als verantwortungsbewusstes Unternehmen verzichten wir auf eine automatische Entscheidungsfindung oder ein Profiling.</p>
 
-<p>Diese Datenschutzerklärung wurde durch den Datenschutzerklärungs-Generator der DGD Deutsche Gesellschaft für Datenschutz GmbH, die als <a href="https://dg-datenschutz.de/datenschutz-dienstleistungen/externer-datenschutzbeauftragter/" target="_blank">Externer Datenschutzbeauftragter Bayreuth</a> tätig ist, in Kooperation mit dem <a href="https://www.wbs.legal/it-recht/datenschutzrecht/" target="_blank">Anwalt für IT- und Datenschutzrecht</a> Christian Solmecke erstellt.
+<p>Diese Datenschutzerklärung wurde durch den Datenschutzerklärungs-Generator der DGD Deutsche Gesellschaft für Datenschutz GmbH, die als <a href="https://dg-datenschutz.de/datenschutz-dienstleistungen/externer-datenschutzbeauftragter/" target="_blank">Externer Datenschutzbeauftragter Bayreuth &#10154;</a> tätig ist, in Kooperation mit dem <a href="https://www.wbs.legal/it-recht/datenschutzrecht/" target="_blank">Anwalt für IT- und Datenschutzrecht &#10154;</a> Christian Solmecke erstellt.
 </p>
 
 </div>

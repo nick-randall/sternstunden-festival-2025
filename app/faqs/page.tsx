@@ -177,7 +177,7 @@ const Faqs = () => {
       </Link>
       oder besuche uns auf
       <Link href="https://www.instagram.com/sternstundenfestival/" target="_blank">
-        <strong> Instagram</strong>
+        <strong> Instagram &#10154;</strong>
       </Link>
       .
     </div>
