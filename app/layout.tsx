@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta
           name="twitter:description"
           content="Das Sternstunden Festival vereint inspirierende Konzerterlebnisse in besonderer Umgebung mit spannenden astrophysikalischen Einblicken unter Hamburgs Sternenhimmel in einzigartiger Festivalatmosphäre. "
-        /><meta name="twitter:image" content="/logo-without-dates.png"/>
+        /><meta name="twitter:image" content="/site-preview.jpg"/>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         {/* Media queries don't seem to work currently on some mobile devices, as
                 a workaround I've put them here in the page layout style tag*/}

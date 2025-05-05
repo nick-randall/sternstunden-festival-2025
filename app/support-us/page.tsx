@@ -103,6 +103,7 @@ const Faqs = () => {
           isOpen={currOpen === 2}
           handleClick={() => toggleOpen(2)}
         />
+        
       </div>
       <br />
     </div>

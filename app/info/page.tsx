@@ -16,7 +16,7 @@ const MoreInfoPage = () => {
         name="description"
         content="Das Sternstunden Festival vereint inspirierende Konzerterlebnisse in besonderer Umgebung mit spannenden astrophysikalischen Einblicken unter Hamburgs Sternenhimmel in einzigartiger Festivalatmosphäre."
       />
-      <meta name="twitter:image" content="/logo-without-dates.png" />
+      <meta name="twitter:image" content="/site-preview.jpg" />
       <meta name="twitter:title" content="Info | Sternstunden Festival" />
       <meta
         name="twitter:description"

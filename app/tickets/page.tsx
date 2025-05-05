@@ -9,7 +9,7 @@ const Tickets: React.FC = () => {
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <title>TICKETS | Sternstunden Festival</title>
       <meta name="description" content="Tickets online bestellen für das Sternstunden Festival 2025" />
-      <meta name="twitter:image" content="/logo-without-dates.png" />
+      <meta name="twitter:image" content="/site-preview.jpg" />
       <meta name="twitter:title" content="Tickets | Sternstunden Festival" />
       <style>
         {`
