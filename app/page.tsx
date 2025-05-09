@@ -36,14 +36,13 @@ export default function Page() {
           <div>
            <h2 style={{textAlign: "left"}}><wbr />MUSIK TRIFFT KOSMOS</h2>
           </div>
-          <br />
+            
           <div>
             <strong>
               Klangvolle Nächte unter dem Sternenzelt, faszinierende Einblicke in die Weiten des Universums und ein Ort voller Geschichte – Willkommen
               auf dem Sternstunden Festival!
             </strong>
-            <br />
-            <br />
+            <Spacer height={32} />
             Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das Gelände der historischen{" "}
             <strong>Hamburger Sternwarte in Bergedorf</strong> ein. <strong>Freitags ab dem Nachmittag und samstags ab dem Mittag</strong> verwandelt
             sich die weitläufige Parkanlage rund um die denkmalgeschützten Teleskopgebäude in einen Ort der Begegnung mit Musik und Astronomie.
