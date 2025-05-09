@@ -34,9 +34,9 @@ export default function Page() {
       <div className="content-box split-box">
         <div className="text-box">
           <div>
-           <h2 style={{textAlign: "left"}}><wbr />MUSIK TRIFFT KOSMOS</h2>
+           <h2 style={{textAlign: "left"}}><wbr />MUSIK TRIFFT <wbr />KOSMOS</h2>
           </div>
-            
+
           <div>
             <strong>
               Klangvolle Nächte unter dem Sternenzelt, faszinierende Einblicke in die Weiten des Universums und ein Ort voller Geschichte – Willkommen
