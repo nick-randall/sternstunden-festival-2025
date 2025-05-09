@@ -22,7 +22,7 @@
 
   padding: 15px;
   hyphens: auto;
-  text-align: justify;
+  text-align: justify left;
   /* the text box will never shrink below 48% */
   flex-shrink: 0;
   flex-basis: 45%;

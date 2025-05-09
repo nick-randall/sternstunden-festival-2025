@@ -34,7 +34,11 @@ export default function Page() {
       <div className="content-box split-box">
         <div className="text-box">
           <div>
-           <h2 style={{textAlign: "left"}}><wbr />MUSIK TRIFFT <wbr />KOSMOS</h2>
+          <h2 style={{textAlign: "left"}}>MUSIK TRIFFT <span style={{
+  hyphens: "none", 
+  WebkitHyphens: "none", 
+  msHyphens: "none"
+}}>KOSMOS</span></h2>
           </div>
 
           <div>
