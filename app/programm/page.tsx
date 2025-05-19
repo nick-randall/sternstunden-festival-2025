@@ -20,7 +20,7 @@ const ProgrammPage = () => {
           <li>inspirierende Begegnungen in einzigartiger Atmosphäre</li>
         </ul>
       </p>
-      <h3>Folge uns auf Instagram und erfahre direkt, wenn das vollständige Programm online ist.</h3>
+      <h3>Folge uns auf <a href="https://www.instagram.com/sternstundenfestival" target="_blank">Instagram &#10154;</a> und erfahre direkt, wenn das vollständige Programm online ist.</h3>
         <Spacer height={32} />
       <h3>In den letzten Jahren haben unter anderem folgende Acts bei uns gespielt</h3>
       <p> <a href="https://www.heptapolka.com/" target="_blank">Hepta Polka &#10154;</a><br/>
