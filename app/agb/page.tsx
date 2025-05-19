@@ -1,16 +1,13 @@
 "use client";
 import "../../styles/common.css";
 import "../../styles/boring-pages.css";
-import Flex from "../../components/Flex";
 
 export default function AGB() {
   return (
     <div className="boring-page-wrapper">
-      <Flex alignItems="center" flexDirection="column">
         <h2 className="main-title">Sternstunden Festival</h2>
         <h1 className="subtitle">Allgemeine Geschäftsbedingungen des Veranstalters</h1>
         <p>Stand: 18.06.2024</p>
-        <Flex alignItems="start" flexDirection="column">
           <div>
             Diese allgemeinen Geschäftsbedingungen für Veranstaltungen des Fördervereins der Unimusik Hamburg e.V. („wir“, „uns“, „Veranstalter“)
             gelten für den Erwerb von Tickets und dem Besuch der von uns allein oder zusammen mit Kooperationspartnern durchgeführten Veranstaltungen
@@ -265,8 +262,6 @@ export default function AGB() {
             Verbraucher ist jede natürliche Person, die ein Ticket zu Zwecken erwirbt, die überwiegend weder ihrer gewerblichen noch ihrer
             selbständigen beruflichen Tätigkeit zugerechnet werden können.
           </p>
-        </Flex>
-      </Flex>
     </div>
   );
 }
