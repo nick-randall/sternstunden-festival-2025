@@ -30,7 +30,15 @@ const MobileMenu: React.FC = () => {
         <div className="mobile-menu-bar">
           <h1 style={{ margin: 0, flexShrink: 0 }}>
             <Link href="/" className="menu-item-container" onClick={() => setIsOpen(false)}>
-              <Image className="menu-item logo" src="/logo-simple.png" alt="Sternstunden Festival Logo" width="826" height="483" priority={true} />
+              <Image
+                className="menu-item logo"
+                src="/logo-simple.png"
+                alt="Sternstunden Festival Logo"
+                width="826"
+                height="483"
+                priority={true}
+                loading="eager"
+              />
             </Link>
           </h1>
           <div className="menu-item-container" onClick={toggleMenu}>
