@@ -30,7 +30,7 @@ const MobileMenu: React.FC = () => {
         <div className="mobile-menu-bar">
           <h1 style={{ margin: 0, flexShrink: 0 }}>
             <Link href="/" className="menu-item-container" onClick={() => setIsOpen(false)}>
-              <Image className="menu-item logo" src="/logo-simple.png" alt="Sternstunden Festival Logo" width="826" height="483" />
+              <Image className="menu-item logo" src="/logo-simple.png" alt="Sternstunden Festival Logo" width="826" height="483" priority={true} />
             </Link>
           </h1>
           <div className="menu-item-container" onClick={toggleMenu}>
@@ -96,15 +96,15 @@ const MobileMenu: React.FC = () => {
                 <div className="mobile-menu-item-text">Mission Statement</div>
               </Link>
               <div className="mobile-sub-menu-item" onClick={toggleMenu}>
-              <Link href="/sternwarte" className="mobile-menu-item-container">
-                <div className="mobile-menu-item-text">Sternwarte</div>
-              </Link>
-            </div>
-            <div className="mobile-sub-menu-item" onClick={toggleMenu}>
-              <Link href="/rueckblick" className="mobile-menu-item-container">
-                <div className="mobile-menu-item-text">Rückblick</div>
-              </Link>
-            </div>
+                <Link href="/sternwarte" className="mobile-menu-item-container">
+                  <div className="mobile-menu-item-text">Sternwarte</div>
+                </Link>
+              </div>
+              <div className="mobile-sub-menu-item" onClick={toggleMenu}>
+                <Link href="/rueckblick" className="mobile-menu-item-container">
+                  <div className="mobile-menu-item-text">Rückblick</div>
+                </Link>
+              </div>
             </div>
           </div>
           <div className="mobile-menu-item">

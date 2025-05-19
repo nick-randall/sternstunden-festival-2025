@@ -8,10 +8,11 @@ interface ShrinkingMenuLogoProps {
 
 const ShrinkingMenuLogo: React.FC<ShrinkingMenuLogoProps> = ({ scrollIsAtTopOfPage }) => {
   return (
-    <h1 style={{ margin: 0}}>
+    <h1 style={{ margin: 0 }}>
       <Link href="/" className="menu-item-container" style={{ position: "relative" }}>
         <Image
           className={`menu-item logo ${scrollIsAtTopOfPage ? "big" : ""}`}
+          priority={true}
           src="/logo-with-dates.png"
           alt="Sternstunden Festival Logo"
           width="826"
@@ -20,6 +21,7 @@ const ShrinkingMenuLogo: React.FC<ShrinkingMenuLogoProps> = ({ scrollIsAtTopOfPa
         />
         <Image
           className={`menu-item logo ${scrollIsAtTopOfPage ? "big" : ""}`}
+          priority={true}
           src="/logo-simple.png"
           alt="Sternstunden Festival Logo"
           width="826"
