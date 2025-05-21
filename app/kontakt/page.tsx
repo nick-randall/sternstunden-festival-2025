@@ -45,27 +45,28 @@ const KontaktPage: React.FC = () => {
     handleSend();
   };
 
+  const handleError = (error: string) => {
+    console.error("Error:", error);
+    setErrorMessage("Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später erneut.");
+    setSending(false);
+    setSent(false);
+  };
+
   const handleSend = async () => {
+    let status = 0;
     try {
       const resp = await fetch("https://sternstunde.fly.dev/send-email", { method: "POST", body: JSON.stringify(formValues) });
-      const status = resp.status;
-      if (status === 200) {
-        setFormValues({ firstname: "", lastname: "", email: "", subject: "", message: "" });
-      } else {
-        alert("Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später erneut.");
-        setErrorMessage("Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später erneut.");
-        setSending(false);
-        return;
-      }
+      status = resp.status;
     } catch (error) {
-      console.error("Error sending email:", error);
-      alert("Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später erneut.");
-      setErrorMessage("Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später erneut.");
-      setSending(false);
-      return;
+      handleError(error as string);
+    }
+    if (status >= 200 && status < 300) {
+      setFormValues({ firstname: "", lastname: "", email: "", subject: "", message: "" });
+      setSent(true);
+    } else {
+      handleError("Fehler beim Senden der Nachricht.");
     }
     setSending(false);
-    setSent(true);
   };
 
   return (
@@ -114,11 +115,10 @@ const KontaktPage: React.FC = () => {
         <div className="contact-form-row">{errorMessage && <div className="error-message">{errorMessage}</div>}</div>
       </div>
       <div className="text-box">
-        <br/>
-        <span style={{fontSize:14}}>
-      (&lowast;) benötigt.</span></div>
+        <br />
+        <span style={{ fontSize: 14 }}>(&lowast;) benötigt.</span>
+      </div>
     </form>
-
   );
 };
 
