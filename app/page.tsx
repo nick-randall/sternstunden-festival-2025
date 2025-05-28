@@ -32,7 +32,7 @@ export default function Page() {
       <Spacer height={96} />
 
       <div className="content-box">
-      <div className="text-box2">
+      
           
 
          <Image
@@ -43,7 +43,7 @@ export default function Page() {
               className="hom-image"
             />
        
-        </div>
+   
         </div>
 <Spacer height={32} />
 
