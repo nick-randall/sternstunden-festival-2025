@@ -31,6 +31,22 @@ export default function Page() {
       <Banner />
       <Spacer height={96} />
 
+      <div className="content-box">
+      <div className="text-box2">
+          
+
+         <Image
+              src="/lineup2025.jpg"
+              alt="Musikalisches Lineup 2025 / Sternstunden Festival 18. & 19. Juli"
+              width="1080"
+              height="864"
+              className="hom-image"
+            />
+       
+        </div>
+        </div>
+<Spacer height={32} />
+
       <div className="content-box split-box">
         <div className="text-box">
           <div>
@@ -73,74 +89,6 @@ export default function Page() {
 
         
       </div>
-
-<Spacer height={32} />
-      <div className="content-box">
-      <div className="text-box2">
-          <div>
-          <h2 style={{textAlign: "left"}}><span style={{
-  hyphens: "none", 
-  WebkitHyphens: "none", 
-  msHyphens: "none"
-}}>LINEUP 2025</span></h2>
-          </div>
-
-          <div>
-            <strong>
-          
-<h1>
-  <a href="https://linktr.ee/AnahitVardanyan " target="_blank">Anahit Vardanyan</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="20" height="20" />&nbsp;&nbsp;
-  <a href="https://rocket-men.com/" target="_blank">Rocket Men</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="20" height="20" />&nbsp;&nbsp;
-  <a href="https://linktr.ee/Yousefk" target="_blank">Yousef Kekhia</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="20" height="20" />&nbsp;&nbsp;
-  <a href="https://noukmusik.de/" target="_blank">NOUK</a>
-  </h1>
-  
-<h2>
-  <a href="https://www.pouyaabdimusic.com/projects" target="_blank">Bald Bald</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-  <a href="https://m.soundcloud.com/bow-brothers" target="_blank">Bow Brothers</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-  <a href="https://www.duosu.de" target="_blank">Duo SU</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-  <a href="https://www.fjcello.eu" target="_blank">Felix Jedeck</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-  <a href="https://on.soundcloud.com/se6fqL66CfTDezj47" target="_blank">Forehead</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-  <a href="https://deaf-anthropologist.bandcamp.com/album/in-vivo" target="_blank">IN VIVO Kosmos</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-  <a href="https://linktr.ee/insa.music" target="_blank">INSA</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-  <a href="https://www.julieweissbach.de/" target="_blank">Julie Weißbach</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-  <a href="https://linktr.ee/kurkapellesonnendeck" target="_blank">Kurkapelle Sonnendeck</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-  <a href="https://www.instagram.com/lucidrobberyofficial/" target="_blank">Lucid Robbery</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-  <a href="https://www.pabameto.com/quartett/" target="_blank">Pabameto Quartett (Community Dance)</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-  <a href="https://www.youtube.com/watch?v=nV609OqIEE4" target="_blank">Panimo</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-  <a href="https://www.justuswolf.com/pepziecarola-1" target="_blank">pepziecarola</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-  <a href="https://quabla-band.com" target="_blank">Quabla</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-  <a href="https://www.pouyaabdimusic.com/projects" target="_blank">Sebastian Gietz Quintett</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-  <a href="https://www.simonsagtmusik.de" target="_blank">Simon sagt</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-  <a href="https://www.unimusik.uni-hamburg.de/ensembles/big-band.html" target="_blank">Skyliner Bigband</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-  <a href="https://linktr.ee/TonioGeugelin" target="_blank">Tonio Geugelin</a>  
-  </h2>
-            </strong>
-Alsterquintett&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-Bettina & Bettina&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-Chorchester Collab&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-Die Junge Camerata&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-Duo: Sternzeichen Geige Aszendent Klavier&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-Ensemble Heißer Scheiß&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-Ensemble Nachtklang&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-Gregor in der Kuppel&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-High Five / Azul&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-Horn Ensemble&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-Immanuel&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-Kometen-Quintett&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-Lanbo & Jia-Xi&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-LeSaTo&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-lili j. m.&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-Malte & Malte&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-Nil&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-Nimm 8&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-Nine Strings Attached&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-Protostellar Core&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-Sternschubert-Quintett
-          </div>
-       
-        </div>
-        </div>
       
       <Spacer height={32} />
       <div className="content-box video-container">

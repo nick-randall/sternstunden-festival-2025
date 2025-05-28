@@ -92,9 +92,25 @@
   height: 100%;
   aspect-ratio: 3/2;
 }
+
 .home-image {
   height: 100%;
   width: auto;
+}
+
+.hom-image-cropping-wrapper {
+  overflow: hidden;
+}
+
+.hom-image-wrapper {
+  flex-shrink: 0;
+  height: 100%;
+  aspect-ratio: 3/2;
+}
+
+.hom-image {
+  height: auto;
+  width: 100%;
 }
 
 .arrow {
