@@ -3,7 +3,6 @@ import "../../styles/common.css";
 import "../../styles/boring-pages.css";
 import CollapsibleText from "@/components/CollapsibleTextBox";
 import { useState } from "react";
-import Link from "next/link";
 
 const Faqs = () => {
   const [currOpen, setCurrOpen] = useState(-1);
@@ -82,10 +81,11 @@ const Faqs = () => {
               <br />
               <br />
               Wenn ihr Lust habt, uns <strong> </strong> , beim <strong>Auf- und Abbau</strong> oder an den <strong>Festivaltagen selbst</strong> zu
-              unterstützen, freuen wir uns sehr über eure Hilfe! Meldet euch einfach über dieses
+              unterstützen, freuen wir uns sehr über eure Hilfe! Meldet euch einfach über dieses{" "}
               <a href="https://forms.cloud.microsoft/r/Ts38UzQxBk?origin=lprLink" target="_blank" title="Google Dokument">
                 <strong> Google Dokument &#10154;</strong>
                 </a>
+
               <br />
               <br />
               Ein paar Beispiele, wie ihr euch einbringen könnt:
