@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="de">
       <head>
-        <title>Sternstunden Festival 202 | Musik und Astronomie</title>
+        <title>Sternstunden Festival 2025 | Musik und Kosmos</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
