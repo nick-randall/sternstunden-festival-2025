@@ -9,3 +9,4 @@ export const getDayPlus24HourTimeString = (date: string) => {
 
   return `${germanDay} ${hours}:${formattedMinutes}`;
 };
+

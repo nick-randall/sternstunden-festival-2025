@@ -32,19 +32,34 @@
 .featured-artist-card {
   display: flex;
   flex-direction: column;
+  max-width: 800px;
 }
 
 .featured-artist-card .heading {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: linear-gradient(to right, rgb(232, 0, 233, 0.12), rgb(37, 3, 192, 0.12)); /* same as #e800e9, #2503c0 */
   padding: 15px;
   width: 100%;
+  height: 45px;
   margin-bottom: 20px;
 }
 .featured-artist-card .heading .back-button {
   font-family: "NunitoSans";
-  font-size: 20px;
+  font-size: 17px;
+  font-weight: 700;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
 }
+
+.featured-artist-card .heading .back-button .close {
+  height: 24px;
+  width: 24px;
+}
+
 .featured-artist-card .heading h2 {
   font-family: "NunitoSans";
   font-size: 20px;
@@ -56,31 +71,37 @@
   text-decoration: none;
 }
 
-.featured-artist-card img {
-  width: 400px;
+.featured-artist-card section {
+  display: flex;
+  flex-direction: row;
+}
+
+.featured-artist-card section .artist-image {
+  flex-basis: 60%;
+  flex-shrink: 0;
   height: 100%;
   object-fit: cover;
 }
 
-.featured-artist-card .artist-and-events-details {
+.featured-artist-card section .artist-and-events-details {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
+  /* align-items: center; */
 }
-.featured-artist-card .artist-and-events-details .divider{
-  height: 4px;
-  width: 70%;
-  background-color: black;;
-}
-
-.featured-artist-card .artist-and-events-details .artist-description{
-
+.featured-artist-card section .artist-and-events-details .divider {
+  height: 6px;
+  width: 30%;
+  margin: 4px 0px 6px 0px;
+  background-color: black;
 }
 
-.featured-artist-card .artist-and-events-details .events {
+.featured-artist-card .artist-and-events-details .artist-description {
+}
+
+.featured-artist-card section .artist-and-events-details h2  {
   font-weight: 700;
+  margin: 0px;
+  font-size: 20px;
 }
 
 .artists-grid :nth-child(3n + 1) .artist-card img {
@@ -126,11 +147,11 @@
   min-height: 100vh;
 }
 
-.artist-page img {
+/* .artist-page img {
   width: 400px;
   height: 400px;
   object-fit: cover;
-}
+} */
 
 .artist-event-time {
   font-weight: 700;
