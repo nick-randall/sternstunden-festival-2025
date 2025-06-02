@@ -185,7 +185,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       height="669"
                       width="1720"
                       className="sponsor-logo"
-                    />{" "}
+                    />
                   </a>
                 </div>
               </div>

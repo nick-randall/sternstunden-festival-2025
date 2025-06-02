@@ -6,10 +6,10 @@
   width: 100%;
 }
 
-.content-box .text-box2{
+.content-box .text-box2 {
   display: flex;
   flex-direction: column;
-   background: linear-gradient(to right, rgb(232, 0, 233, 0.12), rgb(37, 3, 192, 0.12)); /* same as #e800e9, #2503c0 */
+  background: linear-gradient(to right, rgb(232, 0, 233, 0.12), rgb(37, 3, 192, 0.12)); /* same as #e800e9, #2503c0 */
   padding: 15px;
   width: 100%;
 }
@@ -22,7 +22,6 @@
 .content-box .text-box2 a:hover {
   color: rgba(240, 129, 54);
 }
-
 
 .content-box.split-box {
   /* prevent right padding */

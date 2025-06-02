@@ -29,15 +29,65 @@
   object-fit: cover;
 }
 
-.artist-card .artist-details{
-  
+.featured-artist-card {
+  display: flex;
+  flex-direction: column;
 }
 
-.artists-grid :nth-child(3n+1) .artist-card img {
+.featured-artist-card .heading {
+  display: flex;
+  background: linear-gradient(to right, rgb(232, 0, 233, 0.12), rgb(37, 3, 192, 0.12)); /* same as #e800e9, #2503c0 */
+  padding: 15px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.featured-artist-card .heading .back-button {
+  font-family: "NunitoSans";
+  font-size: 20px;
+}
+.featured-artist-card .heading h2 {
+  font-family: "NunitoSans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.featured-artist-card img {
+  width: 400px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-artist-card .artist-and-events-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.featured-artist-card .artist-and-events-details .divider{
+  height: 4px;
+  width: 70%;
+  background-color: black;;
+}
+
+.featured-artist-card .artist-and-events-details .artist-description{
+
+}
+
+.featured-artist-card .artist-and-events-details .events {
+  font-weight: 700;
+}
+
+.artists-grid :nth-child(3n + 1) .artist-card img {
   border: 2px solid #3af0f3;
 }
 
-.artists-grid :nth-child(3n+2) .artist-card img {
+.artists-grid :nth-child(3n + 2) .artist-card img {
   border: 2px solid #f3f318;
 }
 

@@ -47,6 +47,7 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
   try {
     const response = await fetch(`https://sternstunde.fly.dev/get-artist/${slug}`, { headers: { Accept: "application/json" } });
     // const response = await fetch(`http://localhost:8080/get-artist/${slug}`, { headers: { Accept: "application/json" } });
+    
     if (response.status === 404) {
       notFound();
     }
@@ -65,16 +66,21 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
 
   return (
     <div className="artist-page">
-      <h1>{a.artist.name}</h1>
-      <p>{a.artist.description}</p>
-      <Image src={a.artist.imageUrl} alt={a.artist.name} height="400" width="400" />
-      {a.events &&
-        a.events.map((e: ArtistEvent) => (
-          <div key={e.id} className="artist-event">
-            <div className="artist-event-time">{getDayPlus24HourTimeString(e.startDateTime)}</div>
-            <div className="artist-event-stage">{e.stage.name}</div>
-          </div>
-        ))}
+      <div className="featured-artist-card">
+        <div className="heading">
+          <h2>{a.artist.name}</h2>
+          <button className="back-button">zurück</button>
+        </div>
+        <p>{a.artist.description}</p>
+        <Image src={a.artist.imageUrl} alt={a.artist.name} height="400" width="400" />
+        {a.events &&
+          a.events.map((e: ArtistEvent) => (
+            <div key={e.id} className="artist-event">
+              <div className="artist-event-time">{getDayPlus24HourTimeString(e.startDateTime)}</div>
+              <div className="artist-event-stage">{e.stage.name}</div>
+            </div>
+          ))}
+      </div>
     </div>
   );
 };

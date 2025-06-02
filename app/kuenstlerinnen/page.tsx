@@ -6,23 +6,31 @@ import Link from "next/link";
 import { getDayPlus24HourTimeString } from "@/helper_functions/helperFunctions";
 
 const Artists: React.FC = async () => {
-  const artists = [];
+  const artistsData = [];
   try {
-    
-    const response = await fetch("https://sternstunde.fly.dev/get-artists" , { headers: { Accept: "application/json" } });
+    const response = await fetch("https://sternstunde.fly.dev/get-artists", { headers: { Accept: "application/json" } });
 
     // const response = await fetch("http://localhost:8080/get-artists", { headers: { Accept: "application/json" } });
     const foundartists = await response.json();
-    artists.push(...foundartists);
+    artistsData.push(...foundartists);
   } catch (error) {
     const errorMessage = error as Error;
     console.error("Error fetching artists:", errorMessage.message);
   }
-  artists.sort((a: ArtistWithEvents, b: ArtistWithEvents) => {
+  artistsData.sort((a: ArtistWithEvents, b: ArtistWithEvents) => {
     if (a.artist.index === undefined || b.artist.index === undefined) {
       return 0;
     }
     return a.artist.index - b.artist.index;
+  });
+  const artists: ArtistWithEvents[] = artistsData.map((a: ArtistWithEvents) => {
+          console.log(`Artist code ${a.artist.code}`);
+
+    if (!a.artist.imageUrl || a.artist.imageUrl === "ZgotmplZ" || a.artist.imageUrl === "NULL") {
+      return { ...a, artist: { ...a.artist, imageUrl: "/default-artist-image.png" } };
+    } else {
+      return a;
+    }
   });
   return (
     <div className="artists-page-wrapper">

@@ -1,6 +1,6 @@
 "use client";
-import { useFrame } from "@react-three/fiber";
-import { Vector3 } from "three";
+import { useFrame, useLoader } from "@react-three/fiber";
+import { TextureLoader, Vector3 } from "three";
 import { Suspense, useState } from "react";
 import Planet from "./Planet";
 import React from "react";
@@ -120,9 +120,29 @@ function MyScene() {
     return () => {};
   };
 
+  const texture = useLoader(TextureLoader, `chevron-right.svg`);
+
   return (
     <>
       <Suspense>
+        <group>
+      <mesh
+      // position={position}
+      // rotation={[counterTilt, 0, counterFlip]}
+      // onClick={onClick}
+       >
+      <planeGeometry attach="geometry" args={[2, 2]} />
+      <meshBasicMaterial
+        attach={"material"}
+        map={texture}
+        transparent={true}
+        alphaTest={0.01}
+      />
+      {/* <Text fontSize={0.5} position={[0, 1, 0]}>
+        {index}
+      </Text> */}
+    </mesh>
+        </group>
         <group position={[0, 5, 0]}>
           <group rotation={[tilt, 0, flip]}>
             {planets.map((planet, index) => {
