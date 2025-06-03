@@ -1,7 +1,7 @@
 import Image from "next/image";
 import "../../../styles/common.css";
 import "../../../styles/artists.css";
-import { getDayPlus24HourTimeString } from "@/helper_functions/helperFunctions";
+import { getReadableDETimeAndDayAbbr } from "@/helper_functions/helperFunctions";
 import { notFound } from "next/navigation";
 import Spacer from "@/components/Spacer";
 import Link from "next/link";
@@ -79,7 +79,7 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
             {a.events &&
               a.events.map((e: ArtistEvent) => (
                 <div key={e.id} className="artist-event">
-                  <h2>{getDayPlus24HourTimeString(e.startDateTime)}</h2>
+                  <h2>{getReadableDETimeAndDayAbbr(e.startDateTime)}</h2>
                   <div className="artist-event-stage">{e.stage.name}</div>
                 </div>
               ))}
