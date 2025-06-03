@@ -134,8 +134,8 @@ function MyScene() {
   return (
     <>
       <Suspense>
-        <ThreeDChevron texture={texture} facesRight={false} handleClick={handleLeftChevronClick} position={[-2.5, 0, 3]} />
-        <ThreeDChevron texture={texture} facesRight={true} handleClick={handleRightChevronClick} position={[2.5, 0, 3]} />
+        <ThreeDChevron texture={texture} facesRight={false} handleClick={handleLeftChevronClick} position={[-2.5, 0, 2.8]} />
+        <ThreeDChevron texture={texture} facesRight={true} handleClick={handleRightChevronClick} position={[2.5, 0, 2.8]} />
         <group position={[0, 5, 0]}>
           <group rotation={[tilt, 0, flip]}>
             {planets.map((planet, index) => {
