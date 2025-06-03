@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 800px;
 }
 
 .planets-page-wrapper h1 {
@@ -64,4 +64,67 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.planets-page-wrapper .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, rgb(232, 0, 233, 0.12), rgb(37, 3, 192, 0.12)); /* same as #e800e9, #2503c0 */
+  padding: 15px;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 20px;
+}
+
+.planets-page-wrapper .heading .back-button {
+  font-family: "NunitoSans";
+  font-size: 17px;
+  font-weight: 700;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.planets-page-wrapper .heading .back-button .close {
+  height: 24px;
+  width: 24px;
+}
+
+.planets-page-wrapper .heading h2 {
+  font-family: "NunitoSans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.planets-page-wrapper .planet-image {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  margin: 20px;
+
+}
+
+.planets-page-wrapper .planet-description {
+  font-family: "NunitoSans";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: black;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.planets-page-wrapper .play-audio-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+
 }

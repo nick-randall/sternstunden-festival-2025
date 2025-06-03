@@ -12,7 +12,7 @@ const ThreeDChevron: FC<ThreeDChevronProps> = ({facesRight, texture, handleClick
   return (
     <mesh
       position={position}
-      scale={[0.4, 0.4, 0.4]}
+      scale={[0.3, 0.3, 0.3]}
       rotation={[0, 0, facesRight ? 0 : Math.PI]}
       onClick={handleClick}
       onPointerOver={() => { document.body.style.cursor = "pointer"; }}
