@@ -3,7 +3,7 @@ import "../../styles/common.css";
 import "../../styles/artists.css";
 import Spacer from "@/components/Spacer";
 import Link from "next/link";
-import { getDayPlus24HourTimeString } from "@/helper_functions/helperFunctions";
+import { getReadableDETimeAndDayAbbr } from "@/helper_functions/helperFunctions";
 
 const Artists: React.FC = async () => {
   const artistsData = [];
@@ -47,7 +47,8 @@ const Artists: React.FC = async () => {
                 {a.events &&
                   a.events.map((e: ArtistEvent) => (
                     <div key={e.id} className="artist-event">
-                      <div className="artist-event-time">{getDayPlus24HourTimeString(e.startDateTime)}</div>
+ 
+                      <div className="artist-event-time">{getReadableDETimeAndDayAbbr(e.startDateTime)}</div>
                       <div className="artist-event-stage">{e.stage.name}</div>
                     </div>
                   ))}
