@@ -10,7 +10,6 @@ export async function generateStaticParams() {
   const artists = [];
   try {
     const response = await fetch("https://sternstunde.fly.dev/get-artists", { headers: { Accept: "application/json" } });
-
     // const response = await fetch("http://localhost:8080/get-artists", { headers: { Accept: "application/json" } });
     const foundartists = await response.json();
     artists.push(...foundartists);
@@ -18,28 +17,10 @@ export async function generateStaticParams() {
     const err = error as Error;
     console.error("Error fetching artists:", err.message);
   }
-  // artists.sort((a: ArtistWithEvents, b: ArtistWithEvents) => {
-  //   if (a.artist.index === undefined || b.artist.index === undefined) {
-  //     return 0;
-  //   }
-  //   return a.artist.index - b.artist.index;
-  // });
   return artists.map((a: ArtistWithEvents) => ({
     slug: a.artist.code,
-    // name: a.artist.name,
-    // description: a.artist.description,
-    // imageUrl: a.artist.imageUrl,
-    // events: a.events,
   }));
 }
-// const ArtistPage = async ({
-//   params,
-// }: {
-//   params: Promise<{ id: string }>
-// }) => {
-//   const p = await params;
-//   return <h1>{p.id}</h1>;
-// };
 
 const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;

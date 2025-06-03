@@ -7,6 +7,13 @@ interface IndividualPlanetProps {
   params: Promise<{ slug: string }>;
 }
 
+export async function generateStaticParams() {
+  const planets = ["merkur", "venus", "erde", "mars", "jupiter", "saturn", "uranus", "neptun", "pluto"];
+  return planets.map((slug) => ({
+    slug,
+  }));
+}
+
 const IndividualPlanet: React.FC<IndividualPlanetProps> = async ({ params }) => {
   const { slug } = await params;
   const imageUrl = `https://sternstunde.s3.ap-southeast-2.amazonaws.com/planets/${slug}.avif`;

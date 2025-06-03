@@ -10,6 +10,7 @@ import { Canvas } from "@react-three/fiber";
 const planets = ["merkur", "venus", "erde", "mars", "jupiter", "saturn", "uranus", "neptun", "pluto"];
 
 import useMediaQuery from "./useMediaQuery";
+import ThreeDChevron from "./3dChevron";
 
 const PlanetScene: React.FC = () => {
   const { screenWidth } = useMediaQuery();
@@ -24,7 +25,7 @@ const PlanetScene: React.FC = () => {
     sizeFactor = 0.35;
   }
   return (
-    <Canvas style={{ width: 800 * sizeFactor, height: 600 * sizeFactor }}>
+    <Canvas style={{ width: 1300 * sizeFactor, height: 600 * sizeFactor }}>
       <MyScene />
     </Canvas>
   );
@@ -72,9 +73,8 @@ function MyScene() {
 
   useFrame((_, delta) => {
     if (targetRotation === undefined) return;
-    const threshold = 0.005;
+    const threshold = 0.01;
     if (Math.abs(targetRotation - planetsRotation) <= threshold) {
-      console.log("Target reached");
       setPlanetsRotation(targetRotation);
       setCurrPlanet(newPlanet);
       setLeftAndRightIndex(newPlanet);
@@ -104,9 +104,6 @@ function MyScene() {
   });
 
   const getClickAction = (index: number) => {
-    // if(launchedPlanet !== -1 || targetRotation !== undefined) {
-    //   return () => {};
-    // }
     if (index === leftIndex || index === rightIndex) {
       return () => {
         setNewPlanetAndTargetRotation(index);
@@ -120,29 +117,25 @@ function MyScene() {
     return () => {};
   };
 
+  const handleLeftChevronClick = () => {
+    if (targetRotation !== undefined) return;
+    const nextIndex = currPlanet + 1 > planets.length - 1 ? 0 : currPlanet + 1;
+    setNewPlanetAndTargetRotation(nextIndex);
+  };
+
+  const handleRightChevronClick = () => {
+    if (targetRotation !== undefined) return;
+    const nextIndex = currPlanet - 1 < 0 ? planets.length - 1 : currPlanet - 1;
+    setNewPlanetAndTargetRotation(nextIndex);
+  };
+
   const texture = useLoader(TextureLoader, `chevron-right.svg`);
 
   return (
     <>
       <Suspense>
-        <group>
-      <mesh
-      // position={position}
-      // rotation={[counterTilt, 0, counterFlip]}
-      // onClick={onClick}
-       >
-      <planeGeometry attach="geometry" args={[2, 2]} />
-      <meshBasicMaterial
-        attach={"material"}
-        map={texture}
-        transparent={true}
-        alphaTest={0.01}
-      />
-      {/* <Text fontSize={0.5} position={[0, 1, 0]}>
-        {index}
-      </Text> */}
-    </mesh>
-        </group>
+        <ThreeDChevron texture={texture} facesRight={false} handleClick={handleLeftChevronClick} position={[-2.5, 0, 3]} />
+        <ThreeDChevron texture={texture} facesRight={true} handleClick={handleRightChevronClick} position={[2.5, 0, 3]} />
         <group position={[0, 5, 0]}>
           <group rotation={[tilt, 0, flip]}>
             {planets.map((planet, index) => {
