@@ -76,17 +76,16 @@
   flex-direction: row;
 }
 
-.featured-artist-card section .artist-image {
-  flex-basis: 60%;
+.featured-artist-card section .image-container {
+  flex-basis: 50%;
   flex-shrink: 0;
-  height: 100%;
-  object-fit: cover;
+  position: relative;
+  aspect-ratio: 1/1;
 }
 
 .featured-artist-card section .artist-and-events-details {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
 }
 .featured-artist-card section .artist-and-events-details .divider {
   height: 6px;
@@ -95,26 +94,12 @@
   background-color: black;
 }
 
-.featured-artist-card .artist-and-events-details .artist-description {
-}
-
 .featured-artist-card section .artist-and-events-details h2  {
   font-weight: 700;
   margin: 0px;
   font-size: 20px;
 }
 
-/* .artists-grid :nth-child(3n + 1) .artist-card img {
-  border: 2px solid #3af0f3;
-}
-
-.artists-grid :nth-child(3n + 2) .artist-card img {
-  border: 2px solid #f3f318;
-}
-
-.artists-grid :nth-child(3n) .artist-card img {
-  border: 2px solid white;
-} */
 
 .artist-card .image-container {
   display: flex;

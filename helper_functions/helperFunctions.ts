@@ -14,5 +14,5 @@ export const getReadableDETimeAndDayAbbr = (time: string) => {
   const germanDay = ["SO", "MO", "DI", "MI", "DO", "FR", "SA"][day];
   const iso = timeInGermany.toISOString();
   const isotime = iso.slice(11, 16);
-  return `${isotime} ${germanDay}`;
+  return `${germanDay} ${isotime}`;
 };

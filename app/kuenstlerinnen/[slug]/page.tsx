@@ -51,13 +51,14 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
     <div className="artist-page">
       <style>
         {`
-        @media (max-width: 768px) {
-          .featured-artist-card section {
-            flex-direction: column;
-            align-items: center;
-            width: 400px;
+          @media (max-width: 768px) {
+            .featured-artist-card section {
+              flex-direction: column;
+            }
+            .featured-artist-card section .image-container {           
+              flex-basis: auto;
+            }
           }
-        }
           `}
       </style>
       <div className="featured-artist-card">
@@ -70,7 +71,9 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
           </Link>
         </div>
         <section>
-          <Image className="artist-image" src={a.artist.imageUrl} alt={a.artist.name} height="400" width="400" />
+            <div className="image-container" >
+              <Image className="artist-image" src={a.artist.imageUrl} alt={a.artist.name} fill={true}  />
+            </div>
           <Spacer width={16} />
           <div className="artist-and-events-details">
             <div>{a.artist.description}</div>
