@@ -78,7 +78,6 @@ const Timetable = async () => {
     <div className="timetable-page-wrapper">
       <h1>Timetable</h1>
       <div>Freitag</div>
-      {/* <div className="table-outer-container"> */}
         <div className="table-container">
           <table className="day-timetable">
             <thead>
@@ -103,7 +102,6 @@ const Timetable = async () => {
                             style={{
                               width: `${eventOnGrid.width * 100}%`,
                               left: `${eventOnGrid.getInnerLeftOffset() * 100}%`,
-                              border: "1px black dotted"
                             }}
                           >
                             {eventOnGrid.artistName}
@@ -118,7 +116,6 @@ const Timetable = async () => {
             </tbody>
           </table>
         </div>
-      {/* </div> */}
     </div>
   );
 };

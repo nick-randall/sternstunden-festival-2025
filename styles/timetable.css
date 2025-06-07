@@ -56,3 +56,11 @@
 .time-label {
   text-align: left;
 }
+
+.event-box {
+  background-color: aqua;
+  height: 100%;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+}
