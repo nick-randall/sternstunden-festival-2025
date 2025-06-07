@@ -30,7 +30,7 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
   try {
     const response = await fetch(`https://sternstunde.fly.dev/get-artist/${slug}`, { headers: { Accept: "application/json" } });
     // const response = await fetch(`http://localhost:8080/get-artist/${slug}`, { headers: { Accept: "application/json" } });
-
+    
     if (response.status === 404) {
       notFound();
     }
@@ -46,6 +46,7 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
   if (!a) {
     return <div>Die Künstlerin konnte nicht gefunden werden</div>;
   }
+  console.log("artist: ", a);
 
   return (
     <div className="artist-page">
@@ -72,7 +73,7 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
         </div>
         <section>
           <div className="image-container">
-            <Image className="artist-image" src={a.artist.imageUrl} alt={a.artist.name} fill={true} />
+            <img className="artist-image" src={a.artist.imageUrl} alt={a.artist.name}/>
           </div>
           <Spacer width={16} />
           <div className="artist-and-events-details">

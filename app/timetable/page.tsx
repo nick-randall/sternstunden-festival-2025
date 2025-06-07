@@ -1,6 +1,7 @@
 // import Flex from "@/components/Flex";
 import "../../styles/common.css";
 import "../../styles/timetable.css";
+// import {testData} from "./test_data"
 import { getDayEndTime, getDayStartTime, getReadableDETime } from "@/helper_functions/helperFunctions";
 
 const timeUnit = 30;
@@ -24,7 +25,7 @@ class EventOnGrid {
     return this.left - Math.floor(this.left);
   }
   isInCell(cellIndex: number): boolean {
-    return cellIndex >= this.left - 1 && cellIndex < this.left;
+    return cellIndex >= this.left && cellIndex < this.left + 1;
   }
 }
 
@@ -63,6 +64,7 @@ const Timetable = async () => {
     const response = await fetch("https://sternstunde.fly.dev/get-stages-with-their-events", { headers: { Accept: "application/json" } });
     // const response = await fetch("http://localhost:8080/get-timetable", { headers: { Accept: "application/json" } });
     const timetableData = await response.json();
+    // const timetableData = testData;
     stageEvents = timetableData[0].stageEvents; // only grabbing first day's events for simplicity
     dayStartTime = getDayStartTime(stageEvents);
     dayEndTime = getDayEndTime(stageEvents);
@@ -76,43 +78,47 @@ const Timetable = async () => {
     <div className="timetable-page-wrapper">
       <h1>Timetable</h1>
       <div>Freitag</div>
-      <div className="timetable-wrapper">
-        <table className="day-timetable">
-          <thead>
-            <tr>
-              {createTimesLabels(dayStartTime!, numThirtyMinuteIntervals).map(time => (
-                <th key={time}>{time}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {stageEvents.map((stageEvent) => {
-              const stageRow = createStageRow(stageEvent, dayStartTime!, numThirtyMinuteIntervals);
-              return (
-                <tr key={stageEvent.stage.id}>
-                  <td className="stage-name">{stageEvent.stage.name}</td>
-                  {stageRow.map((eventOnGrid, cellIndex) => (
-                    <td key={cellIndex} className="event-cell">
-                      {eventOnGrid ? (
-                        <div
-                          className="event-box"
-                          style={{
-                            width: `${eventOnGrid.width * 100}%`,
-                            left: `${eventOnGrid.getInnerLeftOffset() * 100}%`,
-                            border: "1px black dotted"
-                          }}
-                        >
-                          {eventOnGrid.artistName}
-                        </div>
-                      ) : null}
-                    </td>
-                  ))}
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
+      {/* <div className="table-outer-container"> */}
+        <div className="table-container">
+          <table className="day-timetable">
+            <thead>
+              <tr>
+                <th></th>
+                {createTimesLabels(dayStartTime!, numThirtyMinuteIntervals).map(time => (
+                  <th key={time} className="time-label">{time}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {stageEvents.map((stageEvent) => {
+                const stageRow = createStageRow(stageEvent, dayStartTime!, numThirtyMinuteIntervals);
+                return (
+                  <tr key={stageEvent.stage.id}>
+                    <td className="stage-name">{stageEvent.stage.name}</td>
+                    {stageRow.map((eventOnGrid, cellIndex) => (
+                      <td key={cellIndex} className="event-cell">
+                        {eventOnGrid ? (
+                          <div
+                            className="event-box"
+                            style={{
+                              width: `${eventOnGrid.width * 100}%`,
+                              left: `${eventOnGrid.getInnerLeftOffset() * 100}%`,
+                              border: "1px black dotted"
+                            }}
+                          >
+                            {eventOnGrid.artistName}
+                          </div>
+                        ) : null}
+                      </td>
+                    ))}
+                    <td></td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      {/* </div> */}
     </div>
   );
 };

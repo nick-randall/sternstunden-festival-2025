@@ -7,6 +7,14 @@ type Artist  = {
   events: ArtistEvent[];
 }
 
+type ArtistWithoutEvents  = {
+  id: string;
+  index: number;
+  name: string;
+  description: string;
+  imageUrl: string;
+}
+
 type MenuItem = "tickets" | "programm" | "info" | "kontakt" | "" | "closing";
 
 
@@ -41,7 +49,6 @@ type ArtistWithEvents = {
 
 
 type StageWithEvents = {
-  id: number;
     stage: {
     id: number;
     name: string;
@@ -51,7 +58,7 @@ type StageWithEvents = {
 
 type FestivalEvent = {
   id: number;
-  artist: Artist;
+  artist: ArtistWithOutEvents;
   stage: {
     id: number;
     name: string;
