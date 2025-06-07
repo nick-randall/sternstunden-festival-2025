@@ -1,4 +1,4 @@
-interface Artist {
+type Artist  = {
   id: string;
   index: number;
   name: string;
@@ -38,3 +38,26 @@ type ArtistWithEvents = {
   eventStartDateTime: string;
   events: ArtistEvent[];
 }
+
+
+type StageWithEvents = {
+  id: number;
+    stage: {
+    id: number;
+    name: string;
+  };
+  events: FestivalEvent[];
+}
+
+type FestivalEvent = {
+  id: number;
+  artist: Artist;
+  stage: {
+    id: number;
+    name: string;
+  };
+  startDateTime: string;
+  endDateTime: string;
+};
+
+
