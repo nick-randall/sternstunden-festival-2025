@@ -21,12 +21,11 @@ const bandNames = [
 ];
 
 const Lineup: FC = () => {
-  // const [nameSpans, setNameSpans] = useState<HTMLCollectionOf<HTMLAnchorElement> | null>(null);
   const largestFontSize = 58;
+  const fontSizeDecreaseFactor = 8; // decrease font size by this factor for each line
   const lineHeight = 1.15;
 
   const containerRef = useRef<HTMLDivElement | null>(null);
-  // const nameSpanElements = useRef<{ [name: string]: { el: HTMLAnchorElement } }>({});
   const nameSpanElements = useRef<HTMLAnchorElement[]>([]);
 
   const spanRefCallback = useCallback((el: HTMLAnchorElement | null) => {
@@ -38,7 +37,7 @@ const Lineup: FC = () => {
   const decreaseFontSize = useCallback(
     (spans: HTMLElement[], currLine: number) => {
       const currFontSize = largestFontSize;
-      const newFontSize = largestFontSize - currLine * 8;
+      const newFontSize = largestFontSize - currLine * fontSizeDecreaseFactor;
       for (const nameSpan of spans) {
         const offsetBottom = nameSpan.offsetTop + nameSpan.offsetHeight;
         const isAfterCurrLine = Math.round(offsetBottom / (currFontSize * lineHeight)) > currLine;
@@ -46,36 +45,9 @@ const Lineup: FC = () => {
           nameSpan.style.fontSize = `${newFontSize}px`;
         }
       }
-      // nameSpans = document.querySelectorAll(".lineup-text");
     },
     [largestFontSize, lineHeight]
   );
-
-  // const lineupText = document.querySelector(".lineup-text");
-
-  // useEffect(() => {
-  //   const lineupContainer = containerRef.current;
-  //   if (!lineupContainer) return;
-
-  //   const nameSpansMap = nameSpanElements.current;
-  //   if (!nameSpansMap) return;
-  //   // if (Object.keys(nameSpansMap).length < bandNames.length) return;
-  //   const nameSpans: HTMLAnchorElement[] = [];
-  //   for (let i = 0; i < bandNames.length; i++) {
-  //     console.log("Adding band name:", bandNames[i]);
-  //     if(bandNames[i] in nameSpansMap === false) {
-  //       return
-  //     }
-  //     const el = nameSpansMap[bandNames[i]]!.el;
-  //     nameSpans.push(el);
-  //   }
-  //   // setNameSpans(lineupContainer.getElementsByClassName("lineup-text"));
-  //   console.log("Name spans:", nameSpans);
-  //   console.log("decresing font size");
-  //   for (let i = 1; i < bandNames.length; i++) {
-  //     decreaseFontSize(nameSpans, i);
-  //   }
-  // }, [decreaseFontSize, largestFontSize, lineHeight]);
 
   const fontSizeCallback = useCallback(() => {
     const lineupContainer = containerRef.current;
@@ -83,19 +55,7 @@ const Lineup: FC = () => {
 
     const nameSpansMap = nameSpanElements.current;
     if (!nameSpansMap) return;
-    // if (Object.keys(nameSpansMap).length < bandNames.length) return;
-    // const nameSpans: HTMLAnchorElement[] = [];
-    // for (let i = 0; i < bandNames.length; i++) {
-    //   console.log("Adding band name:", bandNames[i]);
-    //   if(bandNames[i] in nameSpansMap === false) {
-    //     return
-    //   }
-    //   const el = nameSpansMap[bandNames[i]]!.el;
-    //   nameSpans.push(el);
-    // }
-    // setNameSpans(lineupContainer.getElementsByClassName("lineup-text"));
-    console.log("Name spans:", nameSpanElements);
-    console.log("decresing font size");
+  
     for (let i = 1; i < bandNames.length; i++) {
       decreaseFontSize(nameSpanElements.current, i);
     }
