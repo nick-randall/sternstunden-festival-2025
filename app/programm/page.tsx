@@ -14,22 +14,22 @@ const ProgrammPage = () => {
       <p>Weitere Informationen und Zeiten folgen bald</p>
       <h2>Astroprogramm</h2>
       <p>
-          Science-Slam&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-          Vorträge<sup>*</sup>&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-          Ask an Astronomer&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp; 
-          Music of the spheres&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp; 
-          Virtual reality – Reise zum Zentrum der Milchstraße&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp; 
-          Supercomputing in der Astrophysik&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-          Computer Vision Song Contest&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp; 
-          Die Farben des Universums&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp; 
-          Cosmic Timeline&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-          Cosmic ray experiment (DESY Schülerlabor)&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-          Führungen&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-          Kinderführungen&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-          Teleskopbesichtigungen&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-          Sonnenbeobachtung&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-          Ausstellung: Weltbild im Wandel&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-          Bernhard Schmidt Museum&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+          Science-Slam <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+          Vorträge<sup>*</sup> <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+          Ask an Astronomer <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp; 
+          Music of the spheres <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp; 
+          Virtual reality – Reise zum Zentrum der Milchstraße <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp; 
+          Supercomputing in der Astrophysik <Image src="/star.svg" alt="star symbol" width="10" height="10" /> &nbsp;
+          Computer Vision Song Contest <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp; 
+          Die Farben des Universums <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp; 
+          Cosmic Timeline <Image src="/star.svg" alt="star symbol" width="10" height="10" /> &nbsp;
+          Cosmic ray experiment (DESY Schülerlabor) <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+          Führungen <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+          Kinderführungen <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+          Teleskopbesichtigungen <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+          Sonnenbeobachtung <Image src="/star.svg" alt="star symbol" width="10" height="10" /> &nbsp;
+          Ausstellung: Weltbild im Wandel <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+          Bernhard Schmidt Museum <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
           Astronomisches Quiz
       </p>
       
@@ -39,72 +39,72 @@ const ProgrammPage = () => {
   <h2>Musiklineup</h2>
   <h3>Freitag</h3>
   <h1>
-    <a href="https://rocket-men.com/" target="_blank">Rocket Men</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="20" height="20" />&nbsp;&nbsp;
+    <a href="https://rocket-men.com/" target="_blank">Rocket Men</a> &nbsp;<Image src="/star.svg" alt="star symbol" width="20" height="20" /> &nbsp;
     <a href="https://linktr.ee/Yousefk" target="_blank">Yousef Kekhia</a>
   </h1>
 
   <h2>
-    <a href="https://m.soundcloud.com/bow-brothers" target="_blank">Bow Brothers</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-    <a href="https://linktr.ee/insa.music" target="_blank">INSA</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-    <a href="https://www.julieweissbach.de/" target="_blank">Julie Weißbach</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-    <a href="https://linktr.ee/kurkapellesonnendeck" target="_blank">Kurkapelle Sonnendeck</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-    <a href="https://www.justuswolf.com/pepziecarola-1" target="_blank">pepziecarola</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
+    <a href="https://m.soundcloud.com/bow-brothers" target="_blank">Bow Brothers</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <a href="https://linktr.ee/insa.music" target="_blank">INSA</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <a href="https://www.julieweissbach.de/" target="_blank">Julie Weißbach</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <a href="https://linktr.ee/kurkapellesonnendeck" target="_blank">Kurkapelle Sonnendeck</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <a href="https://www.justuswolf.com/pepziecarola-1" target="_blank">pepziecarola</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
     <a href="https://linktr.ee/TonioGeugelin" target="_blank">Tonio Geugelin</a>  
     </h2>
 
-    Alsterquintett&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-    Bettina & Bettina&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-    Ensemble Heißer Scheiß&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-    Ensemble Nachtklang&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-    Horn Ensemble&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-    lili j. m.&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-    Malte & Malte&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-    Nil&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-    Nimm 8&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+    Alsterquintett <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    Bettina & Bettina <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    Ensemble Heißer Scheiß <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    Ensemble Nachtklang <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    Horn Ensemble <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    lili j. m. <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    Malte & Malte <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    Nil <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    Nimm 8 <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Protostellar Core
 
 <h3>Samstag</h3>
     <h1>
-  <a href="https://linktr.ee/AnahitVardanyan " target="_blank">Anahit Vardanyan</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="20" height="20" />&nbsp;&nbsp;
+  <a href="https://linktr.ee/AnahitVardanyan " target="_blank">Anahit Vardanyan</a> &nbsp;<Image src="/star.svg" alt="star symbol" width="20" height="20" /> &nbsp;
     <a href="https://noukmusik.de/" target="_blank">NOUK</a>
   </h1>
 
   <h2>
-    <a href="https://www.pouyaabdimusic.com/projects" target="_blank">Bald Bald</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-    <a href="https://www.duosu.de" target="_blank">Duo SU</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-    <a href="https://www.fjcello.eu" target="_blank">Felix Jedeck</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-    <a href="https://on.soundcloud.com/se6fqL66CfTDezj47" target="_blank">Forehead</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-    <a href="https://deaf-anthropologist.bandcamp.com/album/in-vivo" target="_blank">IN VIVO Kosmos</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-    <a href="https://www.instagram.com/lucidrobberyofficial/" target="_blank">Lucid Robbery</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-    <a href="https://www.pabameto.com/quartett/" target="_blank">Pabameto Quartett (Community Dance)</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-    <a href="https://www.youtube.com/watch?v=nV609OqIEE4" target="_blank">Panimo</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-    <a href="https://quabla-band.com" target="_blank">Quabla</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-    <a href="https://www.pouyaabdimusic.com/projects" target="_blank">Sebastian Gietz Quintett</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-    <a href="https://www.simonsagtmusik.de" target="_blank">Simon sagt</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
-    <a href="https://www.unimusik.uni-hamburg.de/ensembles/big-band.html" target="_blank">Skyliner Bigband</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;&nbsp;
+    <a href="https://www.pouyaabdimusic.com/projects" target="_blank">Bald Bald</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <a href="https://www.duosu.de" target="_blank">Duo SU</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <a href="https://www.fjcello.eu" target="_blank">Felix Jedeck</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <a href="https://on.soundcloud.com/se6fqL66CfTDezj47" target="_blank">Forehead</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <a href="https://deaf-anthropologist.bandcamp.com/album/in-vivo" target="_blank">IN VIVO Kosmos</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <a href="https://www.instagram.com/lucidrobberyofficial/" target="_blank">Lucid Robbery</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <a href="https://www.pabameto.com/quartett/" target="_blank">Pabameto Quartett (Community Dance)</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <a href="https://www.youtube.com/watch?v=nV609OqIEE4" target="_blank">Panimo</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <a href="https://quabla-band.com" target="_blank">Quabla</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <a href="https://www.pouyaabdimusic.com/projects" target="_blank">Sebastian Gietz Quintett</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <a href="https://www.simonsagtmusik.de" target="_blank">Simon sagt</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <a href="https://www.unimusik.uni-hamburg.de/ensembles/big-band.html" target="_blank">Skyliner Bigband</a> 
     </h2>
 
-    Chorchester Collab&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-    Die Junge Camerata&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-    Duo: Sternzeichen Geige Aszendent Klavier&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-    Gregor in der Kuppel&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-    High Five / Azul&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-    Immanuel&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-    Kometen-Quintett&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-    Lanbo & Jia-Xi&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-    LeSaTo&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-    Nine Strings Attached&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+    Chorchester Collab <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    Die Junge Camerata <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    Duo: Sternzeichen Geige Aszendent Klavier <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    Gregor in der Kuppel <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    High Five / Azul <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    Immanuel <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    Kometen-Quintett <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    Lanbo & Jia-Xi <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    LeSaTo <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    Nine Strings Attached <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Protostellar Core
 </p>
 
   <Spacer height={16} />
       <p>
         <h2>Kinderprogramm</h2>  
-        <a href="https://www.simonsagtmusik.de" target="_blank">Simon sagt</a> (Musikact)&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-        Kinderschminken&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-        Planetenrundgang&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-        Kinderführungen&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
-        Rallye&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+        <a href="https://www.simonsagtmusik.de" target="_blank">Simon sagt</a> (Musikact) <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+        Kinderschminken <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+        Planetenrundgang <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+        Kinderführungen <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+        Rallye <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
         Spiel & Spaß
       </p>
         <Spacer height={16} />
