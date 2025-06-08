@@ -22,12 +22,13 @@
   text-align: center;
   /* outline: #292553 1px solid; */
   font-weight: normal;
-  height: 80px;
+  height: 60px;
   width: 100px;
 }
 
 .day-timetable .description-col {
   width: 250px;
+  
 }
 
 .day-timetable tr:nth-child(even) {
@@ -42,8 +43,9 @@
   /* background-color: #c06e82; */
   /* padding: 25px; */
   /* height: 100px; */
-  font-size: 20px;
-  width: 100px;
+  font-size: 14px;
+  width: 120px;
+  background-color: #ebcc7680;
 }
 
 .time-label {
@@ -51,12 +53,13 @@
 }
 
 .event-box {
-  background-color: #e1874760;
+ background: linear-gradient(to right, rgb(232, 0, 233, 0.16), rgb(37, 3, 192, 0.16)); /* same as #e800e9, #2503c0 */
   height: 100%;
   display: flex;
   flex-direction: column; 
   justify-content: center;
   text-overflow: ellipsis;
+  font-size: 14px;
 }
 
 .stage-name{
@@ -65,5 +68,6 @@
   flex-direction: column;
   justify-content: center;
   background-color: #ebcc76;
-  outline: #fcfcf1 1px solid;
+  outline: #fcfcf100 1px solid;
+  font-size: 14px;
 }
