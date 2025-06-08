@@ -11,23 +11,33 @@ const ProgrammPage = () => {
   return (
     <div className="boring-page-wrapper">
       <h1>Programm Sternstunden Festival 2025</h1>
-      <h2>Musik trifft Kosmos – und du bist eingeladen.</h2>
+      <p>Weitere Informationen und Zeiten folgen bald</p>
+      <h2>Astroprogramm</h2>
       <p>
-        Klangvolle Nächte, ein historischer Ort, faszinierende Einblicke ins Universum: Im Juli verwandelt sich die Hamburger Sternwarte erneut in ein
-        Festivalgelände der besonderen Art.
+          Science-Slam&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+          Vorträge<sup>*</sup>&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+          Ask an Astronomer&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp; 
+          Music of the spheres&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp; 
+          Virtual reality – Reise zum Zentrum der Milchstraße&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp; 
+          Supercomputing in der Astrophysik&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+          Computer Vision Song Contest&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp; 
+          Die Farben des Universums&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp; 
+          Cosmic Timeline&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+          Cosmic ray experiment (DESY Schülerlabor)&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+          Führungen&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+          Kinderführungen&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+          Teleskopbesichtigungen&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+          Sonnenbeobachtung&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+          Ausstellung: Weltbild im Wandel&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+          Bernhard Schmidt Museum&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+          Astronomisches Quiz
       </p>
-      <p>
-        Das Astro- und Kinderprogramm für dieses Jahr wird <strong>in Kürze</strong> veröffentlicht. Freu dich auf:
-        <ul>
-          <li>neue Perspektiven auf Astronomie & Wissenschaft</li>
-          <li>ein liebevoll gestaltetes Kinderprogramm</li>
-          <li>inspirierende Begegnungen in einzigartiger Atmosphäre</li>
-        </ul>
-      </p>
-         <Spacer height={16} />
+      
+               <Spacer height={16} />
+ 
 <p>
-  <h2>Lineup 2025</h2>
-  <h2>Freitag</h2>
+  <h2>Musiklineup</h2>
+  <h3>Freitag</h3>
   <h1>
     <a href="https://rocket-men.com/" target="_blank">Rocket Men</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="20" height="20" />&nbsp;&nbsp;
     <a href="https://linktr.ee/Yousefk" target="_blank">Yousef Kekhia</a>
@@ -53,7 +63,7 @@ const ProgrammPage = () => {
     Nimm 8&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
     Protostellar Core
 
-<h2>Samstag</h2>
+<h3>Samstag</h3>
     <h1>
   <a href="https://linktr.ee/AnahitVardanyan " target="_blank">Anahit Vardanyan</a>&nbsp; <Image src="/star.svg" alt="star symbol" width="20" height="20" />&nbsp;&nbsp;
     <a href="https://noukmusik.de/" target="_blank">NOUK</a>
@@ -87,10 +97,29 @@ const ProgrammPage = () => {
     Protostellar Core
 </p>
 
+  <Spacer height={16} />
+      <p>
+        <h2>Kinderprogramm</h2>  
+        <a href="https://www.simonsagtmusik.de" target="_blank">Simon sagt</a> (Musikact)&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+        Kinderschminken&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+        Planetenrundgang&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+        Kinderführungen&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+        Rallye&nbsp; <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;&nbsp;
+        Spiel & Spaß
+      </p>
+        <Spacer height={16} />
+       <h2><sup>*</sup>Vorträge</h2>
+       <p> 	Jan-Erik Christian: Neutronensterne - Alles Quark? <br/>
+	          Martin Fournier: Simulating the Universe with Supercomputers <br/>
+	          Sören Witte: Was macht Planeten bewohnbar? <br/>
+	          Günter Sigl: Die höchstenergetischen Teilchen des Universums: Woher kommen sie und woraus bestehen sie? <br/>
+	          Pranjal Trivedi: From the Music of the Heavens to the Symphony of Black Holes <br/>
 
-   <Spacer height={16} />
+
+</p>
+<Spacer height={16} />
       <h3>Folge uns auf <a href="https://www.instagram.com/sternstundenfestival" target="_blank">Instagram &#10154;</a> und erfahre direkt, wenn das vollständige Programm online ist.</h3>
-        <Spacer height={32} />
+ <Spacer height={32} />
         <h2>Rückblick</h2>
       <h3>In den letzten Jahren haben unter anderem folgende Acts bei uns gespielt</h3>
       <p> <a href="https://www.heptapolka.com/" target="_blank">Hepta Polka &#10154;</a><br/>
