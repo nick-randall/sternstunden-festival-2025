@@ -10,6 +10,7 @@ type Artist  = {
 type ArtistWithoutEvents  = {
   id: string;
   index: number;
+  code: string;
   name: string;
   description: string;
   imageUrl: string;

@@ -8,11 +8,13 @@ const timeUnit = 30;
 
 class EventOnGrid {
   artistName: string;
+  artistCode: string;
   left: number;
   width: number;
 
-  constructor(artistName: string, dayStartTime: Date, event: FestivalEvent) {
-    this.artistName = artistName;
+  constructor(artist: ArtistWithoutEvents, dayStartTime: Date, event: FestivalEvent) {
+    this.artistName = artist.name;
+    this.artistCode = artist.code;
     const eventStartTime = new Date(event.startDateTime);
     const startingAfterDayStart = eventStartTime.getTime() - dayStartTime.getTime();
     this.left = startingAfterDayStart / timeUnit / (1000 * 60); // convert to minutes
@@ -31,7 +33,7 @@ class EventOnGrid {
 
 const createStageRow = (stage: StageWithEvents, dayStartTime: Date, numThirtyMinuteIntervals: number) => {
   const stageRow: (EventOnGrid | undefined)[] = [];
-  const eventsOnGrid: EventOnGrid[] = stage.events.map(event => new EventOnGrid(event.artist.name, dayStartTime, event));
+  const eventsOnGrid: EventOnGrid[] = stage.events.map(event => new EventOnGrid(event.artist, dayStartTime, event));
   for (let i = 0; i < numThirtyMinuteIntervals; i++) {
     let eventInCell: EventOnGrid | undefined = undefined;
     for (const eventOnGrid of eventsOnGrid) {
@@ -45,7 +47,7 @@ const createStageRow = (stage: StageWithEvents, dayStartTime: Date, numThirtyMin
   return stageRow;
 };
 
-const createTimesLabels = (dayStartTime: Date, numThirtyMinuteIntervals: number): string[] => {
+const createTimeLabels = (dayStartTime: Date, numThirtyMinuteIntervals: number): string[] => {
   const timesEveryThirtyMinutes: string[] = [];
   for (let i = 0; i <= numThirtyMinuteIntervals; i++) {
     const interval = new Date(dayStartTime.getTime() + i * timeUnit * 60 * 1000);
@@ -78,44 +80,46 @@ const Timetable = async () => {
     <div className="timetable-page-wrapper">
       <h1>Timetable</h1>
       <div>Freitag</div>
-        <div className="table-container">
-          <table className="day-timetable">
-            <thead>
-              <tr>
-                <th></th>
-                {createTimesLabels(dayStartTime!, numThirtyMinuteIntervals).map(time => (
-                  <th key={time} className="time-label">{time}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {stageEvents.map((stageEvent) => {
-                const stageRow = createStageRow(stageEvent, dayStartTime!, numThirtyMinuteIntervals);
-                return (
-                  <tr key={stageEvent.stage.id}>
-                    <td className="stage-name">{stageEvent.stage.name}</td>
-                    {stageRow.map((eventOnGrid, cellIndex) => (
-                      <td key={cellIndex} className="event-cell">
-                        {eventOnGrid ? (
-                          <div
-                            className="event-box"
-                            style={{
-                              width: `${eventOnGrid.width * 100}%`,
-                              left: `${eventOnGrid.getInnerLeftOffset() * 100}%`,
-                            }}
-                          >
-                            {eventOnGrid.artistName}
-                          </div>
-                        ) : null}
-                      </td>
-                    ))}
-                    <td></td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+      <div className="table-container">
+        <table className="day-timetable">
+          <thead>
+            <tr>
+              <th></th>
+              {createTimeLabels(dayStartTime!, numThirtyMinuteIntervals).map(time => (
+                <th key={time} className="time-label">
+                  {time}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {stageEvents.map(stageEvent => {
+              const stageRow = createStageRow(stageEvent, dayStartTime!, numThirtyMinuteIntervals);
+              return (
+                <tr key={stageEvent.stage.id}>
+                  <td className="stage-name">{stageEvent.stage.name}</td>
+                  {stageRow.map((eventOnGrid, cellIndex) => (
+                    <td key={cellIndex} className="event-cell">
+                      {eventOnGrid ? (
+                        <div
+                          className="event-box"
+                          style={{
+                            width: `${eventOnGrid.width * 100}%`,
+                            left: `${eventOnGrid.getInnerLeftOffset() * 100}%`,
+                          }}
+                        >
+                          <a href={`/kuenstlerinnen${eventOnGrid.artistCode}`}>{eventOnGrid.artistName}</a>
+                        </div>
+                      ) : null}
+                    </td>
+                  ))}
+                  <td></td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
