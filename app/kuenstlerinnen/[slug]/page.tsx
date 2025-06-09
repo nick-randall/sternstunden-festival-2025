@@ -73,7 +73,7 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
         </div>
         <section>
           <div className="image-container">
-            <img className="artist-image" src={a.artist.imageUrl} alt={a.artist.name}/>
+            <Image className="artist-image" src={a.artist.imageUrl} alt={a.artist.name} fill={true}/>
           </div>
           <Spacer width={16} />
           <div className="artist-and-events-details">
