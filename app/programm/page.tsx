@@ -86,7 +86,7 @@ const ProgrammPage = () => {
 
     Chorchester Collab <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Die Junge Camerata <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-    Duo: Sternzeichen Geige Aszendent Klavier <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    Duo: Geige & Klavier <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Gregor in der Kuppel <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     High Five / Azul <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Immanuel <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
