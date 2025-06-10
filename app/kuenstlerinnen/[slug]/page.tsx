@@ -4,7 +4,7 @@ import "../../../styles/artists.css";
 import { getReadableDETimeAndDayAbbr } from "@/helper_functions/helperFunctions";
 import { notFound } from "next/navigation";
 import Spacer from "@/components/Spacer";
-import Link from "next/link";
+import ArtistBackButton from "@/components/ArtistBackButton";
 
 export async function generateStaticParams() {
   const artists = [];
@@ -59,17 +59,17 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
             .featured-artist-card section .image-container {           
               flex-basis: auto;
             }
+            .artist-description {        
+              mask-image: none;
+              -webkit-mask-image: none;
+            }
           }
           `}
       </style>
       <div className="featured-artist-card">
         <div className="heading">
           <h2>{a.artist.name}</h2>
-          <Link className="back-button" href="/kuenstlerinnen">
-            zurück
-            <Spacer width={8} />
-            <Image src="/close.png" alt="Zurück" width="24" height="24" />
-          </Link>
+          <ArtistBackButton />
         </div>
         <section>
           <div className="image-container">
@@ -77,7 +77,7 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
           </div>
           <Spacer width={16} />
           <div className="artist-and-events-details">
-            <div>{a.artist.description}</div>
+            <div className="artist-description">{a.artist.description}</div>
             <Spacer height={16} />
             <div className="divider" />
             {a.events &&

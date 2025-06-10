@@ -73,7 +73,7 @@ const Timetable = async () => {
     numThirtyMinuteIntervals = Math.ceil((dayEndTime.getTime() - dayStartTime.getTime()) / (1000 * 60 * 30));
   } catch (error) {
     const errorMessage = error as Error;
-    console.error("Error fetching timetable data:", errorMessage.message);
+    console.error("Error fetching timetable dat a:", errorMessage.message);
   }
 
   return (
