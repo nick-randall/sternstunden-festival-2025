@@ -30,7 +30,7 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
   try {
     const response = await fetch(`https://sternstunde.fly.dev/get-artist/${slug}`, { headers: { Accept: "application/json" } });
     // const response = await fetch(`http://localhost:8080/get-artist/${slug}`, { headers: { Accept: "application/json" } });
-    
+
     if (response.status === 404) {
       notFound();
     }
@@ -58,6 +58,8 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
             }
             .featured-artist-card section .image-container {           
               flex-basis: auto;
+              width: unset;
+              height: unset;
             }
             .artist-description {        
               mask-image: none;
@@ -66,37 +68,36 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
           }
           `}
       </style>
-      <div className="featured-artist-card">
-        <div className="heading">
-          <h2>{a.artist.name}</h2>
-          <ArtistBackButton />
+        <div className="featured-artist-card">
+          <div className="heading">
+            <h2>{a.artist.name}</h2>
+            <ArtistBackButton />
+          </div>
+          <section>
+            <div className="image-container">
+              <Image className="artist-image" src={a.artist.imageUrl} alt={a.artist.name} fill={true} />
+            </div>
+            <Spacer width={16} />
+            <div className="artist-and-events-details">
+              <div className="artist-description">{a.artist.description}</div>
+              <Spacer height={16} />
+              <div className="divider" />
+              {a.events &&
+                a.events.map((e: ArtistEvent) => (
+                  <div key={e.id} className="artist-event">
+                    <h2>{getReadableDETimeAndDayAbbr(e.startDateTime)}</h2>
+                    <div className="artist-event-stage">{e.stage.name}</div>
+                  </div>
+                ))}
+              <Spacer height={16} />
+              <div className="divider" />
+              <a href={a.artist.artistUrl} target="_blank" rel="noopener noreferrer">
+                <h2>Website</h2>
+              </a>
+            </div>
+          </section>
         </div>
-        <section>
-          <div className="image-container">
-            <Image className="artist-image" src={a.artist.imageUrl} alt={a.artist.name} fill={true}/>
-          </div>
-          <Spacer width={16} />
-          <div className="artist-and-events-details">
-            <div className="artist-description">{a.artist.description}</div>
-            <Spacer height={16} />
-            <div className="divider" />
-            {a.events &&
-              a.events.map((e: ArtistEvent) => (
-                <div key={e.id} className="artist-event">
-                  <h2>{getReadableDETimeAndDayAbbr(e.startDateTime)}</h2>
-                  <div className="artist-event-stage">{e.stage.name}</div>
-                </div>
-              ))}
-            <Spacer height={16} />
-            <div className="divider" />
-
-            <a href={a.artist.artistUrl} target="_blank" rel="noopener noreferrer">
-              <h2>Website</h2>
-            </a>
-          </div>
-        </section>
       </div>
-    </div>
   );
 };
 

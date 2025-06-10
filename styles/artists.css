@@ -73,18 +73,15 @@
 }
 
 .featured-artist-card section .image-container {
-  /* flex-basis: 50%; */
-  flex-basis: 400px;
-  /* flex-shrink: 0; */
   position: relative;
   aspect-ratio: 1/1;
+  width: 400px;
+  height: 400px;
 }
 
 .featured-artist-card section .artist-and-events-details {
   display: flex;
   flex-direction: column;
-  width: 100%; 
-  /* for some reason widt: 100% makes the photos bigger */
 }
 .featured-artist-card section .artist-and-events-details .divider {
   height: 6px;
@@ -133,21 +130,4 @@
 
 .artist-event-time {
   font-weight: 700;
-}
-
-.artist-description {
-  overflow-y: scroll;
-  scrollbar-width: none;
-  -webkit-mask-image: linear-gradient(to top, transparent, black 20%, black);
-  mask-image: linear-gradient(to top, transparent, black 20%, black);
-}
-
-.artist-description::-webkit-scrollbar {
-  display: none;
-}
-
-.artist-description::after {
-  display: block;
-  content: "";
-  height: 10px;
 }
