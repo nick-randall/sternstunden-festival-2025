@@ -96,6 +96,10 @@
   font-size: 20px;
 }
 
+.featured-artist-card section .artist-and-events-details .artist-description {
+  white-space: pre-line;
+}
+
 
 .artist-card .image-container {
   display: flex;
