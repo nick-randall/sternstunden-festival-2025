@@ -14,6 +14,10 @@ type ArtistWithoutEvents  = {
   name: string;
   description: string;
   imageUrl: string;
+  attributes: {
+    [key: string]: string | number | boolean;
+  };
+  artistUrl: string;
 }
 
 type MenuItem = "tickets" | "programm" | "info" | "kontakt" | "" | "closing";

@@ -1,20 +1,23 @@
 // import Flex from "@/components/Flex";
+import { BASE_URL } from "@/helper_functions/constants";
 import "../../styles/common.css";
 import "../../styles/timetable.css";
 // import {testData} from "./test_data"
 import { getDayEndTime, getDayStartTime, getReadableDETime } from "@/helper_functions/helperFunctions";
+import Link from "next/link";
+import Image from "next/image";
 
 const timeUnit = 30;
 
 class EventOnGrid {
-  artistName: string;
-  artistCode: string;
+  artist: ArtistWithoutEvents;
+  event: FestivalEvent;
   left: number;
   width: number;
 
   constructor(artist: ArtistWithoutEvents, dayStartTime: Date, event: FestivalEvent) {
-    this.artistName = artist.name;
-    this.artistCode = artist.code;
+    this.event = event;
+    this.artist = artist;
     const eventStartTime = new Date(event.startDateTime);
     const startingAfterDayStart = eventStartTime.getTime() - dayStartTime.getTime();
     this.left = startingAfterDayStart / timeUnit / (1000 * 60); // convert to minutes
@@ -63,8 +66,8 @@ const Timetable = async () => {
   let dayEndTime: Date | null = null;
   let numThirtyMinuteIntervals = 0;
   try {
-    const response = await fetch("https://sternstunde.fly.dev/get-stages-with-their-events", { headers: { Accept: "application/json" } });
-    // const response = await fetch("http://localhost:8080/get-timetable", { headers: { Accept: "application/json" } });
+    console.log(`${BASE_URL}/get-stages-with-their-events`)
+    const response = await fetch(`${BASE_URL}/get-stages-with-their-events`, { headers: { Accept: "application/json" } });
     const timetableData = await response.json();
     // const timetableData = testData;
     stageEvents = timetableData[0].stageEvents; // only grabbing first day's events for simplicity
@@ -100,7 +103,7 @@ const Timetable = async () => {
                   <td className="stage-name">{stageEvent.stage.name}</td>
                   {stageRow.map((eventOnGrid, cellIndex) => (
                     <td key={cellIndex} className="event-cell">
-                      {eventOnGrid ? (
+                      {eventOnGrid && (
                         <div
                           className="event-box"
                           style={{
@@ -108,9 +111,17 @@ const Timetable = async () => {
                             left: `${eventOnGrid.getInnerLeftOffset() * 100}%`,
                           }}
                         >
-                          <a href={`/kuenstlerinnen${eventOnGrid.artistCode}`}>{eventOnGrid.artistName}</a>
+                          <Link href={`/kuenstlerinnen/${eventOnGrid.artist.code}`}>{eventOnGrid.artist.name}</Link>
+                          <div style={{display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center"}}>
+                            {eventOnGrid.event.attributes.mit_gebardensprache && <div>
+                              <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width ="25" />
+                            </div>}
+                            {eventOnGrid.event.attributes.mit_kurzvortrag && <div>
+                              <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height="25" width ="25" />
+                            </div>}
+                          </div>
                         </div>
-                      ) : null}
+                      )}
                     </td>
                   ))}
                   <td></td>

@@ -4,11 +4,13 @@ import "../../styles/artists.css";
 import Spacer from "@/components/Spacer";
 import Link from "next/link";
 import { getReadableDETimeAndDayAbbr } from "@/helper_functions/helperFunctions";
+import { BASE_URL } from "@/helper_functions/constants";
 
 const Artists: React.FC = async () => {
   const artistsData = [];
   try {
-    const response = await fetch("https://sternstunde.fly.dev/get-artists", { headers: { Accept: "application/json" } });
+    // await fetch(`${BASE_URL}/update-all-artist-codes`)
+    const response = await fetch(`${BASE_URL}/get-artists`, { headers: { Accept: "application/json" } });
 
     // const response = await fetch("http://localhost:8080/get-artists", { headers: { Accept: "application/json" } });
     const foundartists = await response.json();
