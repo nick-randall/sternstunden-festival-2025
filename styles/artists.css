@@ -25,6 +25,10 @@
   flex-direction: column;
 }
 
+.artist-card.astroprogramm {
+  background-color: rgba(0, 136, 233, 0.2);
+}
+
 .artist-card img {
   object-fit: cover;
 }

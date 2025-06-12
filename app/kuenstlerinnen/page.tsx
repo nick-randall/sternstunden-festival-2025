@@ -11,8 +11,6 @@ const Artists: React.FC = async () => {
   try {
     // await fetch(`${BASE_URL}/update-all-artist-codes`)
     const response = await fetch(`${BASE_URL}/get-artists`, { headers: { Accept: "application/json" } });
-
-    // const response = await fetch("http://localhost:8080/get-artists", { headers: { Accept: "application/json" } });
     const foundartists = await response.json();
     artistsData.push(...foundartists);
   } catch (error) {
@@ -40,7 +38,7 @@ const Artists: React.FC = async () => {
       <div className="artists-grid">
         {artists.map((a: ArtistWithEvents) => (
           <Link key={a.artist.id} href={`/kuenstlerinnen/${a.artist.code}`} className="artist-link">
-            <div key={a.artist.id} className="artist-card">
+            <div key={a.artist.id} className={`artist-card ${a.artist.attributes.astroprogramm ? "astroprogramm" : ""}`}>
               <Image src={a.artist.imageUrl} alt={a.artist.name} width="265" height="265" />
               <div className="artist-details">
                 <Spacer height={5} />
