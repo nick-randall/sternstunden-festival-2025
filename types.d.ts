@@ -43,6 +43,8 @@ type ArtistWithEvents = {
     imageUrl: string;
     artistUrl: string;
     code: string;
+    attributes: {
+      [key: string]: string | number | boolean;}
   };
   eventStartDateTime: string;
   events: ArtistEvent[];
@@ -66,6 +68,10 @@ type FestivalEvent = {
   };
   startDateTime: string;
   endDateTime: string;
+  attributes: {
+    [key: string]: string | number | boolean; 
+  };
+
 };
 
 

@@ -68,36 +68,38 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
           }
           `}
       </style>
-        <div className="featured-artist-card">
-          <div className="heading">
-            <h2>{a.artist.name}</h2>
-            <ArtistBackButton />
+      <div className="featured-artist-card">
+        <div className="heading">
+          <h2>{a.artist.name}</h2>
+          <ArtistBackButton />
+        </div>
+        <section>
+          <div className="image-container">
+            <Image className="artist-image" src={a.artist.imageUrl} alt={a.artist.name} fill={true} />
           </div>
-          <section>
-            <div className="image-container">
-              <Image className="artist-image" src={a.artist.imageUrl} alt={a.artist.name} fill={true} />
-            </div>
-            <Spacer width={16} />
-            <div className="artist-and-events-details">
-              <div className="artist-description">{a.artist.description}</div>
-              <Spacer height={16} />
-              <div className="divider" />
-              {a.events &&
-                a.events.map((e: ArtistEvent) => (
-                  <div key={e.id} className="artist-event">
-                    <h2>{getReadableDETimeAndDayAbbr(e.startDateTime)}</h2>
-                    <div className="artist-event-stage">{e.stage.name}</div>
-                  </div>
-                ))}
-              <Spacer height={16} />
-              <div className="divider" />
+          <Spacer width={16} />
+          <div className="artist-and-events-details">
+            <div className="artist-description">{a.artist.description}</div>
+            <Spacer height={16} />
+            <div className="divider" />
+            {a.events &&
+              a.events.map((e: ArtistEvent) => (
+                <div key={e.id} className="artist-event">
+                  <h2>{getReadableDETimeAndDayAbbr(e.startDateTime)}</h2>
+                  <div className="artist-event-stage">{e.stage.name}</div>
+                </div>
+              ))}
+            <Spacer height={16} />
+            <div className="divider" />
+            {a.artist.artistUrl && (
               <a href={a.artist.artistUrl} target="_blank" rel="noopener noreferrer">
                 <h2>Website</h2>
               </a>
-            </div>
-          </section>
-        </div>
+            )}
+          </div>
+        </section>
       </div>
+    </div>
   );
 };
 
