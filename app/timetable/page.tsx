@@ -66,7 +66,7 @@ const Timetable = async () => {
   let dayEndTime: Date | null = null;
   let numThirtyMinuteIntervals = 0;
   try {
-    console.log(`${BASE_URL}/get-stages-with-their-events`)
+    console.log(`${BASE_URL}/get-stages-with-their-events`);
     const response = await fetch(`${BASE_URL}/get-stages-with-their-events`, { headers: { Accept: "application/json" } });
     const timetableData = await response.json();
     // const timetableData = testData;
@@ -112,13 +112,17 @@ const Timetable = async () => {
                           }}
                         >
                           <Link href={`/kuenstlerinnen/${eventOnGrid.artist.code}`}>{eventOnGrid.artist.name}</Link>
-                          <div style={{display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center"}}>
-                            {eventOnGrid.event.attributes.mit_gebardensprache && <div>
-                              <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width ="25" />
-                            </div>}
-                            {eventOnGrid.event.attributes.mit_kurzvortrag && <div>
-                              <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height="25" width ="25" />
-                            </div>}
+                          <div className="symbols-row">
+                            {eventOnGrid.event.attributes.mit_gebardensprache && (
+                              <div>
+                                <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" />
+                              </div>
+                            )}
+                            {eventOnGrid.event.attributes.mit_kurzvortrag && (
+                              <div>
+                                <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height="25" width="25" />
+                              </div>
+                            )}
                           </div>
                         </div>
                       )}
@@ -130,6 +134,14 @@ const Timetable = async () => {
             })}
           </tbody>
         </table>
+      </div>
+      <div className="legend-column">
+        <div className="symbols-row">
+          <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" />= Mit Übersetzung in Deutscher Gebärdensprache (DGS)
+        </div>
+         <div className="symbols-row">
+          <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height="25" width="25" />= Mit Kurzvortrag
+        </div>
       </div>
     </div>
   );
