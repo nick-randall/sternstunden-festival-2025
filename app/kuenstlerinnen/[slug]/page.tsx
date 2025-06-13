@@ -28,7 +28,7 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
   let a: ArtistWithEvents | null = null;
 
   try {
-    const response = await fetch(`https://sternstunde.fly.dev/get-artist/${slug}`, { headers: { Accept: "application/json" } });
+    const response = await fetch(`https://sternstunde.fly.dev/get-artist/${slug}`, { headers: { Accept: "application/json" }, method: "POST" });
     // const response = await fetch(`http://localhost:8080/get-artist/${slug}`, { headers: { Accept: "application/json" } });
 
     if (response.status === 404) {
@@ -46,8 +46,9 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
   if (!a) {
     return <div>Die Künstlerin konnte nicht gefunden werden</div>;
   }
-  console.log("artist: ", a);
-
+  for(const event of a.events) {
+  console.log("Event attributes:", event.attributes);
+  }
   return (
     <div className="artist-page">
       <style>
@@ -83,7 +84,7 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
             <Spacer height={16} />
             <div className="divider" />
             {a.events &&
-              a.events.map((e: ArtistEvent) => (
+              a.events.map((e: FestivalEvent) => (
                 <div key={e.id} className="artist-event">
                   <h2>{getReadableDETimeAndDayAbbr(e.startDateTime)}</h2>
                   <div className="artist-event-stage">{e.stage.name}</div>

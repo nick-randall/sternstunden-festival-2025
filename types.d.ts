@@ -51,7 +51,7 @@ type ArtistWithEvents = {
       [key: string]: string | number | boolean;}
   };
   eventStartDateTime: string;
-  events: ArtistEvent[];
+  events: FestivalEvent[];
 }
 
 

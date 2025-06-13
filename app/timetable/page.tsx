@@ -1,5 +1,4 @@
 // import Flex from "@/components/Flex";
-import { BASE_URL } from "@/helper_functions/constants";
 import "../../styles/common.css";
 import "../../styles/timetable.css";
 // import {testData} from "./test_data"
@@ -66,8 +65,7 @@ const Timetable = async () => {
   let dayEndTime: Date | null = null;
   let numThirtyMinuteIntervals = 0;
   try {
-    console.log(`${BASE_URL}/get-stages-with-their-events`);
-    const response = await fetch(`${BASE_URL}/get-stages-with-their-events`, { headers: { Accept: "application/json" } });
+    const response = await fetch(`https://sternstunde.fly.dev/get-stages-with-their-events`, { headers: { Accept: "application/json" }, method: "POST" });
     const timetableData = await response.json();
     // const timetableData = testData;
     stageEvents = timetableData[0].stageEvents; // only grabbing first day's events for simplicity

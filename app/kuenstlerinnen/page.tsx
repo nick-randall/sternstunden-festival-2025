@@ -4,13 +4,11 @@ import "../../styles/artists.css";
 import Spacer from "@/components/Spacer";
 import Link from "next/link";
 import { getReadableDETimeAndDayAbbr } from "@/helper_functions/helperFunctions";
-import { BASE_URL } from "@/helper_functions/constants";
 
 const Artists: React.FC = async () => {
   const artistsData = [];
   try {
-    // await fetch(`${BASE_URL}/update-all-artist-codes`)
-    const response = await fetch(`${BASE_URL}/get-artists`, { headers: { Accept: "application/json" } });
+    const response = await fetch(`https://sternstunde.fly.dev/get-artists`, { headers: { Accept: "application/json",  }, method: "POST" });
     const foundartists = await response.json();
     artistsData.push(...foundartists);
   } catch (error) {
@@ -45,7 +43,7 @@ const Artists: React.FC = async () => {
                 <div className="artist-name">{a.artist.name}</div>
                 <Spacer height={5} />
                 {a.events &&
-                  a.events.map((e: ArtistEvent) => (
+                  a.events.map((e: FestivalEvent) => (
                     <div key={e.id} className="artist-event">
  
                       <div className="artist-event-time">{getReadableDETimeAndDayAbbr(e.startDateTime)}</div>
