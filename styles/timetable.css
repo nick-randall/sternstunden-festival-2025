@@ -32,7 +32,7 @@
 }
 
 .day-timetable tr:nth-child(even) {
-  background-color: #fefefe66;
+  background-color: #fefefe44;
 }
 
 .day-timetable tr:nth-child(odd) {
@@ -44,7 +44,7 @@
   /* padding: 25px; */
   /* height: 100px; */
   font-size: 14px;
-  width: 120px;
+  width: 100px;
   background-color: #ebcc7680;
 }
 
@@ -53,13 +53,14 @@
 }
 
 .event-box {
- background: linear-gradient(to right, rgb(232, 0, 233, 0.16), rgb(37, 3, 192, 0.16)); /* same as #e800e9, #2503c0 */
+  background: rgb(232, 0, 233, 0.16);
+  /* background: linear-gradient(to right, rgb(232, 0, 233, 0.16), rgb(37, 3, 192, 0.16)); /* same as #e800e9, #2503c0 */
   height: 100%;
   display: flex;
   flex-direction: column; 
   justify-content: center;
   text-overflow: ellipsis;
-  font-size: 14px;
+  font-size: 13px;
 }
 .event-box a {
   color: black;
@@ -72,7 +73,7 @@
   justify-content: center;
   background-color: #ebcc76;
   outline: #fcfcf100 1px solid;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .symbols-row {
