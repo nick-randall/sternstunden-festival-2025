@@ -53,7 +53,7 @@
 }
 
 .event-box {
-  background: rgb(232, 0, 233, 0.16);
+  background: rgb(238, 224, 248);
   /* background: linear-gradient(to right, rgb(232, 0, 233, 0.16), rgb(37, 3, 192, 0.16)); /* same as #e800e9, #2503c0 */
   height: 100%;
   display: flex;
@@ -61,6 +61,8 @@
   justify-content: center;
   text-overflow: ellipsis;
   font-size: 13px;
+  line-height: 100%;
+  font-weight: 600;
 }
 .event-box a {
   color: black;
@@ -74,6 +76,7 @@
   background-color: #ebcc76;
   outline: #fcfcf100 1px solid;
   font-size: 12px;
+  line-height: 120%;
 }
 
 .symbols-row {
