@@ -60,18 +60,22 @@ const createTimeLabels = (dayStartTime: Date, numThirtyMinuteIntervals: number):
 };
 
 const Timetable = async () => {
-  let stageEvents: StageWithEvents[] = [];
-  let dayStartTime: Date | null = null;
-  let dayEndTime: Date | null = null;
-  let numThirtyMinuteIntervals = 0;
+  let days: {
+    stageEvents: StageWithEvents[];
+    day: {
+      id: 1;
+      name: string;
+      startDateTime: string;
+      endDateTime: string;
+    };
+  }[] = [];
   try {
-    const response = await fetch(`https://sternstunde.fly.dev/get-stages-with-their-events`, { headers: { Accept: "application/json" }, method: "POST" });
-    const timetableData = await response.json();
-    // const timetableData = testData;
-    stageEvents = timetableData[0].stageEvents; // only grabbing first day's events for simplicity
-    dayStartTime = getDayStartTime(stageEvents);
-    dayEndTime = getDayEndTime(stageEvents);
-    numThirtyMinuteIntervals = Math.ceil((dayEndTime.getTime() - dayStartTime.getTime()) / (1000 * 60 * 30));
+    const response = await fetch(`https://sternstunde.fly.dev/get-stages-with-their-events`, {
+      headers: { Accept: "application/json" },
+      method: "POST",
+    });
+    days = await response.json();
+    // const days = testData;
   } catch (error) {
     const errorMessage = error as Error;
     console.error("Error fetching timetable dat a:", errorMessage.message);
@@ -80,64 +84,17 @@ const Timetable = async () => {
   return (
     <div className="timetable-page-wrapper">
       <h1>Timetable</h1>
-      <div>Freitag</div>
       <div className="table-container">
-        <table className="day-timetable">
-          <thead>
-            <tr>
-              <th></th>
-              {createTimeLabels(dayStartTime!, numThirtyMinuteIntervals).map(time => (
-                <th key={time} className="time-label">
-                  {time}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {stageEvents.map(stageEvent => {
-              const stageRow = createStageRow(stageEvent, dayStartTime!, numThirtyMinuteIntervals);
-              return (
-                <tr key={stageEvent.stage.id}>
-                  <td className="stage-name">{stageEvent.stage.name}</td>
-                  {stageRow.map((eventOnGrid, cellIndex) => (
-                    <td key={cellIndex} className="event-cell">
-                      {eventOnGrid && (
-                        <div
-                          className="event-box"
-                          style={{
-                            width: `${eventOnGrid.width * 100}%`,
-                            left: `${eventOnGrid.getInnerLeftOffset() * 100}%`,
-                          }}
-                        >
-                          <Link href={`/kuenstlerinnen/${eventOnGrid.artist.code}`}>{eventOnGrid.artist.name}</Link>
-                          <div className="symbols-row">
-                            {eventOnGrid.event.attributes.mit_gebardensprache && (
-                              <div>
-                                <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" />
-                              </div>
-                            )}
-                            {eventOnGrid.event.attributes.mit_kurzvortrag && (
-                              <div>
-                                <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height="25" width="25" />
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      )}
-                    </td>
-                  ))}
-                  <td></td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+        {days.map((day, index) => {
+          return <Day key={`day ${index}`} day={day} />;
+        })}
       </div>
       <div className="legend-column">
         <div className="symbols-row">
-          <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" />= Mit Übersetzung in Deutscher Gebärdensprache (DGS)
+          <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" />= Mit Übersetzung in Deutscher Gebärdensprache
+          (DGS)
         </div>
-         <div className="symbols-row">
+        <div className="symbols-row">
           <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height="25" width="25" />= Mit Kurzvortrag
         </div>
       </div>
@@ -145,3 +102,84 @@ const Timetable = async () => {
   );
 };
 export default Timetable;
+
+const Day = ({
+  day,
+}: {
+  day: {
+    stageEvents: StageWithEvents[];
+    day: {
+      id: 1;
+      name: string;
+      startDateTime: string;
+      endDateTime: string;
+    };
+  };
+}) => {
+  // const stages = stageEvents.map(stage => ({
+  //   name: stage.stage.name,
+  //   events: createStageRow(stage, dayStartTime, numThirtyMinuteIntervals),
+  // }));
+  const stageEvents = day.stageEvents; // only grabbing first day's events for simplicity
+  const dayStartTime = getDayStartTime(stageEvents);
+  const dayEndTime = getDayEndTime(stageEvents);
+  const numThirtyMinuteIntervals = Math.ceil((dayEndTime.getTime() - dayStartTime.getTime()) / (1000 * 60 * 30));
+
+  const timeLabels = createTimeLabels(dayStartTime, numThirtyMinuteIntervals);
+
+  return (
+    <div>
+      {day.day.name && <h2 className="day-title">{day.day.name}</h2>}
+      <table className="day-timetable">
+        <thead>
+          <tr>
+            <th></th>
+            {timeLabels.map(time => (
+              <th key={time} className="time-label">
+                {time}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {stageEvents.map(stageEvent => {
+            const stageRow = createStageRow(stageEvent, dayStartTime!, numThirtyMinuteIntervals);
+            return (
+              <tr key={stageEvent.stage.id}>
+                <td className="stage-name">{stageEvent.stage.name}</td>
+                {stageRow.map((eventOnGrid, cellIndex) => (
+                  <td key={cellIndex} className="event-cell">
+                    {eventOnGrid && (
+                      <div
+                        className="event-box"
+                        style={{
+                          width: `${eventOnGrid.width * 100}%`,
+                          left: `${eventOnGrid.getInnerLeftOffset() * 100}%`,
+                        }}
+                      >
+                        <Link href={`/kuenstlerinnen/${eventOnGrid.artist.code}`}>{eventOnGrid.artist.name}</Link>
+                        <div className="symbols-row">
+                          {eventOnGrid.event.attributes.mit_gebardensprache && (
+                            <div>
+                              <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" />
+                            </div>
+                          )}
+                          {eventOnGrid.event.attributes.mit_kurzvortrag && (
+                            <div>
+                              <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height="25" width="25" />
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                  </td>
+                ))}
+                <td></td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+};
