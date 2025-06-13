@@ -37,7 +37,7 @@ const Artists: React.FC = async () => {
         {artists.map((a: ArtistWithEvents) => (
           <Link key={a.artist.id} href={`/kuenstlerinnen/${a.artist.code}`} className="artist-link">
             <div key={a.artist.id} className={`artist-card ${a.artist.attributes.astroprogramm ? "astroprogramm" : ""}`}>
-              <Image src={a.artist.imageUrl} alt={a.artist.name} width="265" height="265" />
+              <Image src={a.artist.imageUrl} alt={a.artist.name} width="265" height="265"/>
               <div className="artist-details">
                 <Spacer height={5} />
                 <div className="artist-name">{a.artist.name}</div>
@@ -52,6 +52,7 @@ const Artists: React.FC = async () => {
                   ))}
               </div>
             </div>
+            <Spacer height={30} />
           </Link>
         ))}
       </div>
