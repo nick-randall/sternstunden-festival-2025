@@ -23,21 +23,6 @@ type ArtistWithoutEvents  = {
 type MenuItem = "tickets" | "programm" | "info" | "kontakt" | "" | "closing";
 
 
-type ArtistEvent = {
-  id: number;
-  startDateTime: string;
-  endDateTime: string;
-  stage: {
-    id: number;
-    name: string;
-  };
-  day: {
-    id: number;
-    name: string;
-    startDateTime: string;
-    endDateTime: string;
-  };
-}
 type ArtistWithEvents = {
   artist: {
     id: number;
@@ -53,6 +38,16 @@ type ArtistWithEvents = {
   eventStartDateTime: string;
   events: FestivalEvent[];
 }
+
+type DayAndEvents= {
+    stageEvents: StageWithEvents[];
+    day: {
+      id: 1;
+      name: string;
+      startDateTime: string;
+      endDateTime: string;
+    };
+  };
 
 
 type StageWithEvents = {

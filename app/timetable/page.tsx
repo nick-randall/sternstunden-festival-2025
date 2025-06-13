@@ -5,6 +5,7 @@ import "../../styles/timetable.css";
 import { getDayEndTime, getDayStartTime, getReadableDETime } from "@/helper_functions/helperFunctions";
 import Link from "next/link";
 import Image from "next/image";
+import TimetableSwitcher from "@/components/TimetableSwitcher";
 
 const timeUnit = 30;
 
@@ -59,36 +60,33 @@ const createTimeLabels = (dayStartTime: Date, numThirtyMinuteIntervals: number):
   return timesEveryThirtyMinutes;
 };
 
-const Timetable = async () => {
-  let days: {
-    stageEvents: StageWithEvents[];
-    day: {
-      id: 1;
-      name: string;
-      startDateTime: string;
-      endDateTime: string;
-    };
-  }[] = [];
+const TimetablePage = async () => {
+  let daysAndTheirEvents: DayAndEvents[] = [];
   try {
     const response = await fetch(`https://sternstunde.fly.dev/get-stages-with-their-events`, {
       headers: { Accept: "application/json" },
       method: "POST",
     });
-    days = await response.json();
+    daysAndTheirEvents = await response.json();
     // const days = testData;
   } catch (error) {
     const errorMessage = error as Error;
     console.error("Error fetching timetable dat a:", errorMessage.message);
   }
 
+  const dayTimetables = daysAndTheirEvents.map((dayAndEvents: DayAndEvents) => (
+    <DayTimetable key={dayAndEvents.day.id} dayAndEvents={dayAndEvents} />
+  ));
+
+  const dayNames = daysAndTheirEvents.map(day => day.day.name);
+
   return (
     <div className="timetable-page-wrapper">
       <h1>Timetable</h1>
-      <div className="table-container">
-        {days.map((day, index) => {
-          return <Day key={`day ${index}`} day={day} />;
-        })}
-      </div>
+      
+        <TimetableSwitcher dayTimetables={dayTimetables} dayNames={dayNames}/>
+       
+     
       <div className="legend-column">
         <div className="symbols-row">
           <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" />= Mit Übersetzung in Deutscher Gebärdensprache
@@ -101,26 +99,10 @@ const Timetable = async () => {
     </div>
   );
 };
-export default Timetable;
+export default TimetablePage;
 
-const Day = ({
-  day,
-}: {
-  day: {
-    stageEvents: StageWithEvents[];
-    day: {
-      id: 1;
-      name: string;
-      startDateTime: string;
-      endDateTime: string;
-    };
-  };
-}) => {
-  // const stages = stageEvents.map(stage => ({
-  //   name: stage.stage.name,
-  //   events: createStageRow(stage, dayStartTime, numThirtyMinuteIntervals),
-  // }));
-  const stageEvents = day.stageEvents; // only grabbing first day's events for simplicity
+const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
+  const stageEvents = dayAndEvents.stageEvents;
   const dayStartTime = getDayStartTime(stageEvents);
   const dayEndTime = getDayEndTime(stageEvents);
   const numThirtyMinuteIntervals = Math.ceil((dayEndTime.getTime() - dayStartTime.getTime()) / (1000 * 60 * 30));
@@ -129,7 +111,7 @@ const Day = ({
 
   return (
     <div>
-      {day.day.name && <h2 className="day-title">{day.day.name}</h2>}
+      {/* {dayAndEvents.day.name && <h2 className="day-title">{dayAndEvents.day.name}</h2>} */}
       <table className="day-timetable">
         <thead>
           <tr>
@@ -148,44 +130,32 @@ const Day = ({
               <tr key={stageEvent.stage.id}>
                 <td className="stage-name">{stageEvent.stage.name}</td>
                 {stageRow.map((eventOnGrid, cellIndex) => {
-  const isStart = eventOnGrid && Math.floor(eventOnGrid.left) === cellIndex;
+                  const isStart = eventOnGrid && Math.floor(eventOnGrid.left) === cellIndex;
 
-  return (
-    <td key={cellIndex} className="event-cell">
-      {isStart && (
-        <div
-          className="event-box"
-          style={{
-            width: `${eventOnGrid.width * 100}%`,
-            left: `${eventOnGrid.getInnerLeftOffset() * 100}%`,
-          }}
-        >
-          <Link href={`/kuenstlerinnen/${eventOnGrid.artist.code}`}>
-            {eventOnGrid.artist.name}
-          </Link>
-          <div className="symbols-row">
-            {eventOnGrid.event.attributes.mit_gebardensprache && (
-              <Image
-                src="/gebaerdensprache.png"
-                alt="Symbol Gebärdensprache"
-                height={25}
-                width={25}
-              />
-            )}
-            {eventOnGrid.event.attributes.mit_kurzvortrag && (
-              <Image
-                src="/kurzvortrag.png"
-                alt="Symbol Kurzvortrag"
-                height={25}
-                width={25}
-              />
-            )}
-          </div>
-        </div>
-      )}
-    </td>
-  );
-})}
+                  return (
+                    <td key={cellIndex} className="event-cell">
+                      {isStart && (
+                        <div
+                          className="event-box"
+                          style={{
+                            width: `${eventOnGrid.width * 100}%`,
+                            left: `${eventOnGrid.getInnerLeftOffset() * 100}%`,
+                          }}
+                        >
+                          <Link href={`/kuenstlerinnen/${eventOnGrid.artist.code}`}>{eventOnGrid.artist.name}</Link>
+                          <div className="symbols-row">
+                            {eventOnGrid.event.attributes.mit_gebardensprache && (
+                              <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height={25} width={25} />
+                            )}
+                            {eventOnGrid.event.attributes.mit_kurzvortrag && (
+                              <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height={25} width={25} />
+                            )}
+                          </div>
+                        </div>
+                      )}
+                    </td>
+                  );
+                })}
                 <td></td>
               </tr>
             );
