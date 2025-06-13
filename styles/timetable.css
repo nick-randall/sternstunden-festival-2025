@@ -52,20 +52,35 @@
   text-align: left;
 }
 
-.event-box {
-  background: rgb(238, 224, 248);
-  /* background: linear-gradient(to right, rgb(232, 0, 233, 0.16), rgb(37, 3, 192, 0.16)); /* same as #e800e9, #2503c0 */
-  height: 100%;
-  display: flex;
-  flex-direction: column; 
-  justify-content: center;
-  text-overflow: ellipsis;
-  font-size: 13px;
-  line-height: 100%;
-  font-weight: 600;
+.event-cell {
+  position: relative; /* für absolute Positionierung */
+  overflow: visible;
+  padding: 0;
 }
+
+.event-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(232, 0, 233, 0.16);
+  /*background: rgb(238, 224, 248); */
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
 .event-box a {
   color: black;
+  text-decoration: none;
 }
 
 .stage-name{
@@ -77,6 +92,7 @@
   outline: #fcfcf100 1px solid;
   font-size: 12px;
   line-height: 120%;
+  z-index: 1;
 }
 
 .symbols-row {

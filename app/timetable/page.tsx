@@ -147,33 +147,45 @@ const Day = ({
             return (
               <tr key={stageEvent.stage.id}>
                 <td className="stage-name">{stageEvent.stage.name}</td>
-                {stageRow.map((eventOnGrid, cellIndex) => (
-                  <td key={cellIndex} className="event-cell">
-                    {eventOnGrid && (
-                      <div
-                        className="event-box"
-                        style={{
-                          width: `${eventOnGrid.width * 100}%`,
-                          left: `${eventOnGrid.getInnerLeftOffset() * 100}%`,
-                        }}
-                      >
-                        <Link href={`/kuenstlerinnen/${eventOnGrid.artist.code}`}>{eventOnGrid.artist.name}</Link>
-                        <div className="symbols-row">
-                          {eventOnGrid.event.attributes.mit_gebardensprache && (
-                            <div>
-                              <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" />
-                            </div>
-                          )}
-                          {eventOnGrid.event.attributes.mit_kurzvortrag && (
-                            <div>
-                              <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height="25" width="25" />
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    )}
-                  </td>
-                ))}
+                {stageRow.map((eventOnGrid, cellIndex) => {
+  const isStart = eventOnGrid && Math.floor(eventOnGrid.left) === cellIndex;
+
+  return (
+    <td key={cellIndex} className="event-cell">
+      {isStart && (
+        <div
+          className="event-box"
+          style={{
+            width: `${eventOnGrid.width * 100}%`,
+            left: `${eventOnGrid.getInnerLeftOffset() * 100}%`,
+          }}
+        >
+          <Link href={`/kuenstlerinnen/${eventOnGrid.artist.code}`}>
+            {eventOnGrid.artist.name}
+          </Link>
+          <div className="symbols-row">
+            {eventOnGrid.event.attributes.mit_gebardensprache && (
+              <Image
+                src="/gebaerdensprache.png"
+                alt="Symbol Gebärdensprache"
+                height={25}
+                width={25}
+              />
+            )}
+            {eventOnGrid.event.attributes.mit_kurzvortrag && (
+              <Image
+                src="/kurzvortrag.png"
+                alt="Symbol Kurzvortrag"
+                height={25}
+                width={25}
+              />
+            )}
+          </div>
+        </div>
+      )}
+    </td>
+  );
+})}
                 <td></td>
               </tr>
             );
