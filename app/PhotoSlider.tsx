@@ -1,13 +1,12 @@
 "use client";
-import useMediaQuery from "@/components/useMediaQuery";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 interface PhotoSliderProps {
-  photoUrls: string[];
+  photoComponents: React.JSX.Element[];
 }
 
-const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoUrls }) => {
+const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoComponents }) => {
   const [userScrolling, setUserScrolling] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const timer = useRef<NodeJS.Timeout | null>(null);
@@ -25,6 +24,7 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoUrls }) => {
       // container.style.scrollSnapType = "none";
     }, 3000);
   };
+  console.log(currentImageIndex)
 
   useEffect(() => {
     const scroll = () => {
@@ -90,13 +90,13 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoUrls }) => {
     };
   }, [handleScroll]);
 
-  const getLoadingType = (index: number) => {
-    if (index === 0) return undefined;
-    if (currentImageIndex + 2 > index) return "eager";
-    return "lazy";
-  };
+  // const getLoadingType = (index: number) => {
+  //   if (index === 0) return undefined;
+  //   if (currentImageIndex + 2 > index) return "eager";
+  //   return "lazy";
+  // };
 
-  const {screenWidth} = useMediaQuery()
+  // const {screenWidth} = useMediaQuery()
 
   return (
     <>
@@ -114,17 +114,7 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoUrls }) => {
         </div>
       </div>
       <div ref={containerRef} key="mobile-photo-slider" className="photo-slider" onWheel={pauseScroll} onTouchStart={pauseScroll}>
-        {photoUrls.map((url, index) => (
-          <Image
-            height={screenWidth / 2}
-            width={screenWidth / 2}
-            key={index + "image"}
-            src={url}
-            alt="Rückblick Foto Sternstunden Festival 2024"
-            priority={index === 0}
-            loading={getLoadingType(index)}
-          />
-        ))}
+        {photoComponents.map(photoComponent => photoComponent)}
       </div>
     </>
   );

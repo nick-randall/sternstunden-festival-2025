@@ -10,8 +10,9 @@ import Link from "next/link";
 const rootUrl = "https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/";
 const initial = ["ssf24m43", "ssf24m115", "ssf24m112", "ssf24m113", "ssf24m44", "ssf24m108"];
 
-export default function Page() {
+export default async function Page() {
   const photoUrls = [];
+  const photoComponents = [];
   for (let i = 0; i < initial.length; i++) {
     photoUrls.push(`${rootUrl}${initial[i]}.jpg`);
   }
@@ -24,6 +25,31 @@ export default function Page() {
     if (i === 66) continue;
     photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/ssf24${i}.jpg`);
   }
+
+  try {
+    for (let i = 0; i < photoUrls.length; i++) {
+      const url = photoUrls[i];
+      const response = await fetch(url, { method: "HEAD" });
+      if (!response.ok) {
+        console.error(`Image not found: ${url}`);
+        continue;
+      }
+      photoComponents.push(  <Image
+                  height={300}
+                  width={300}
+                  src={url}
+                  alt="Rückblick Foto Sternstunden Festival 2024"
+                  priority={i < 10}
+                  loading={i < 10 ? "eager" : "lazy"}
+                />
+              );
+    }
+  }
+  catch (error) {
+    console.error("Error fetching images:", error);
+  }
+  
+
   return (
     <>
       <Image className="header-logo" src="/logo-with-dates.png" alt="Sternstunden Festival Logo" width="827" height="434" />
@@ -97,7 +123,7 @@ export default function Page() {
       </div>
       <Spacer height={32} />
       <div className="content-box" style={{ flexDirection: "column" }}>
-        <PhotoSlider photoUrls={photoUrls} /> 
+        <PhotoSlider photoComponents={photoComponents} /> 
         <strong><a href="https://beyondportrait.de" target="_blank" title="Beyond Portrait Fotografie">Bilder (c) beyond.portrait &#10154;</a></strong>
       </div>
     </>
