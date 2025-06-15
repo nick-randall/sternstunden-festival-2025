@@ -83,7 +83,7 @@
   width: 100%;
   background: rgb(232, 0, 233, 0.16);
   /*background: rgb(238, 224, 248); */
-  z-index: 0;
+  z-index: 9;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,7 +109,7 @@
   outline: #fcfcf100 1px solid;
   font-size: 12px;
   line-height: 120%;
-  z-index: 1;
+  z-index: 10;
 }
 
 .symbols-row {
