@@ -7,23 +7,27 @@ import Link from "next/link";
 import Image from "next/image";
 import TimetableSwitcher from "@/components/TimetableSwitcher";
 
-const timeUnit = 30;
+const minutesPerCell = 30;
 
 class EventOnGrid {
   artist: ArtistWithoutEvents;
   event: FestivalEvent;
   left: number;
-  width: number;
+  numCellsWide: number;
 
   constructor(artist: ArtistWithoutEvents, dayStartTime: Date, event: FestivalEvent) {
     this.event = event;
     this.artist = artist;
     const eventStartTime = new Date(event.startDateTime);
     const startingAfterDayStart = eventStartTime.getTime() - dayStartTime.getTime();
-    this.left = startingAfterDayStart / timeUnit / (1000 * 60); // convert to minutes
+    const startingAfterDayStartInMinutes = startingAfterDayStart / (1000 * 60); // convert to minutes
+    this.left = startingAfterDayStartInMinutes / minutesPerCell; // convert to minutes
     const eventEndTime = new Date(event.endDateTime);
-    const duration = eventEndTime.getTime() - eventStartTime.getTime();
-    this.width = duration / timeUnit / (1000 * 60); // convert to minutes
+    const durationInMilliseconds = eventEndTime.getTime() - eventStartTime.getTime();
+    const durationInMinutes = durationInMilliseconds / (1000 * 60);
+    const numCells = durationInMinutes / minutesPerCell; // convert to number of 30-minute intervals -- and therefore how many cells it occupies
+    const borderCrossings = numCells - 1;
+    this.numCellsWide = numCells +  (borderCrossings * 0.02); // each cell is 1 unit wide, and each border crossing adds 0.02 units
   }
 
   getInnerLeftOffset(): number {
@@ -53,7 +57,7 @@ const createStageRow = (stage: StageWithEvents, dayStartTime: Date, numThirtyMin
 const createTimeLabels = (dayStartTime: Date, numThirtyMinuteIntervals: number): string[] => {
   const timesEveryThirtyMinutes: string[] = [];
   for (let i = 0; i <= numThirtyMinuteIntervals; i++) {
-    const interval = new Date(dayStartTime.getTime() + i * timeUnit * 60 * 1000);
+    const interval = new Date(dayStartTime.getTime() + i * minutesPerCell * 60 * 1000);
     const formattedTime = getReadableDETime(interval.toISOString());
     timesEveryThirtyMinutes.push(formattedTime);
   }
@@ -83,10 +87,9 @@ const TimetablePage = async () => {
   return (
     <div className="timetable-page-wrapper">
       <h1>Timetable</h1>
-      
-        <TimetableSwitcher dayTimetables={dayTimetables} dayNames={dayNames}/>
-       
-     
+
+      <TimetableSwitcher dayTimetables={dayTimetables} dayNames={dayNames} />
+
       <div className="legend-column">
         <div className="symbols-row">
           <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" />= Mit Übersetzung in Deutscher Gebärdensprache
@@ -111,7 +114,6 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
 
   return (
     <div>
-      {/* {dayAndEvents.day.name && <h2 className="day-title">{dayAndEvents.day.name}</h2>} */}
       <table className="day-timetable">
         <thead>
           <tr>
@@ -138,7 +140,7 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
                         <div
                           className="event-box"
                           style={{
-                            width: `${eventOnGrid.width * 100}%`,
+                            width: `${eventOnGrid.numCellsWide * 100}%`,
                             left: `${eventOnGrid.getInnerLeftOffset() * 100}%`,
                           }}
                         >
