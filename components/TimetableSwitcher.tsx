@@ -57,6 +57,9 @@ const Arrows: FC<{ scrollForward: (ev: React.MouseEvent) => void; scrollBackward
   scrollBackward,
   scrollForward,
 }) => {
+  if (typeof window === "undefined" || typeof document === "undefined") {
+    return null;
+  }
   return createPortal(
     <div>
       <Image onClick={scrollBackward} src="./chevron-right.svg" alt="Rückwärts Scrollen" className="arrow arrow-left" height="50" width="50" />
