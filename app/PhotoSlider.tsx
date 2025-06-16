@@ -38,7 +38,6 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoComponents }) => {
     if (!container) return;
     scrollPos.current = container.scrollLeft; // reset scroll position
     lastTimeStamp.current = performance.now(); // reset timestamp
-    console.log("Starting scroll at position:", scrollPos.current);
     if (animationFrame.current === null) {
       animationFrame.current = requestAnimationFrame(scrollStep);
     }
@@ -92,14 +91,6 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoComponents }) => {
 
   return (
     <>
-      <div
-        style={{
-          position: "absolute",
-          height: 400,
-          width: "calc(100% - 100px)",
-          pointerEvents: "none",
-        }}
-      >
         <div style={{ position: "relative" }}>
           <Image
             onClick={scrollBackward}
@@ -107,20 +98,19 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoComponents }) => {
             src="./chevron-right.svg"
             alt="Vorwärts Scrollen"
             className="arrow arrow-left"
-            height={screenWidth / 3}
-            width={screenWidth / 3}
+            height="50"
+            width="50"
           />
           <Image
             onClick={scrollForward}
             onMouseEnter={pauseScroll}
             src="./chevron-right.svg"
             alt="Rückwärts Scrollen"
-            height={screenWidth / 3}
-            width={screenWidth / 3}
+            height="50"
+            width="50"
             className="arrow arrow-right"
           />
         </div>
-      </div>
       <div
         ref={containerRef}
         key="photo-slider"
