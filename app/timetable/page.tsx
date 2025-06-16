@@ -142,7 +142,7 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
                           style={{
                             width: `${eventOnGrid.numCellsWide * 100}%`,
                             left: `${eventOnGrid.getInnerLeftOffset() * 100}%`,
-                            backgroundColor: eventOnGrid.artist.attributes.astroprogramm ? "rgb(232, 0, 233, 0.16)" : "rgb(238, 224, 248, 0.6)",
+                            backgroundColor: eventOnGrid.artist.attributes.astroprogramm ? "rgba(0, 140, 255, 0.322)" : "rgba(232, 0, 233, 0.16)",
                           }}
                         >
                           <Link href={`/kuenstlerinnen/${eventOnGrid.artist.code}`}>{eventOnGrid.artist.name}</Link>
