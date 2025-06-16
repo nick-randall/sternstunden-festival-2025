@@ -1,54 +1,66 @@
 "use client";
+import useMediaQuery from "@/components/useMediaQuery";
 import Image from "next/image";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 interface PhotoSliderProps {
   photoComponents: React.JSX.Element[];
 }
 
+const scrollStepSize = 100; // pixels to scroll each step
+
 const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoComponents }) => {
-  const [userScrolling, setUserScrolling] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const timer = useRef<NodeJS.Timeout | null>(null);
-  const autoScrollTimer = useRef<NodeJS.Timeout | null>(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const pauseScrollingTimer = useRef<NodeJS.Timeout | null>(null);
+  const animationFrame = useRef<number | null>(null);
+  const scrollPos = useRef(0);
+  const lastTimeStamp = useRef(performance.now());
+  const { screenWidth } = useMediaQuery();
+
+  const scrollStep = useCallback(() => {
+    const deltaTime = (performance.now() - lastTimeStamp.current) / 1000; // in seconds
+    lastTimeStamp.current = performance.now();
+    const scrollDistance = scrollStepSize * deltaTime; // pixels per second
+    scrollPos.current += scrollDistance;
+    containerRef.current?.scrollTo({ left: scrollPos.current, behavior: "auto" });
+    animationFrame.current = requestAnimationFrame(scrollStep);
+  }, []);
 
   const pauseScroll = () => {
+    if (animationFrame.current !== null) {
+      cancelAnimationFrame(animationFrame.current);
+      animationFrame.current = null;
+    }
+  };
+
+  const startScroll = useCallback(() => {
     const container = containerRef.current;
     if (!container) return;
-    // container.style.scrollSnapType = "x mandatory";
-    setUserScrolling(true);
-    if (timer.current) clearTimeout(timer.current);
-    timer.current = setTimeout(() => {
-      setUserScrolling(false);
-      // container.style.scrollSnapType = "none";
-    }, 3000);
-  };
-  console.log(currentImageIndex)
+    scrollPos.current = container.scrollLeft; // reset scroll position
+    lastTimeStamp.current = performance.now(); // reset timestamp
+    console.log("Starting scroll at position:", scrollPos.current);
+    if (animationFrame.current === null) {
+      animationFrame.current = requestAnimationFrame(scrollStep);
+    }
+  }, [scrollStep]);
 
-  useEffect(() => {
-    const scroll = () => {
-      const container = containerRef.current;
-      if (!container) return;
-      autoScrollTimer.current = setTimeout(() => {
-        if (userScrolling) return;
-        container.scrollBy({ left: 20, behavior: "smooth" });
-        scroll();
-      }, 150);
-    };
-    scroll();
-    return () => {
-      if (autoScrollTimer.current) {
-        clearInterval(autoScrollTimer.current);
-      }
-    };
-  }, [userScrolling]);
+  const pauseScrollThenResume = useCallback(() => {
+    pauseScroll();
+    const container = containerRef.current;
+    if (!container) return;
+    if (screenWidth > 1080) {
+      container.style.scrollSnapType = "x mandatory";
+    }
+    pauseScrollingTimer.current = setTimeout(() => {
+      startScroll();
+      container.style.scrollSnapType = "none";
+    }, 3000);
+  }, [screenWidth, startScroll]);
 
   const scrollBackward = () => {
     const container = containerRef.current;
     if (!container) return;
-    container.style.scrollSnapType = "x mandatory";
-    pauseScroll();
+    pauseScrollThenResume();
     container.scrollBy({ left: -container.clientWidth / 2, behavior: "smooth" });
     setTimeout(() => {
       container.style.scrollSnapType = "none";
@@ -58,45 +70,25 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoComponents }) => {
   const scrollForward = () => {
     const container = containerRef.current;
     if (!container) return;
-    container.style.scrollSnapType = "x mandatory";
-    pauseScroll();
+    // container.style.scrollSnapType = "x mandatory";
+    pauseScrollThenResume();
     container.scrollBy({ left: container.clientWidth / 2, behavior: "smooth" });
     setTimeout(() => {
       container.style.scrollSnapType = "none";
     }, 500);
   };
 
-  const handleScroll = useCallback(() => {
-    const container = containerRef.current;
-    if (!container) return;
-    const scrollLeft = container.scrollLeft;
-    let left = 0;
-    for (let i = 0; i < container.children.length; i++) {
-      const child = container.children[i];
-      left += child.clientWidth;
-      if (left > scrollLeft) {
-        setCurrentImageIndex(i);
-        break;
-      }
-    }
-  }, [setCurrentImageIndex]);
-
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-    container.addEventListener("scroll", handleScroll);
+    console.log("Starting photo slider scroll");
+    startScroll();
     return () => {
-      container.removeEventListener("scroll", handleScroll);
+      // Cleanup timers on unmount
+      if (animationFrame.current) {
+        cancelAnimationFrame(animationFrame.current);
+        clearTimeout(pauseScrollingTimer.current!);
+      }
     };
-  }, [handleScroll]);
-
-  // const getLoadingType = (index: number) => {
-  //   if (index === 0) return undefined;
-  //   if (currentImageIndex + 2 > index) return "eager";
-  //   return "lazy";
-  // };
-
-  // const {screenWidth} = useMediaQuery()
+  }, [startScroll]);
 
   return (
     <>
@@ -109,11 +101,38 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photoComponents }) => {
         }}
       >
         <div style={{ position: "relative" }}>
-          <Image onClick={scrollBackward} src="./chevron-right.svg" alt="Scroll Back" className="arrow arrow-left" height="50" width="50" />
-          <Image onClick={scrollForward} src="./chevron-right.svg" alt="Scroll Forward" height="50" width="50" className="arrow arrow-right" />
+          <Image
+            onClick={scrollBackward}
+            onMouseEnter={pauseScroll}
+            src="./chevron-right.svg"
+            alt="Vorwärts Scrollen"
+            className="arrow arrow-left"
+            height={screenWidth / 3}
+            width={screenWidth / 3}
+          />
+          <Image
+            onClick={scrollForward}
+            onMouseEnter={pauseScroll}
+            src="./chevron-right.svg"
+            alt="Rückwärts Scrollen"
+            height={screenWidth / 3}
+            width={screenWidth / 3}
+            className="arrow arrow-right"
+          />
         </div>
       </div>
-      <div ref={containerRef} key="mobile-photo-slider" className="photo-slider" onWheel={pauseScroll} onTouchStart={pauseScroll}>
+      <div
+        ref={containerRef}
+        key="photo-slider"
+        className="photo-slider"
+        onWheel={pauseScrollThenResume}
+        onTouchStart={pauseScrollThenResume}
+        onTouchEnd={pauseScrollThenResume}
+        onTouchMove={pauseScrollThenResume}
+        // onTouchCancel={pauseScrollThenResume}
+        onMouseLeave={startScroll}
+        onMouseEnter={pauseScroll}
+      >
         {photoComponents.map(photoComponent => photoComponent)}
       </div>
     </>

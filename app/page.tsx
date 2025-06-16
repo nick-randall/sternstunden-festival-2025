@@ -34,21 +34,21 @@ export default async function Page() {
         console.error(`Image not found: ${url}`);
         continue;
       }
-      photoComponents.push(  <Image
-                  height={300}
-                  width={300}
-                  src={url}
-                  alt="Rückblick Foto Sternstunden Festival 2024"
-                  priority={i < 10}
-                  loading={i < 10 ? "eager" : "lazy"}
-                />
-              );
+      photoComponents.push(
+        <Image
+        key ={`photo-${i}`}
+          height={300}
+          width={300}
+          src={url}
+          alt="Rückblick Foto Sternstunden Festival 2024"
+          priority={i < 10}
+          loading={i < 10 ? "eager" : "lazy"}
+        />
+      );
     }
-  }
-  catch (error) {
+  } catch (error) {
     console.error("Error fetching images:", error);
   }
-  
 
   return (
     <>
@@ -58,29 +58,31 @@ export default async function Page() {
       <Spacer height={96} />
 
       <div className="content-box">
-      
-          
-
-         <Image
-              src="/lineup2025.jpg"
-              alt="Musikalisches Lineup 2025 / Sternstunden Festival 18. & 19. Juli"
-              width="1080"
-              height="864"
-              className="hom-image"
-            />
-       
-   
-        </div>
-<Spacer height={32} />
+        <Image
+          src="/lineup2025.jpg"
+          alt="Musikalisches Lineup 2025 / Sternstunden Festival 18. & 19. Juli"
+          width="1080"
+          height="864"
+          className="hom-image"
+        />
+      </div>
+      <Spacer height={32} />
 
       <div className="content-box split-box">
         <div className="text-box">
           <div>
-          <h2 style={{textAlign: "left"}}>MUSIK TRIFFT <span style={{
-  hyphens: "none", 
-  WebkitHyphens: "none", 
-  msHyphens: "none"
-}}>KOSMOS</span></h2>
+            <h2 style={{ textAlign: "left" }}>
+              MUSIK TRIFFT{" "}
+              <span
+                style={{
+                  hyphens: "none",
+                  WebkitHyphens: "none",
+                  msHyphens: "none",
+                }}
+              >
+                KOSMOS
+              </span>
+            </h2>
           </div>
 
           <div>
@@ -111,11 +113,8 @@ export default async function Page() {
           </div>
         </div>
         <div className="responsive-spacer-15"></div>
-
-
-        
       </div>
-      
+
       <Spacer height={32} />
       <div className="content-box video-container">
         <div>AFTERMOVIE 2024</div>
@@ -123,8 +122,12 @@ export default async function Page() {
       </div>
       <Spacer height={32} />
       <div className="content-box" style={{ flexDirection: "column" }}>
-        <PhotoSlider photoComponents={photoComponents} /> 
-        <strong><a href="https://beyondportrait.de" target="_blank" title="Beyond Portrait Fotografie">Bilder (c) beyond.portrait &#10154;</a></strong>
+        <PhotoSlider photoComponents={photoComponents} />
+        <strong>
+          <a href="https://beyondportrait.de" target="_blank" title="Beyond Portrait Fotografie">
+            Bilder (c) beyond.portrait &#10154;
+          </a>
+        </strong>
       </div>
     </>
   );
