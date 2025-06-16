@@ -140,10 +140,11 @@
   cursor: pointer;
   width: 45px;
   height: 45px;
+   transform: translate(-0%, -50%)
 }
 
 .arrow-left {
   transform: translate(-0%, -50%) rotateY(180deg);
   right: auto;
-  left: 150px;
+  left: 20px;
 }

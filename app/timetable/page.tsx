@@ -27,7 +27,7 @@ class EventOnGrid {
     const durationInMinutes = durationInMilliseconds / (1000 * 60);
     const numCells = durationInMinutes / minutesPerCell; // convert to number of 30-minute intervals -- and therefore how many cells it occupies
     const borderCrossings = numCells - 1;
-    this.numCellsWide = numCells +  (borderCrossings * 0.02); // each cell is 1 unit wide, and each border crossing adds 0.02 units
+    this.numCellsWide = numCells + borderCrossings * 0.02; // each cell is 1 unit wide, and each border crossing adds 0.02 units
   }
 
   getInnerLeftOffset(): number {
@@ -142,6 +142,7 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
                           style={{
                             width: `${eventOnGrid.numCellsWide * 100}%`,
                             left: `${eventOnGrid.getInnerLeftOffset() * 100}%`,
+                            backgroundColor: eventOnGrid.artist.attributes.astroprogramm ? "rgb(232, 0, 233, 0.16)" : "rgb(238, 224, 248, 0.6)",
                           }}
                         >
                           <Link href={`/kuenstlerinnen/${eventOnGrid.artist.code}`}>{eventOnGrid.artist.name}</Link>

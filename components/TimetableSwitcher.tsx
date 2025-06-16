@@ -2,6 +2,7 @@
 import { useState, JSX, FC, useRef } from "react";
 import Spacer from "./Spacer";
 import Image from "next/image";
+import { createPortal } from "react-dom";
 
 interface TimetableSwitcherProps {
   dayNames: string[];
@@ -32,6 +33,7 @@ const TimetableSwitcher: FC<TimetableSwitcherProps> = ({ dayTimetables, dayNames
 
   return (
     <div>
+      <Arrows scrollBackward={scrollBackward} scrollForward={scrollForward} />
       {dayNames.map((dayName, index) => (
         <button className={`day-name-button ${index === selectedDayIndex ? "selected" : ""}`} key={index} onClick={() => setSelectedDayIndex(index)}>
           {dayName}
@@ -42,22 +44,6 @@ const TimetableSwitcher: FC<TimetableSwitcherProps> = ({ dayTimetables, dayNames
         {dayTimetables.map((timetable, index) => (
           <div className={`individual-timetable-container ${index === selectedDayIndex ? "selected" : ""}`} key={index}>
             {timetable}
-            <Image
-              onClick={scrollBackward}
-              src="./chevron-right.svg"
-              alt="Vorwärts Scrollen"
-              className="arrow arrow-left"
-              height="50"
-              width="50"
-            />
-            <Image
-              onClick={scrollForward}
-              src="./chevron-right.svg"
-              alt="Vorwärts Scrollen"
-              className="arrow"
-              height="50"
-              width="50"
-            />
           </div>
         ))}
       </div>
@@ -66,3 +52,16 @@ const TimetableSwitcher: FC<TimetableSwitcherProps> = ({ dayTimetables, dayNames
 };
 
 export default TimetableSwitcher;
+
+const Arrows: FC<{ scrollForward: (ev: React.MouseEvent) => void; scrollBackward: (ev: React.MouseEvent) => void }> = ({
+  scrollBackward,
+  scrollForward,
+}) => {
+  return createPortal(
+    <div>
+      <Image onClick={scrollBackward} src="./chevron-right.svg" alt="Rückwärts Scrollen" className="arrow arrow-left" height="50" width="50" />
+      <Image onClick={scrollForward} src="./chevron-right.svg" alt="Vorwärts Scrollen" className="arrow" height="50" width="50" />
+    </div>,
+    document.body
+  );
+};
