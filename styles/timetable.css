@@ -11,6 +11,8 @@
   align-self: start;
   width: 100%;
   overflow-x: scroll;
+    mask-image: linear-gradient(to right, black 92%, transparent);
+
 }
 
 .individual-timetable-container {

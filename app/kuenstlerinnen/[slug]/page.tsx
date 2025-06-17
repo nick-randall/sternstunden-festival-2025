@@ -62,10 +62,6 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
               width: unset;
               height: unset;
             }
-            .artist-description {        
-              mask-image: none;
-              -webkit-mask-image: none;
-            }
           }
           `}
       </style>

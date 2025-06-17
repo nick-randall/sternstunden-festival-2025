@@ -60,23 +60,3 @@ const Zoomable: React.FC<ZoomableProps> = ({ children, title }) => {
 
 export default Zoomable;
 
-// const Zoomable: FC<TimetableSwitcherProps> = ({ dayTimetables, dayNames }) => {
-//   return (
-//     <div className="modal-container">
-//       <div className="modal-content">
-//         <div className="modal-figure">
-//           <figure>
-//             <div className="tables-container" ref={tablesContainerRef}>
-//               {dayTimetables.map((timetable, index) => (
-//                 <div className={`individual-timetable-container ${index === selectedDayIndex ? "selected" : ""}`} key={index}>
-//                   {timetable}
-//                 </div>
-//               ))}
-//             </div>
-//             <figcaption>Zoomable Timetable</figcaption>
-//           </figure>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
