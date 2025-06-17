@@ -1,7 +1,7 @@
 "use client";
 import { createPortal } from "react-dom";
 import "../styles/common.css";
-import { JSX, useEffect, useState } from "react";
+import { cloneElement, JSX, useEffect, useState } from "react";
 
 interface ZoomableProps {
   children: JSX.Element;
@@ -29,7 +29,12 @@ const Zoomable: React.FC<ZoomableProps> = ({ children, title }) => {
     }
   }, [active]);
 
-  if (!active) return <div onClick={handleOpen}>{children}</div>;
+  if (!active) {
+    const childWithOnClick = cloneElement(children, {
+      onClick: handleOpen,
+    });
+    return <>{childWithOnClick}</>;
+  }
   if (typeof window === "undefined" || typeof document === "undefined") {
     return children;
   }
