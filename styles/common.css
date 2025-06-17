@@ -44,7 +44,7 @@ a:hover {
   z-index: 104500;
 }
 
-.modal-content {
+.modal-content {  
   position: relative;
   z-index: 104500;
   display: flex;
