@@ -6,6 +6,7 @@ import PhotoSlider from "./PhotoSlider";
 import Banner from "@/components/Banner";
 import Image from "next/image";
 import Link from "next/link";
+import Zoomable from "@/components/Zoomable";
 
 const rootUrl = "https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/";
 const initial = ["ssf24m43", "ssf24m115", "ssf24m112", "ssf24m113", "ssf24m44", "ssf24m108"];
@@ -58,13 +59,15 @@ export default async function Page() {
       <Spacer height={96} />
 
       <div className="content-box">
-        <Image
-          src="/lineup2025.jpg"
-          alt="Musikalisches Lineup 2025 / Sternstunden Festival 18. & 19. Juli"
-          width="1080"
-          height="864"
-          className="hom-image"
-        />
+        <Zoomable>
+          <Image
+            src="/lineup2025.jpg"
+            alt="Musikalisches Lineup 2025 / Sternstunden Festival 18. & 19. Juli"
+            width="1080"
+            height="864"
+            className="hom-image"
+          />
+        </Zoomable>
       </div>
       <Spacer height={32} />
 

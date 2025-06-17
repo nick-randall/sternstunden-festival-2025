@@ -3,7 +3,7 @@
   /* display: flex; */
   /* flex-direction: column; */
   /* align-items: center; */
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 .timetable-page-wrapper .tables-container {
@@ -126,7 +126,6 @@
   justify-content: center;
 }
 
-
 .arrow {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.5);
@@ -140,11 +139,59 @@
   cursor: pointer;
   width: 45px;
   height: 45px;
-   transform: translate(-0%, -50%)
+  transform: translate(-0%, -50%);
 }
 
 .arrow-left {
   transform: translate(-0%, -50%) rotateY(180deg);
   right: auto;
   left: 20px;
+}
+
+.modal-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 104500;
+}
+
+.modal-content {
+  position: relative;
+  display: inline-block;
+  z-index: 104500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-figure {
+  opacity: 0;
+  transition: all .2s ease-in-out;
+  transform: scale(.93);
+}
+
+.modal-figure.with-animation {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal-figure img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  line-height: 0;
+  padding: 55px 0 55px;
+  margin: 0 auto;
+}
+
+.offscreen-tables-container{
+  position: absolute;
+  /* left: -10000px;
+  top: -10000px; */
+  overflow: hidden;
 }
