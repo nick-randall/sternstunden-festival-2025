@@ -98,6 +98,13 @@ const TimetablePage = async () => {
         <div className="symbols-row">
           <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height="25" width="25" />= Mit Kurzvortrag
         </div>
+        <div className="symbols-row">
+          <Image src="/musik_color.png" alt="Farbe Musikbox" height="19" width="19" /> = Musikprogramm
+        </div>
+        <div className="symbols-row">
+          <Image src="/astro_color.png" alt="Farbe Astrobox" height="19" width="19" /> = Astroprogramm
+        </div>
+         <div><br></br>Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell.</div>
       </div>
     </div>
   );
