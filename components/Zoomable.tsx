@@ -5,9 +5,10 @@ import { JSX, useEffect, useState } from "react";
 
 interface ZoomableProps {
   children: JSX.Element;
+  title: string;
 }
 
-const Zoomable: React.FC<ZoomableProps> = ({ children }) => {
+const Zoomable: React.FC<ZoomableProps> = ({ children, title }) => {
   const [active, setActive] = useState(false);
   const [withAnimation, setWithAnimation] = useState("with-animation");
 
@@ -41,7 +42,7 @@ const Zoomable: React.FC<ZoomableProps> = ({ children }) => {
             <div className={`modal-figure ${withAnimation}`}>
               <figure>
                 {children}
-                <figcaption>Zoomable Timetable</figcaption>
+                <figcaption>{title}</figcaption>
               </figure>
             </div>
           </div>

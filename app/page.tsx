@@ -59,7 +59,7 @@ export default async function Page() {
       <Spacer height={96} />
 
       <div className="content-box">
-        <Zoomable>
+        <Zoomable title="Musikalisches Lineup 2025">
           <Image
             src="/lineup2025.jpg"
             alt="Musikalisches Lineup 2025 / Sternstunden Festival 18. & 19. Juli"
