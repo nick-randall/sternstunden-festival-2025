@@ -104,6 +104,7 @@ const TimetablePage = async () => {
         <div className="symbols-row">
           <Image src="/astro_color.png" alt="Farbe Astrobox" height="19" width="19" /> = Astroprogramm
         </div>
+         <div><br></br>Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell.</div>
       </div>
     </div>
   );

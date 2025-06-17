@@ -216,6 +216,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   </a>
                 </div>
               </div>
+                <div className="sponsor-logo-row">
+                <div className="sponsor-logo-container">
+                  <a href="https://www.european-gmbh.de/" target="_blank" title="European GmbH">
+                    <Image src="/sponsors/european_logo.png" alt="European GmbH" width="400" height="78" className="sponsor-logo" />
+                  </a>
+                  </div>
+                  </div>
             </div>
 
             <Spacer height={32} />
