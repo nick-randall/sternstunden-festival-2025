@@ -7,16 +7,18 @@ import Banner from "@/components/Banner";
 import Image from "next/image";
 import Link from "next/link";
 import Zoomable from "@/components/Zoomable";
+import { getPlaceholderImage } from "@/helper_functions/createBlurredImages";
 
 const rootUrl = "https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/";
 const initial = ["ssf24m43", "ssf24m115", "ssf24m112", "ssf24m113", "ssf24m44", "ssf24m108"];
 
 export default async function Page() {
   const photoUrls = [];
-  const photoComponents = [];
+  // const photoComponents = [];
   for (let i = 0; i < initial.length; i++) {
     photoUrls.push(`${rootUrl}${initial[i]}.jpg`);
   }
+  let imagesWithPlaceholders: ImageWithPlaceholder[] = [];
 
   for (let i = 1; i < 115; i++) {
     if (i === 80) continue;
@@ -28,25 +30,32 @@ export default async function Page() {
   }
 
   try {
-    for (let i = 0; i < photoUrls.length; i++) {
-      const url = photoUrls[i];
-      const response = await fetch(url, { method: "HEAD" });
-      if (!response.ok) {
-        console.error(`Image not found: ${url}`);
-        continue;
-      }
-      photoComponents.push(
-        <Image
-        key ={`photo-${i}`}
-          height={300}
-          width={300}
-          src={url}
-          alt="Rückblick Foto Sternstunden Festival 2024"
-          priority={i < 10}
-          loading={i < 10 ? "eager" : "lazy"}
-        />
-      );
-    }
+    imagesWithPlaceholders = await Promise.all(
+      photoUrls.map(async (src: string) => {
+        const imageWithPlaceholder = await getPlaceholderImage(src);
+        return imageWithPlaceholder;
+      })
+    );
+    // for (let i = 0; i < photoUrls.length; i++) {
+    //   const url = photoUrls[i];
+    //   const response = await fetch(url, { method: "HEAD" });
+    //   if (!response.ok) {
+    //     console.error(`Image not found: ${url}`);
+    //     continue;
+    //   }
+
+    //   photoComponents.push(
+    //     <Image
+    //       key={`photo-${i}`}
+    //       height={300}
+    //       width={300}
+    //       src={url}
+    //       alt="Rückblick Foto Sternstunden Festival 2024"
+    //       priority={i < 10}
+    //       loading={i < 10 ? "eager" : "lazy"}
+    //     />
+    //   );
+    // }
   } catch (error) {
     console.error("Error fetching images:", error);
   }
@@ -125,7 +134,7 @@ export default async function Page() {
       </div>
       <Spacer height={32} />
       <div className="content-box" style={{ flexDirection: "column" }}>
-        <PhotoSlider photoComponents={photoComponents} />
+        <PhotoSlider imagesWithPlaceholders={imagesWithPlaceholders} />
         <strong>
           <a href="https://beyondportrait.de" target="_blank" title="Beyond Portrait Fotografie">
             Bilder (c) beyond.portrait &#10154;
