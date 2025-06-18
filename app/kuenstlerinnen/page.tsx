@@ -4,11 +4,12 @@ import "../../styles/artists.css";
 import Spacer from "@/components/Spacer";
 import Link from "next/link";
 import { getReadableDETimeAndDayAbbr } from "@/helper_functions/helperFunctions";
+import { getPlaceholderImage } from "@/helper_functions/createBlurredImages";
 
 const Artists: React.FC = async () => {
   const artistsData = [];
   try {
-    const response = await fetch(`https://sternstunde.fly.dev/get-artists`, { headers: { Accept: "application/json",  }, method: "POST" });
+    const response = await fetch(`https://sternstunde.fly.dev/get-artists`, { headers: { Accept: "application/json" }, method: "POST" });
     const foundartists = await response.json();
     artistsData.push(...foundartists);
   } catch (error) {
@@ -22,7 +23,7 @@ const Artists: React.FC = async () => {
     return a.artist.index - b.artist.index;
   });
   const artists: ArtistWithEvents[] = artistsData.map((a: ArtistWithEvents) => {
-          console.log(`Artist code ${a.artist.code}`);
+    console.log(`Artist code ${a.artist.code}`);
 
     if (!a.artist.imageUrl || a.artist.imageUrl === "ZgotmplZ" || a.artist.imageUrl === "NULL") {
       return { ...a, artist: { ...a.artist, imageUrl: "/default-artist-image.png" } };
@@ -30,14 +31,31 @@ const Artists: React.FC = async () => {
       return a;
     }
   });
+  const imagesWithPlaceholders = await Promise.all(
+    artists.map(async (artist: ArtistWithEvents) => {
+      if (!artist.artist.imageUrl || artist.artist.imageUrl === "ZgotmplZ" || artist.artist.imageUrl === "NULL") {
+        return { src: "/default-artist-image.png", placeholder: "/default-artist-image.png" };
+      }
+      const imageWithPlaceholder = await getPlaceholderImage(artist.artist.imageUrl);
+      return imageWithPlaceholder;
+    })
+  );
+  const artistsWithPlaceholders: ArtistWithEventsAndPlaceholderImage[] = [];
+  for (let i = 0; i < artists.length; i++) {
+    const artistWithEvents = artists[i];
+    const placeholderImage = imagesWithPlaceholders[i];
+   const artist =  {...artistWithEvents.artist, placeholderImage};
+    artistsWithPlaceholders.push({ ...artistWithEvents, artist });
+  }
+
   return (
     <div className="artists-page-wrapper">
       <h1>Artists</h1>
       <div className="artists-grid">
-        {artists.map((a: ArtistWithEvents) => (
+        {artistsWithPlaceholders.map((a: ArtistWithEventsAndPlaceholderImage) => (
           <Link key={a.artist.id} href={`/kuenstlerinnen/${a.artist.code}`} className="artist-link">
             <div key={a.artist.id} className={`artist-card ${a.artist.attributes.astroprogramm ? "astroprogramm" : ""}`}>
-              <Image src={a.artist.imageUrl} alt={a.artist.name} width="265" height="265"/>
+              <Image src={a.artist.imageUrl} alt={a.artist.name} width="265" height="265" placeholder="blur" blurDataURL={a.artist.placeholderImage.placeholder} />
               <div className="artist-details">
                 <Spacer height={5} />
                 <div className="artist-name">{a.artist.name}</div>
@@ -45,7 +63,6 @@ const Artists: React.FC = async () => {
                 {a.events &&
                   a.events.map((e: FestivalEvent) => (
                     <div key={e.id} className="artist-event">
- 
                       <div className="artist-event-time">{getReadableDETimeAndDayAbbr(e.startDateTime)}</div>
                       <div className="artist-event-stage">{e.stage.name}</div>
                     </div>

@@ -5,6 +5,7 @@ import { getReadableDETimeAndDayAbbr } from "@/helper_functions/helperFunctions"
 import { notFound } from "next/navigation";
 import Spacer from "@/components/Spacer";
 import ArtistBackButton from "@/components/ArtistBackButton";
+import { getPlaceholderImage } from "@/helper_functions/createBlurredImages";
 
 export async function generateStaticParams() {
   const artists = [];
@@ -25,7 +26,7 @@ export async function generateStaticParams() {
 const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
 
-  let a: ArtistWithEvents | null = null;
+  let a: ArtistWithEventsAndPlaceholderImage | null = null;
 
   try {
     const response = await fetch(`https://sternstunde.fly.dev/get-artist/${slug}`, { headers: { Accept: "application/json" }, method: "POST" });
@@ -46,9 +47,9 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
   if (!a) {
     return <div>Die Künstlerin konnte nicht gefunden werden</div>;
   }
-  for(const event of a.events) {
-  console.log("Event attributes:", event.attributes);
-  }
+  const placeholderImage = await getPlaceholderImage(a.artist.imageUrl);
+  a = { ...a, artist: { ...a.artist, placeholderImage } };
+
   return (
     <div className="artist-page">
       <style>
@@ -72,7 +73,14 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
         </div>
         <section>
           <div className="image-container">
-            <Image className="artist-image" src={a.artist.imageUrl} alt={a.artist.name} fill={true} />
+            <Image
+              className="artist-image"
+              src={a.artist.imageUrl}
+              alt={a.artist.name}
+              fill={true}
+              placeholder="blur"
+              blurDataURL={a.artist.placeholderImage.placeholder}
+            />
           </div>
           <Spacer width={16} />
           <div className="artist-and-events-details">

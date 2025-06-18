@@ -1,13 +1,13 @@
-type Artist  = {
+type Artist = {
   id: string;
   index: number;
   name: string;
   description: string;
   imageUrl: string;
   events: ArtistEvent[];
-}
+};
 
-type ArtistWithoutEvents  = {
+type ArtistWithoutEvents = {
   id: string;
   index: number;
   code: string;
@@ -18,10 +18,9 @@ type ArtistWithoutEvents  = {
     [key: string]: string | number | boolean;
   };
   artistUrl: string;
-}
+};
 
 type MenuItem = "tickets" | "programm" | "info" | "kontakt" | "" | "closing";
-
 
 type ArtistWithEvents = {
   artist: {
@@ -33,30 +32,48 @@ type ArtistWithEvents = {
     artistUrl: string;
     code: string;
     attributes: {
-      [key: string]: string | number | boolean;}
+      [key: string]: string | number | boolean;
+    };
   };
   eventStartDateTime: string;
   events: FestivalEvent[];
-}
+};
 
-type DayAndEvents= {
-    stageEvents: StageWithEvents[];
-    day: {
-      id: 1;
-      name: string;
-      startDateTime: string;
-      endDateTime: string;
+type ArtistWithEventsAndPlaceholderImage = {
+  artist: {
+    id: number;
+    index: number;
+    name: string;
+    description: string;
+    imageUrl: string;
+    artistUrl: string;
+    code: string;
+    attributes: {
+      [key: string]: string | number | boolean;
     };
+    placeholderImage: ImageWithPlaceholder;
   };
+  eventStartDateTime: string;
+  events: FestivalEvent[];
+};
 
+type DayAndEvents = {
+  stageEvents: StageWithEvents[];
+  day: {
+    id: 1;
+    name: string;
+    startDateTime: string;
+    endDateTime: string;
+  };
+};
 
 type StageWithEvents = {
-    stage: {
+  stage: {
     id: number;
     name: string;
   };
   events: FestivalEvent[];
-}
+};
 
 type FestivalEvent = {
   id: number;
@@ -68,13 +85,11 @@ type FestivalEvent = {
   startDateTime: string;
   endDateTime: string;
   attributes: {
-    [key: string]: string | number | boolean; 
+    [key: string]: string | number | boolean;
   };
-
 };
-
 
 type ImageWithPlaceholder = {
   src: string;
   placeholder: string;
-}
+};
