@@ -38,6 +38,9 @@ const Zoomable: React.FC<ZoomableProps> = ({ children, title }) => {
   if (typeof window === "undefined" || typeof document === "undefined") {
     return children;
   }
+  const childWithClickBarrier = cloneElement(children, {
+    onClick: (e: React.MouseEvent) => e.stopPropagation(),
+  });
   return (
     <>
       {children}
@@ -46,9 +49,13 @@ const Zoomable: React.FC<ZoomableProps> = ({ children, title }) => {
           <div className="modal-content">
             <div className={`modal-figure ${withAnimation}`}>
               <figure>
-                {children}
+                {childWithClickBarrier}
                 <figcaption>{title}</figcaption>
               </figure>
+              <button className="modal-close-button" onClick={handleClose}>
+                <span />
+                <span />
+              </button>
             </div>
           </div>
         </div>,
@@ -59,4 +66,3 @@ const Zoomable: React.FC<ZoomableProps> = ({ children, title }) => {
 };
 
 export default Zoomable;
-
