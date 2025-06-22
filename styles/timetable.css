@@ -11,8 +11,7 @@
   align-self: start;
   width: 100%;
   overflow-x: scroll;
-    mask-image: linear-gradient(to right, black 92%, transparent);
-
+  mask-image: linear-gradient(to right, black 92%, transparent);
 }
 
 .individual-timetable-container {
@@ -172,8 +171,8 @@
 
 .modal-figure {
   opacity: 0;
-  transition: all .2s ease-in-out;
-  transform: scale(.93);
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.93);
 }
 
 .modal-figure.with-animation {
@@ -191,7 +190,7 @@
   margin: 0 auto;
 }
 
-.offscreen-tables-container{
+.offscreen-tables-container {
   position: absolute;
   /* left: -10000px;
   top: -10000px; */

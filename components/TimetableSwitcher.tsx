@@ -1,5 +1,5 @@
 "use client";
-import { useState, JSX, FC, useRef } from "react";
+import { useState, JSX, FC, useRef,  useEffect } from "react";
 import Spacer from "./Spacer";
 import Image from "next/image";
 import { createPortal } from "react-dom";
@@ -57,8 +57,12 @@ const Arrows: FC<{ scrollForward: (ev: React.MouseEvent) => void; scrollBackward
   scrollBackward,
   scrollForward,
 }) => {
-  if (typeof window === "undefined" || typeof document === "undefined") {
-    return null;
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+  if (!isMounted) {
+    return null; // Don't render on the server or before mounting
   }
   return createPortal(
     <div>
