@@ -12,7 +12,8 @@ const minutesPerCell = 30;
 class EventOnGrid {
   artist: ArtistWithoutEvents;
   event: FestivalEvent;
-  left: number;
+  innerCellLeftOffset: number;
+  cellIndex: number;
   numCellsWide: number;
 
   constructor(artist: ArtistWithoutEvents, dayStartTime: Date, event: FestivalEvent) {
@@ -21,7 +22,9 @@ class EventOnGrid {
     const eventStartTime = new Date(event.startDateTime);
     const startingAfterDayStart = eventStartTime.getTime() - dayStartTime.getTime();
     const startingAfterDayStartInMinutes = startingAfterDayStart / (1000 * 60); // convert to minutes
-    this.left = startingAfterDayStartInMinutes / minutesPerCell; // convert to minutes
+    const numThirtyMinuteIntervalsAfterDayStart = startingAfterDayStartInMinutes / minutesPerCell; // convert to number of 30-minute intervals
+    this.cellIndex = Math.floor(numThirtyMinuteIntervalsAfterDayStart);
+    this.innerCellLeftOffset = numThirtyMinuteIntervalsAfterDayStart - this.cellIndex; 
     const eventEndTime = new Date(event.endDateTime);
     const durationInMilliseconds = eventEndTime.getTime() - eventStartTime.getTime();
     const durationInMinutes = durationInMilliseconds / (1000 * 60);
@@ -30,11 +33,8 @@ class EventOnGrid {
     this.numCellsWide = numCells + borderCrossings * 0.02; // each cell is 1 unit wide, and each border crossing adds 0.02 units
   }
 
-  getInnerLeftOffset(): number {
-    return this.left - Math.floor(this.left);
-  }
   isInCell(cellIndex: number): boolean {
-    return cellIndex >= this.left && cellIndex < this.left + 1;
+    return cellIndex >= this.cellIndex && cellIndex < this.cellIndex + 1;
   }
 }
 
@@ -75,7 +75,7 @@ const TimetablePage = async () => {
     // const days = testData;
   } catch (error) {
     const errorMessage = error as Error;
-    console.error("Error fetching timetable dat a:", errorMessage.message);
+    console.error("Error fetching timetable data:", errorMessage.message);
   }
 
   const dayTimetables = daysAndTheirEvents.map((dayAndEvents: DayAndEvents) => (
@@ -104,7 +104,9 @@ const TimetablePage = async () => {
         <div className="symbols-row">
           <Image src="/astro_color.png" alt="Farbe Astrobox" height="19" width="19" /> = Astroprogramm
         </div>
-         <div><br></br>Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell.</div>
+        <div>
+          <br></br>Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell.
+        </div>
       </div>
     </div>
   );
@@ -115,7 +117,8 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
   const stageEvents = dayAndEvents.stageEvents;
   const dayStartTime = getDayStartTime(stageEvents);
   const dayEndTime = getDayEndTime(stageEvents);
-  const numThirtyMinuteIntervals = Math.ceil((dayEndTime.getTime() - dayStartTime.getTime()) / (1000 * 60 * 30));
+  const dayDurationInMilliseconds = dayEndTime.getTime() - dayStartTime.getTime();
+  const numThirtyMinuteIntervals = dayDurationInMilliseconds / (1000 * 60 * minutesPerCell);
 
   const timeLabels = createTimeLabels(dayStartTime, numThirtyMinuteIntervals);
 
@@ -134,12 +137,12 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
         </thead>
         <tbody>
           {stageEvents.map(stageEvent => {
-            const stageRow = createStageRow(stageEvent, dayStartTime!, numThirtyMinuteIntervals);
+            const stageRow = createStageRow(stageEvent, dayStartTime, numThirtyMinuteIntervals);
             return (
               <tr key={stageEvent.stage.id}>
                 <td className="stage-name">{stageEvent.stage.name}</td>
                 {stageRow.map((eventOnGrid, cellIndex) => {
-                  const isStart = eventOnGrid && Math.floor(eventOnGrid.left) === cellIndex;
+                  const isStart = eventOnGrid !== undefined;
 
                   return (
                     <td key={cellIndex} className="event-cell">
@@ -148,7 +151,7 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
                           className="event-box"
                           style={{
                             width: `${eventOnGrid.numCellsWide * 100}%`,
-                            left: `${eventOnGrid.getInnerLeftOffset() * 100}%`,
+                            left: `${eventOnGrid.innerCellLeftOffset * 100}%`,
                             backgroundColor: eventOnGrid.artist.attributes.astroprogramm ? "rgba(0, 140, 255, 0.322)" : "rgba(232, 0, 233, 0.16)",
                           }}
                         >
