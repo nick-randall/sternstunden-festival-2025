@@ -112,6 +112,15 @@
   line-height: 120%;
   z-index: 10;
 }
+/* Hide the stage rows moving beneath the stage name column */
+.stage-name::before {
+  width: 3px;
+  height: 100%;
+  content: '';
+  background-color: #ebcc76;
+  position: absolute;
+  left: -3px;
+}
 
 .symbols-row {
   display: flex;
