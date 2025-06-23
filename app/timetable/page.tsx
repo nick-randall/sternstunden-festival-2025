@@ -1,4 +1,3 @@
-// import Flex from "@/components/Flex";
 import "../../styles/common.css";
 import "../../styles/timetable.css";
 // import {testData} from "./test_data"
@@ -64,59 +63,6 @@ const createTimeLabels = (dayStartTime: Date, numThirtyMinuteIntervals: number):
   return timesEveryThirtyMinutes;
 };
 
-const TimetablePage = async () => {
-  let daysAndTheirEvents: DayAndEvents[] = [];
-  try {
-    const response = await fetch(`https://sternstunde.fly.dev/get-stages-with-their-events`, {
-      headers: { Accept: "application/json" },
-      method: "POST",
-    });
-    daysAndTheirEvents = await response.json();
-    // const days = testData;
-  } catch (error) {
-    const errorMessage = error as Error;
-    console.error("Error fetching timetable data:", errorMessage.message);
-  }
-
-  const dayTimetables = daysAndTheirEvents.map((dayAndEvents: DayAndEvents) => (
-    <DayTimetable key={dayAndEvents.day.id} dayAndEvents={dayAndEvents} />
-  ));
-
-  const dayNames = daysAndTheirEvents.map(day => day.day.name);
-
-  return (
-    <div className="timetable-page-wrapper">
-      <h1>Timetable</h1>
-
-      <TimetableSwitcher dayTimetables={dayTimetables} dayNames={dayNames} />
-
-      <div className="legend-column">
-        <div className="symbols-row">
-          <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" />= Mit Übersetzung in Deutscher Gebärdensprache
-          (DGS)
-        </div>
-        <div className="symbols-row">
-          <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height="25" width="25" />= Mit Kurzvortrag
-        </div>
-        <div className="symbols-row">
-          <Image src="/kinderprogramm.png" alt="Symbol Kinderprogramm" height="25" width="25" />= Kinderprogramm
-        </div>
-        <div className="symbols-row">
-          <Image src="/musik_color.png" alt="Farbe Musikbox" height="19" width="19" /> = Musikprogramm
-        </div>
-        <div className="symbols-row">
-          <Image src="/astro_color.png" alt="Farbe Astrobox" height="19" width="19" /> = Astroprogramm
-        </div>
-
-        <div>
-          <br></br>Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell.
-        </div>
-      </div>
-    </div>
-  );
-};
-export default TimetablePage;
-
 const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
   const stageEvents = dayAndEvents.stageEvents;
   const dayStartTime = getDayStartTime(stageEvents);
@@ -166,8 +112,9 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
                               <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height={25} width={25} />
                             )}
                             {eventOnGrid.event.attributes.kinderprogramm && (
-                              <Image src="/kinderprogramm.png" alt="Symbol Kinderprogramm" height={25} width={25} />
+                              <Image src="/kinderprogramm.png" alt="Symbol Kinderprogramm" height={19} width={32} />
                             )}
+                            
                           </div>
                         </div>
                       )}
@@ -183,3 +130,58 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
     </div>
   );
 };
+
+
+const TimetablePage = async () => {
+  let daysAndTheirEvents: DayAndEvents[] = [];
+  try {
+    const response = await fetch(`https://sternstunde.fly.dev/get-stages-with-their-events`, {
+      headers: { Accept: "application/json" },
+      method: "POST",
+    });
+    daysAndTheirEvents = await response.json();
+    // const days = testData;
+  } catch (error) {
+    const errorMessage = error as Error;
+    console.error("Error fetching timetable data:", errorMessage.message);
+  }
+
+  const dayTimetables = daysAndTheirEvents.map((dayAndEvents: DayAndEvents) => (
+    <DayTimetable key={dayAndEvents.day.id} dayAndEvents={dayAndEvents} />
+  ));
+
+  const dayNames = daysAndTheirEvents.map(day => day.day.name);
+
+  return (
+    <div className="timetable-page-wrapper">
+      <h1>Timetable</h1>
+
+      <TimetableSwitcher dayTimetables={dayTimetables} dayNames={dayNames} />
+
+      <div className="legend-column">
+        <div className="symbols-row">
+          <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" />&nbsp;= Mit Übersetzung in Deutscher Gebärdensprache
+          (DGS)
+        </div>
+        <div className="symbols-row">
+          <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height="25" width="25" />&nbsp;= Mit Kurzvortrag
+        </div>
+        <div className="symbols-row">
+          <Image src="/kinderprogramm.png" alt="Symbol Kinderprogramm" height="19" width="32" />&nbsp;= Kinderprogramm
+        </div>
+        <div className="symbols-row">
+          <Image src="/musik_color.png" alt="Farbe Musikbox" height="19" width="19" />&nbsp;= Musikprogramm
+        </div>
+        <div className="symbols-row">
+          <Image src="/astro_color.png" alt="Farbe Astrobox" height="19" width="19" />&nbsp;= Astroprogramm
+        </div>
+
+        <div>
+          <br></br>Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell.
+        </div>
+      </div>
+    </div>
+  );
+};
+export default TimetablePage;
+
