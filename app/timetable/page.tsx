@@ -24,7 +24,7 @@ class EventOnGrid {
     const startingAfterDayStartInMinutes = startingAfterDayStart / (1000 * 60); // convert to minutes
     const numThirtyMinuteIntervalsAfterDayStart = startingAfterDayStartInMinutes / minutesPerCell; // convert to number of 30-minute intervals
     this.cellIndex = Math.floor(numThirtyMinuteIntervalsAfterDayStart);
-    this.innerCellLeftOffset = numThirtyMinuteIntervalsAfterDayStart - this.cellIndex; 
+    this.innerCellLeftOffset = numThirtyMinuteIntervalsAfterDayStart - this.cellIndex;
     const eventEndTime = new Date(event.endDateTime);
     const durationInMilliseconds = eventEndTime.getTime() - eventStartTime.getTime();
     const durationInMinutes = durationInMilliseconds / (1000 * 60);
@@ -99,11 +99,15 @@ const TimetablePage = async () => {
           <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height="25" width="25" />= Mit Kurzvortrag
         </div>
         <div className="symbols-row">
+          <Image src="/kinderprogramm.png" alt="Symbol Kinderprogramm" height="25" width="25" />= Kinderprogramm
+        </div>
+        <div className="symbols-row">
           <Image src="/musik_color.png" alt="Farbe Musikbox" height="19" width="19" /> = Musikprogramm
         </div>
         <div className="symbols-row">
           <Image src="/astro_color.png" alt="Farbe Astrobox" height="19" width="19" /> = Astroprogramm
         </div>
+
         <div>
           <br></br>Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell.
         </div>
@@ -142,11 +146,9 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
               <tr key={stageEvent.stage.id}>
                 <td className="stage-name">{stageEvent.stage.name}</td>
                 {stageRow.map((eventOnGrid, cellIndex) => {
-                  const isStart = eventOnGrid !== undefined;
-
                   return (
                     <td key={cellIndex} className="event-cell">
-                      {isStart && (
+                      {eventOnGrid && (
                         <div
                           className="event-box"
                           style={{
@@ -162,6 +164,9 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
                             )}
                             {eventOnGrid.event.attributes.mit_kurzvortrag && (
                               <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height={25} width={25} />
+                            )}
+                            {eventOnGrid.event.attributes.kinderprogramm && (
+                              <Image src="/kinderprogramm.png" alt="Symbol Kinderprogramm" height={25} width={25} />
                             )}
                           </div>
                         </div>
