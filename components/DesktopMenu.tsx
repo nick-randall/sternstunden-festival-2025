@@ -62,7 +62,7 @@ const DesktopMenu: React.FC = () => {
               Tickets
             </div>
           </Link>
-          <Link href="/programm" className="menu-item-container" onMouseEnter={() => handleMouseEnter("programm")}>
+          <Link href="/kuenstlerinnen" className="menu-item-container" onMouseEnter={() => handleMouseEnter("programm")}>
             <div className={`menu-item ${currDropdown === "programm" && "hovered"}`} ref={programHoverRef}>
               Programm
             </div>
@@ -82,30 +82,31 @@ const DesktopMenu: React.FC = () => {
       </div>
       <div className={`menu-dropdown ${currDropdown === "" && "hidden"}`}>
         <div style={{ left, position: "relative", top: "100%" }}>
-          {/* {currDropdown === "programm" && (
+         {currDropdown === "programm" && (
             <ul className="menu-dropdown-list">
+              <li>
+                <Link href="/kuenstlerinnen" className="menu-dropdown-link">
+                  Programm
+                </Link>
+              </li>  
+                  <li>
+                <Link href="/programminfo" className="menu-dropdown-link">
+                  Programminfo
+                </Link>
+              </li> 
               <li>
                 <Link href="/timetable" className="menu-dropdown-link">
                   Timetable
                 </Link>
               </li>
-              <li>
-                <Link href="/kuenstlerinnen" className="menu-dropdown-link">
-                  Artists
-                </Link>
-              </li>
-              <li>
-                <Link href="/astroprogramm" className="menu-dropdown-link">
-                  Astroprogramm
-                </Link>
-              </li>
-              <li>
+          
+              {/*  <li>
                 <Link href="/planeten" className="menu-dropdown-link">
                   Planetenrundgang
                 </Link>
-              </li>
+              </li> */}
             </ul>
-          )} */}
+          )} 
 
           {currDropdown === "info" && (
             <ul className="menu-dropdown-list">

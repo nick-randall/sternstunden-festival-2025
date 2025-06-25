@@ -161,13 +161,13 @@ const TimetablePage = async () => {
       <div className="legend-column">
         <div className="symbols-row">
           <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" />&nbsp;= Mit Übersetzung in Deutscher Gebärdensprache
-          (DGS)
+          (DGS) durch Studierende des IDGS Hamburg.
         </div>
         <div className="symbols-row">
           <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height="25" width="25" />&nbsp;= Mit Kurzvortrag
         </div>
         <div className="symbols-row">
-          <Image src="/kinderprogramm.png" alt="Symbol Kinderprogramm" height="19" width="32" />&nbsp;= Kinderprogramm
+          <Image src="/kinderprogramm.png" alt="Symbol Kinderprogramm" height="19" width="32" />&nbsp;= (auch) für Kinder
         </div>
         <div className="symbols-row">
           <Image src="/musik_color.png" alt="Farbe Musikbox" height="19" width="19" />&nbsp;= Musikprogramm

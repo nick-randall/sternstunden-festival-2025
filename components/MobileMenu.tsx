@@ -56,25 +56,30 @@ const MobileMenu: React.FC = () => {
             </Link>
           </div>
           <div className="mobile-menu-item">
-            <Link href="/programm" className="mobile-menu-item-container" onClick={toggleMenu}>
+            <Link href="/kuenstlerinnen" className="mobile-menu-item-container" onClick={toggleMenu}>
               <div className="mobile-menu-item-text">Programm</div>
-            </Link>
-            {/* <div className="mobile-sub-menu-item">
+                  <div className="mobile-sub-menu-item">
               <Link href="/kuenstlerinnen" className="mobile-menu-item-container" onClick={toggleMenu}>
-                <div className="mobile-menu-item-text">Künstler:innen</div>
+                <div className="mobile-menu-item-text">Programm</div>
+              </Link>
+            </div>
+            </Link>
+                         <div className="mobile-sub-menu-item">
+              <Link href="/programminfo" className="mobile-menu-item-container" onClick={toggleMenu}>
+                <div className="mobile-menu-item-text">Programminfo</div>
               </Link>
             </div>
             <div className="mobile-sub-menu-item">
+              <Link href="/timetable" className="mobile-menu-item-container" onClick={toggleMenu}>
+                <div className="mobile-menu-item-text">Timetable</div>
+              </Link>
+            </div>
+          </div>
+                {/*<div className="mobile-sub-menu-item">
               <Link href="/planeten" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Planetenrundgang</div>
               </Link>
-            </div>
-            <div className="mobile-sub-menu-item">
-              <Link href="/astroprogramm" className="mobile-menu-item-container" onClick={toggleMenu}>
-                <div className="mobile-menu-item-text">Astroprogramm</div>
-              </Link>
             </div> */}
-          </div>
           <div className="mobile-menu-item">
             <Link href="/info" className="mobile-menu-item-container" onClick={toggleMenu}>
               <div className="mobile-menu-item-text">Info</div>

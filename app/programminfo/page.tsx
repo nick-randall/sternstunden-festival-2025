@@ -5,38 +5,45 @@ import "../../styles/common.css";
 import Spacer from "@/components/Spacer";
 import Image from "next/image";
 
-
+import Link from "next/link";
 
 const ProgrammPage = () => {
   return (
     <div className="boring-page-wrapper">
-      <h1>Programm Sternstunden Festival 2025</h1>
-      <p>Weitere Informationen und Zeiten folgen bald</p>
-      <h2>Astroprogramm</h2>
+      <h1>Programminfo 2025</h1>
+      <p>Unser Festival an der Hamburger Sternwarte bietet ein abwechslungsreiches Programm aus Wissenschaft, 
+        Musik und Kinderangeboten – von Teleskop-Beobachtungen über Ensemblemusik bis Science Slam, von Techno über Jazz bis Klassik, von Sagittarius A* über schwarze Löcher bis zur Sonne. Das ganze auf dem wunderschönen Gelände der Hamburger Sternwarte in Hamburg-Bergedorf.
+        Hier gibt’s einen Überblick über die einzelnen Programmbereiche.
+</p>
+               <Spacer height={16} />
+
+      <h2>Astroprogramm – Das Universum zum Anfassen</h2>
       <p>
-          Science-Slam <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-          Vorträge<sup>*</sup> <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-          Ask an Astronomer <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp; 
-          Music of the spheres <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp; 
-          Virtual reality – Reise zum Zentrum der Milchstraße <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp; 
-          Supercomputing in der Astrophysik <Image src="/star.svg" alt="star symbol" width="10" height="10" /> &nbsp;
-          Computer Vision Song Contest <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp; 
-          Die Farben des Universums <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp; 
-          Cosmic Timeline <Image src="/star.svg" alt="star symbol" width="10" height="10" /> &nbsp;
-          Cosmic ray experiment (DESY Schülerlabor) <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-          Führungen <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-          Kinderführungen <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-          Teleskopbesichtigungen <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-          Sonnenbeobachtung <Image src="/star.svg" alt="star symbol" width="10" height="10" /> &nbsp;
-          Ausstellung: Weltbild im Wandel <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-          Bernhard Schmidt Museum <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-          Astronomisches Quiz
+          Erlebt Teleskop-Besichtungen, Virtual Reality-Reisen, Sonnenbeobachtung und Science Slam. Entdeckt interaktive Experimente, Führungen, Ausstellungen und stellt eure Fragen direkt an Astronom:innen. Freut euch auf spannende Vorträge von Astrophysiker*innen zu Themen wie Neutronensterne, Supercomputer, bewohnbare Planeten, kosmische Teilchen und die Symphonie der Schwarzen Löcher.
+Einige Angebote werden in Deutsche Gebärdensprache (DGS  <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" /> ) übersetzt. 
+<br/>
+👉 <Link href="/timetable">
+      <strong>[Zum Timetable]</strong>
+        </Link> 
+        <br/>
+ 👉     <Link href="/kuenstlerinnen">
+      <strong>[Zum Programm]</strong>
+        </Link>
       </p>
-      
                <Spacer height={16} />
  
 <p>
-  <h2>Musiklineup</h2>
+  <h2>Musikprogramm – Klangwelten unter Sternen</h2>
+  <p>Zwei Tage, fünf Bühnen, ein spannendes Lineup: Von Kammermusik über Indiepop, Jazz bis Elektronik sind Acts wie Anahit Vardanyan, Rocket Men, INSA, Yousef Kekhia und viele mehr dabei. Außerdem spielen viele Ensembles aus dem Kosmos der Unimusik Hamburg. <br/>
+In den Innenräumen – Großer Refraktor, Bibliothek und Oskar-Lühning-Teleskop – ist der Platz begrenzt. Deshalb spielen viele Ensembles ihr Programm zweimal. Falls das erste Konzert voll ist, habt ihr die Möglichkeit, einfach das zweite zu besuchen.  </p>
+👉 <Link href="/timetable">
+      <strong>[Zum Timetable]</strong>
+        </Link> 
+        <br/>
+ 👉     <Link href="/kuenstlerinnen">
+      <strong>[Zum Programm]</strong>
+        </Link> 
+        <br/>
   <h3>Freitag</h3>
   <h1>
     <a href="https://rocket-men.com/" target="_blank">Rocket Men</a> &nbsp;<Image src="/star.svg" alt="star symbol" width="20" height="20" /> &nbsp;
@@ -54,11 +61,11 @@ const ProgrammPage = () => {
 
     Alsterquintett <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Bettina & Bettina <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    Die Blechschnecken <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Ensemble Heißer Scheiß <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Ensemble Nachtklang <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-    Horn Ensemble <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     lili j. m. <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-    Malte & Malte <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    Malte <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Nil <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Nimm 8 <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Protostellar Core
@@ -70,6 +77,7 @@ const ProgrammPage = () => {
   </h1>
 
   <h2>
+    <a href="https://linktr.ee/antonimusic_" target="_blank">Antoní</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
     <a href="https://www.pouyaabdimusic.com/projects" target="_blank">Bald Bald</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
     <a href="https://www.duosu.de" target="_blank">Duo SU</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
     <a href="https://www.fjcello.eu" target="_blank">Felix Jedeck</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
@@ -84,12 +92,12 @@ const ProgrammPage = () => {
     <a href="https://www.unimusik.uni-hamburg.de/ensembles/big-band.html" target="_blank">Skyliner Bigband</a> 
     </h2>
 
+    Canvas <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Chorchester Collab <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-    Die Junge Camerata <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Duo: Geige & Klavier <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Gregor in der Kuppel <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     High Five / Azul <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-    Immanuel <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    Junge Camerata <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Kometen-Quintett <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Lanbo & Jia-Xi <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     LeSaTo <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
@@ -99,27 +107,15 @@ const ProgrammPage = () => {
 
   <Spacer height={16} />
       <p>
-        <h2>Kinderprogramm</h2>  
-        <a href="https://www.simonsagtmusik.de" target="_blank">Simon sagt</a> (Musikact) <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-        Kinderschminken <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-        Planetenrundgang <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-        Kinderführungen <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-        Rallye <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-        Spiel & Spaß
+        <h2>Kinderprogramm – Forschen, Spielen, Staunen</h2>  
+      Kinder erwartet ein spannendes Programm mit Sonnenbeobachtung, Rallye, Führungen speziell für Kinder (auch in DGS), Kinderschminken und musikalischer Unterhaltung durch den Hamburger Sänger <a href="https://www.simonsagtmusik.de" target="_blank">Simon sagt &#10154;</a> am Samstag um 15 Uhr. Kreative Bastelaktionen und Mitmachspiele runden das Angebot ab. Spielzeug wird gestellt von <a href="https://buewi.de/programm/zirkus-willibande/" target="_blank">Zirkus Willibande &#10154;</a>.
       </p>
         <Spacer height={16} />
-       <h2><sup>*</sup>Vorträge</h2>
-       <p> 	Jan-Erik Christian: Neutronensterne - Alles Quark? <br/>
-	          Martin Fournier: Simulating the Universe with Supercomputers <br/>
-	          Sören Witte: Was macht Planeten bewohnbar? <br/>
-	          Günter Sigl: Die höchstenergetischen Teilchen des Universums: Woher kommen sie und woraus bestehen sie? <br/>
-	          Pranjal Trivedi: From the Music of the Heavens to the Symphony of Black Holes <br/>
+             <p>
+        <h2>Food & Getränke</h2>  
+Verschiedene Food Trucks versorgen euch mit veganen, vegetarischen und klassischen Speisen – ideal für eine Pause, zu Stärkung und für das Miteinander. Außerdem gibt es Getränke. Fremdgetränke sind bei uns nicht erlaubt – außer eurer Wasserflasche, die ihr gerne mitbringen dürft.      </p>
+        <Spacer height={16} />
 
-
-</p>
-<Spacer height={16} />
-      <h3>Folge uns auf <a href="https://www.instagram.com/sternstundenfestival" target="_blank">Instagram &#10154;</a> und erfahre direkt, wenn das vollständige Programm online ist.</h3>
- <Spacer height={32} />
         <h2>Rückblick</h2>
       <h3>In den letzten Jahren haben unter anderem folgende Acts bei uns gespielt</h3>
       <p> <a href="https://www.heptapolka.com/" target="_blank">Hepta Polka &#10154;</a><br/>
@@ -138,6 +134,9 @@ const ProgrammPage = () => {
           <a href="https://www.instagram.com/bow.brothers/" target="_blank">Bow Brothers &#10154;</a><br/>
           <a href="https://www.fjcello.eu/" target="_blank">Felix Jedeck &#10154;</a><br/>
 </p>
+<Spacer height={16} />
+<h3>Folge uns auf <a href="https://www.instagram.com/sternstundenfestival" target="_blank">Instagram &#10154;</a>.</h3>
+ 
     </div>
   );
 };

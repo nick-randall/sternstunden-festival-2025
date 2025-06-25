@@ -50,7 +50,7 @@ const Artists: React.FC = async () => {
 
   return (
     <div className="artists-page-wrapper">
-      <h1>Artists</h1>
+      <h1>Programm</h1>
       <div className="artists-grid">
         {artistsWithPlaceholders.map((a: ArtistWithEventsAndPlaceholderImage) => (
           <Link key={a.artist.id} href={`/kuenstlerinnen/${a.artist.code}`} className="artist-link">
