@@ -34,8 +34,12 @@ Einige Angebote werden in Deutsche Gebärdensprache (DGS  <Image src="/gebaerden
  
 <p>
   <h2>Musikprogramm – Klangwelten unter Sternen</h2>
-  <p>Zwei Tage, fünf Bühnen, ein spannendes Lineup: Von Kammermusik über Indiepop, Jazz bis Elektronik sind Acts wie Anahit Vardanyan, Rocket Men, INSA, Yousef Kekhia und viele mehr dabei. Außerdem spielen viele Ensembles aus dem Kosmos der Unimusik Hamburg. <br/>
-In den Innenräumen – Großer Refraktor, Bibliothek und Oskar-Lühning-Teleskop – ist der Platz begrenzt. Deshalb spielen viele Ensembles ihr Programm zweimal. Falls das erste Konzert voll ist, habt ihr die Möglichkeit, einfach das zweite zu besuchen.  </p>
+  <p>Zwei Tage, fünf Bühnen, ein spannendes Lineup: Von Kammermusik über Indiepop, Jazz bis Elektronik sind Acts wie Anahit Vardanyan, Rocket Men, NOUK, Yousef Kekhia, INSA und viele mehr dabei. 
+    Außerdem spielen viele Ensembles aus dem Kosmos der Unimusik Hamburg. 
+    Beim <Link href="/kuenstlerinnen/pabameto_quartett">Pabameto Quartett</Link> lädt ein angeleiteter Community Dance zum gemeinsamen Tanzen ein. <br/>
+In den Innenräumen – Großer Refraktor, Bibliothek und Oskar-Lühning-Teleskop – ist der Platz begrenzt. Deshalb spielen viele Ensembles ihr Programm zweimal. Falls das erste Konzert voll ist, habt ihr die Möglichkeit, einfach das zweite zu besuchen.  
+
+</p>
 👉 <Link href="/timetable">
       <strong>[Zum Timetable]</strong>
         </Link> 
@@ -108,7 +112,9 @@ In den Innenräumen – Großer Refraktor, Bibliothek und Oskar-Lühning-Telesko
   <Spacer height={16} />
       <p>
         <h2>Kinderprogramm – Forschen, Spielen, Staunen</h2>  
-      Kinder erwartet ein spannendes Programm mit Sonnenbeobachtung, Rallye, Führungen speziell für Kinder (auch in DGS), Kinderschminken und musikalischer Unterhaltung durch den Hamburger Sänger <a href="https://www.simonsagtmusik.de" target="_blank">Simon sagt &#10154;</a> am Samstag um 15 Uhr. Kreative Bastelaktionen und Mitmachspiele runden das Angebot ab. Spielzeug wird gestellt von <a href="https://buewi.de/programm/zirkus-willibande/" target="_blank">Zirkus Willibande &#10154;</a>.
+      Kinder erwartet ein spannendes Programm mit Sonnenbeobachtung, Rallye, Führungen speziell für Kinder (auch in DGS), Kinderschminken und musikalischer Unterhaltung durch den Hamburger Sänger <a href="https://www.simonsagtmusik.de" target="_blank">Simon sagt &#10154;</a> am Samstag um 15 Uhr. 
+Außerdem erwartet euch ein lehrreicher Planetenrundgang über das Gelände – mit spannenden Infos zu den Himmelskörpern und einem Hörtext zu Gustav Holsts 'Die Planeten', den ihr auf dem Handy eurer Eltern hören könnt. 
+Kreative Bastelaktionen und Mitmachspiele runden das Angebot ab. Spielzeug wird gestellt von <a href="https://buewi.de/programm/zirkus-willibande/" target="_blank">Zirkus Willibande &#10154;</a>.
       </p>
         <Spacer height={16} />
              <p>
