@@ -5,6 +5,7 @@ import { getDayEndTime, getDayStartTime, getReadableDETime } from "@/helper_func
 import Link from "next/link";
 import Image from "next/image";
 import TimetableSwitcher from "@/components/TimetableSwitcher";
+import Spacer from "@/components/Spacer";
 
 const minutesPerCell = 30;
 
@@ -157,7 +158,7 @@ const TimetablePage = async () => {
       <h1>Timetable</h1>
 
       <TimetableSwitcher dayTimetables={dayTimetables} dayNames={dayNames} />
-
+      <Spacer height={8} />
       <div className="legend-column">
         <div className="symbols-row">
           <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" />&nbsp;= Mit Übersetzung in Deutscher Gebärdensprache
