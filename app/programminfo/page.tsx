@@ -36,7 +36,7 @@ Einige Angebote werden in Deutsche Gebärdensprache (DGS  <Image src="/gebaerden
   <h2>Musikprogramm – Klangwelten unter Sternen</h2>
   <p>Zwei Tage, fünf Bühnen, ein spannendes Lineup: Von Kammermusik über Indiepop, Jazz bis Elektronik sind Acts wie Anahit Vardanyan, Rocket Men, NOUK, Yousef Kekhia, INSA und viele mehr dabei. 
     Außerdem spielen viele Ensembles aus dem Kosmos der Unimusik Hamburg. 
-    Beim <Link href="/kuenstlerinnen/pabameto_quartett">Pabameto Quartett</Link> lädt ein angeleiteter Community Dance zum gemeinsamen Tanzen ein. <br/>
+    Beim <Link href="/kuenstlerinnen/pabameto-quartett">Pabameto Quartett</Link> lädt ein angeleiteter Community Dance zum gemeinsamen Tanzen ein. <br/>
 In den Innenräumen – Großer Refraktor, Bibliothek und Oskar-Lühning-Teleskop – ist der Platz begrenzt. Deshalb spielen viele Ensembles ihr Programm zweimal. Falls das erste Konzert voll ist, habt ihr die Möglichkeit, einfach das zweite zu besuchen.  
 
 </p>
@@ -50,17 +50,17 @@ In den Innenräumen – Großer Refraktor, Bibliothek und Oskar-Lühning-Telesko
         <br/>
   <h3>Freitag</h3>
   <h1>
-    <a href="https://rocket-men.com/" target="_blank">Rocket Men</a> &nbsp;<Image src="/star.svg" alt="star symbol" width="20" height="20" /> &nbsp;
-    <a href="https://linktr.ee/Yousefk" target="_blank">Yousef Kekhia</a>
+    <Link href="/kuenstlerinnen/rocket-men" target="_blank">Rocket Men</Link> &nbsp;<Image src="/star.svg" alt="star symbol" width="20" height="20" /> &nbsp;
+    <Link href="/kuenstlerinnen/yousef-kekhia" target="_blank">Yousef Kekhia</Link>
   </h1>
 
   <h2>
-    <a href="https://m.soundcloud.com/bow-brothers" target="_blank">Bow Brothers</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
-    <a href="https://linktr.ee/insa.music" target="_blank">INSA</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
-    <a href="https://www.julieweissbach.de/" target="_blank">Julie Weißbach</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
-    <a href="https://linktr.ee/kurkapellesonnendeck" target="_blank">Kurkapelle Sonnendeck</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
-    <a href="https://www.justuswolf.com/pepziecarola-1" target="_blank">pepziecarola</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
-    <a href="https://linktr.ee/TonioGeugelin" target="_blank">Tonio Geugelin</a>  
+    <Link href="/kuenstlerinnen/bow-brothers" target="_blank">Bow Brothers</Link> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <Link href="/kuenstlerinnen/insa" target="_blank">INSA</Link> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <Link href="/kuenstlerinnen/julie-weibach" target="_blank">Julie Weißbach</Link> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <Link href="/kuenstlerinnen/kurkapelle-sonnendeck" target="_blank">Kurkapelle Sonnendeck</Link> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <Link href="/kuenstlerinnen/pepziecarola" target="_blank">pepziecarola</Link> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <Link href="/kuenstlerinnen/tonio-geugelin" target="_blank">Tonio Geugelin</Link>
     </h2>
 
     Alsterquintett <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
@@ -76,24 +76,24 @@ In den Innenräumen – Großer Refraktor, Bibliothek und Oskar-Lühning-Telesko
 
 <h3>Samstag</h3>
     <h1>
-  <a href="https://linktr.ee/AnahitVardanyan " target="_blank">Anahit Vardanyan</a> &nbsp;<Image src="/star.svg" alt="star symbol" width="20" height="20" /> &nbsp;
-    <a href="https://noukmusik.de/" target="_blank">NOUK</a>
+  <Link href="/kuenstlerinnen/anahit-vardanyan " target="_blank">Anahit Vardanyan</Link> &nbsp;<Image src="/star.svg" alt="star symbol" width="20" height="20" /> &nbsp;
+    <Link href="/kuenstlerinnen/nouk" target="_blank">NOUK</Link>
   </h1>
 
   <h2>
-    <a href="https://linktr.ee/antonimusic_" target="_blank">Antoní</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
-    <a href="https://www.pouyaabdimusic.com/projects" target="_blank">Bald Bald</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
-    <a href="https://www.duosu.de" target="_blank">Duo SU</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
-    <a href="https://www.fjcello.eu" target="_blank">Felix Jedeck</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
-    <a href="https://on.soundcloud.com/se6fqL66CfTDezj47" target="_blank">Forehead</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
-    <a href="https://deaf-anthropologist.bandcamp.com/album/in-vivo" target="_blank">IN VIVO Kosmos</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
-    <a href="https://www.instagram.com/lucidrobberyofficial/" target="_blank">Lucid Robbery</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
-    <a href="https://www.pabameto.com/quartett/" target="_blank">Pabameto Quartett (Community Dance)</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
-    <a href="https://www.youtube.com/watch?v=nV609OqIEE4" target="_blank">Panimo</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
-    <a href="https://quabla-band.com" target="_blank">Quabla</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
-    <a href="https://www.pouyaabdimusic.com/projects" target="_blank">Sebastian Gietz Quintett</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
-    <a href="https://www.simonsagtmusik.de" target="_blank">Simon sagt</a> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
-    <a href="https://www.unimusik.uni-hamburg.de/ensembles/big-band.html" target="_blank">Skyliner Bigband</a> 
+    <Link href="/kuenstlerinnen/antoni" target="_blank">Antoní</Link> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <Link href="/kuenstlerinnen/bald-bald" target="_blank">Bald Bald</Link> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <Link href="/kuenstlerinnen/duo-su" target="_blank">Duo SU</Link> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <Link href="/kuenstlerinnen/felix-jedeck" target="_blank">Felix Jedeck</Link> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <Link href="/kuenstlerinnen/forehead" target="_blank">Forehead</Link> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <Link href="/kuenstlerinnen/in-vivo-kosmos" target="_blank">IN VIVO Kosmos</Link> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <Link href="/kuenstlerinnen/lucid-robbery" target="_blank">Lucid Robbery</Link> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <Link href="/kuenstlerinnen/pabameto-quartett" target="_blank">Pabameto Quartett (Community Dance)</Link> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <Link href="/kuenstlerinnen/panimo" target="_blank">Panimo</Link> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <Link href="/kuenstlerinnen/quabla" target="_blank">Quabla</Link> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <Link href="/kuenstlerinnen/sebastian-gietz-quintett" target="_blank">Sebastian Gietz Quintett</Link> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <Link href="/kuenstlerinnen/simon-sagt" target="_blank">Simon sagt</Link> <Image src="/star.svg" alt="star symbol" width="15" height="15" />&nbsp;
+    <Link href="/kuenstlerinnen/skyliner-bigband" target="_blank">Skyliner Bigband</Link>
     </h2>
 
     Canvas <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
