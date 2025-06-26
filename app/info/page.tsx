@@ -64,6 +64,13 @@ const MoreInfoPage = () => {
             <strong>und vieles mehr</strong>
           </li>
         </ul>
+        👉 <Link href="/timetable">
+      <strong>[Zum Timetable]</strong>
+        </Link> 
+        <br/>
+ 👉     <Link href="/kuenstlerinnen">
+      <strong>[Zum Programm]</strong>
+        </Link> 
         <Spacer height={4} />
       </p>
       <h3>Für alle Generationen</h3>
