@@ -103,7 +103,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 position: relative;
               }
               .page-wrapper {
-                margin-top: auto;
+               
                 width: auto;
                 left: auto;
                 transform: none;
