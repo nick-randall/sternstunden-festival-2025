@@ -176,12 +176,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     />
                   </a>
                 </div>
-                              <div className="sponsor-logo-row">
+                             
                 <div className="sponsor-logo-container">
                   <a href="https://www.uni-hamburg.de/exzellenz/exzellenzcluster.html" target="_blank" title="Exzellenzcluster">
                     <Image src="/sponsors/excellenzcluster.png" alt="Excellenzcluster" width="400" height="78" className="sponsor-logo" />
                   </a>
-                  </div>
               </div>
 </div>
 </div>
@@ -201,65 +200,48 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <Image src="/sponsors/bergedorf_bille.png" alt="Bergedorf Bille" width="400" height="78" className="sponsor-logo" />
                   </a>
                 </div>
-              </div>
-
-                <div className="sponsor-logo-row">
                 <div className="sponsor-logo-container">
                   <a href="https://www.asta-uhh.de/" target="_blank" title="AStA Hamburg">
                     <Image src="/sponsors/asta.png" alt="AStA Hamburg" width="400" height="78" className="sponsor-logo" />
                   </a>
                   </div>
-                  </div>                  
-
-                <div className="sponsor-logo-row">
+                  
                 <div className="sponsor-logo-container">
                   <a href="https://www.european-gmbh.de/" target="_blank" title="European GmbH">
                     <Image src="/sponsors/european_logo.png" alt="European GmbH" width="400" height="78" className="sponsor-logo" />
                   </a>
                   </div>
-                  </div>             
-
-                <div className="sponsor-logo-row">
+                  
                 <div className="sponsor-logo-container">
                   <a href="https://sternstundenfestival.de" target="_blank" title="Fernandez Medien- und Eventtechnik">
                     <Image src="/sponsors/fernandez.png" alt="Fernandez Medien- und Eventtechnik" width="400" height="78" className="sponsor-logo" />
                   </a>
                   </div>
-                  </div>    
-
-                <div className="sponsor-logo-row">
+                  
                 <div className="sponsor-logo-container">
                   <a href="https://freshmen.media/" target="_blank" title="Freshmen Media">
                     <Image src="/sponsors/freshmen.png" alt="Freshmen Media" width="400" height="78" className="sponsor-logo" />
                   </a>
                   </div>
-                  </div>                      
-
-                <div className="sponsor-logo-row">
+                
                 <div className="sponsor-logo-container">
                   <a href="https://www.kaiser-showtechnik.de/" target="_blank" title="Kaiser Showtechnik">
                     <Image src="/sponsors/kaiser.png" alt="Kaiser Showtechnik" width="400" height="78" className="sponsor-logo" />
                   </a>
                   </div>
-                  </div>   
-
-                <div className="sponsor-logo-row">
+                  
                 <div className="sponsor-logo-container">
                   <a href="https://www.nordlicht-verleih.de/" target="_blank" title="Nordlicht Verleih">
                     <Image src="/sponsors/nordlicht.png" alt="Nordlicht Verleih" width="400" height="78" className="sponsor-logo" />
                   </a>
                   </div>
-                  </div>  
-
-                <div className="sponsor-logo-row">
+        
                 <div className="sponsor-logo-container">
                   <a href="https://www.nordlite.de/" target="_blank" title="Nordlite Veranstaltungstechnik GmbH">
                     <Image src="/sponsors/nordlite.png" alt="Nordlite Veranstaltungstechnik GmbH" width="400" height="78" className="sponsor-logo" />
                   </a>
                   </div>
-                  </div> 
-
-                <div className="sponsor-logo-row">
+                 
                 <div className="sponsor-logo-container">
                   <a href="https://www.visiontools.de/" target="_blank" title="Vision Tools">
                     <Image src="/sponsors/visiontools.png" alt="Vision Tools" width="400" height="78" className="sponsor-logo" />
@@ -277,38 +259,30 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 <div className="sponsor-logo-wrap-section3">
 
               <div className="sponsor-logo-row">
-                <div className="sponsor-logo-container2">
+                <div className="sponsor-logo-container">
                   <a href="https://www.haw-hamburg.de/" target="_blank" title="HAW Hamburg">
                     <Image src="/sponsors/hawhamburg.png" alt="HAW Hamburg" height="155" width="336" className="sponsor-logo" />
                   </a>
                 </div>
-              </div>
-
-              <div className="sponsor-logo-row">
-                <div className="sponsor-logo-container2">
+              
+                <div className="sponsor-logo-container">
                   <a href="https://www.unimusik.uni-hamburg.de/ueber-unimusik/foerderverein-unimusik.html" target="_blank" title="Unimusik Förderverein">
                     <Image src="/sponsors/unimusik-foerderverein.png" alt="Unimusik Förderverein" height="155" width="336" className="sponsor-logo" />
                   </a>
                 </div>
-              </div>
-
-       <div className="sponsor-logo-row">
+              
                 <div className="sponsor-logo-container">
                   <a href="https://www.unimusik.uni-hamburg.de/" target="_blank" title="Univmusik Hamburg"> 
                     <Image src="/sponsors/UHH_Wortmarken_Unimusik_DIN_A4.png" alt="Unimusik Hamburg Sponsor" width="375" height="123" className="sponsor-logo" />
                   </a>
                 </div>
-              </div>
-
-              <div className="sponsor-logo-row">
+              
                 <div className="sponsor-logo-container">
                   <a href="https://www.physik.uni-hamburg.de/hs.html" target="_blank" title="Hamburger Sternwarte">
                     <Image src="/sponsors/UHH_Wortmarke_Sternwarte.png" alt="Hamburger Sternwarte" width="400" height="78" className="sponsor-logo" />
                   </a>
                 </div>
-              </div>
-
-              <div className="sponsor-logo-row">
+              
                 <div className="sponsor-logo-container">
                   <a href="https://www.fhsev.de/" target="_blank" title=" Förderverein Hamburger Sternwarte">
                     <Image src="/sponsors/fhs.png" alt="Förderverein Hamburger Sternwarte" width="400" height="78" className="sponsor-logo" />

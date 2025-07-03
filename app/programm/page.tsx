@@ -65,9 +65,11 @@ In den Innenräumen – Großer Refraktor, Bibliothek und Oskar-Lühning-Telesko
 
     Alsterquintett <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Bettina & Bettina <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    Canvas <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Die Blechschnecken <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Ensemble Heißer Scheiß <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Ensemble Nachtklang <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+    High Five / Azul <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     lili j. m. <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Malte <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Nil <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
@@ -96,11 +98,10 @@ In den Innenräumen – Großer Refraktor, Bibliothek und Oskar-Lühning-Telesko
     <Link href="/kuenstlerinnen/skyliner-bigband" target="_blank">Skyliner Bigband</Link>
     </h2>
 
-    Canvas <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
+
     Chorchester Collab <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Duo: Geige & Klavier <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Gregor in der Kuppel <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-    High Five / Azul <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Junge Camerata <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Kometen-Quintett <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Lanbo & Jia-Xi <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
