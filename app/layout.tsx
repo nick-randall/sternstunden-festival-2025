@@ -200,6 +200,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <Image src="/sponsors/bergedorf_bille.png" alt="Bergedorf Bille" width="400" height="78" className="sponsor-logo" />
                   </a>
                 </div>
+                
                 <div className="sponsor-logo-container">
                   <a href="https://www.asta-uhh.de/" target="_blank" title="AStA Hamburg">
                     <Image src="/sponsors/asta.png" alt="AStA Hamburg" width="400" height="78" className="sponsor-logo" />
