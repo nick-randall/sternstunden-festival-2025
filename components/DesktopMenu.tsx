@@ -99,7 +99,11 @@ const DesktopMenu: React.FC = () => {
                   Timetable
                 </Link>
               </li>
-          
+               <li>
+                <Link href="/mobile-app" className="menu-dropdown-link">
+                  Festival App
+                </Link>
+              </li>
               {/*  <li>
                 <Link href="/planeten" className="menu-dropdown-link">
                   Planetenrundgang
