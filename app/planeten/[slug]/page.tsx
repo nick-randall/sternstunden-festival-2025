@@ -31,6 +31,19 @@ const IndividualPlanet: React.FC<IndividualPlanetProps> = async ({ params }) => 
     pluto: "Kein Plan von Pluto",
   };
 
+  const texts: { [key: string]: string } = {
+    merkur: "Merkur ist der sonnennächste Planet und der kleinste Planet unseres Sonnensystems. Er hat eine sehr dünne Atmosphäre und eine extrem hohe Temperatur.",
+    venus: "Venus ist der zweite Planet von der Sonne und ähnelt in Größe und Struktur der Erde, hat aber eine dichte, giftige Atmosphäre.",
+    erde: "Die Erde ist der dritte Planet von der Sonne und der einzige bekannte Planet, auf dem Leben existiert.",
+    mars: "Mars ist der vierte Planet von der Sonne und bekannt für seine rote Farbe, die durch Eisenoxid auf seiner Oberfläche verursacht wird.",
+    jupiter: "Jupiter ist der größte Planet unseres Sonnensystems und hat eine sehr starke Magnetosphäre sowie viele Monde.",
+    saturn: "Saturn ist bekannt für seine auffälligen Ringe, die aus Eis- und Gesteinsbrocken bestehen.",
+    uranus: "Uranus ist ein Eisriese mit einer einzigartigen Neigung, die ihn auf die Seite kippt, während er um die Sonne kreist.",
+    neptun: "Neptun ist der äußerste Planet unseres Sonnensystems und bekannt für seine starken Winde und tiefblaue Farbe.",
+    pluto: "Pluto wurde früher als neunter Planet betrachtet, wird aber jetzt als Zwergplanet klassifiziert.",
+  };
+
+
   const getClickRightUrl = () => {
     const currPlanet = Object.keys(titles).indexOf(slug);
     const nextPlanet = (currPlanet + 1) % Object.keys(titles).length;
@@ -80,9 +93,8 @@ const IndividualPlanet: React.FC<IndividualPlanetProps> = async ({ params }) => 
       <section className="planet-description">
         <p>Habt ihr das gehört?</p>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod distinctio consequuntur impedit debitis a voluptas voluptatibus, accusamus et
-          sint ipsum quos dignissimos quia repellat ducimus. Fugiat delectus ab laudantium. Corrupti?
-        </p>
+         {texts[slug] || "Hier gibt es keine Beschreibung für diesen Planeten."}
+         </p>
       </section>
     </div>
   );

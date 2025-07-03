@@ -1,5 +1,5 @@
 "use client";
-import { useState, JSX, FC, useRef,  useEffect } from "react";
+import { useState, JSX, FC, useRef, useEffect } from "react";
 import Spacer from "./Spacer";
 import Image from "next/image";
 import { createPortal } from "react-dom";
@@ -31,11 +31,45 @@ const TimetableSwitcher: FC<TimetableSwitcherProps> = ({ dayTimetables, dayNames
     });
   };
 
+  const handleDayChange = (index: number) => {
+    setSelectedDayIndex(index);
+    localStorage.setItem("selectedDayIndex", index.toString());
+  };
+
+  useEffect(() => {
+    const lastSelectedIndex = localStorage.getItem("selectedDayIndex");
+    if (lastSelectedIndex !== null) {
+      setSelectedDayIndex(parseInt(lastSelectedIndex, 10));
+    }
+    const savedScrollPosition = localStorage.getItem("scrollPosition");
+    const container = tablesContainerRef.current;
+    if (savedScrollPosition && container) {
+      const scrollPosition = parseInt(savedScrollPosition, 10);
+      container.scrollTo({
+        left: scrollPosition,
+        behavior: "instant",
+      });
+    }
+    const handleScroll = () => {
+      if (tablesContainerRef.current) {
+        localStorage.setItem("scrollPosition", tablesContainerRef.current.scrollLeft.toString());
+      }
+    };
+    if (container) {
+      container.addEventListener("scroll", handleScroll);
+    }
+    return () => {
+      if (container) {
+        container.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
+
   return (
     <div>
       <Arrows scrollBackward={scrollBackward} scrollForward={scrollForward} />
       {dayNames.map((dayName, index) => (
-        <button className={`day-name-button ${index === selectedDayIndex ? "selected" : ""}`} key={index} onClick={() => setSelectedDayIndex(index)}>
+        <button className={`day-name-button ${index === selectedDayIndex ? "selected" : ""}`} key={index} onClick={() => handleDayChange(index)}>
           {dayName}
         </button>
       ))}
