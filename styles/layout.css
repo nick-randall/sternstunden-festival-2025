@@ -77,21 +77,18 @@ body {
 
 .sponsor-logo-wrap-section2 {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   max-width: 1920px;
 }
 
 .sponsor-logo-wrap-section3 {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   max-width: 1920px;
 }
 
 .sponsor-logo-wrap-section {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   max-width: 800px;
 }
