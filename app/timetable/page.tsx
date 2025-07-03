@@ -178,7 +178,13 @@ const TimetablePage = async () => {
         </div>
 
         <div>
-          <br></br>Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell. Stand 03.07.
+          <br/>
+          Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell. Stand 03.07.
+          <br/>
+          Fürs Smartphone haben wir auch eine
+           👉 <Link href="/mobile-app">
+      <strong>Festival App</strong> 
+        </Link>.
         </div>
       </div>
     </div>

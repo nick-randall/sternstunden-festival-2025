@@ -74,6 +74,24 @@ body {
   padding: 0px 10px;
 }
 
+.sponsor-logo-row2 {
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.sponsor-logo-wrap-section2 {
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+}
+
+.sponsor-logo-wrap-section3 {
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+}
+
 .sponsor-logo-wrap-section {
   display: flex;
   justify-content: center;
@@ -81,6 +99,12 @@ body {
 }
 
 .sponsor-logo-container {
+  width: 100%;
+  min-width: 150px;
+  max-width: 180px;
+}
+
+.sponsor-logo-container2 {
   width: 100%;
   min-width: 150px;
   max-width: 180px;
