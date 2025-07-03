@@ -187,9 +187,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 <Spacer height={32} />
             <div>
-              <strong>Gesponsort durch</strong>
+              <strong>Gesponsert durch</strong>
             </div>
-<Spacer height={32} />
 
 <div className="sponsor-logo-wrap-section2">
 
@@ -255,7 +254,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div>
               <strong>Partner:innen</strong>
             </div>
-<Spacer height={32} />
 
 <div className="sponsor-logo-wrap-section3">
 
