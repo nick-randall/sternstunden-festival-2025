@@ -178,7 +178,7 @@ const TimetablePage = async () => {
         </div>
 
         <div>
-          <br></br>Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell.
+          <br></br>Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell. Stand 03.07.
         </div>
       </div>
     </div>

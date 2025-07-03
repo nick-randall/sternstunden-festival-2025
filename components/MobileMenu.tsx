@@ -61,7 +61,7 @@ const MobileMenu: React.FC = () => {
 
             </Link>
                          <div className="mobile-sub-menu-item">
-              <Link href="/programminfo" className="mobile-menu-item-container" onClick={toggleMenu}>
+              <Link href="/programm" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Programminfo</div>
               </Link>
             </div>

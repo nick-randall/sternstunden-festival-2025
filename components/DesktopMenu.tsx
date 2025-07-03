@@ -90,7 +90,7 @@ const DesktopMenu: React.FC = () => {
                 </Link>
               </li>  
                   <li>
-                <Link href="/programminfo" className="menu-dropdown-link">
+                <Link href="/programm" className="menu-dropdown-link">
                   Programminfo
                 </Link>
               </li> 
