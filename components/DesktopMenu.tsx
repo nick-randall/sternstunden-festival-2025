@@ -124,11 +124,11 @@ const DesktopMenu: React.FC = () => {
                   Anfahrt
                 </Link>
               </li>
-              {/* <li>
+              <li>
                 <Link href="/lageplan" className="menu-dropdown-link">
                   Lageplan
                 </Link>
-              </li> */}
+              </li>
               <li>
                 <Link href="/faqs" className="menu-dropdown-link">
                   FAQs
