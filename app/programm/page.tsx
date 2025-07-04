@@ -12,14 +12,14 @@ const ProgrammPage = () => {
     <div className="boring-page-wrapper">
       <h1>Programminfo 2025</h1>
       <p>Unser Festival an der Hamburger Sternwarte bietet ein abwechslungsreiches Programm aus Wissenschaft, 
-        Musik und Kinderangeboten – von Teleskop-Beobachtungen über Ensemblemusik bis Science Slam, von Techno über Jazz bis Klassik, von Sagittarius A* über schwarze Löcher bis zur Sonne. Das ganze auf dem wunderschönen Gelände der Hamburger Sternwarte in Hamburg-Bergedorf.
+        Musik und Kinderangeboten – von Teleskop-Beobachtungen über Ensemblemusik bis Science Slam, von Techno über Jazz bis Klassik, von Sagittarius A* über schwarze Löcher bis zur Sonne. Das Ganze auf dem wunderschönen Gelände der Hamburger Sternwarte in Hamburg-Bergedorf.
         Hier gibt’s einen Überblick über die einzelnen Programmbereiche.
 </p>
                <Spacer height={16} />
 
       <h2>Astroprogramm – Das Universum zum Anfassen</h2>
       <p>
-          Erlebt Teleskop-Besichtungen, Virtual Reality-Reisen, Sonnenbeobachtung und Science Slam. Entdeckt interaktive Experimente, Führungen, Ausstellungen und stellt eure Fragen direkt an Astronom:innen. Freut euch auf spannende Vorträge von Astrophysiker*innen zu Themen wie Neutronensterne, Supercomputer, bewohnbare Planeten, kosmische Teilchen und die Symphonie der Schwarzen Löcher.
+          Erlebt Teleskop-Besichtungen, Virtual Reality-Reisen, Sonnenbeobachtung und Science Slam. Entdeckt interaktive Experimente, Führungen, Ausstellungen und stellt eure Fragen direkt an Astronom:innen. Freut euch auf spannende Vorträge von Astrophysiker:innen zu Themen wie Neutronensterne, Supercomputer, bewohnbare Planeten, kosmische Teilchen und die Symphonie der Schwarzen Löcher.
 Einige Angebote werden in Deutsche Gebärdensprache (DGS  <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" /> ) übersetzt. 
 <br/>
 👉 <Link href="/timetable">
@@ -64,7 +64,6 @@ In den Innenräumen – Großer Refraktor, Bibliothek und Oskar-Lühning-Telesko
     </h2>
 
     Alsterquintett <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
-    Bettina & Bettina <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Canvas <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Die Blechschnecken <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Ensemble Heißer Scheiß <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
@@ -99,6 +98,7 @@ In den Innenräumen – Großer Refraktor, Bibliothek und Oskar-Lühning-Telesko
     </h2>
 
 
+    Bettina & Bettina <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Chorchester Collab <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Duo: Geige & Klavier <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Gregor in der Kuppel <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
