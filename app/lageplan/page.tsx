@@ -1,7 +1,6 @@
 // import Flex from "@/components/Flex";
 import "../../styles/common.css";
 import "../../styles/boring-pages.css";
-import Spacer from "@/components/Spacer";
 import Image from "next/image";
 import Zoomable from "@/components/Zoomable";
 
