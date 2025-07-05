@@ -1,6 +1,7 @@
 "use client";
 import "../../styles/common.css";
 import "../../styles/boring-pages.css";
+import Spacer from "@/components/Spacer";
 import CollapsibleText from "@/components/CollapsibleTextBox";
 import { useState } from "react";
 
@@ -30,10 +31,8 @@ const Faqs = () => {
               und warum sich eine Partnerschaft lohnen kann in unserem
               <a href="https://drive.google.com/file/d/1tA0ZSmtFKyFFrA8xUp_mBrO4HznoVbEH/view?usp=sharing" target="_blank" title="Sponsoring Folder">
                 <strong> Sponsoring Folder &#10154;</strong>
-              </a>
-              .
-              <br />
-              <br />
+              </a>.
+                <Spacer height={16} />
               Unternehmen können Förderbeträge von der Steuer absetzen!
               <br />
             </div>
@@ -50,8 +49,7 @@ const Faqs = () => {
               angewiesen, um unser Festival möglich zu machen. Das Sternstunden Festival kannst du auch mit einer Spende als Privatperson fördern. So
               leistest du deinen Beitrag, die Kultur und Wissenschaft Hamburgs abseits des Mainstreams zu bereichern. Wenn du uns unter die Arme
               greifen möchtest, freuen wir uns sehr über deine Spende auf folgendes Konto:
-              <br />
-              <br />
+                 <Spacer height={16} />
               Förderverein der Unimusik Hamburg e.V.
               <br />
               DE39 8306 5408 0004 1718 96
@@ -59,8 +57,9 @@ const Faqs = () => {
               GENODEF1SLR
               <br />
               Deutsche Skatbank
-              <br />
-              <br />
+                  <Spacer height={16} />
+              Oder nutze diesen <strong><a href="https://www.paypal.com/donate/?hosted_button_id=RMNEQFSCL48SQ" target="_blank">Paypal Link&#10154;</a></strong>.
+    <Spacer height={16} />
               Eine Spendenbescheinigung können wir auf Wunsch ausstellen. Bitte kontaktiere uns dafür unter:
               <a href="mailto:info@foerderverein-unimusik-hamburg.de?subject=Spendenbescheinigung%20Sternstunden" title="Spendenbescheinigung">
                 <strong> info@foerderverein-unimusik-hamburg.de </strong>
@@ -80,7 +79,7 @@ const Faqs = () => {
               Nachbarschaft einzusetzen? Sprich uns gerne an!
               <br />
               <br />
-              Wenn ihr Lust habt, uns <strong> </strong> , beim <strong>Auf- und Abbau</strong> oder an den <strong>Festivaltagen selbst</strong> zu
+              Wenn ihr Lust habt, uns beim <strong>Auf- und Abbau</strong> oder an den <strong>Festivaltagen selbst</strong> zu
               unterstützen, freuen wir uns sehr über eure Hilfe! Meldet euch einfach über dieses{" "}
               <a href="https://forms.cloud.microsoft/r/Ts38UzQxBk?origin=lprLink" target="_blank" title="Google Dokument">
                 <strong> Google Dokument &#10154;</strong>
