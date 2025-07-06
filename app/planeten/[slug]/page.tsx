@@ -60,7 +60,6 @@ const IndividualPlanet: React.FC<IndividualPlanetProps> = async ({ params }) => 
 
   return (
     <div className="planets-page-wrapper">
-      <h1>{titles[slug] || slug}</h1>
       <div className="heading">
         <h2>{titles[slug] || slug}</h2>
         <Link className="back-button" href="/planeten">
