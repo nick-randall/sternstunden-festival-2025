@@ -70,7 +70,7 @@ const Anfahrt = () => {
       <div>
       <h3>🚌 Anreise mit dem ÖPNV</h3>
       <ul>
-        <li>Buslinien 332 und 135 (Haltestelle Sternwarte Besucherzentrum) fahren nur alle 30 Minuten</li>
+        <li>Buslinien 332 und 135</li>
         <li><strong>Alternative:</strong> Linien 8890 und 228 alle 10 Minuten bis Haltestelle Holtenklinke</li>
         → Treppe und Fußweg zur Sternwarte von dort<br/>
         → recht steiler Weg
