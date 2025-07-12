@@ -9,6 +9,30 @@ import Spacer from "@/components/Spacer";
 
 const minutesPerCell = 30;
 
+const positionOverlappingEvents = (event: FestivalEvent, events: FestivalEvent[]): { top: string, height: string } => {
+  const eventStartTime = new Date(event.startDateTime);
+  const eventEndTime = new Date(event.endDateTime);
+
+  const overlappingEvent = events.find(e => {
+    if (e.id === event.id) {
+      return false; // Skip the same event
+    }
+    if (e.stage.id !== event.stage.id) {
+      return false; // Only consider events on the same stage
+    }
+    const eStartTime = new Date(e.startDateTime);
+    const eEndTime = new Date(e.endDateTime);
+
+    return eStartTime < eventEndTime && eEndTime > eventStartTime;
+  });
+  if (overlappingEvent) {
+    const twoEvents = [event, overlappingEvent].sort((a, b) => a.id - b.id);
+    // Shouldn't really be sorting by ID, this will do for now
+    return twoEvents[0].id === event.id ? { top: "0%", height: "49%" } : { top: "50%", height: "50%" }; // Return 0 if the event is first, 50 if it's second
+  }
+  return { top: "0%", height:  "100%" }; // No overlap, so full height
+};
+
 class EventOnGrid {
   artist: ArtistWithoutEvents;
   event: FestivalEvent;
@@ -102,6 +126,14 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
                             width: `${eventOnGrid.numCellsWide * 100}%`,
                             left: `${eventOnGrid.innerCellLeftOffset * 100}%`,
                             backgroundColor: eventOnGrid.artist.attributes.astroprogramm ? "rgba(0, 140, 255, 0.322)" : "rgba(232, 0, 233, 0.16)",
+                            top: positionOverlappingEvents(
+                              eventOnGrid.event,
+                              stageEvents.flatMap(e => e.events)
+                            ).top,
+                            height: positionOverlappingEvents(
+                              eventOnGrid.event,
+                              stageEvents.flatMap(e => e.events)
+                            ).height,
                           }}
                         >
                           <Link href={`/kuenstlerinnen/${eventOnGrid.artist.code}`}>{eventOnGrid.artist.name}</Link>
@@ -115,7 +147,6 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
                             {eventOnGrid.event.attributes.kinderprogramm && (
                               <Image src="/kinderprogramm.png" alt="Symbol Kinderprogramm" height={19} width={32} />
                             )}
-                            
                           </div>
                         </div>
                       )}
@@ -132,11 +163,11 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
   );
 };
 
-
 const TimetablePage = async () => {
   let daysAndTheirEvents: DayAndEvents[] = [];
   try {
-    const response = await fetch(`https://sternstunde.fly.dev/get-stages-with-their-events`, {
+    // const response = await fetch(`https://sternstunde.fly.dev/get-stages-with-their-events`, {
+    const response = await fetch(`http://localhost:8080/get-stages-with-their-events`, {
       headers: { Accept: "application/json" },
       method: "POST",
     });
@@ -161,34 +192,38 @@ const TimetablePage = async () => {
       <Spacer height={8} />
       <div className="legend-column">
         <div className="symbols-row">
-          <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" />&nbsp;= Mit Übersetzung in Deutscher Gebärdensprache
-          (DGS) durch Studierende des IDGS Hamburg.
+          <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" />
+          &nbsp;= Mit Übersetzung in Deutscher Gebärdensprache (DGS) durch Studierende des IDGS Hamburg.
         </div>
         <div className="symbols-row">
-          <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height="25" width="25" />&nbsp;= Mit Kurzvortrag
+          <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height="25" width="25" />
+          &nbsp;= Mit Kurzvortrag
         </div>
         <div className="symbols-row">
-          <Image src="/kinderprogramm.png" alt="Symbol Kinderprogramm" height="19" width="32" />&nbsp;= (auch) für Kinder
+          <Image src="/kinderprogramm.png" alt="Symbol Kinderprogramm" height="19" width="32" />
+          &nbsp;= (auch) für Kinder
         </div>
         <div className="symbols-row">
-          <Image src="/musik_color.png" alt="Farbe Musikbox" height="19" width="19" />&nbsp;= Musikprogramm
+          <Image src="/musik_color.png" alt="Farbe Musikbox" height="19" width="19" />
+          &nbsp;= Musikprogramm
         </div>
         <div className="symbols-row">
-          <Image src="/astro_color.png" alt="Farbe Astrobox" height="19" width="19" />&nbsp;= Astroprogramm
+          <Image src="/astro_color.png" alt="Farbe Astrobox" height="19" width="19" />
+          &nbsp;= Astroprogramm
         </div>
 
         <div>
-          <br/>
+          <br />
           Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell. Stand 04.07.
-          <br/>
-          Fürs Smartphone haben wir auch eine
-           👉 <Link href="/mobile-app">
-      <strong>Festival App</strong> 
-        </Link>.
+          <br />
+          Fürs Smartphone haben wir auch eine 👉{" "}
+          <Link href="/mobile-app">
+            <strong>Festival App</strong>
+          </Link>
+          .
         </div>
       </div>
     </div>
   );
 };
 export default TimetablePage;
-
