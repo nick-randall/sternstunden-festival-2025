@@ -247,7 +247,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <Image src="/sponsors/visiontools.png" alt="Vision Tools" width="400" height="78" className="sponsor-logo" />
                   </a>
                   </div>
+
+                 <div className="sponsor-logo-container">
+                  <a href="https://www.momentevents.co/" target="_blank" title="Moment App">
+                    <Image src="/sponsors/moment.png" alt="Moment App" width="400" height="78" className="sponsor-logo" />
+                  </a>
+                  </div>
+
                   </div> 
+                                   
+
+                  
 </div>
 
 <Spacer height={32} />
