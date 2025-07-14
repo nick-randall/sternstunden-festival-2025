@@ -106,6 +106,8 @@ export default async function Page() {
             Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das Gelände der historischen{" "}
             <strong>Hamburger Sternwarte in Bergedorf</strong> ein. <strong>Freitags ab dem Nachmittag und samstags ab dem Mittag</strong> verwandelt
             sich die weitläufige Parkanlage rund um die denkmalgeschützten Teleskopgebäude in einen Ort der Begegnung mit Musik und Astronomie.
+             <Spacer height={32} />
+              Einlass ist am Freitag ab 16 Uhr und am Samstag ab 13:30 Uhr.
           </div>
           <br />
           <Link className="more-info" href="/info">

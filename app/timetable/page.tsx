@@ -234,7 +234,7 @@ const TimetablePage = async () => {
 
         <div>
           <br />
-          Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell. Stand 04.07.
+          Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell. Stand 14.07.
           <br />
           Fürs Smartphone haben wir auch eine 👉{" "}
           <Link href="/mobile-app">

@@ -13,7 +13,7 @@ const ProgrammPage = () => {
       <h1>Programminfo 2025</h1>
       <p>Unser Festival an der Hamburger Sternwarte bietet ein abwechslungsreiches Programm aus Wissenschaft, 
         Musik und Kinderangeboten – von Teleskop-Beobachtungen über Ensemblemusik bis Science Slam, von Techno über Jazz bis Klassik, von Sagittarius A* über schwarze Löcher bis zur Sonne. Das Ganze auf dem wunderschönen Gelände der Hamburger Sternwarte in Hamburg-Bergedorf.
-        Hier gibt’s einen Überblick über die einzelnen Programmbereiche.
+        Hier gibt’s einen Überblick über die einzelnen Programmbereiche. Einlass am Freitag ist ab 16:00 Uhr, Samstag ab 13:30 Uhr.
 </p>
                <Spacer height={16} />
 
@@ -113,9 +113,10 @@ In den Innenräumen – Großer Refraktor, Bibliothek und Oskar-Lühning-Telesko
   <Spacer height={16} />
       <p>
         <h2>Kinderprogramm – Forschen, Spielen, Staunen</h2>  
-      Kinder erwartet ein spannendes Programm mit Sonnenbeobachtung, Rallye, Führungen speziell für Kinder (auch in DGS), Kinderschminken und musikalischer Unterhaltung durch den Hamburger Sänger <a href="https://www.simonsagtmusik.de" target="_blank">Simon sagt &#10154;</a> am Samstag um 15 Uhr. 
+      Kinder erwartet ein spannendes Programm mit Sonnenbeobachtung, Rallye, Führungen speziell für Kinder (auch in DGS) und musikalischer Unterhaltung durch den Hamburger Sänger <a href="https://www.simonsagtmusik.de" target="_blank">Simon sagt &#10154;</a> am Samstag um 15 Uhr. 
 Außerdem erwartet euch ein lehrreicher Planetenrundgang über das Gelände – mit spannenden Infos zu den Himmelskörpern und einem Hörtext zu Gustav Holsts <strong>Die Planeten</strong>, den ihr auf dem Handy eurer Eltern hören könnt. 
-Kreative Bastelaktionen und Mitmachspiele runden das Angebot ab. Spielzeug wird gestellt von <a href="https://buewi.de/programm/zirkus-willibande/" target="_blank">Zirkus Willibande &#10154;</a>.
+Kinderschminken, kreative Bastelaktionen und Mitmachspiele runden das Angebot in der <strong>Kids Area</strong> ab. Spielzeug wird gestellt von <a href="https://buewi.de/programm/zirkus-willibande/" target="_blank">Zirkus Willibande &#10154;</a>. 
+<br/>Die <strong>Kids Area</strong> ist an beiden Tagen bis 19 Uhr geöffnet.
       </p>
         <Spacer height={16} />
              <p>

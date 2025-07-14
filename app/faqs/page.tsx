@@ -40,7 +40,7 @@ const Faqs = () => {
         <CollapsibleText
           title="Wann beginnt das Festival jeweils an den beiden Tagen? "
           text="Am Freitag beginnt der Einlass um 16 Uhr und das Programm endet um 1 Uhr nachts.
-                  Am Samstag geht es mit dem Einlass um 14 Uhr los und das Programm endet um Mitternacht,
+                  Am Samstag geht es mit dem Einlass um 13:30 Uhr los und das Programm endet um Mitternacht,
                   je nach Witterungsverhältnissen geht die Himmelsbeobachtung vielleicht noch etwas länger."
           isOpen={currOpen === 1}
           handleClick={() => toggleOpen(1)}
@@ -75,7 +75,7 @@ const Faqs = () => {
         />
         <CollapsibleText
           title="Gibt es auf dem Festival Essen und Getränke?"
-          text="Ja, es wird ein Angebot an Speisen und Getränken geben."
+          text="Ja! Verschiedene Food Trucks versorgen euch mit veganen, vegetarischen und klassischen Speisen – ideal für eine Pause, zu Stärkung und für das Miteinander. Außerdem gibt es Getränke. Fremdgetränke sind bei uns nicht erlaubt – außer eurer Wasserflasche, die ihr gerne mitbringen dürft."
           isOpen={currOpen === 6}
           handleClick={() => toggleOpen(6)}
         />
