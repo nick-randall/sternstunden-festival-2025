@@ -111,8 +111,21 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
           </tr>
         </thead>
         <tbody>
-          {stageEvents.map(stageEvent => {
+          {stageEvents.map((stageEvent, idx) => {
             const stageRow = createStageRow(stageEvent, dayStartTime, numThirtyMinuteIntervals);
+            if (idx === Math.floor(stageEvents.length / 2)) {
+              return (
+                <tr key={stageEvent.stage.id + "-header"}>
+                  <th></th>
+                  {timeLabels.map(time => (
+                    <th key={time} className="time-label">
+                      {time}
+                    </th>
+                  ))}
+                </tr>
+              );
+            }
+
             return (
               <tr key={stageEvent.stage.id}>
                 <td className="stage-name">{stageEvent.stage.name}</td>
@@ -157,6 +170,14 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
               </tr>
             );
           })}
+          <tr>
+            <th></th>
+            {timeLabels.map(time => (
+              <th key={time} className="time-label">
+                {time}
+              </th>
+            ))}
+          </tr>
         </tbody>
       </table>
     </div>
