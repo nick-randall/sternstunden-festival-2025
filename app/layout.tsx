@@ -297,13 +297,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <Image src="/sponsors/fhs.png" alt="Förderverein Hamburger Sternwarte" width="400" height="78" className="sponsor-logo" />
                   </a>
                 </div>
+
+<div className="sponsor-logo-wrap-section3">
+  <div className="sponsor-logo-row">
+    {/* alle anderen Logos */}
+    <div className="sponsor-logo-container">
+      <a href="https://cherryontop.film/" target="_blank" title="cherryontop">
+        <Image
+          src="/sponsors/cherry.png"
+          alt="cherryontop.film"
+          width="336"
+          height="155"
+          className="sponsor-logo"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+
               </div>
 
-                <div className="sponsor-logo-container">
-                  <a href="https://cherryontop.film/" target="_blank" title="cherryontop">
-                    <Image src="/sponsors/cherry.png" alt="cherryontop.film" width="336" height="155"  className="sponsor-logo" />
-                  </a>
-                </div>
+  
  </div>
 
             <Spacer height={32} />
