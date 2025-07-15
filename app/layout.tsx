@@ -285,7 +285,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <Image src="/sponsors/UHH_Wortmarken_Unimusik_DIN_A4.png" alt="Unimusik Hamburg Sponsor" width="375" height="123" className="sponsor-logo" />
                   </a>
                 </div>
-              
+
                 <div className="sponsor-logo-container">
                   <a href="https://www.physik.uni-hamburg.de/hs.html" target="_blank" title="Hamburger Sternwarte">
                     <Image src="/sponsors/UHH_Wortmarke_Sternwarte.png" alt="Hamburger Sternwarte" width="400" height="78" className="sponsor-logo" />
@@ -301,10 +301,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
                 <div className="sponsor-logo-container">
                   <a href="https://cherryontop.film/" target="_blank" title="cherryontop">
-                    <Image src="/sponsors/cherry.png" alt="cherryontop.film" height="155" width="336" className="sponsor-logo" />
+                    <Image src="/sponsors/cherry.png" alt="cherryontop.film" width="336" height="155"  className="sponsor-logo" />
                   </a>
                 </div>
-
  </div>
 
             <Spacer height={32} />
