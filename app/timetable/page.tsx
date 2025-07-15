@@ -111,62 +111,80 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
           </tr>
         </thead>
         <tbody>
-          {stageEvents.map((stageEvent) => {
-            const stageRow = createStageRow(stageEvent, dayStartTime, numThirtyMinuteIntervals);
-            
+   
+   {stageEvents.map((stageEvent, idx) => {
+  const stageRow = createStageRow(stageEvent, dayStartTime, numThirtyMinuteIntervals);
+const rows: React.ReactElement[] = [];
 
-            return (
-              <tr key={stageEvent.stage.id}>
-                <td className="stage-name">{stageEvent.stage.name}</td>
-                {stageRow.map((eventOnGrid, cellIndex) => {
-                  return (
-                    <td key={cellIndex} className="event-cell">
-                      {eventOnGrid && (
-                        <div
-                          className="event-box"
-                          style={{
-                            width: `${eventOnGrid.numCellsWide * 100}%`,
-                            left: `${eventOnGrid.innerCellLeftOffset * 100}%`,
-                            backgroundColor: eventOnGrid.artist.attributes.astroprogramm ? "rgba(0, 140, 255, 0.322)" : "rgba(232, 0, 233, 0.16)",
-                            top: positionOverlappingEvents(
-                              eventOnGrid.event,
-                              stageEvents.flatMap(e => e.events)
-                            ).top,
-                            height: positionOverlappingEvents(
-                              eventOnGrid.event,
-                              stageEvents.flatMap(e => e.events)
-                            ).height,
-                          }}
-                        >
-                          <Link href={`/kuenstlerinnen/${eventOnGrid.artist.code}`}>{eventOnGrid.artist.name}</Link>
-                          <div className="symbols-row">
-                            {eventOnGrid.event.attributes.mit_gebardensprache && (
-                              <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height={25} width={25} />
-                            )}
-                            {eventOnGrid.event.attributes.mit_kurzvortrag && (
-                              <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height={25} width={25} />
-                            )}
-                            {eventOnGrid.event.attributes.kinderprogramm && (
-                              <Image src="/kinderprogramm.png" alt="Symbol Kinderprogramm" height={19} width={32} />
-                            )}
-                          </div>
-                        </div>
-                      )}
-                    </td>
-                  );
-                })}
-                <td></td>
-              </tr>
-            );
-          })}
-          <tr>
-            <th></th>
-            {timeLabels.map(time => (
-              <th key={time} className="time-label">
-                {time}
-              </th>
-            ))}
-          </tr>
+  // 🟪 STAGE-ZEILE
+  rows.push(
+    <tr key={stageEvent.stage.id}>
+      <td className="stage-name">{stageEvent.stage.name}</td>
+      {stageRow.map((eventOnGrid, cellIndex) => (
+        <td key={cellIndex} className="event-cell">
+          {eventOnGrid && (
+            <div
+              className="event-box"
+              style={{
+                width: `${eventOnGrid.numCellsWide * 100}%`,
+                left: `${eventOnGrid.innerCellLeftOffset * 100}%`,
+                backgroundColor: eventOnGrid.artist.attributes.astroprogramm
+                  ? "rgba(0, 140, 255, 0.322)"
+                  : "rgba(232, 0, 233, 0.16)",
+                top: positionOverlappingEvents(
+                  eventOnGrid.event,
+                  stageEvents.flatMap(e => e.events)
+                ).top,
+                height: positionOverlappingEvents(
+                  eventOnGrid.event,
+                  stageEvents.flatMap(e => e.events)
+                ).height,
+              }}
+            >
+              <Link href={`/kuenstlerinnen/${eventOnGrid.artist.code}`}>{eventOnGrid.artist.name}</Link>
+              <div className="symbols-row">
+                {eventOnGrid.event.attributes.mit_gebardensprache && (
+                  <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height={25} width={25} />
+                )}
+                {eventOnGrid.event.attributes.mit_kurzvortrag && (
+                  <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height={25} width={25} />
+                )}
+                {eventOnGrid.event.attributes.kinderprogramm && (
+                  <Image src="/kinderprogramm.png" alt="Symbol Kinderprogramm" height={19} width={32} />
+                )}
+              </div>
+            </div>
+          )}
+        </td>
+      ))}
+      <td></td>
+    </tr>
+  );
+
+  // ⏱ UHRZEILE nach der 9. STAGE-ZEILE (d.h. nach idx === 8)
+  if (idx === 8) {
+    rows.push(
+      <tr key="middle-time-row" className="middle-time-row">
+        <th></th>
+        {timeLabels.map(time => (
+          <th key={time} className="time-label">{time}</th>
+        ))}
+      </tr>
+    );
+  }
+
+  return rows;
+})}
+
+<tr>
+  <th></th>
+  {timeLabels.map(time => (
+    <th key={`bottom-${time}`} className="time-label">
+      {time}
+    </th>
+  ))}
+</tr>
+
         </tbody>
       </table>
     </div>
