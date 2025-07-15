@@ -48,7 +48,25 @@ In den Innenräumen – Großer Refraktor, Bibliothek und Oskar-Lühning-Telesko
       <strong>[Zum Programm]</strong>
         </Link> 
         <br/>
-  <h3>Freitag</h3>
+</p>
+
+  <Spacer height={16} />
+      <p>
+        <h2>Kinderprogramm – Forschen, Spielen, Staunen</h2>  
+      Kinder erwartet ein spannendes Programm mit Sonnenbeobachtung, Rallye, Führungen speziell für Kinder (auch in DGS) und musikalischer Unterhaltung durch den Hamburger Sänger <a href="https://www.simonsagtmusik.de" target="_blank">Simon sagt &#10154;</a> am Samstag um 15 Uhr. 
+Außerdem erwartet euch ein lehrreicher Planetenrundgang über das Gelände – mit spannenden Infos zu den Himmelskörpern und einem Hörtext zu Gustav Holsts <strong>Die Planeten</strong>, den ihr auf dem Handy eurer Eltern hören könnt. 
+Kinderschminken, kreative Bastelaktionen und Mitmachspiele runden das Angebot in der <strong>Kids Area</strong> ab. Spielzeug wird gestellt von <a href="https://buewi.de/programm/zirkus-willibande/" target="_blank">Zirkus Willibande &#10154;</a>. 
+<br/>Die <strong>Kids Area</strong> ist an beiden Tagen bis 19 Uhr geöffnet.
+      </p>
+        <Spacer height={16} />
+             <p>
+        <h2>Food & Getränke</h2>  
+Verschiedene Food Trucks versorgen euch mit veganen, vegetarischen und klassischen Speisen – ideal für eine Pause, zu Stärkung und für das Miteinander. Außerdem gibt es Getränke. Fremdgetränke sind bei uns nicht erlaubt – außer eurer Wasserflasche, die ihr gerne mitbringen dürft.      </p>
+        <Spacer height={16} />
+
+        <p>
+           <h2>Lineup</h2>
+           <h3>Freitag</h3>
   <h1>
     <Link href="/kuenstlerinnen/rocket-men" target="_blank">Rocket Men</Link> &nbsp;<Image src="/star.svg" alt="star symbol" width="20" height="20" /> &nbsp;
     <Link href="/kuenstlerinnen/yousef-kekhia" target="_blank">Yousef Kekhia</Link>
@@ -108,22 +126,8 @@ In den Innenräumen – Großer Refraktor, Bibliothek und Oskar-Lühning-Telesko
     LeSaTo <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Nine Strings Attached <Image src="/star.svg" alt="star symbol" width="10" height="10" />&nbsp;
     Protostellar Core
-</p>
-
+        </p>
   <Spacer height={16} />
-      <p>
-        <h2>Kinderprogramm – Forschen, Spielen, Staunen</h2>  
-      Kinder erwartet ein spannendes Programm mit Sonnenbeobachtung, Rallye, Führungen speziell für Kinder (auch in DGS) und musikalischer Unterhaltung durch den Hamburger Sänger <a href="https://www.simonsagtmusik.de" target="_blank">Simon sagt &#10154;</a> am Samstag um 15 Uhr. 
-Außerdem erwartet euch ein lehrreicher Planetenrundgang über das Gelände – mit spannenden Infos zu den Himmelskörpern und einem Hörtext zu Gustav Holsts <strong>Die Planeten</strong>, den ihr auf dem Handy eurer Eltern hören könnt. 
-Kinderschminken, kreative Bastelaktionen und Mitmachspiele runden das Angebot in der <strong>Kids Area</strong> ab. Spielzeug wird gestellt von <a href="https://buewi.de/programm/zirkus-willibande/" target="_blank">Zirkus Willibande &#10154;</a>. 
-<br/>Die <strong>Kids Area</strong> ist an beiden Tagen bis 19 Uhr geöffnet.
-      </p>
-        <Spacer height={16} />
-             <p>
-        <h2>Food & Getränke</h2>  
-Verschiedene Food Trucks versorgen euch mit veganen, vegetarischen und klassischen Speisen – ideal für eine Pause, zu Stärkung und für das Miteinander. Außerdem gibt es Getränke. Fremdgetränke sind bei uns nicht erlaubt – außer eurer Wasserflasche, die ihr gerne mitbringen dürft.      </p>
-        <Spacer height={16} />
-
         <h2>Rückblick</h2>
       <h3>In den letzten Jahren haben unter anderem folgende Acts bei uns gespielt</h3>
       <p> <a href="https://www.heptapolka.com/" target="_blank">Hepta Polka &#10154;</a><br/>
