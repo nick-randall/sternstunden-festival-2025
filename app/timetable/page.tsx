@@ -111,7 +111,7 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
           </tr>
         </thead>
         <tbody>
-          {stageEvents.map((stageEvent, idx) => {
+          {stageEvents.map((stageEvent) => {
             const stageRow = createStageRow(stageEvent, dayStartTime, numThirtyMinuteIntervals);
             
 
