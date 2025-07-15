@@ -113,18 +113,7 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
         <tbody>
           {stageEvents.map((stageEvent, idx) => {
             const stageRow = createStageRow(stageEvent, dayStartTime, numThirtyMinuteIntervals);
-            if (idx === Math.floor(stageEvents.length / 2)) {
-              return (
-                <tr key={stageEvent.stage.id + "-header"}>
-                  <th></th>
-                  {timeLabels.map(time => (
-                    <th key={time} className="time-label">
-                      {time}
-                    </th>
-                  ))}
-                </tr>
-              );
-            }
+            
 
             return (
               <tr key={stageEvent.stage.id}>
