@@ -299,6 +299,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </div>
               </div>
 
+                <div className="sponsor-logo-container">
+                  <a href="https://cherryontop.film/" target="_blank" title="cherryontop">
+                    <Image src="/sponsors/cherry.png" alt="cherryontop.film" height="155" width="336" className="sponsor-logo" />
+                  </a>
+                </div>
+
  </div>
 
             <Spacer height={32} />
