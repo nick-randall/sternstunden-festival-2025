@@ -3,6 +3,7 @@ import { useState, JSX, FC, useRef, useEffect } from "react";
 import Spacer from "./Spacer";
 import Image from "next/image";
 import { createPortal } from "react-dom";
+import FestivalAppPopup from "./FestivalAppPopup";
 
 interface TimetableSwitcherProps {
   dayNames: string[];
@@ -81,6 +82,7 @@ const TimetableSwitcher: FC<TimetableSwitcherProps> = ({ dayTimetables, dayNames
           </div>
         ))}
       </div>
+      <FestivalAppPopup />
     </div>
   );
 };

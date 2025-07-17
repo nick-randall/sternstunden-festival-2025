@@ -5,6 +5,7 @@ import Spacer from "@/components/Spacer";
 import Link from "next/link";
 import { getReadableDETimeAndDayAbbr } from "@/helper_functions/helperFunctions";
 import { getPlaceholderImage } from "@/helper_functions/createBlurredImages";
+import FestivalAppPopup from "@/components/FestivalAppPopup";
 
 const Artists: React.FC = async () => {
   const artistsData = [];
@@ -73,6 +74,7 @@ const Artists: React.FC = async () => {
           </Link>
         ))}
       </div>
+      <FestivalAppPopup />
     </div>
   );
 };
