@@ -29,23 +29,9 @@ const Tickets: React.FC = () => {
           <div>
             <h1>TICKETS 2025</h1>
             <p>
-              Für das Sternstunden Festival gibt es zwei Preisstufen: Vorverkauf und Abendkasse. Außerdem gibt es wieder ermäßigte* Tickets und
-              kostenlosen Eintritt für geflüchtete Personen*** sowie für Kinder unter 14 Jahren**.
-              <br /> <br />
-              Der Vorverkauf endet am 17. Juli.
-
-              <h2>Vorverkauf</h2>
-              <b>Reguläre Tickets: </b>
+              Für das Sternstunden Festival gibt es ermäßigte* Tickets und
+              kostenlosen Eintritt für geflüchtete Personen*** sowie für Kinder unter 14 Jahren**. Ab heute gelten die Abendkassenpreise.
               <br />
-              Freitags-Ticket: 10 € <br />
-              Samstags-Ticket: 15 € <br />
-              Festivalticket (Fr & Sa) 20 € <br />
-              <br />
-              <b>Ermäßigte* Tickets:</b>
-              <br />
-              Freitags-Ticket: 7 €<br />
-              Samstags-Ticket: 10 €<br />
-              Festivalticket (Fr & Sa) 15 €<br />
             
               <h2>Abendkasse</h2>
                <b>Reguläre Tickets:</b>
@@ -74,9 +60,24 @@ const Tickets: React.FC = () => {
               <br />
               <br />
               <b>**/***Hinweis</b>: Bestellt bitte auch bei freiem Eintritt ein entsprechendes kostenloses Ticket!
+<s>
+               <h2>Vorverkauf (endete am 17.7.)</h2>
+              <b>Reguläre Tickets: </b>
+              <br />
+              Freitags-Ticket: 10 € <br />
+              Samstags-Ticket: 15 € <br />
+              Festivalticket (Fr & Sa) 20 € <br />
+              <br />
+              <b>Ermäßigte* Tickets:</b>
+              <br />
+              Freitags-Ticket: 7 €<br />
+              Samstags-Ticket: 10 €<br />
+              Festivalticket (Fr & Sa) 15 €<br />
+              </s>
+            </p>
               {/* Script is now dynamically added via useEffect */}
               <br />
-            </p>
+            
           </div>
         </div>
         <div className="responsive-spacer-15" id="shop-container-top" />
