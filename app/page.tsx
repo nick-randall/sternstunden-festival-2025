@@ -3,7 +3,6 @@ import "../styles/home.css";
 import "../styles/common.css";
 import Spacer from "../components/Spacer";
 import PhotoSlider from "./PhotoSlider";
-import Banner from "@/components/Banner";
 import Image from "next/image";
 import Link from "next/link";
 import Zoomable from "@/components/Zoomable";
@@ -63,43 +62,21 @@ export default async function Page() {
   return (
     <>
       <Image className="header-logo" src="/logo-with-dates.png" alt="Sternstunden Festival Logo" width="827" height="434" />
-      <div id="banner-slot" />
-      <Banner />
-      <Spacer height={96} />
-
 
       <div className="content-box split-box">
         <div className="text-box">
           <div>
             <h2 style={{ textAlign: "left" }}>
-              MUSIK TRIFFT{" "}
-              <span
-                style={{
-                  hyphens: "none",
-                  WebkitHyphens: "none",
-                  msHyphens: "none",
-                }}
-              >
-                KOSMOS
-              </span>
+       RÜCKBLICK 2025
             </h2>
           </div>
 
           <div>
-            <strong>
-              Klangvolle Nächte unter dem Sternenzelt, faszinierende Einblicke in die Weiten des Universums und ein Ort voller Geschichte – das war das Sternstunden Festival 2025!
-            </strong>
+Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das Gelände der historischen <strong>Hamburger Sternwarte in Bergedorf</strong> ein. Auch 2025 wurde die weitläufige Parkanlage rund um die denkmalgeschützten Teleskopgebäude wieder zu einem lebendigen Ort der Begegnung mit <strong>Musik und Astronomie</strong> – mit Konzerten, Sternenführungen, Kinderprogramm, Wissenschaft, Gemeinschaftstanz und vielem mehr.            <Spacer height={32} />
+            <strong>Danke an alle Besucher:innen, Künstler:innen und Mitwirkenden für ein unvergessliches Wochenende!</strong>
             <Spacer height={32} />
-            Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das Gelände der historischen <strong>Hamburger Sternwarte in Bergedorf</strong> ein. Auch 2025 wurde die weitläufige Parkanlage rund um die denkmalgeschützten Teleskopgebäude wieder zu einem lebendigen Ort der Begegnung mit <strong>Musik und Astronomie</strong> – mit Konzerten, Sternenführungen, Kinderprogramm, Wissenschaft, Gemeinschaftstanz und vielem mehr.
-             <Spacer height={32} />
-            <strong>Wir danken allen Besucher:innen, Künstler:innen und Mitwirkenden für ein unvergessliches Wochenende!</strong>
-             <Spacer height={32} />
-          Bleibt gespannt – die Planungen für 2026 laufen bereits.          
+          Bleibt gespannt – die Planungen für 2026 laufen bereits!         
           </div>
-          <br />
-          <Link className="more-info" href="/info">
-            MEHR INFOS...
-          </Link>
         </div>
         <div className="responsive-spacer-15"></div>
         <div className="home-image-cropping-wrapper">
