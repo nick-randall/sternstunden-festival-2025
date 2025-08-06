@@ -22,12 +22,11 @@ const MoreInfoPage = () => {
         name="twitter:description"
         content="Das Sternstunden Festival vereint inspirierende Konzerterlebnisse in besonderer Umgebung mit spannenden astrophysikalischen Einblicken unter Hamburgs Sternenhimmel in einzigartiger Festivalatmosphäre."
       />
-      <h1>Das Sternstunden Festival</h1>
+      <h1>Das war das Sternstunden Festival 2025</h1>
       <h3>Musik trifft Kosmos</h3>
       <p>
         <strong>
-          Klangvolle Nächte unter dem Sternenzelt, faszinierende Einblicke in die Weiten des Universums und ein Ort voller Geschichte – Willkommen auf
-          dem Sternstunden Festival!
+          Klangvolle Nächte unter dem Sternenzelt, faszinierende Einblicke in die Weiten des Universums und ein Ort voller Geschichte
         </strong>
         <br />
         Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das Gelände der historischen 

@@ -67,18 +67,6 @@ export default async function Page() {
       <Banner />
       <Spacer height={96} />
 
-      <div className="content-box">
-        <Zoomable title="Musikalisches Lineup 2025">
-          <Image
-            src="/lineup2025.jpg"
-            alt="Musikalisches Lineup 2025 / Sternstunden Festival 18. & 19. Juli"
-            width="1080"
-            height="864"
-            className="hom-image"
-          />
-        </Zoomable>
-      </div>
-      <Spacer height={32} />
 
       <div className="content-box split-box">
         <div className="text-box">
@@ -99,15 +87,14 @@ export default async function Page() {
 
           <div>
             <strong>
-              Klangvolle Nächte unter dem Sternenzelt, faszinierende Einblicke in die Weiten des Universums und ein Ort voller Geschichte – Willkommen
-              auf dem Sternstunden Festival!
+              Klangvolle Nächte unter dem Sternenzelt, faszinierende Einblicke in die Weiten des Universums und ein Ort voller Geschichte – das war das Sternstunden Festival 2025!
             </strong>
             <Spacer height={32} />
-            Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das Gelände der historischen{" "}
-            <strong>Hamburger Sternwarte in Bergedorf</strong> ein. <strong>Freitags ab dem Nachmittag und samstags ab dem Mittag</strong> verwandelt
-            sich die weitläufige Parkanlage rund um die denkmalgeschützten Teleskopgebäude in einen Ort der Begegnung mit Musik und Astronomie.
+            Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das Gelände der historischen <strong>Hamburger Sternwarte in Bergedorf</strong> ein. Auch 2025 wurde die weitläufige Parkanlage rund um die denkmalgeschützten Teleskopgebäude wieder zu einem lebendigen Ort der Begegnung mit <strong>Musik und Astronomie</strong> – mit Konzerten, Sternenführungen, Kinderprogramm, Wissenschaft, Gemeinschaftstanz und vielem mehr.
              <Spacer height={32} />
-              Einlass ist am Freitag ab 16 Uhr und am Samstag ab 13:30 Uhr.
+            <strong>Wir danken allen Besucher:innen, Künstler:innen und Mitwirkenden für ein unvergessliches Wochenende!</strong>
+             <Spacer height={32} />
+          Bleibt gespannt – die Planungen für 2026 laufen bereits.          
           </div>
           <br />
           <Link className="more-info" href="/info">
@@ -130,7 +117,21 @@ export default async function Page() {
         </div>
         <div className="responsive-spacer-15"></div>
       </div>
-
+      
+      <Spacer height={32} />
+      
+      <div className="content-box">
+        <Zoomable title="Musikalisches Lineup 2025">
+          <Image
+            src="/lineup2025.jpg"
+            alt="Musikalisches Lineup 2025 / Sternstunden Festival 18. & 19. Juli"
+            width="1080"
+            height="864"
+            className="hom-image"
+          />
+        </Zoomable>
+      </div>
+      
       <Spacer height={32} />
       <div className="content-box video-container">
         <div>AFTERMOVIE 2024</div>
@@ -139,11 +140,11 @@ export default async function Page() {
       <Spacer height={32} />
       <div className="content-box" style={{ flexDirection: "column" }}>
         <PhotoSlider imagesWithPlaceholders={imagesWithPlaceholders} />
-        <strong>
+        <strong>Rückblick 2024</strong>
           <a href="https://beyondportrait.de" target="_blank" title="Beyond Portrait Fotografie">
-            Bilder (c) beyond.portrait &#10154;
+             (c) beyond.portrait &#10154;
           </a>
-        </strong>
+      
       </div>
     </>
   );

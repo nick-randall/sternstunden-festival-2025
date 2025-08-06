@@ -50,11 +50,11 @@ const MobileMenu: React.FC = () => {
           </div>
         </div>
         <div className={`mobile-menu ${isOpen ? "open" : ""}`} ref={menuRef}>
-          <div className="mobile-menu-item">
+          {/*<div className="mobile-menu-item">
             <Link href="/tickets" className="mobile-menu-item-container" onClick={toggleMenu}>
               <div className="mobile-menu-item-text">Tickets</div>
             </Link>
-          </div>
+          </div> */}
           <div className="mobile-menu-item">
             <Link href="/kuenstlerinnen" className="mobile-menu-item-container" onClick={toggleMenu}>
               <div className="mobile-menu-item-text">Programm</div>

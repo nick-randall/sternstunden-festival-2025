@@ -57,11 +57,11 @@ const DesktopMenu: React.FC = () => {
       <div className="menu-bar">
         <div className="menu-items-wrapper">
 
-          <Link href="/tickets" className="menu-item-container">
+          {/* <Link href="/tickets" className="menu-item-container">
             <div className={`menu-item ${currDropdown === "tickets" && "hovered"}`} onMouseEnter={() => handleMouseEnter("tickets")}>
               Tickets
             </div>
-          </Link>
+          </Link> */}
           <Link href="/kuenstlerinnen" className="menu-item-container" onMouseEnter={() => handleMouseEnter("programm")}>
             <div className={`menu-item ${currDropdown === "programm" && "hovered"}`} ref={programHoverRef}>
               Programm
