@@ -4,7 +4,6 @@ import "../styles/common.css";
 import Spacer from "../components/Spacer";
 import PhotoSlider from "./PhotoSlider";
 import Image from "next/image";
-import Link from "next/link";
 import Zoomable from "@/components/Zoomable";
 import { getPlaceholderImage } from "@/helper_functions/createBlurredImages";
 
