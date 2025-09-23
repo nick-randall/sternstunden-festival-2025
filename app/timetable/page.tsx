@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import TimetableSwitcher from "@/components/TimetableSwitcher";
 import Spacer from "@/components/Spacer";
-
+import stagesWithTheirEvents from "@/festival_data_2025/stages_and_events";
 const minutesPerCell = 30;
 
 const positionOverlappingEvents = (event: FestivalEventWithArtist, events: FestivalEventWithArtist[]): { top: string; height: string } => {
@@ -190,18 +190,18 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
 };
 
 const TimetablePage = async () => {
-  let daysAndTheirEvents: DayAndEvents[] = [];
-  try {
-    const response = await fetch(`https://sternstunde.fly.dev/get-stages-with-their-events`, {
-      headers: { Accept: "application/json" },
-      method: "POST",
-    });
-    daysAndTheirEvents = await response.json();
-    // const days = testData;
-  } catch (error) {
-    const errorMessage = error as Error;
-    console.error("Error fetching timetable data:", errorMessage.message);
-  }
+  const daysAndTheirEvents: DayAndEvents[] = stagesWithTheirEvents;
+  // try {
+  //   const response = await fetch(`https://sternstunde.fly.dev/get-stages-with-their-events`, {
+  //     headers: { Accept: "application/json" },
+  //     method: "POST",
+  //   });
+  //   daysAndTheirEvents = await response.json();
+  //   // const days = testData;
+  // } catch (error) {
+  //   const errorMessage = error as Error;
+  //   console.error("Error fetching timetable data:", errorMessage.message);
+  // }
 
   const dayTimetables = daysAndTheirEvents.map((dayAndEvents: DayAndEvents) => (
     <DayTimetable key={dayAndEvents.day.id} dayAndEvents={dayAndEvents} />
