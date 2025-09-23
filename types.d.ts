@@ -1,5 +1,5 @@
 type Artist = {
-  id: string;
+  id: number;
   index: number;
   name: string;
   description: string;
@@ -8,7 +8,7 @@ type Artist = {
 };
 
 type ArtistWithoutEvents = {
-  id: string;
+  id: number;
   index: number;
   code: string;
   name: string;
@@ -31,11 +31,10 @@ type ArtistWithEvents = {
     imageUrl: string;
     artistUrl: string;
     code: string;
-    attributes: {
+    attributes: null | {
       [key: string]: string | number | boolean;
     };
   };
-  eventStartDateTime: string;
   events: FestivalEvent[];
 };
 
@@ -48,19 +47,18 @@ type ArtistWithEventsAndPlaceholderImage = {
     imageUrl: string;
     artistUrl: string;
     code: string;
-    attributes: {
+    attributes: null | {
       [key: string]: string | number | boolean;
     };
     placeholderImage: ImageWithPlaceholder;
   };
-  eventStartDateTime: string;
   events: FestivalEvent[];
 };
 
 type DayAndEvents = {
   stageEvents: StageWithEvents[];
   day: {
-    id: 1;
+    id: number;
     name: string;
     startDateTime: string;
     endDateTime: string;
@@ -72,12 +70,12 @@ type StageWithEvents = {
     id: number;
     name: string;
   };
-  events: FestivalEvent[];
+  events: FestivalEventWithArtist[];
 };
 
 type FestivalEvent = {
   id: number;
-  artist: ArtistWithOutEvents;
+ 
   stage: {
     id: number;
     name: string;
@@ -87,7 +85,17 @@ type FestivalEvent = {
   attributes: {
     [key: string]: string | number | boolean;
   };
+  day?: {
+    id: number;
+    name: string;
+    startDateTime: string;
+    endDateTime: string;
+  };
 };
+
+type FestivalEventWithArtist = FestivalEvent & {
+  artist: ArtistWithoutEvents;
+}
 
 type ImageWithPlaceholder = {
   src: string;

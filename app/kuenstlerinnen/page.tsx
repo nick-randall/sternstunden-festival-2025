@@ -6,17 +6,19 @@ import Link from "next/link";
 import { getReadableDETimeAndDayAbbr } from "@/helper_functions/helperFunctions";
 import { getPlaceholderImage } from "@/helper_functions/createBlurredImages";
 import FestivalAppPopup from "@/components/FestivalAppPopup";
+import artistsData from '../../festival_data_2025/artists';
 
 const Artists: React.FC = async () => {
-  const artistsData = [];
-  try {
-    const response = await fetch(`https://sternstunde.fly.dev/get-artists`, { headers: { Accept: "application/json" }, method: "POST" });
-    const foundartists = await response.json();
-    artistsData.push(...foundartists);
-  } catch (error) {
-    const errorMessage = error as Error;
-    console.error("Error fetching artists:", errorMessage.message);
-  }
+  // const artistsData = [];
+  // try {
+  //   const response = await fetch(`https://sternstunde.fly.dev/get-artists`, { headers: { Accept: "application/json" }, method: "POST" });
+  //   const foundartists = await response.json();
+  //   artistsData.push(...foundartists);
+  // } catch (error) {
+  //   const errorMessage = error as Error;
+  //   console.error("Error fetching artists:", errorMessage.message);
+  // }
+  // artistsData = 
   artistsData.sort((a: ArtistWithEvents, b: ArtistWithEvents) => {
     if (a.artist.index === undefined || b.artist.index === undefined) {
       return 0;
@@ -24,7 +26,7 @@ const Artists: React.FC = async () => {
     return a.artist.index - b.artist.index;
   });
   const artists: ArtistWithEvents[] = artistsData.map((a: ArtistWithEvents) => {
-    console.log(`Artist code ${a.artist.code}`);
+    console.log(`${a.artist.code}`);
 
     if (!a.artist.imageUrl || a.artist.imageUrl === "ZgotmplZ" || a.artist.imageUrl === "NULL") {
       return { ...a, artist: { ...a.artist, imageUrl: "/default-artist-image.png" } };
@@ -55,7 +57,7 @@ const Artists: React.FC = async () => {
       <div className="artists-grid">
         {artistsWithPlaceholders.map((a: ArtistWithEventsAndPlaceholderImage) => (
           <Link key={a.artist.id} href={`/kuenstlerinnen/${a.artist.code}`} className="artist-link">
-            <div key={a.artist.id} className={`artist-card ${a.artist.attributes.astroprogramm ? "astroprogramm" : ""}`}>
+            <div key={a.artist.id} className={`artist-card ${a.artist.attributes?.astroprogramm ? "astroprogramm" : ""}`}>
               <Image src={a.artist.imageUrl} alt={a.artist.name} width="265" height="265" placeholder="blur" blurDataURL={a.artist.placeholderImage.placeholder} />
               <div className="artist-details">
                 <Spacer height={5} />
