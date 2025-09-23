@@ -9,7 +9,7 @@ import Spacer from "@/components/Spacer";
 
 const minutesPerCell = 30;
 
-const positionOverlappingEvents = (event: FestivalEvent, events: FestivalEvent[]): { top: string; height: string } => {
+const positionOverlappingEvents = (event: FestivalEventWithArtist, events: FestivalEventWithArtist[]): { top: string; height: string } => {
   const eventStartTime = new Date(event.startDateTime);
   const eventEndTime = new Date(event.endDateTime);
 
@@ -35,12 +35,12 @@ const positionOverlappingEvents = (event: FestivalEvent, events: FestivalEvent[]
 
 class EventOnGrid {
   artist: ArtistWithoutEvents;
-  event: FestivalEvent;
+  event: FestivalEventWithArtist;
   innerCellLeftOffset: number;
   cellIndex: number;
   numCellsWide: number;
 
-  constructor(artist: ArtistWithoutEvents, dayStartTime: Date, event: FestivalEvent) {
+  constructor(artist: ArtistWithoutEvents, dayStartTime: Date, event: FestivalEventWithArtist) {
     this.event = event;
     this.artist = artist;
     const eventStartTime = new Date(event.startDateTime);
