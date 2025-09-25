@@ -55,7 +55,7 @@ const KontaktPage: React.FC = () => {
   const handleSend = async () => {
     let status = 0;
     try {
-      const resp = await fetch("https://sternstunden-email-server.fly.dev/send-email", { method: "POST", body: JSON.stringify(formValues) });
+      const resp = await fetch("https://sternstunde.fly.dev/send-email", { method: "POST", body: JSON.stringify(formValues) });
       status = resp.status;
     } catch (error) {
       handleError(error as string);
