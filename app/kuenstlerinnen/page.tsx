@@ -6,7 +6,7 @@ import Link from "next/link";
 import { getReadableDETimeAndDayAbbr } from "@/helper_functions/helperFunctions";
 import { getPlaceholderImage } from "@/helper_functions/createBlurredImages";
 import FestivalAppPopup from "@/components/FestivalAppPopup";
-import artistsData from '../../festival_data_2025/artists';
+import artistsData from "../../festival_data_2025/artists";
 
 const Artists: React.FC = async () => {
   // const artistsData = [];
@@ -18,7 +18,7 @@ const Artists: React.FC = async () => {
   //   const errorMessage = error as Error;
   //   console.error("Error fetching artists:", errorMessage.message);
   // }
-  // artistsData = 
+  // artistsData =
   artistsData.sort((a: ArtistWithEvents, b: ArtistWithEvents) => {
     if (a.artist.index === undefined || b.artist.index === undefined) {
       return 0;
@@ -34,20 +34,34 @@ const Artists: React.FC = async () => {
       return a;
     }
   });
-  const imagesWithPlaceholders = await Promise.all(
-    artists.map(async (artist: ArtistWithEvents) => {
+  const usePlaceHolders = process.env.GENERATE_PLACEHOLDERS;
+  const images: ImageWithPlaceholder[] = [];
+
+  if (usePlaceHolders !== "false") {
+    const imagesWithPlaceholders = await Promise.all(
+      artists.map(async (artist: ArtistWithEvents) => {
+        if (!artist.artist.imageUrl || artist.artist.imageUrl === "ZgotmplZ" || artist.artist.imageUrl === "NULL") {
+          return { src: "/default-artist-image.png", placeholder: "/default-artist-image.png" };
+        }
+        const imageWithPlaceholder = await getPlaceholderImage(artist.artist.imageUrl);
+        return imageWithPlaceholder;
+      })
+    );
+    images.push(...imagesWithPlaceholders);
+  } else {
+    const imagesWithOutPlaceholders: ImageWithPlaceholder[] = artists.map((artist: ArtistWithEvents) => {
       if (!artist.artist.imageUrl || artist.artist.imageUrl === "ZgotmplZ" || artist.artist.imageUrl === "NULL") {
         return { src: "/default-artist-image.png", placeholder: "/default-artist-image.png" };
       }
-      const imageWithPlaceholder = await getPlaceholderImage(artist.artist.imageUrl);
-      return imageWithPlaceholder;
-    })
-  );
+      return { src: artist.artist.imageUrl, placeholder: undefined };
+    });
+    images.push(...imagesWithOutPlaceholders);
+  }
   const artistsWithPlaceholders: ArtistWithEventsAndPlaceholderImage[] = [];
   for (let i = 0; i < artists.length; i++) {
     const artistWithEvents = artists[i];
-    const placeholderImage = imagesWithPlaceholders[i];
-   const artist =  {...artistWithEvents.artist, placeholderImage};
+    const image = images[i];
+    const artist = { ...artistWithEvents.artist, image };
     artistsWithPlaceholders.push({ ...artistWithEvents, artist });
   }
 
@@ -58,7 +72,14 @@ const Artists: React.FC = async () => {
         {artistsWithPlaceholders.map((a: ArtistWithEventsAndPlaceholderImage) => (
           <Link key={a.artist.id} href={`/kuenstlerinnen/${a.artist.code}`} className="artist-link">
             <div key={a.artist.id} className={`artist-card ${a.artist.attributes?.astroprogramm ? "astroprogramm" : ""}`}>
-              <Image src={a.artist.imageUrl} alt={a.artist.name} width="265" height="265" placeholder="blur" blurDataURL={a.artist.placeholderImage.placeholder} />
+              <Image
+                src={a.artist.imageUrl}
+                alt={a.artist.name}
+                width="265"
+                height="265"
+                placeholder={a.artist.image.placeholder ? "blur" : undefined}
+                blurDataURL={a.artist.image.placeholder}
+              />
               <div className="artist-details">
                 <Spacer height={5} />
                 <div className="artist-name">{a.artist.name}</div>

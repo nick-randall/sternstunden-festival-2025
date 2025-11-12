@@ -130,7 +130,7 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ imagesWithPlaceholders }) => 
             height={300}
             width={300}
             src={img.src}
-            placeholder="blur"
+            placeholder={img.placeholder ? "blur" : undefined}
             blurDataURL={img.placeholder}
             alt="Rückblick Foto Sternstunden Festival 2024"
             priority={i < 10}

@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev-no-placeholders" : "GENERATE_PLACEHOLDERS=false next dev --turbopack"
   },
   "dependencies": {
     "@react-three/fiber": "^9.1.2",

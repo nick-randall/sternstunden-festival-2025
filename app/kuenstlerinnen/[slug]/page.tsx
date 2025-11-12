@@ -6,10 +6,8 @@ import { getReadableDETimeAndDayAbbr } from "@/helper_functions/helperFunctions"
 import Spacer from "@/components/Spacer";
 import ArtistBackButton from "@/components/ArtistBackButton";
 import { getPlaceholderImage } from "@/helper_functions/createBlurredImages";
-import artistsData from '../../../festival_data_2025/artists';
+import artistsData from "../../../festival_data_2025/artists";
 import artistSlugs from "@/festival_data_2025/artist_slugs";
-
-
 
 export async function generateStaticParams() {
   // const artists = [];
@@ -30,6 +28,7 @@ export async function generateStaticParams() {
 const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
 
+  const usePlaceHolders = process.env.GENERATE_PLACEHOLDERS !== "false";
   let a: ArtistWithEventsAndPlaceholderImage | null = null;
   const artistData = artistSlugs[slug] || null;
 
@@ -52,9 +51,12 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
   // if (!a) {
   //   return <div>Die Künstlerin konnte nicht gefunden werden</div>;
   // }
-  const placeholderImage = await getPlaceholderImage(artistData.artist.imageUrl);
-  a = { ...artistData, artist: { ...artistData.artist, placeholderImage } };
-
+  if (usePlaceHolders) {
+    const image = await getPlaceholderImage(artistData.artist.imageUrl);
+    a = { ...artistData, artist: { ...artistData.artist, image } };
+  } else {
+    a = { ...artistData, artist: { ...artistData.artist, image: {src: artistData.artist.imageUrl} } };
+  }
   return (
     <div className="artist-page">
       <style>
@@ -83,8 +85,8 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
               src={a.artist.imageUrl}
               alt={a.artist.name}
               fill={true}
-              placeholder="blur"
-              blurDataURL={a.artist.placeholderImage.placeholder}
+              placeholder={a.artist.image.placeholder ? "blur" : undefined}
+              blurDataURL={a.artist.image.placeholder}
             />
           </div>
           <Spacer width={16} />

@@ -26,36 +26,41 @@ export default async function Page() {
     if (i === 66) continue;
     photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/ssf24${i}.jpg`);
   }
+  const usePlaceHolders = process.env.GENERATE_PLACEHOLDERS !== "false";
 
-  try {
-    imagesWithPlaceholders = await Promise.all(
-      photoUrls.map(async (src: string) => {
-        const imageWithPlaceholder = await getPlaceholderImage(src);
-        return imageWithPlaceholder;
-      })
-    );
-    // for (let i = 0; i < photoUrls.length; i++) {
-    //   const url = photoUrls[i];
-    //   const response = await fetch(url, { method: "HEAD" });
-    //   if (!response.ok) {
-    //     console.error(`Image not found: ${url}`);
-    //     continue;
-    //   }
+  if (usePlaceHolders) {
+     try {
+      imagesWithPlaceholders = await Promise.all(
+        photoUrls.map(async (src: string) => {
+          const imageWithPlaceholder = await getPlaceholderImage(src);
+          return imageWithPlaceholder;
+        })
+      );
+      // for (let i = 0; i < photoUrls.length; i++) {
+      //   const url = photoUrls[i];
+      //   const response = await fetch(url, { method: "HEAD" });
+      //   if (!response.ok) {
+      //     console.error(`Image not found: ${url}`);
+      //     continue;
+      //   }
 
-    //   photoComponents.push(
-    //     <Image
-    //       key={`photo-${i}`}
-    //       height={300}
-    //       width={300}
-    //       src={url}
-    //       alt="Rückblick Foto Sternstunden Festival 2024"
-    //       priority={i < 10}
-    //       loading={i < 10 ? "eager" : "lazy"}
-    //     />
-    //   );
-    // }
-  } catch (error) {
-    console.error("Error fetching images:", error);
+      //   photoComponents.push(
+      //     <Image
+      //       key={`photo-${i}`}
+      //       height={300}
+      //       width={300}
+      //       src={url}
+      //       alt="Rückblick Foto Sternstunden Festival 2024"
+      //       priority={i < 10}
+      //       loading={i < 10 ? "eager" : "lazy"}
+      //     />
+      //   );
+      // }
+    } catch (error) {
+      console.error("Error fetching images:", error);
+    }
+  } else {
+    imagesWithPlaceholders = photoUrls.map((src: string) => ({ src }));
   }
 
   return (
@@ -65,16 +70,17 @@ export default async function Page() {
       <div className="content-box split-box">
         <div className="text-box">
           <div>
-            <h2 style={{ textAlign: "left" }}>
-       RÜCKBLICK 2025
-            </h2>
+            <h2 style={{ textAlign: "left" }}>RÜCKBLICK 2025</h2>
           </div>
 
           <div>
-Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das Gelände der historischen <strong>Hamburger Sternwarte in Bergedorf</strong> ein. Auch 2025 wurde die weitläufige Parkanlage rund um die denkmalgeschützten Teleskopgebäude wieder zu einem lebendigen Ort der Begegnung mit <strong>Musik und Astronomie</strong> – mit Konzerten, Sternenführungen, Kinderprogramm, Wissenschaft, Gemeinschaftstanz und vielem mehr.            <Spacer height={32} />
+            Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das Gelände der historischen{" "}
+            <strong>Hamburger Sternwarte in Bergedorf</strong> ein. Auch 2025 wurde die weitläufige Parkanlage rund um die denkmalgeschützten
+            Teleskopgebäude wieder zu einem lebendigen Ort der Begegnung mit <strong>Musik und Astronomie</strong> – mit Konzerten, Sternenführungen,
+            Kinderprogramm, Wissenschaft, Gemeinschaftstanz und vielem mehr. <Spacer height={32} />
             <strong>Danke an alle Besucher:innen, Künstler:innen und Mitwirkenden für ein unvergessliches Wochenende!</strong>
             <Spacer height={32} />
-          Bleibt gespannt – die Planungen für 2026 laufen bereits!         
+            Bleibt gespannt – die Planungen für 2026 laufen bereits!
           </div>
         </div>
         <div className="responsive-spacer-15"></div>
@@ -93,9 +99,9 @@ Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das
         </div>
         <div className="responsive-spacer-15"></div>
       </div>
-      
+
       <Spacer height={32} />
-      
+
       <div className="content-box">
         <Zoomable title="Musikalisches Lineup 2025">
           <Image
@@ -107,7 +113,7 @@ Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das
           />
         </Zoomable>
       </div>
-      
+
       <Spacer height={32} />
       <div className="content-box video-container">
         <div>AFTERMOVIE 2024</div>
@@ -117,10 +123,9 @@ Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das
       <div className="content-box" style={{ flexDirection: "column" }}>
         <PhotoSlider imagesWithPlaceholders={imagesWithPlaceholders} />
         <strong>Rückblick 2024</strong>
-          <a href="https://beyondportrait.de" target="_blank" title="Beyond Portrait Fotografie">
-             (c) beyond.portrait &#10154;
-          </a>
-      
+        <a href="https://beyondportrait.de" target="_blank" title="Beyond Portrait Fotografie">
+          (c) beyond.portrait &#10154;
+        </a>
       </div>
     </>
   );

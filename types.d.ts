@@ -50,7 +50,7 @@ type ArtistWithEventsAndPlaceholderImage = {
     attributes: null | {
       [key: string]: string | number | boolean;
     };
-    placeholderImage: ImageWithPlaceholder;
+    image: ImageWithPlaceholder;
   };
   events: FestivalEvent[];
 };
@@ -99,5 +99,5 @@ type FestivalEventWithArtist = FestivalEvent & {
 
 type ImageWithPlaceholder = {
   src: string;
-  placeholder: string;
+  placeholder?: string;
 };
