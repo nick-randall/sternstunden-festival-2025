@@ -14,7 +14,9 @@ const ShrinkingMenuLogo: React.FC<ShrinkingMenuLogoProps> = ({ scrollIsAtTopOfPa
           className={`menu-item logo ${scrollIsAtTopOfPage ? "big" : ""}`}
           priority={true}
           loading="eager"
-          src="/logo-with-dates.png"
+          //src="/logo-with-dates.png"
+          src="/logo-without-dates.png"
+
           alt="Sternstunden Festival Logo"
           width="826"
           height="483"
