@@ -7,6 +7,9 @@ import Menu from "@/components/Menu";
 import "../styles/menu.css";
 import "../styles/common.css";
 import Link from "next/link";
+// This is supposed to globally disable dynamic rendering and make all pages static
+export const dynamic = 'force-static'
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
