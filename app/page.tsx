@@ -100,7 +100,7 @@ export default async function Page() {
         <div className="responsive-spacer-15"></div>
         <div className="home-image-cropping-wrapper">
           <div className="home-image-wrapper">
-            <Zoomable title="QR-Bewerbung">
+            <Zoomable title="Bild bei  nacht von Lasershow an Rubin-Bühne">
               <Image
                 src="/Sternstunden-Festival-2025-203.jpg"
                 alt=""
