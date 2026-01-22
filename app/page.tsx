@@ -65,33 +65,47 @@ export default async function Page() {
 
   return (
     <>
-      <Image className="header-logo" src="/logo-with-dates.png" alt="Sternstunden Festival Logo" width="827" height="434" />
+      <Image className="header-logo" src="/logo-without-dates.png" alt="Sternstunden Festival Logo" width="827" height="434" />
+        <div className="content-box">
 
-      <div className="content-box split-box">
+            <Zoomable title="Save the Date">
+                <Image
+                    src="/SSF26_Briefkopf.jpg"
+                    alt="Ankündigung Sternstunden Festival 17. & 18. Juli"
+                    width="1240"
+                    height="877"
+                    className="hom-image"
+                />
+            </Zoomable>
+        </div>
+        <div className="responsive-spacer-15"></div>
+        <div className="content-box split-box">
         <div className="text-box">
           <div>
-            <h2 style={{ textAlign: "left" }}>RÜCKBLICK 2025</h2>
+            <h2 style={{ textAlign: "left" }}>OPEN CALL: ARTISTS</h2>
           </div>
 
           <div>
-            Seit seiner Premiere im Sommer 2023 lädt das Festival jährlich im Juli auf das Gelände der historischen{" "}
-            <strong>Hamburger Sternwarte in Bergedorf</strong> ein. Auch 2025 wurde die weitläufige Parkanlage rund um die denkmalgeschützten
-            Teleskopgebäude wieder zu einem lebendigen Ort der Begegnung mit <strong>Musik und Astronomie</strong> – mit Konzerten, Sternenführungen,
-            Kinderprogramm, Wissenschaft, Gemeinschaftstanz und vielem mehr. <Spacer height={32} />
-            <strong>Danke an alle Besucher:innen, Künstler:innen und Mitwirkenden für ein unvergessliches Wochenende!</strong>
-            <Spacer height={32} />
-            Bleibt gespannt – die Planungen für 2026 laufen bereits!
+              Auch beim diesjährigen Sternstunden Festival habt ihr die Möglichkeit, unterschiedlichste musikalische Beiträge auf die Bühnen der wunderschönen Sternwarte zu bringen.
+              <br />
+              <br />
+              <strong> Bewerbt euch bis zum 22.02.2026 </strong>
+
+              <a href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAZAAIzJRyZUMVlSV0tBWFlCWURSNEY3WjNVUzRQWE5JMC4u&origin=lprLink&route=shorturl" target="_blank" title="Bewerbung Artists 2026">
+                   hier
+              </a>
+              !
           </div>
         </div>
         <div className="responsive-spacer-15"></div>
         <div className="home-image-cropping-wrapper">
           <div className="home-image-wrapper">
-            <Zoomable title="Sternstunden Festival 2024">
+            <Zoomable title="Bild bei  nacht von Lasershow an Rubin-Bühne">
               <Image
-                src="/sternstunden_festival_home.jpg"
-                alt="Foto mit dem Text: 2 Tage Science Slam über 30 Konzerte mehr als 20 Vorträge über 1000 Besucher:innen buntes Kinderprogramm Besichtigungen Foodtrucks und und und"
-                width="625"
-                height="416"
+                src="/Sternstunden-Festival-2025-203.jpg"
+                alt=""
+                width="700"
+                height="300"
                 className="home-image"
               />
             </Zoomable>
@@ -102,7 +116,7 @@ export default async function Page() {
 
       <Spacer height={32} />
 
-      <div className="content-box">
+        {/* <div className="content-box">
         <Zoomable title="Musikalisches Lineup 2025">
           <Image
             src="/lineup2025.jpg"
@@ -112,7 +126,7 @@ export default async function Page() {
             className="hom-image"
           />
         </Zoomable>
-      </div>
+      </div>*/}
 
       <Spacer height={32} />
       <div className="content-box video-container">
