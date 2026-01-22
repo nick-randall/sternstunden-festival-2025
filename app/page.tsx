@@ -65,7 +65,7 @@ export default async function Page() {
 
   return (
     <>
-      <Image className="header-logo" src="/SSF26_Briefkopf.jpg" alt="Sternstunden Festival Logo" width="827" height="434" />
+      <Image className="header-logo" src="/logo-without-dates.png" alt="Sternstunden Festival Logo" width="827" height="434" />
         <div className="content-box">
 
             <Zoomable title="Save the Date">
