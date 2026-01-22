@@ -102,9 +102,9 @@ export default async function Page() {
           <div className="home-image-wrapper">
             <Zoomable title="QR-Bewerbung">
               <Image
-                src="/QR_Bewerbung.jpeg"
-                alt="QR Code zu Forns-Dokument für die Artist-Bewerbung"
-                width="300"
+                src="/Sternstunden-Festival-2025-203.jpg"
+                alt=""
+                width="700"
                 height="300"
                 className="home-image"
               />
