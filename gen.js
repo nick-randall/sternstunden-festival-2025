@@ -1840,6 +1840,7 @@ export async function getPlaceholderImage(filepath) {
 
 
 async function generatePlaceholders() {
+  console.log(fs)
   const placeholders = {};
   
   for (const artist of artistsData) {
@@ -1851,7 +1852,7 @@ async function generatePlaceholders() {
     }
   }
   
-  fs.writeFileSync('./festival_data_2025/placeholders.json', JSON.stringify(placeholders, null, 2));
+  fs.writeFile('./festival_data_2025/placeholders.json', JSON.stringify(placeholders, null, 2));
 }
 console.log("Generating placeholders...");
 generatePlaceholders();
