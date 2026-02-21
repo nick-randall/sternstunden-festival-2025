@@ -100,7 +100,7 @@ export default async function Page() {
         <div className="responsive-spacer-15"></div>
         <div className="home-image-cropping-wrapper">
           <div className="home-image-wrapper">
-            <Zoomable title="Bild bei  nacht von Lasershow an Rubin-Bühne">
+            <Zoomable title="Bild bei Nacht von Lasershow an Rubin-Bühne">
               <Image
                 src="/Sternstunden-Festival-2025-203.jpg"
                 alt=""
@@ -129,16 +129,21 @@ export default async function Page() {
       </div>*/}
 
       <Spacer height={32} />
-      <div className="content-box video-container">
-        <div>AFTERMOVIE 2024</div>
-        <iframe className="video" frameBorder="0" src="https://www.youtube-nocookie.com/embed/H_ZANaTi9Lo?si=Rnq-__7u6C3o3eiM"></iframe>
-      </div>
-      <Spacer height={32} />
-      <div className="content-box" style={{ flexDirection: "column" }}>
-        <PhotoSlider imagesWithPlaceholders={imagesWithPlaceholders} />
-        <strong>Rückblick 2024</strong>
-        <a href="https://beyondportrait.de" target="_blank" title="Beyond Portrait Fotografie">
-          (c) beyond.portrait &#10154;
+        <div className="content-box video-container">
+            <div>AFTERMOVIE 2025</div>
+            <iframe width="1120" height="630"
+                    src="https://www.youtube-nocookie.com/embed/XGiNFSrd4oA?si=NTvr_Y7HMB3X5IxF"
+                    title="YouTube video player" frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen></iframe>
+        </div>
+        <Spacer height={32}/>
+        <div className="content-box" style={{flexDirection: "column"}}>
+            <PhotoSlider imagesWithPlaceholders={imagesWithPlaceholders}/>
+            <strong>Rückblick 2024</strong>
+            <a href="https://beyondportrait.de" target="_blank" title="Beyond Portrait Fotografie">
+                (c) beyond.portrait &#10154;
         </a>
       </div>
     </>
