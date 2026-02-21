@@ -62,7 +62,7 @@ const DesktopMenu: React.FC = () => {
               Tickets
             </div>
           </Link> */}
-          <Link href="/kuenstlerinnen" className="menu-item-container" onMouseEnter={() => handleMouseEnter("programm")}>
+          <Link href="/programm" className="menu-item-container" onMouseEnter={() => handleMouseEnter("programm")}>
             <div className={`menu-item ${currDropdown === "programm" && "hovered"}`} ref={programHoverRef}>
               Programm
             </div>
