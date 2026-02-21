@@ -92,7 +92,7 @@ export default async function Page() {
               <strong> Bewerbt euch bis zum 22.02.2026 </strong>
 
               <a href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAZAAIzJRyZUMVlSV0tBWFlCWURSNEY3WjNVUzRQWE5JMC4u&origin=lprLink&route=shorturl" target="_blank" title="Bewerbung Artists 2026">
-                   hier
+                   hier &#10154;
               </a>
               !
           </div>

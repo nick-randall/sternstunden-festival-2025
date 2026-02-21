@@ -1,6 +1,8 @@
 .menu-wrapper {
   /* background: linear-gradient(to right, rgb(253, 244, 219, 0.3), rgb(239, 132, 84, 0.3));  */
-  background-color: rgba(251, 252, 240, 0.5);
+  /*background-color: rgba(251, 252, 240, 0.5);
+  */
+  background-color: rgba(255, 170, 0, 0.6);
   position: fixed;
   z-index: 100;
   width: 100%;
@@ -42,7 +44,8 @@
 }
 
 .menu-bar {
-  background-color: rgba(251, 252, 240, 0.5);
+  /* background-color: rgba(251, 252, 240, 0.5);*/
+  background-color: rgba(255, 170, 0, 0.6);
   display: flex;
   justify-content: center;
   transition: height 1s ease;
@@ -178,7 +181,8 @@
   width: 100%;
   /* background: linear-gradient(to right, rgb(232, 0, 233, 0.12), rgb(37, 3, 192, 0.12));  */
   /* same as #e800e9, #2503c0 */
-  background-color: rgba(251, 252, 240, 0.7);
+ /* background-color: rgba(251, 252, 240, 0.7);*/
+  background-color: rgba(255, 170, 0, 0.8);
 
   transition: 1s ease;
 }

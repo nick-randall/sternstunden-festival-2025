@@ -149,6 +149,11 @@ const DesktopMenu: React.FC = () => {
                   Rückblick 23/24
                 </Link>
               </li>
+              <li>
+              <Link href="/programm" className="menu-dropdown-link">
+                Rückblick 25
+              </Link>
+                </li>
             </ul>
           )}
           {currDropdown === "kontakt" && (

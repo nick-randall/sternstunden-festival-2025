@@ -8,7 +8,8 @@ body {
   which unfortunately is not supported on mobile devices. */
 
 .bg {
-  background-image: url(../public/back.jpg);
+  /*background-image: url(../public/back.jpg);*/
+  background-image: url('../public/SSF26_Hintergrund00004.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

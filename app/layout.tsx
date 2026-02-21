@@ -55,7 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 display: none;
               }
               .bg {
-                background-image: url('background_mobile.jpg');
+                background-image: url('handy_o.jpg');
               }
               .video {
                 min-height: 30vh;

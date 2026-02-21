@@ -26,7 +26,8 @@
 a {
   text-decoration: strong;
   text-decoration: none;
-  color: rgba(240, 129, 54);
+  /*color: rgba(240, 129, 54);*/
+  color: rgba(29, 64, 149, 0.8);
 }
 
 a:hover {
