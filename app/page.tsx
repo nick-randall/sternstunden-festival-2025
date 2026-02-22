@@ -131,12 +131,8 @@ export default async function Page() {
       <Spacer height={32} />
         <div className="content-box video-container">
             <div>AFTERMOVIE 2025</div>
-            <iframe width="1120" height="630"
-                    src="https://www.youtube-nocookie.com/embed/XGiNFSrd4oA?si=NTvr_Y7HMB3X5IxF"
-                    title="YouTube video player" frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen></iframe>
+            <iframe className="video"  frameBorder="0"
+                    src="https://www.youtube-nocookie.com/embed/XGiNFSrd4oA?si=NTvr_Y7HMB3X5IxF"></iframe>
         </div>
         <Spacer height={32}/>
         <div className="content-box" style={{flexDirection: "column"}}>
