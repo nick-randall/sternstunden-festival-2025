@@ -70,6 +70,7 @@ const KontaktPage: React.FC = () => {
   };
 
   return (
+
     <form onSubmit={handleSubmit}>
       <div className="contact-form-container">
         <h1>KONTAKT</h1>

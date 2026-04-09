@@ -1,6 +1,8 @@
 .boring-page-wrapper {
   max-width: 800px;
   line-height: 1.8;
+  background: linear-gradient(to right, rgba(255, 110, 0, 0.78), rgba(255, 110, 0, 0.6));
+  padding: 15px;
 }
 
 .boring-page-wrapper h1, .boring-page-wrapper .main-title{

@@ -82,14 +82,15 @@ export default async function Page() {
         <div className="content-box split-box">
         <div className="text-box">
           <div>
-            <h2 style={{ textAlign: "left" }}>OPEN CALL: ARTISTS</h2>
+            <h2 style={{ textAlign: "left" }}>Bald gibt es Tickets!</h2>
           </div>
 
           <div>
-              Auch beim diesjährigen Sternstunden Festival habt ihr die Möglichkeit, unterschiedlichste musikalische Beiträge auf die Bühnen der wunderschönen Sternwarte zu bringen.
+              Ab dem <strong>17.04.2026 </strong>  gibt es wieder Early-Bird Tickets.
+
               <br />
               <br />
-              <strong> Bewerbt euch bis zum 22.02.2026 </strong>
+              <strong> Sichert euch eurer Ticket  </strong>
 
               <a href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAZAAIzJRyZUMVlSV0tBWFlCWURSNEY3WjNVUzRQWE5JMC4u&origin=lprLink&route=shorturl" target="_blank" title="Bewerbung Artists 2026">
                    hier &#10154;

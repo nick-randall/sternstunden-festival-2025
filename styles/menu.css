@@ -30,7 +30,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 5px 20px;
-  background-color: rgba(251, 252, 240, 0.5);
+  background-color: rgba(255, 170, 0, 0.7);
 }
 
 .menu-items-wrapper {
@@ -45,7 +45,7 @@
 
 .menu-bar {
   /* background-color: rgba(251, 252, 240, 0.5);*/
-  background-color: rgba(255, 170, 0, 0.6);
+  background-color: rgba(255, 170, 0, 0.7);
   display: flex;
   justify-content: center;
   transition: height 1s ease;
@@ -54,7 +54,7 @@
 .mobile-menu {
   height: 0px;
   overflow: scroll;
-  background-color: rgba(251, 252, 240, 0.9);
+  background-color: rgba(255, 170, 0, 1);
   transition: all 0.8s ease;
   font-family: 'NunitoSans';
 }
@@ -81,7 +81,7 @@
 }
 
 .mobile-menu-item-text:hover {
-  color: rgba(240, 129, 54);
+  color: rgba(240, 60, 54);
 }
 
 .hamburger {
@@ -154,7 +154,7 @@
 
 .menu-item.hovered,
 .menu-dropdown-list li a:hover {
-  color: rgba(240, 129, 54)
+  color: rgba(240, 60, 54)
 }
 
 .menu-item-container {
@@ -182,7 +182,7 @@
   /* background: linear-gradient(to right, rgb(232, 0, 233, 0.12), rgb(37, 3, 192, 0.12));  */
   /* same as #e800e9, #2503c0 */
  /* background-color: rgba(251, 252, 240, 0.7);*/
-  background-color: rgba(255, 170, 0, 0.8);
+  background-color: rgba(255, 170, 0, 1);
 
   transition: 1s ease;
 }

@@ -5,6 +5,8 @@
   font-family: "NunitoSans";
   font-weight: 200;
   font-size: 20px;
+  background: linear-gradient(to right, rgba(255, 110, 0, 0.78), rgba(255, 110, 0, 0.6));
+  padding: 50px;
 }
 
 .contact-form-container h1 {
