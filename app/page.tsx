@@ -90,12 +90,12 @@ export default async function Page() {
 
               <br />
               <br />
-              <strong> Sichert euch eurer Ticket  </strong>
+              {/* <strong> Sichert euch eurer Ticket  </strong>
 
               <a href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAZAAIzJRyZUMVlSV0tBWFlCWURSNEY3WjNVUzRQWE5JMC4u&origin=lprLink&route=shorturl" target="_blank" title="Bewerbung Artists 2026">
                    hier &#10154;
               </a>
-              !
+              ! */}
           </div>
         </div>
         <div className="responsive-spacer-15"></div>
