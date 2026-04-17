@@ -39,7 +39,7 @@ const Anfahrt = () => {
         </a>
       </p>
               <Spacer height={16} />
-
+        {/*
   <div>
       <h3>Hinweis!</h3>
          <h2>🛠️ Straßensperrung Justus-Brinckmann-Straße</h2>
@@ -103,7 +103,7 @@ const Anfahrt = () => {
         <li>Voi und Dott wurden über den Bedarf informiert</li>
       </ul>
     </div>
-
+    */}
     <div>
       <strong>Unsere Empfehlung:</strong> Kommt am besten mit dem Fahrrad, zu Fuß oder mit den Linienbussen 8890 / 228 oder  332 / 135 – so seid ihr entspannt und klimafreundlich unterwegs.
       <br/><br/>

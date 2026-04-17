@@ -10,10 +10,41 @@ import Link from "next/link";
 const ProgrammPage = () => {
   return (
     <div className="boring-page-wrapper">
-   <h1>Rückblick Programm 2025</h1>
+
+        <h1>Ausblick Programm 2026 &#x2013; Klassik, Beats und Kosmos</h1>
+
+        <p>
+        Das Sternstundenfestival geht in die dritte Runde!
+        Wir bieten euch auch dieses Jahr ein abwechslungsreiches Programm zwischen Wissenschaft, Musik und Kinderangeboten - von Teleskopbesichtigungen und Ensemblemusik.
+        Hier gibt's einen kleinen Sneak Peak, auf was ihr euch dieses Jahr freuen könnt. Mehr zum Programm verraten wir euch bald.
+        </p>
+        <Spacer height={16} />
+
+        <h2>Musikprogramm – Klangwelten unter Sternen</h2>
+        <p>
+            Zwei Tage, fünf Bühnen, ein spannendes Line-up: Das Musikprogramm reicht von Kammermusik über Indiepop und Jazz bis hin zu Elektronik.
+            <br/>Dieses Jahr dabei sind:<br/>
+
+            <strong> Joshua Milo &#9733; Takandoon &#9733; Akleja &#9733; Duty Free &#9733; Kurkapelle Sonnendeck &#9733; Forehead &#9733; Zoe Ardiles &#9733; Ole Tiden &#9733; Görda &#9733; ... und noch viele mehr!  </strong>
+
+            <br/>
+        </p>
+
+        <Spacer height={16} />
+
+        <h2>Astroprogramm – Das Universum zum Anfassen</h2>
+        <p>
+            Das Astroprogramm macht auch in diesem Jahr das Universum für Groß und Klein greifbar.
+            Freut euch auf spannende Experimente, Teleskopbesichtigungen und einen unterhaltsamen Science Slam. Lernt  in spannenden Vorträgen mehr über das All oder löchtert bei "Ask an Astronomer" einen Experten mit euren Fragen.
+        </p>
+
+
+
+        {/*}
+        <h1>Rückblick Programm 2025</h1>
 <p>
-  Unser Festival an der Hamburger Sternwarte bot im Juli 2025 ein abwechslungsreiches Programm aus Wissenschaft, Musik und Kinderangeboten – von Teleskop-Beobachtungen über Ensemblemusik bis Science Slam, von Techno über Jazz bis Klassik, von Sagittarius A* über schwarze Löcher bis zur Sonne.  
-  Das Ganze fand auf dem wunderschönen Gelände der Hamburger Sternwarte in Hamburg-Bergedorf statt.  
+  Unser Festival an der Hamburger Sternwarte bot im Juli 2025 ein abwechslungsreiches Programm aus Wissenschaft, Musik und Kinderangeboten – von Teleskop-Beobachtungen über Ensemblemusik bis Science Slam, von Techno über Jazz bis Klassik, von Sagittarius A* über schwarze Löcher bis zur Sonne.
+  Das Ganze fand auf dem wunderschönen Gelände der Hamburger Sternwarte in Hamburg-Bergedorf statt.
   Hier gibt’s weiterhin einen Überblick über die Programmbereiche unseres vergangenen Festivals.
 </p>
 
@@ -21,9 +52,9 @@ const ProgrammPage = () => {
 
 <h2>Astroprogramm – Das Universum zum Anfassen</h2>
 <p>
-  Teleskop-Besichtigungen, Virtual Reality-Reisen, Sonnenbeobachtung und Science Slam – das Astroprogramm machte das Universum greifbar.  
+  Teleskop-Besichtigungen, Virtual Reality-Reisen, Sonnenbeobachtung und Science Slam – das Astroprogramm machte das Universum greifbar.
   Besucher:innen entdeckten interaktive Experimente, Ausstellungen und konnten ihre Fragen direkt an Astronom:innen stellen.  
-  Spannende Vorträge behandelten Themen wie Neutronensterne, Supercomputer, bewohnbare Planeten, kosmische Teilchen und die Symphonie der Schwarzen Löcher.  
+  Spannende Vorträge behandelten Themen wie Neutronensterne, Supercomputer, bewohnbare Planeten, kosmische Teilchen und die Symphonie der Schwarzen Löcher.
   Einige Angebote wurden in Deutsche Gebärdensprache (DGS <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" />) übersetzt.  
   <br/>
   👉 <Link href="/timetable"><strong>[Zum Timetable]</strong></Link><br/>
@@ -146,7 +177,7 @@ const ProgrammPage = () => {
 </p>
 <Spacer height={16} />
 <h3>Folge uns auf <a href="https://www.instagram.com/sternstundenfestival" target="_blank">Instagram &#10154;</a>.</h3>
- 
+ */}
     </div>
   );
 };

@@ -211,7 +211,7 @@ const TimetablePage = async () => {
 
   return (
     <div className="timetable-page-wrapper">
-      <h1>Timetable</h1>
+      <h1>Timetable 2025</h1>
 
       <TimetableSwitcher dayTimetables={dayTimetables} dayNames={dayNames} />
       <Spacer height={8} />
@@ -239,7 +239,7 @@ const TimetablePage = async () => {
 
         <div>
           <br />
-          Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell. Stand 14.07.
+          Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell. Stand 14.07.2025
           <br />
           Fürs Smartphone haben wir auch eine 👉
           <Link href="/mobile-app">

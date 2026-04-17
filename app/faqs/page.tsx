@@ -21,8 +21,8 @@ const Faqs = () => {
           title="Wie viel werden die Tickets an der Abendkasse kosten? "
           text={
             <div>
-              Die Tickets werden für den Freitag 15€ (ermäßigt 10€) und für den Samstag 20€ (ermäßigt 14€) kosten. Das Kombiticket kostet 25€
-              (ermäßigt 19€). Ermäßigungsberechtigt sind Studierende, Senior:innen, Schüler:innen, Auszubildende, Erwerbslose, Menschen mit
+              Die Tickets werden für den Freitag 17€ (ermäßigt 12€) und für den Samstag 22€ (ermäßigt 17€) kosten. Das Kombiticket kostet 27€
+              (ermäßigt 22€). Ermäßigungsberechtigt sind Studierende, Senior:innen, Schüler:innen, Auszubildende, Erwerbslose, Menschen mit
               Schwerbehinderung (ab GdB 50, bei eingetragenem Merkzeichen „B“ erhält Begleitung freien Eintritt). Kinder bis 14 Jahre erhalten freien
               Eintritt und benötigen ein kostenloses Online-Ticket. Geflüchtete erhalten freien Eintritt gegen Vorlage einer gültigen
               Aufenthaltserlaubnis nach § 24 AufenthG oder § 25 Abs. 1, 2 oder 3 AufenthG oder jeweils in Verbindung mit einer gültigen
@@ -39,7 +39,7 @@ const Faqs = () => {
         />
         <CollapsibleText
           title="Wann beginnt das Festival jeweils an den beiden Tagen? "
-          text="Am Freitag beginnt der Einlass um 16 Uhr und das Programm endet um 1 Uhr nachts.
+          text="Am Freitag beginnt der Einlass um 15 Uhr und das Programm endet um 1 Uhr nachts.
                   Am Samstag geht es mit dem Einlass um 13:30 Uhr los und das Programm endet um Mitternacht,
                   je nach Witterungsverhältnissen geht die Himmelsbeobachtung vielleicht noch etwas länger."
           isOpen={currOpen === 1}

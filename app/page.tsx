@@ -6,9 +6,11 @@ import PhotoSlider from "./PhotoSlider";
 import Image from "next/image";
 import Zoomable from "@/components/Zoomable";
 import { getPlaceholderImage } from "@/helper_functions/createBlurredImages";
+import Link from "next/link";
+const rootUrl = "https://sternstunde.s3.ap-southeast-2.amazonaws.com/2025_photos/";
 
-const rootUrl = "https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/";
-const initial = ["ssf24m43", "ssf24m115", "ssf24m112", "ssf24m113", "ssf24m44", "ssf24m108"];
+const initial = ["ssf25m001", "ssf25m002", "ssf25m003", "ssf25m004", "ssf25m005", "ssf25m006", "ssf25m007", "ssf25m008", "ssf25m009", "ssf25m010", "ssf25m011", "ssf25m012", "ssf25m013", "ssf25m014",
+"ssf25m015", "ssf25m016", "ssf25m017", "ssf25m018", "ssf25m019", "ssf25m020", "ssf25m021", "ssf25m022", "ssf25m023", "ssf25m024", "ssf25m025", "ssf25m026", "ssf25m027", "ssf25m028", "ssf25m029", "ssf25m030", "ssf25m031"];
 
 export default async function Page() {
   const photoUrls = [];
@@ -18,14 +20,14 @@ export default async function Page() {
   }
   let imagesWithPlaceholders: ImageWithPlaceholder[] = [];
 
-  for (let i = 1; i < 115; i++) {
-    if (i === 80) continue;
-    photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/ssf24m${i}.jpg`);
+  for (let i = 1; i < 142; i++) {
+    if (i === 142) continue;
+    photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2025_photos/ssf25_${i}.jpg`);
   }
-  for (let i = 1; i < 87; i++) {
-    if (i === 66) continue;
-    photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2024_photos/ssf24${i}.jpg`);
-  }
+  /*for (let i = 1; i < 32; i++) {
+    if (i === 32) continue;
+    photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2025_photos/ssf25m0${i}.jpg`);
+  }*/
   const usePlaceHolders = process.env.GENERATE_PLACEHOLDERS !== "false";
 
   if (usePlaceHolders) {
@@ -87,29 +89,25 @@ export default async function Page() {
 
           <div>
               Ab dem <strong>17.04.2026 </strong>  gibt es wieder Early-Bird Tickets.
-
               <br />
               <br />
-              {/* <strong> Sichert euch eurer Ticket  </strong>
+              <strong> Sichert euch euer Ticket</strong>
 
-              <a href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAZAAIzJRyZUMVlSV0tBWFlCWURSNEY3WjNVUzRQWE5JMC4u&origin=lprLink&route=shorturl" target="_blank" title="Bewerbung Artists 2026">
-                   hier &#10154;
-              </a>
-              ! */}
+              <Link href=" /tickets" target="_blank"> hier </Link> &#10154;
           </div>
         </div>
         <div className="responsive-spacer-15"></div>
         <div className="home-image-cropping-wrapper">
           <div className="home-image-wrapper">
-            <Zoomable title="Bild bei Nacht von Lasershow an Rubin-Bühne">
-              <Image
-                src="/Sternstunden-Festival-2025-203.jpg"
-                alt=""
-                width="700"
-                height="300"
-                className="home-image"
-              />
-            </Zoomable>
+                <Link href="/programm" target="_blank" title="Programm 2026">
+                    <Image
+                        src="/Programmpost.png"
+                        alt="Programm-Ankündigung Sternstundenfestival 2026"
+                        width="1700"
+                        height="1700"
+                        className="home-image"
+                    />
+                </Link>
           </div>
         </div>
         <div className="responsive-spacer-15"></div>
@@ -138,7 +136,7 @@ export default async function Page() {
         <Spacer height={32}/>
         <div className="content-box" style={{flexDirection: "column"}}>
             <PhotoSlider imagesWithPlaceholders={imagesWithPlaceholders}/>
-            <strong>Rückblick 2024</strong>
+            <strong>Rückblick 2025</strong>
             <a href="https://beyondportrait.de" target="_blank" title="Beyond Portrait Fotografie">
                 (c) beyond.portrait &#10154;
         </a>

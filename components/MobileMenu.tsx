@@ -50,11 +50,11 @@ const MobileMenu: React.FC = () => {
           </div>
         </div>
         <div className={`mobile-menu ${isOpen ? "open" : ""}`} ref={menuRef}>
-          {/*<div className="mobile-menu-item">
+          <div className="mobile-menu-item">
             <Link href="/tickets" className="mobile-menu-item-container" onClick={toggleMenu}>
               <div className="mobile-menu-item-text">Tickets</div>
             </Link>
-          </div> */}
+          </div>
           <div className="mobile-menu-item">
             <Link href="/programm" className="mobile-menu-item-container" onClick={toggleMenu}>
               <div className="mobile-menu-item-text">Programm</div>
@@ -64,17 +64,17 @@ const MobileMenu: React.FC = () => {
               <Link href="/programm" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Programminfo</div>
               </Link>
-            </div>*/}
+            </div>
             <div className="mobile-sub-menu-item">
               <Link href="/timetable" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Timetable</div>
               </Link>
             </div>
-            <div className="mobile-sub-menu-item">
+            {/*<div className="mobile-sub-menu-item">
               <Link href="/mobile-app" className="mobile-menu-item-container" onClick={toggleMenu}>
                 <div className="mobile-menu-item-text">Festival App</div>
               </Link>
-            </div>
+            </div>*/}
           </div>
                 {/*<div className="mobile-sub-menu-item">
               <Link href="/planeten" className="mobile-menu-item-container" onClick={toggleMenu}>
@@ -111,8 +111,13 @@ const MobileMenu: React.FC = () => {
               </div>
               <div className="mobile-sub-menu-item" onClick={toggleMenu}>
                 <Link href="/rueckblick" className="mobile-menu-item-container">
-                  <div className="mobile-menu-item-text">Rückblick</div>
+                  <div className="mobile-menu-item-text">Rückblick 23/24</div>
                 </Link>
+                <div className="mobile-sub-menu-item" onClick={toggleMenu}>
+                  <Link href="/rueckblick25" className="mobile-menu-item-container">
+                    <div className="mobile-menu-item-text">Rückblick 25</div>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

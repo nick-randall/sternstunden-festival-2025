@@ -169,22 +169,31 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </div>
 
                 <div className="sponsor-logo-container">
-                  <a href="https://www.claussen-simon-stiftung.de/de" target="_blank" title="Claussen Simon Stiftung">
-                    <Image
-                      src="/sponsors/claussen-simon-stiftung.png"
-                      alt="Claussen Simon Stiftung"
-                      height="669"
-                      width="1720"
-                      className="sponsor-logo"
-                    />
+                  <a href="https://www.nordmetall-stiftung.de/" target="_blank" title="Nordmetall-Stiftung">
+                    <Image src="/sponsors/nordmetall.png" alt="Nordmetall-Stiftung" width="400" height="78" className="sponsor-logo" />
                   </a>
-                </div>
+              </div>
+                {/*}
                              
                 <div className="sponsor-logo-container">
                   <a href="https://www.uni-hamburg.de/exzellenz/exzellenzcluster.html" target="_blank" title="Exzellenzcluster">
                     <Image src="/sponsors/excellenzcluster.png" alt="Excellenzcluster" width="400" height="78" className="sponsor-logo" />
                   </a>
-              </div>
+              </div>*/}
+
+
+                <div className="sponsor-logo-container">
+                  <a href="https://buhck-stiftung.de/" target="_blank" title="Buhck-Stiftung">
+                    <Image src="/sponsors/BST_Logo.png" alt="Buhck-Stiftung" width="400" height="78" className="sponsor-logo" />
+                  </a>
+                </div>
+
+                <Spacer height={32} />
+                <div>
+                   <p> <small>Dieses Projekt wird aus Mitteln des <a href="https://www.hamburg.de/politik-und-verwaltung/bezirke/bergedorf" target="_blank" title="Bezirksamt Bergedorf"> Bezirksamts Bergedorf
+                    </a>  gefördert. </small> </p>
+                </div>
+
 </div>
 </div>
 
@@ -202,7 +211,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <Image src="/sponsors/bergedorf_bille.png" alt="Bergedorf Bille" width="400" height="78" className="sponsor-logo" />
                   </a>
                 </div>
-                
+                {/*
                 <div className="sponsor-logo-container">
                   <a href="https://www.asta-uhh.de/" target="_blank" title="AStA Hamburg">
                     <Image src="/sponsors/asta.png" alt="AStA Hamburg" width="400" height="78" className="sponsor-logo" />
@@ -255,7 +264,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <a href="https://www.momentevents.co/" target="_blank" title="Moment App">
                     <Image src="/sponsors/moment.png" alt="Moment App" width="400" height="78" className="sponsor-logo" />
                   </a>
-                  </div>
+                  </div> */}
 
                   </div> 
                                    
@@ -304,6 +313,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 <div className="sponsor-logo-wrap-section3">
   <div className="sponsor-logo-row">
     {/* alle anderen Logos */}
+
+    {/*}
     <div className="sponsor-logo-container">
       <a href="https://cherryontop.film/" target="_blank" title="cherryontop">
         <Image
@@ -314,7 +325,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           className="sponsor-logo"
         />
       </a>
-    </div>
+    </div>*/}
   </div>
 </div>
 
