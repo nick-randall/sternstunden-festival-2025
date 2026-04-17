@@ -81,7 +81,6 @@ export default async function Page() {
 
         </div>
         <div className="responsive-spacer-15"></div>
-        <Spacer height={32} />
         <div className="content-box split-box">
         <div className="text-box">
           <div>

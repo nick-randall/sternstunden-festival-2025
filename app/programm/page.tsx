@@ -14,7 +14,7 @@ const ProgrammPage = () => {
         <h1>Ausblick Programm 2026 &#x2013; Klassik, Beats und Kosmos</h1>
 
         <p>
-        Das Sternstundenfestival geht in die dritte Runde!
+        Das Sternstundenfestival geht in die nächste Runde!
         Wir bieten euch auch dieses Jahr ein abwechslungsreiches Programm zwischen Wissenschaft, Musik und Kinderangeboten - von Teleskopbesichtigungen und Ensemblemusik.
         Hier gibt's einen kleinen Sneak Peak, auf was ihr euch dieses Jahr freuen könnt. Mehr zum Programm verraten wir euch bald.
         </p>

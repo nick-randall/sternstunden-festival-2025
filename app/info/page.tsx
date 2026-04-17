@@ -69,7 +69,7 @@ const MoreInfoPage = () => {
         <br/>
  👉     <Link href="/kuenstlerinnen">
       <strong>[Zum Programm]</strong>
-        </Link> */})
+        </Link> */}
         <Spacer height={4} />
       </p>
       <h3>Für alle Generationen</h3>
