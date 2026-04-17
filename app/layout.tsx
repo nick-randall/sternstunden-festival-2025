@@ -353,7 +353,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </div>
             </div>
 
-            <div>©2023-2025 Sternstunden Festival</div>
+            <div>©2023-2026 Sternstunden Festival</div>
             <Spacer height={32} />
           </Flex>
         </section>

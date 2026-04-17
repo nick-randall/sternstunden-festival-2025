@@ -20,8 +20,8 @@ export default async function Page() {
   }
   let imagesWithPlaceholders: ImageWithPlaceholder[] = [];
 
-  for (let i = 1; i < 142; i++) {
-    if (i === 142) continue;
+  for (let i = 1; i < 109; i++) {
+    if (i === 109) continue;
     photoUrls.push(`https://sternstunde.s3.ap-southeast-2.amazonaws.com/2025_photos/ssf25_${i}.jpg`);
   }
   /*for (let i = 1; i < 32; i++) {
@@ -70,7 +70,7 @@ export default async function Page() {
       <Image className="header-logo" src="/logo-without-dates.png" alt="Sternstunden Festival Logo" width="827" height="434" />
         <div className="content-box">
 
-            <Zoomable title="Save the Date">
+
                 <Image
                     src="/SSF26_Briefkopf.jpg"
                     alt="Ankündigung Sternstunden Festival 17. & 18. Juli"
@@ -78,9 +78,10 @@ export default async function Page() {
                     height="877"
                     className="hom-image"
                 />
-            </Zoomable>
+
         </div>
         <div className="responsive-spacer-15"></div>
+        <Spacer height={32} />
         <div className="content-box split-box">
         <div className="text-box">
           <div>
