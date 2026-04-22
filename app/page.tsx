@@ -84,19 +84,24 @@ export default async function Page() {
         <div className="content-box split-box">
         <div className="text-box">
           <div>
-            <h2 style={{ textAlign: "left" }}>Bald gibt es Tickets!</h2>
+            <h2 style={{ textAlign: "left" }}> Es gibt Tickets!</h2>
           </div>
 
           <div>
-              Ab dem <strong>17.04.2026 </strong>  gibt es wieder Early-Bird Tickets.
+              Seit dem <strong> 17.04.2026 </strong>  gibt es wieder Early-Bird-Tickets.
               <br />
               <br />
               <strong> Sichert euch euer Ticket</strong>
 
-              <Link href=" /tickets" target="_blank"> hier </Link> &#10154;
+              <Link href=" /tickets" target="_blank"> hier! </Link>
+              <br />
+              <br />
+               Und <Link href=" /programm" target="_blank"> hier </Link>  gibt's einen kleinen Sneak Peak, auf was ihr euch dieses Jahr freuen könnt. <br />
+              <br /> Mehr zum Programm verraten wir euch bald.
+
           </div>
         </div>
-        <div className="responsive-spacer-15"></div>
+        <div className="responsive-spacer-15"> </div>
         <div className="home-image-cropping-wrapper">
           <div className="home-image-wrapper">
                 <Link href="/programm" target="_blank" title="Programm 2026">
