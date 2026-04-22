@@ -25,7 +25,11 @@ const ProgrammPage = () => {
             Zwei Tage, fünf Bühnen, ein spannendes Line-up: Das Musikprogramm reicht von Kammermusik über Indiepop und Jazz bis hin zu Elektronik.
             <br/>Dieses Jahr dabei sind:<br/>
 
-            <strong> Joshua Milo &#9733; Takandoon &#9733; Akleja &#9733; Duty Free &#9733; Kurkapelle Sonnendeck &#9733; Forehead &#9733; Zoe Ardiles &#9733; Ole Tiden &#9733; Görda &#9733; ... und noch viele mehr!  </strong>
+            <strong> <Link href="https://youtu.be/z1kLgj66UsM" target="_blank">Joshua Milo</Link> &#9733; Takandoon &#9733; <Link href="https://www.youtube.com/watch?v=8nyPD0yaRoU" target="_blank"> Akleja </Link>
+
+                &#9733; <Link href="https://www.youtube.com/watch?v=OO03kZ-Bibg" target="_blank"> Duty Free </Link> &#9733; <Link href="https://www.youtube.com/watch?v=rI0CsWG-jOQ" target="_blank"> Kurkapelle Sonnendeck </Link>
+                 &#9733; Forehead &#9733; <Link href="https://www.youtube.com/watch?v=Pu9m7ppzLxw&list=PLpuLyuMQ5OcpXnAu9EmOIR0L3e576DIkq" target="_blank"> Zoe Ardiles  </Link>
+                &#9733; Ole Tiden &#9733;<Link href="https://www.goerdamusic.com/musik" target="_blank"> Görda </Link>  &#9733; ... und noch viele mehr!  </strong>
 
             <br/>
         </p>
