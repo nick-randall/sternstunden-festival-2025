@@ -173,13 +173,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <Image src="/sponsors/nordmetall.png" alt="Nordmetall-Stiftung" width="400" height="78" className="sponsor-logo" />
                   </a>
               </div>
-                {/*}
+                
                              
                 <div className="sponsor-logo-container">
                   <a href="https://www.uni-hamburg.de/exzellenz/exzellenzcluster.html" target="_blank" title="Exzellenzcluster">
                     <Image src="/sponsors/excellenzcluster.png" alt="Excellenzcluster" width="400" height="78" className="sponsor-logo" />
                   </a>
-              </div>*/}
+              </div>
 
 
                 <div className="sponsor-logo-container">
