@@ -24,14 +24,51 @@ const ProgrammPage = () => {
         <p>
             Zwei Tage, fünf Bühnen, ein spannendes Line-up: Das Musikprogramm reicht von Kammermusik über Indiepop und Jazz bis hin zu Elektronik.
             <br/>Dieses Jahr dabei sind:<br/>
+            <p> <strong>Freitags: </strong> <br/>
+             Skyliner Bigband &#9733;
+            <Link href= "https://www.youtube.com/watch?v=3enpYIQSQYE&t=290s" target="_blank" > Eversween</Link> &#9733;
+            <Link href="https://www.youtube.com/watch?v=rI0CsWG-jOQ" target="_blank"> Kurkapelle Sonnendeck </Link> &#9733;
+            Picture of a Red Seagull &#9733;
+            Hamburger Streichwerk &#9733;
+            Gletscher-Duo &#9733;
+            Holz Quartett &#9733;
+            Gregor in der Kuppel &#9733;
+            TREVA ENSEMBLE &#9733;
+            Protostellar core  &#9733;
+            <Link href="https://soundcloud.com/oletieden/sets/ueberall-hoert-der-himmel-auf/s-DSzl2VAPuXr" target="_blank">
+                Ole Tiden </Link>  &#9733;
+           <Link href="https://www.goerdamusic.com/musik" target="_blank"> Görda </Link>  &#9733;
+            <Link href="https://svelet.com/" target="_blank"> SVELET </Link> &#9733;
+            <Link href="https://www.youtube.com/watch?v=8nyPD0yaRoU" target="_blank"> Akleja </Link> &#9733;
+            <Link href="https://open.spotify.com/album/6F4zHBdwA5ZA23ebNHt6bN?si=RyalLU1FQnqGEmrWW1vmFQ" target="_blank"> Elom Volta  </Link> &#9733;
+            <Link href=" https://open.spotify.com/intl-de/artist/2fRwJZ7JQOzEOF7PMFXvFl?si=tQ9xlxKGR72vyNzWrPCjcg" target="_blank"> NANCY </Link>  &#9733;
+                <Link href="https://www.bananenfuchs.de/" target="_blank"> Bananenfuchs </Link>  &#9733;
+                </p>
+                <strong>Samstags: </strong>
+            <p>
+            Forehead
+            <Link href="https://open.spotify.com/track/5pTQmoMuqBkkpEDs3gIw8E?si=EULmPGqNTqyS3kpzmH62ZQ" target="_blank"> Takadoon </Link> &
+            <Link href="https://youtu.be/z1kLgj66UsM" target="_blank">Joshua Milo</Link> &#9733;
+            <Link href="https://www.duosu.de/" target="_blank">Duo SU </Link> &#9733;
+            Lanbo und CO
+            Bow Brothers
+            <Link href="https://www.youtube.com/watch?v=OO03kZ-Bibg" target="_blank"> Duty Free </Link> &#9733;
+            Jonas &#9733;
+            Duo constellation &#9733;
+            Canvas &#9733;
+            ChorChester Collab &#9733;
+            EoN &#9733;
+            Unihörner &#9733;
+            <Link href="https://www.bananenfuchs.de/" target="_blank"> Bananenfuchs </Link>  &#9733;
+            Lucid Robbery
+            <Link href="https://loosely-band.de/Musik/" target="_blank"> Loosely </Link>  &#9733;
+            <Link href="https://www.youtube.com/watch?v=Pu9m7ppzLxw&list=PLpuLyuMQ5OcpXnAu9EmOIR0L3e576DIkq" target="_blank"> Zoe Ardiles  </Link> &#9733;
+            Jean Konrad &#9733;
+            <Link href="https://bfan.link/florine" target="_blank"> Lyyla  </Link> &#9733;
+            JST ONE &#9733;
 
-            <strong> <Link href="https://youtu.be/z1kLgj66UsM" target="_blank">Joshua Milo</Link> &#9733; Takadoon &#9733; <Link href="https://www.youtube.com/watch?v=8nyPD0yaRoU" target="_blank"> Akleja </Link>
-
-                &#9733; <Link href="https://www.youtube.com/watch?v=OO03kZ-Bibg" target="_blank"> Duty Free </Link> &#9733; <Link href="https://www.youtube.com/watch?v=rI0CsWG-jOQ" target="_blank"> Kurkapelle Sonnendeck </Link>
-                 &#9733; Forehead &#9733; <Link href="https://www.youtube.com/watch?v=Pu9m7ppzLxw&list=PLpuLyuMQ5OcpXnAu9EmOIR0L3e576DIkq" target="_blank"> Zoe Ardiles  </Link>
-                &#9733; Ole Tiden &#9733;<Link href="https://www.goerdamusic.com/musik" target="_blank"> Görda </Link>  &#9733; ... und noch viele mehr!  </strong>
-
-            <br/>
+            </p>
+            ... und noch viele mehr!
         </p>
 
         <Spacer height={16} />

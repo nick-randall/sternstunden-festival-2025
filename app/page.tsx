@@ -88,7 +88,7 @@ export default async function Page() {
           </div>
 
           <div>
-              Seit dem <strong> 17.04.2026 </strong>  gibt es wieder Early-Bird-Tickets.
+              Seit dem <strong> 17.04.2026 </strong>  gibt es wieder Tickets.
               <br />
               <br />
               <strong> Sichert euch euer Ticket</strong>
