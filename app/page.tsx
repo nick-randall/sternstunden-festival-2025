@@ -88,16 +88,21 @@ export default async function Page() {
           </div>
 
           <div>
-              <strong>  Wann fangen wir an?</strong><br />
+              <p>  <strong>  Wann fangen wir an?</strong><br />
                   Am 17. Juli öffnen wir ab 15 Uhr die Pforten. Am 18. Juli haben wir ab 13:30 Uhr Einlass.
-              <strong>  Was erwartet euch?</strong><br />
+              <br />
+              <br /> </p>
+          <p><strong>  Was erwartet euch?</strong>
+              <br />
+              <br />
               Die Acts und Astroprogramm stehen schon fest.
               Werft doch einen Blick ins <Link href=" /programm" target="_blank"> Programm </Link>. Ein genauer Timetable folgt bald!
               <br />
+              <br /> </p>
+          <p> <strong> Ihr braucht noch ein Ticket? </strong><br />
               <br />
-              <strong> Ihr braucht noch ein Ticket? </strong><br />
               <Link href=" /tickets" target="_blank"> Hier </Link> kommt ihr zum Shop.
-              <br />
+              <br /> </p>
 
           </div>
         </div>
