@@ -47,7 +47,7 @@ const ProgrammPage = () => {
                 <strong>Samstags: </strong>
             <p>
             Forehead
-            <Link href="https://open.spotify.com/track/5pTQmoMuqBkkpEDs3gIw8E?si=EULmPGqNTqyS3kpzmH62ZQ" target="_blank"> Takadoon </Link> &
+            <Link href="https://open.spotify.com/track/5pTQmoMuqBkkpEDs3gIw8E?si=EULmPGqNTqyS3kpzmH62ZQ" target="_blank"> Takadoon </Link> &#9733;
             <Link href="https://youtu.be/z1kLgj66UsM" target="_blank">Joshua Milo</Link> &#9733;
             <Link href="https://www.duosu.de/" target="_blank">Duo SU </Link> &#9733;
             Lanbo und CO
@@ -79,8 +79,34 @@ const ProgrammPage = () => {
             Freut euch auf spannende Experimente, Teleskopbesichtigungen und einen unterhaltsamen Science Slam. Lernt  in spannenden Vorträgen mehr über das All oder löchtert bei "Ask an Astronomer" einen Experten mit euren Fragen.
         </p>
 
+        <strong>Freitags: </strong>
+        <p>
+            Erika Garutti -
+            Baden wir in Dunkler Materie?
+            &#9733;Erika Garutti - Cosmic Giants: The Universe's Largest Galaxies &#9733;
 
 
+
+        </p>
+        <strong>Samstags: </strong>
+        <p>
+            Science Slam &#9733; Dieter Horns - Von Seekühen und Krebsen: Die extremsten Teilchenbeschleuniger in der Milchstraße &#9733; Lenard Kasselmann -
+            Das magnetische Universum
+
+        </p>
+        <strong>An beiden Tagen: </strong>
+        <p>
+            Sonnenbeobachtung
+             &#9733; Music of the Spheres
+            &#9733;Computer Vision Song Contest &#9733;Supercomputing /
+            Virtual reality – Reise zum Zentrum der Milchstraße &#9733; Zeichne dein Weltraumwesen
+            &#9733;
+            Mond- und Venusbeobachtung / Teleskopbesichtigung
+
+            &#9733;Die Farben des Universums
+
+
+        </p>
         {/*}
         <h1>Rückblick Programm 2025</h1>
 <p>

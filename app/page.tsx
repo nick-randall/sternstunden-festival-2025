@@ -84,20 +84,20 @@ export default async function Page() {
         <div className="content-box split-box">
         <div className="text-box">
           <div>
-            <h2 style={{ textAlign: "left" }}> Es gibt Tickets!</h2>
+            <h2 style={{ textAlign: "left" }}> Bald geht es los! </h2>
           </div>
 
           <div>
-              Seit dem <strong> 17.04.2026 </strong>  gibt es wieder Tickets.
+              <strong>  Wann fangen wir an?</strong><br />
+                  Am 17. Juli öffnen wir ab 15 Uhr die Pforten. Am 18. Juli haben wir ab 13:30 Uhr Einlass.
+              <strong>  Was erwartet euch?</strong><br />
+              Die Acts und Astroprogramm stehen schon fest.
+              Werft doch einen Blick ins <Link href=" /programm" target="_blank"> Programm </Link>. Ein genauer Timetable folgt bald!
               <br />
               <br />
-              <strong> Sichert euch euer Ticket</strong>
-
-              <Link href=" /tickets" target="_blank"> hier! </Link>
+              <strong> Ihr braucht noch ein Ticket? </strong><br />
+              <Link href=" /tickets" target="_blank"> Hier </Link> kommt ihr zum Shop.
               <br />
-              <br />
-               Und <Link href=" /programm" target="_blank"> hier </Link>  gibt's einen kleinen Sneak Peak, auf was ihr euch dieses Jahr freuen könnt. <br />
-              <br /> Mehr zum Programm verraten wir euch bald.
 
           </div>
         </div>

@@ -40,7 +40,7 @@ const Faqs = () => {
         <CollapsibleText
           title="Wann beginnt das Festival jeweils an den beiden Tagen? "
           text="Am Freitag beginnt der Einlass um 15 Uhr und das Programm endet um 1 Uhr nachts.
-                  Am Samstag geht es mit dem Einlass um 13:30 Uhr los und das Programm endet um Mitternacht,
+                  Am Samstag geht es mit dem Einlass um 13:30 Uhr los und das Programm endet um Mitternacht beziehungsweise um 1 Uhr,
                   je nach Witterungsverhältnissen geht die Himmelsbeobachtung vielleicht noch etwas länger."
           isOpen={currOpen === 1}
           handleClick={() => toggleOpen(1)}
@@ -132,7 +132,7 @@ const Faqs = () => {
               <Link href="/lageplan" target="_blank">
                 <strong> Lageplan </strong>
               </Link>
-              ist es auch eingezeichnet.
+              ist es auch eingezeichnet. Die Bühnen werden dieses Jahr etwas anders angeordnet sein, der Eingang bleibt aber der selbe. Ein aktualisierter Lageplan folgt bald.
             </div>
           }
           isOpen={currOpen === 11}
