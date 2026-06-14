@@ -94,13 +94,11 @@ export default async function Page() {
               <br /> </p>
           <p><strong>  Was erwartet euch?</strong>
               <br />
-              <br />
               Die Acts und Astroprogramm stehen schon fest.
               Werft doch einen Blick ins <Link href=" /programm" target="_blank"> Programm </Link>. Ein genauer Timetable folgt bald!
               <br />
               <br /> </p>
           <p> <strong> Ihr braucht noch ein Ticket? </strong><br />
-              <br />
               <Link href=" /tickets" target="_blank"> Hier </Link> kommt ihr zum Shop.
               <br /> </p>
 

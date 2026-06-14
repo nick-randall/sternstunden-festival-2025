@@ -132,7 +132,7 @@ const Faqs = () => {
               <Link href="/lageplan" target="_blank">
                 <strong> Lageplan </strong>
               </Link>
-              ist es auch eingezeichnet. Die Bühnen werden dieses Jahr etwas anders angeordnet sein, der Eingang bleibt aber der selbe. Ein aktualisierter Lageplan folgt bald.
+              ist es auch eingezeichnet.
             </div>
           }
           isOpen={currOpen === 11}
@@ -146,7 +146,7 @@ const Faqs = () => {
               <Link href="/lageplan" target="_blank">
                 <strong> Lageplan </strong>
               </Link>
-              gekennzeichnet ist. Der Eingang von der August-Bebel-Straße kommend wird nur als Notausgang genutzt.
+              gekennzeichnet ist. Der Eingang von der August-Bebel-Straße kommend wird nur als Notausgang genutzt. Die Bühnen werden dieses Jahr etwas anders angeordnet sein, der Eingang bleibt aber der selbe. Ein aktualisierter Lageplan folgt bald.
             </div>
           }
           isOpen={currOpen === 12}
