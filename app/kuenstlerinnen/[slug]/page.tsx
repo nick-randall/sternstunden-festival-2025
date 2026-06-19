@@ -8,18 +8,19 @@ import ArtistBackButton from "@/components/ArtistBackButton";
 import { getPlaceholderImage } from "@/helper_functions/createBlurredImages";
 import artistsData from "../../../festival_data_2025/artists";
 import artistSlugs from "@/festival_data_2025/artist_slugs";
+import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
-  // const artists = [];
-  // try {
-  //   const response = await fetch("https://sternstunde.fly.dev/get-artists", { headers: { Accept: "application/json" } });
-  //   // const response = await fetch("http://localhost:8080/get-artists", { headers: { Accept: "application/json" } });
-  //   const foundartists = await response.json();
-  //   artists.push(...foundartists);
-  // } catch (error) {
-  //   const err = error as Error;
-  //   console.error("Error fetching artists:", err.message);
-  // }
+  const artists = [];
+  try {
+    const response = await fetch("https://sternstunde.fly.dev/get-artists", { headers: { Accept: "application/json" } });
+    // const response = await fetch("http://localhost:8080/get-artists", { headers: { Accept: "application/json" } });
+    const foundartists = await response.json();
+    artists.push(...foundartists);
+  } catch (error) {
+    const err = error as Error;
+    console.error("Error fetching artists:", err.message);
+  }
   return artistsData.map((a: ArtistWithEvents) => ({
     slug: a.artist.code,
   }));
@@ -30,32 +31,32 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
 
   const usePlaceHolders = process.env.GENERATE_PLACEHOLDERS !== "false";
   let a: ArtistWithEventsAndPlaceholderImage | null = null;
-  const artistData = artistSlugs[slug] || null;
+  // const artistData = artistSlugs[slug] || null;
+  let artistData: ArtistWithEvents;
 
-  // try {
-  //   const response = await fetch(`https://sternstunde.fly.dev/get-artist/${slug}`, { headers: { Accept: "application/json" }, method: "POST" });
-  //   // const response = await fetch(`http://localhost:8080/get-artist/${slug}`, { headers: { Accept: "application/json" } });
+  try {
+    const response = await fetch(`https://sternstunde.fly.dev/get-artist/${slug}`, { headers: { Accept: "application/json" }, method: "POST" });
+    // const response = await fetch(`http://localhost:8080/get-artist/${slug}`, { headers: { Accept: "application/json" } });
+    if (response.status === 404) {
+      notFound();
+    }
+    if (!response.ok) {
+      throw new Error(`Failed to fetch artist: ${response.statusText}`);
+    }
+    a = await response.json();
+  } catch (error) {
+    const errorMessage = error as Error;
+    console.error("Error fetching artist details:", errorMessage.message);
+  }
 
-  //   if (response.status === 404) {
-  //     notFound();
-  //   }
-  //   if (!response.ok) {
-  //     throw new Error(`Failed to fetch artist: ${response.statusText}`);
-  //   }
-  //   a = await response.json();
-  // } catch (error) {
-  //   const errorMessage = error as Error;
-  //   console.error("Error fetching artist details:", errorMessage.message);
-  // }
-
-  // if (!a) {
-  //   return <div>Die Künstlerin konnte nicht gefunden werden</div>;
-  // }
+  if (!a) {
+    return <div>Die Künstlerin konnte nicht gefunden werden</div>;
+  }
   if (usePlaceHolders) {
-    const image = await getPlaceholderImage(artistData.artist.imageUrl);
-    a = { ...artistData, artist: { ...artistData.artist, image } };
+    const image = await getPlaceholderImage(a.artist.imageUrl);
+    a = { ...a, artist: { ...a.artist, image } };
   } else {
-    a = { ...artistData, artist: { ...artistData.artist, image: {src: artistData.artist.imageUrl} } };
+    a = { ...a, artist: { ...a.artist, image: {src: a.artist.imageUrl} } };
   }
   return (
     <div className="artist-page">
