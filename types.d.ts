@@ -101,3 +101,5 @@ type ImageWithPlaceholder = {
   src: string;
   placeholder?: string;
 };
+
+declare module '*.css';

@@ -6,12 +6,9 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+npm run dev-no-placeholders
+# to avoid long startup times, by not building the placeholders on every load
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
