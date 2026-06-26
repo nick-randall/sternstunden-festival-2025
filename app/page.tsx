@@ -92,7 +92,7 @@ export default async function Page() {
               <p><strong>  Was erwartet euch?</strong>
                   <br />
                   Die Acts und Astroprogramm stehen schon fest.
-                  Werft doch einen Blick ins <Link href=" /programm" target="_blank"> Programm </Link> oder in den <Link href="/timetable" target="_blank"> Timetable</Link>..
+                  Werft doch einen Blick ins <Link href=" /programm" target="_blank"> Programm </Link> oder in den <Link href="/timetable" target="_blank"> Timetable</Link>.
                   <br />
                   <br /> </p>
               <p> <strong> Ihr braucht noch ein Ticket? </strong><br />
@@ -104,7 +104,7 @@ export default async function Page() {
                 <h2 style={{ textAlign: "left" }}> Werde Teil der Sternstunden 2026! </h2>
                 <p> Damit unser Festival am 17. & 18. Juli auf dem Gelände der Hamburger Sternwarte gelingt, suchen wir noch helfende Hände - egal, ob für kurze Einsätze oder mehrere Schichten. Als Dankeschön gibt es - je nach Einsatz- freien Eintritt, Verpflegung und weitere Goodies.<br /> </p>
                 Jede Unterstützung ist willkommen!
-                <p>Du hast Zeit und Lust? Dann melde dich hier <a href="https://helfer.uhhmusik.de/login" target="_blank" title="Google Dokument">
+                <p>Du hast Zeit und Lust? <br />Dann melde dich hier <a href="https://helfer.uhhmusik.de/login" target="_blank" title="Google Dokument">
                 <strong> Link.</strong></a>. Weitere Informationen findest du bei <Link href="/support-us" target="_blank"> Support Us</Link> unter<strong> Mithelfen </strong> .
               </p>
             </div>
@@ -112,16 +112,17 @@ export default async function Page() {
         <div className="responsive-spacer-15"> </div>
 
           <div className="home-image-wrapper">
+              <div  className="home-image">
                 <Link href="/programm" target="_blank" title="Programm 2026">
                     <Image
                         src="/Programmpost.png"
                         alt="Programm-Ankündigung Sternstundenfestival 2026"
                         width="1080"
-                        height="1700"
                         className="home-image"
+
                     />
                 </Link>
-          </div>
+          </div> </div>
         <div className="responsive-spacer-15"></div>
         {/* <div className="content-box">
         <Zoomable title="Musikalisches Lineup 2025">

@@ -1,7 +1,7 @@
 import "../../styles/common.css";
 //import "../../styles/timetable.css";
 import "../../styles/boring-pages.css";
-
+import "../../styles/home.css";
 // import {testData} from "./test_data"
 import { getDayEndTime, getDayStartTime, getReadableDETime } from "@/helper_functions/helperFunctions";
 import Link from "next/link";
@@ -259,6 +259,8 @@ const TimetablePage = () => {
   return (
       <div className="boring-page-wrapper">
         <div className="content-box">
+            <div className="hom-image-wrapper">
+
           <Image
               src="/programm17.JPG"
               alt="Ankündigung Sternstunden Festival 17. & 18. Juli"
@@ -267,11 +269,11 @@ const TimetablePage = () => {
               className="hom-image"
           />
         </div>
-
-        <div className="responsive-spacer-15"> </div>
-          <div className="responsive-spacer-15"> </div>
+        </div>
+          <Spacer height={32} />
 
         <div className="content-box">
+            <div className="hom-image-wrapper">
                 <Image
                     src="/programm18.JPG"
                     alt="Ankündigung Sternstunden Festival 17. & 18. Juli"
@@ -280,8 +282,7 @@ const TimetablePage = () => {
                     className="hom-image"
                 />
 
-
-
+            </div>
         </div>
       </div>
   );
