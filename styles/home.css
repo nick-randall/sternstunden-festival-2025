@@ -91,7 +91,7 @@
 .home-image-wrapper {
   flex-shrink: 0;
   height: 100%;
-   aspect-ratio: 1;
+   aspect-ratio: 3/2;
 }
 
 .home-image {
@@ -106,7 +106,7 @@
 .hom-image-wrapper {
   flex-shrink: 0;
   height: 100%;
-  aspect-ratio: 3/2;
+  /*aspect-ratio: 1;*/
 }
 
 .hom-image {

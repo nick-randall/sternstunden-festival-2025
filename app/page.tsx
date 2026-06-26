@@ -109,7 +109,7 @@ export default async function Page() {
               </p>
             </div>
         </div>
-        <div className="responsive-spacer-15"> </div>
+        <Spacer height={32}/>
         <div className="content-box">
 
               <div  className="home-image">
@@ -123,7 +123,7 @@ export default async function Page() {
                     />
                 </Link>
           </div> </div>
-        <div className="responsive-spacer-15"></div>
+
         {/* <div className="content-box">
         <Zoomable title="Musikalisches Lineup 2025">
           <Image
