@@ -2,14 +2,15 @@ import "../../styles/common.css";
 //import "../../styles/timetable.css";
 import "../../styles/boring-pages.css";
 import "../../styles/home.css";
+import Spacer from "../../components/Spacer";
 // import {testData} from "./test_data"
-import { getDayEndTime, getDayStartTime, getReadableDETime } from "@/helper_functions/helperFunctions";
-import Link from "next/link";
+//import { getDayEndTime, getDayStartTime, getReadableDETime } from "@/helper_functions/helperFunctions";
+//import Link from "next/link";
 import Image from "next/image";
-import TimetableSwitcher from "@/components/TimetableSwitcher";
-import Spacer from "@/components/Spacer";
-import stagesWithTheirEvents from "@/festival_data_2025/stages_and_events";
-import React from "react";
+//import TimetableSwitcher from "@/components/TimetableSwitcher";
+//import Spacer from "@/components/Spacer";
+//import stagesWithTheirEvents from "@/festival_data_2025/stages_and_events";
+//import React from "react";
 //const minutesPerCell = 30;
 
 //const positionOverlappingEvents = (event: FestivalEventWithArtist, events: FestivalEventWithArtist[]): { top: string; height: string } => {

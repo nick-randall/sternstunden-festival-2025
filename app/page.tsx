@@ -110,8 +110,8 @@ export default async function Page() {
             </div>
         </div>
         <div className="responsive-spacer-15"> </div>
+        <div className="content-box">
 
-          <div className="home-image-wrapper">
               <div  className="home-image">
                 <Link href="/programm" target="_blank" title="Programm 2026">
                     <Image
