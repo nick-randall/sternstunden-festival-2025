@@ -11,18 +11,19 @@ const ProgrammPage = () => {
   return (
     <div className="boring-page-wrapper">
 
-        <h1>Ausblick Programm 2026 &#x2013; Klassik, Beats und Kosmos</h1>
+        <h1>Programm 2026 &#x2013; Klassik, Beats und Kosmos</h1>
 
         <p>
-        Das Sternstundenfestival geht in die nächste Runde!
+            <strong>Das Sternstundenfestival geht in die nächste Runde!</strong> <br/>
         Wir bieten euch auch dieses Jahr ein abwechslungsreiches Programm zwischen Wissenschaft, Musik und Kinderangeboten - von Teleskopbesichtigungen und Ensemblemusik.
-        Hier gibt's einen kleinen Sneak Peak, auf was ihr euch dieses Jahr freuen könnt. Mehr zum Programm verraten wir euch bald.
+            Für genaue Konzert- und Vortragszeiten werft gerne einen Blick in den<Link href="/timetable" target="_blank"> Timetable</Link>.
+            Die Zeiten können sich noch  leicht verschieben, schaut also bitte tagesaktuell.
         </p>
         <Spacer height={16} />
 
         <h2>Musikprogramm – Klangwelten unter Sternen</h2>
         <p>
-            Zwei Tage, fünf Bühnen, ein spannendes Line-up: Das Musikprogramm reicht von Kammermusik über Indiepop und Jazz bis hin zu Elektronik.
+            Zwei Tage, fünf Bühnen, ein spannendes Line-up: Das Musikprogramm reicht von Kammermusik über Indiepop und Jazz bis hin zu Elektronik. Am Freitag ist ab 15:00 Uhr Einlass, am Samstag beginnen wir um 13:30 Uhr.
             <br/>Dieses Jahr dabei sind:<br/>
             <p> <strong>Freitags: </strong> <br/>
              Skyliner Bigband &#9733;
@@ -46,12 +47,12 @@ const ProgrammPage = () => {
                 </p>
                 <strong>Samstags: </strong>
             <p>
-            Forehead
+            Forehead &#9733;
             <Link href="https://open.spotify.com/track/5pTQmoMuqBkkpEDs3gIw8E?si=EULmPGqNTqyS3kpzmH62ZQ" target="_blank"> Takadoon </Link> &#9733;
             <Link href="https://youtu.be/z1kLgj66UsM" target="_blank">Joshua Milo</Link> &#9733;
             <Link href="https://www.duosu.de/" target="_blank">Duo SU </Link> &#9733;
-            Lanbo und CO
-            Bow Brothers
+            Lanbo und CO &#9733;
+            Bow Brothers &#9733;
             <Link href="https://www.youtube.com/watch?v=OO03kZ-Bibg" target="_blank"> Duty Free </Link> &#9733;
             Jonas &#9733;
             Duo constellation &#9733;
@@ -68,7 +69,7 @@ const ProgrammPage = () => {
             JST ONE &#9733;
 
             </p>
-            ... und noch viele mehr!
+
         </p>
 
         <Spacer height={16} />
@@ -76,14 +77,14 @@ const ProgrammPage = () => {
         <h2>Astroprogramm – Das Universum zum Anfassen</h2>
         <p>
             Das Astroprogramm macht auch in diesem Jahr das Universum für Groß und Klein greifbar.
-            Freut euch auf spannende Experimente, Teleskopbesichtigungen und einen unterhaltsamen Science Slam. Lernt  in spannenden Vorträgen mehr über das All oder löchtert bei "Ask an Astronomer" einen Experten mit euren Fragen.
+            Freut euch auf spannende Experimente, Teleskopbesichtigungen und einen unterhaltsamen Science Slam. Lernt  in spannenden Vorträgen mehr über das All oder löchtert bei &#34;Ask an Astronomer&#34; einen Experten mit euren Fragen.
         </p>
 
         <strong>Freitags: </strong>
         <p>
             Erika Garutti -
             Baden wir in Dunkler Materie?
-            &#9733;Erika Garutti - Cosmic Giants: The Universe's Largest Galaxies &#9733;
+            &#9733;Erika Garutti - Cosmic Giants: The Universe&#39;s Largest Galaxies &#9733;
 
 
 

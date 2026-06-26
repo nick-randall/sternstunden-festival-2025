@@ -1,5 +1,7 @@
 import "../../styles/common.css";
-import "../../styles/timetable.css";
+//import "../../styles/timetable.css";
+import "../../styles/boring-pages.css";
+
 // import {testData} from "./test_data"
 import { getDayEndTime, getDayStartTime, getReadableDETime } from "@/helper_functions/helperFunctions";
 import Link from "next/link";
@@ -7,190 +9,191 @@ import Image from "next/image";
 import TimetableSwitcher from "@/components/TimetableSwitcher";
 import Spacer from "@/components/Spacer";
 import stagesWithTheirEvents from "@/festival_data_2025/stages_and_events";
-const minutesPerCell = 30;
+import React from "react";
+//const minutesPerCell = 30;
 
-const positionOverlappingEvents = (event: FestivalEventWithArtist, events: FestivalEventWithArtist[]): { top: string; height: string } => {
-  const eventStartTime = new Date(event.startDateTime);
-  const eventEndTime = new Date(event.endDateTime);
+//const positionOverlappingEvents = (event: FestivalEventWithArtist, events: FestivalEventWithArtist[]): { top: string; height: string } => {
+//const eventStartTime = new Date(event.startDateTime);
+//const eventEndTime = new Date(event.endDateTime);
 
-  const overlappingEvent = events.find(e => {
-    if (e.id === event.id) {
-      return false; // Skip the same event
-    }
-    if (e.stage.id !== event.stage.id) {
-      return false; // Only consider events on the same stage
-    }
-    const eStartTime = new Date(e.startDateTime);
-    const eEndTime = new Date(e.endDateTime);
+//const overlappingEvent = events.find(e => {
+//  if (e.id === event.id) {
+//    return false; // Skip the same event
+//  }
+//  if (e.stage.id !== event.stage.id) {
+//    return false; // Only consider events on the same stage
+//  }
+//  const eStartTime = new Date(e.startDateTime);
+//  const eEndTime = new Date(e.endDateTime);
+//
+//  return eStartTime < eventEndTime && eEndTime > eventStartTime;
+//});
+//if (overlappingEvent) {
+//  const twoEvents = [event, overlappingEvent].sort((a, b) => a.id - b.id);
+//  // Shouldn't really be sorting by ID, this will do for now
+//  return twoEvents[0].id === event.id ? { top: "0%", height: "49%" } : { top: "50%", height: "50%" }; // Return 0 if the event is first, 50 if it's second
+//}
+//return { top: "0%", height: "100%" }; // No overlap, so full height
+//};
 
-    return eStartTime < eventEndTime && eEndTime > eventStartTime;
-  });
-  if (overlappingEvent) {
-    const twoEvents = [event, overlappingEvent].sort((a, b) => a.id - b.id);
-    // Shouldn't really be sorting by ID, this will do for now
-    return twoEvents[0].id === event.id ? { top: "0%", height: "49%" } : { top: "50%", height: "50%" }; // Return 0 if the event is first, 50 if it's second
-  }
-  return { top: "0%", height: "100%" }; // No overlap, so full height
-};
+//class EventOnGrid {
+// artist: ArtistWithoutEvents;
+//event: FestivalEventWithArtist;
+//innerCellLeftOffset: number;
+//cellIndex: number;
+//numCellsWide: number;
+//
+//constructor(artist: ArtistWithoutEvents, dayStartTime: Date, event: FestivalEventWithArtist) {
+//  this.event = event;
+//  this.artist = artist;
+//  const eventStartTime = new Date(event.startDateTime);
+//  const startingAfterDayStart = eventStartTime.getTime() - dayStartTime.getTime();
+//  const startingAfterDayStartInMinutes = startingAfterDayStart / (1000 * 60); // convert to minutes
+//  const numThirtyMinuteIntervalsAfterDayStart = startingAfterDayStartInMinutes / minutesPerCell; // convert to number of 30-minute intervals
+//  this.cellIndex = Math.floor(numThirtyMinuteIntervalsAfterDayStart);
+//  this.innerCellLeftOffset = numThirtyMinuteIntervalsAfterDayStart - this.cellIndex;
+//  const eventEndTime = new Date(event.endDateTime);
+//  const durationInMilliseconds = eventEndTime.getTime() - eventStartTime.getTime();
+//  const durationInMinutes = durationInMilliseconds / (1000 * 60);
+//  const numCells = durationInMinutes / minutesPerCell; // convert to number of 30-minute intervals -- and therefore how many cells it occupies
+//  const borderCrossings = numCells - 1;
+//  this.numCellsWide = numCells + borderCrossings * 0.02; // each cell is 1 unit wide, and each border crossing adds 0.02 units
+//}
 
-class EventOnGrid {
-  artist: ArtistWithoutEvents;
-  event: FestivalEventWithArtist;
-  innerCellLeftOffset: number;
-  cellIndex: number;
-  numCellsWide: number;
+//isInCell(cellIndex: number): boolean {
+//  return cellIndex >= this.cellIndex && cellIndex < this.cellIndex + 1;
+//}
+//}
 
-  constructor(artist: ArtistWithoutEvents, dayStartTime: Date, event: FestivalEventWithArtist) {
-    this.event = event;
-    this.artist = artist;
-    const eventStartTime = new Date(event.startDateTime);
-    const startingAfterDayStart = eventStartTime.getTime() - dayStartTime.getTime();
-    const startingAfterDayStartInMinutes = startingAfterDayStart / (1000 * 60); // convert to minutes
-    const numThirtyMinuteIntervalsAfterDayStart = startingAfterDayStartInMinutes / minutesPerCell; // convert to number of 30-minute intervals
-    this.cellIndex = Math.floor(numThirtyMinuteIntervalsAfterDayStart);
-    this.innerCellLeftOffset = numThirtyMinuteIntervalsAfterDayStart - this.cellIndex;
-    const eventEndTime = new Date(event.endDateTime);
-    const durationInMilliseconds = eventEndTime.getTime() - eventStartTime.getTime();
-    const durationInMinutes = durationInMilliseconds / (1000 * 60);
-    const numCells = durationInMinutes / minutesPerCell; // convert to number of 30-minute intervals -- and therefore how many cells it occupies
-    const borderCrossings = numCells - 1;
-    this.numCellsWide = numCells + borderCrossings * 0.02; // each cell is 1 unit wide, and each border crossing adds 0.02 units
-  }
+//const createStageRow = (stage: StageWithEvents, dayStartTime: Date, numThirtyMinuteIntervals: number) => {
+//const stageRow: (EventOnGrid | undefined)[] = [];
+//const eventsOnGrid: EventOnGrid[] = stage.events.map(event => new EventOnGrid(event.artist, dayStartTime, event));
+//for (let i = 0; i < numThirtyMinuteIntervals; i++) {
+//  let eventInCell: EventOnGrid | undefined = undefined;
+//  for (const eventOnGrid of eventsOnGrid) {
+//    if (eventOnGrid.isInCell(i)) {
+//      eventInCell = eventOnGrid;
+//      break;
+//    }
+//  }
+//  stageRow.push(eventInCell);
+//}
+//return stageRow;
+//};
 
-  isInCell(cellIndex: number): boolean {
-    return cellIndex >= this.cellIndex && cellIndex < this.cellIndex + 1;
-  }
-}
+//const createTimeLabels = (dayStartTime: Date, numThirtyMinuteIntervals: number): string[] => {
+//const timesEveryThirtyMinutes: string[] = [];
+//for (let i = 0; i <= numThirtyMinuteIntervals; i++) {
+//  const interval = new Date(dayStartTime.getTime() + i * minutesPerCell * 60 * 1000);
+//  const formattedTime = getReadableDETime(interval.toISOString());
+//  timesEveryThirtyMinutes.push(formattedTime);
+// }
+//return timesEveryThirtyMinutes;
+//};
 
-const createStageRow = (stage: StageWithEvents, dayStartTime: Date, numThirtyMinuteIntervals: number) => {
-  const stageRow: (EventOnGrid | undefined)[] = [];
-  const eventsOnGrid: EventOnGrid[] = stage.events.map(event => new EventOnGrid(event.artist, dayStartTime, event));
-  for (let i = 0; i < numThirtyMinuteIntervals; i++) {
-    let eventInCell: EventOnGrid | undefined = undefined;
-    for (const eventOnGrid of eventsOnGrid) {
-      if (eventOnGrid.isInCell(i)) {
-        eventInCell = eventOnGrid;
-        break;
-      }
-    }
-    stageRow.push(eventInCell);
-  }
-  return stageRow;
-};
+//const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
+//const stageEvents = dayAndEvents.stageEvents;
+//const dayStartTime = getDayStartTime(stageEvents);
+//const dayEndTime = getDayEndTime(stageEvents);
+//const dayDurationInMilliseconds = dayEndTime.getTime() - dayStartTime.getTime();
+//const numThirtyMinuteIntervals = dayDurationInMilliseconds / (1000 * 60 * minutesPerCell);
 
-const createTimeLabels = (dayStartTime: Date, numThirtyMinuteIntervals: number): string[] => {
-  const timesEveryThirtyMinutes: string[] = [];
-  for (let i = 0; i <= numThirtyMinuteIntervals; i++) {
-    const interval = new Date(dayStartTime.getTime() + i * minutesPerCell * 60 * 1000);
-    const formattedTime = getReadableDETime(interval.toISOString());
-    timesEveryThirtyMinutes.push(formattedTime);
-  }
-  return timesEveryThirtyMinutes;
-};
+//const timeLabels = createTimeLabels(dayStartTime, numThirtyMinuteIntervals);
 
-const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
-  const stageEvents = dayAndEvents.stageEvents;
-  const dayStartTime = getDayStartTime(stageEvents);
-  const dayEndTime = getDayEndTime(stageEvents);
-  const dayDurationInMilliseconds = dayEndTime.getTime() - dayStartTime.getTime();
-  const numThirtyMinuteIntervals = dayDurationInMilliseconds / (1000 * 60 * minutesPerCell);
-
-  const timeLabels = createTimeLabels(dayStartTime, numThirtyMinuteIntervals);
-
-  return (
-    <div>
-      <table className="day-timetable">
-        <thead>
-          <tr>
-            <th></th>
-            {timeLabels.map(time => (
-              <th key={time} className="time-label">
-                {time}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {stageEvents.map((stageEvent, idx) => {
-            const stageRow = createStageRow(stageEvent, dayStartTime, numThirtyMinuteIntervals);
-            const rows: React.ReactElement[] = [];
-
+//return (
+//  <div>
+//    <table className="day-timetable">
+//      <thead>
+//        <tr>
+//          <th></th>
+//          {timeLabels.map(time => (
+//            <th key={time} className="time-label">
+//              {time}
+//            </th>
+//          ))}
+//        </tr>
+//      </thead>
+//      <tbody>
+//        {stageEvents.map((stageEvent, idx) => {
+//          const stageRow = createStageRow(stageEvent, dayStartTime, numThirtyMinuteIntervals);
+//          const rows: React.ReactElement[] = [];
+//
             // 🟪 STAGE-ZEILE
-            rows.push(
-              <tr key={stageEvent.stage.id}>
-                <td className="stage-name">{stageEvent.stage.name}</td>
-                {stageRow.map((eventOnGrid, cellIndex) => (
-                  <td key={cellIndex} className="event-cell">
-                    {eventOnGrid && (
-                      <div
-                        className="event-box"
-                        style={{
-                          width: `${eventOnGrid.numCellsWide * 100}%`,
-                          left: `${eventOnGrid.innerCellLeftOffset * 100}%`,
-                          backgroundColor: eventOnGrid.artist.attributes.astroprogramm ? "rgba(0, 140, 255, 0.322)" : "rgba(232, 0, 233, 0.16)",
-                          top: positionOverlappingEvents(
-                            eventOnGrid.event,
-                            stageEvents.flatMap(e => e.events)
-                          ).top,
-                          height: positionOverlappingEvents(
-                            eventOnGrid.event,
-                            stageEvents.flatMap(e => e.events)
-                          ).height,
-                        }}
-                      >
-                        <Link href={`/kuenstlerinnen/${eventOnGrid.artist.code}`}>{eventOnGrid.artist.name}</Link>
-                        <div className="symbols-row">
-                          {eventOnGrid.event.attributes.mit_gebardensprache && (
-                            <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height={25} width={25} />
-                          )}
-                          {eventOnGrid.event.attributes.mit_kurzvortrag && (
-                            <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height={25} width={25} />
-                          )}
-                          {eventOnGrid.event.attributes.kinderprogramm && (
-                            <Image src="/kinderprogramm.png" alt="Symbol Kinderprogramm" height={19} width={32} />
-                          )}
-                        </div>
-                      </div>
-                    )}
-                  </td>
-                ))}
-                <td></td>
-              </tr>
-            );
+//          rows.push(
+//            <tr key={stageEvent.stage.id}>
+//              <td className="stage-name">{stageEvent.stage.name}</td>
+//              {stageRow.map((eventOnGrid, cellIndex) => (
+//                <td key={cellIndex} className="event-cell">
+//                  {eventOnGrid && (
+//                    <div
+//                      className="event-box"
+//                      style={{
+//                        width: `${eventOnGrid.numCellsWide * 100}%`,
+//                        left: `${eventOnGrid.innerCellLeftOffset * 100}%`,
+//                        backgroundColor: eventOnGrid.artist.attributes.astroprogramm ? "rgba(0, 140, 255, 0.322)" : "rgba(232, 0, 233, 0.16)",
+//                        top: positionOverlappingEvents(
+//                          eventOnGrid.event,
+//                          stageEvents.flatMap(e => e.events)
+//                        ).top,
+//                        height: positionOverlappingEvents(
+//                          eventOnGrid.event,
+//                          stageEvents.flatMap(e => e.events)
+//                        ).height,
+//                      }}
+//                    >
+//                      <Link href={`/kuenstlerinnen/${eventOnGrid.artist.code}`}>{eventOnGrid.artist.name}</Link>
+//                      <div className="symbols-row">
+//                        {eventOnGrid.event.attributes.mit_gebardensprache && (
+//                          <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height={25} width={25} />
+//                        )}
+//                        {eventOnGrid.event.attributes.mit_kurzvortrag && (
+//                          <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height={25} width={25} />
+//                        )}
+//                        {eventOnGrid.event.attributes.kinderprogramm && (
+//                          <Image src="/kinderprogramm.png" alt="Symbol Kinderprogramm" height={19} width={32} />
+//                        )}
+//                      </div>
+//                    </div>
+//                  )}
+//                </td>
+//              ))}
+//              <td></td>
+//            </tr>
+//          );
 
             // ⏱ UHRZEILE nach der 9. STAGE-ZEILE (d.h. nach idx === 8)
-            if (idx === 8) {
-              rows.push(
-                <tr key="middle-time-row" className="middle-time-row">
-                  <th></th>
-                  {timeLabels.map(time => (
-                    <th key={time} className="time-label">
-                      {time}
-                    </th>
-                  ))}
-                </tr>
-              );
-            }
+//          if (idx === 8) {
+//            rows.push(
+//              <tr key="middle-time-row" className="middle-time-row">
+//                <th></th>
+//                {timeLabels.map(time => (
+//                  <th key={time} className="time-label">
+//                    {time}
+//                  </th>
+//                ))}
+//              </tr>
+//            );
+//          }
+//
+//          return rows;
+//        })}
 
-            return rows;
-          })}
+//        <tr>
+//          <th></th>
+//          {timeLabels.map(time => (
+//            <th key={`bottom-${time}`} className="time-label">
+//              {time}
+//            </th>
+//          ))}
+//        </tr>
+//      </tbody>
+//    </table>
+//  </div>
+//);
+//};
 
-          <tr>
-            <th></th>
-            {timeLabels.map(time => (
-              <th key={`bottom-${time}`} className="time-label">
-                {time}
-              </th>
-            ))}
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  );
-};
-
-const TimetablePage = async () => {
-  const daysAndTheirEvents: DayAndEvents[] = stagesWithTheirEvents;
+//const TimetablePage = async () => {
+//const daysAndTheirEvents: DayAndEvents[] = stagesWithTheirEvents;
   // try {
   //   const response = await fetch(`https://sternstunde.fly.dev/get-stages-with-their-events`, {
   //     headers: { Accept: "application/json" },
@@ -203,52 +206,84 @@ const TimetablePage = async () => {
   //   console.error("Error fetching timetable data:", errorMessage.message);
   // }
 
-  const dayTimetables = daysAndTheirEvents.map((dayAndEvents: DayAndEvents) => (
-    <DayTimetable key={dayAndEvents.day.id} dayAndEvents={dayAndEvents} />
-  ));
+//const dayTimetables = daysAndTheirEvents.map((dayAndEvents: DayAndEvents) => (
+//  <DayTimetable key={dayAndEvents.day.id} dayAndEvents={dayAndEvents} />
+//));
 
-  const dayNames = daysAndTheirEvents.map(day => day.day.name);
+//const dayNames = daysAndTheirEvents.map(day => day.day.name);
 
+//return (
+//  <div className="timetable-page-wrapper">
+//    <h1>Timetable 2025</h1>
+//
+//    <TimetableSwitcher dayTimetables={dayTimetables} dayNames={dayNames} />
+//    <Spacer height={8} />
+//    <div className="legend-column">
+//      <div className="symbols-row">
+//        <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" />
+//        &nbsp;= Mit Übersetzung in Deutscher Gebärdensprache (DGS) durch Studierende des IDGS Hamburg.
+//      </div>
+//      <div className="symbols-row">
+//        <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height="25" width="25" />
+//        &nbsp;= Mit Kurzvortrag
+//      </div>
+//      <div className="symbols-row">
+//        <Image src="/kinderprogramm.png" alt="Symbol Kinderprogramm" height="19" width="32" />
+//        &nbsp;= (auch) für Kinder
+//      </div>
+//      <div className="symbols-row">
+//        <Image src="/musik_color.png" alt="Farbe Musikbox" height="19" width="19" />
+//        &nbsp;= Musikprogramm
+//      </div>
+//      <div className="symbols-row">
+//        <Image src="/astro_color.png" alt="Farbe Astrobox" height="19" width="19" />
+//        &nbsp;= Astroprogramm
+//      </div>
+
+//      <div>
+//        <br />
+//        Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell. Stand 14.07.2025
+//        <br />
+//        Fürs Smartphone haben wir auch eine 👉
+//        <Link href="/mobile-app">
+//          <strong>Festival App</strong>
+//        </Link>
+//        .
+//      </div>
+//    </div>
+//  </div>
+// );
+//};
+//export default TimetablePage;
+const TimetablePage = () => {
   return (
-    <div className="timetable-page-wrapper">
-      <h1>Timetable 2025</h1>
-
-      <TimetableSwitcher dayTimetables={dayTimetables} dayNames={dayNames} />
-      <Spacer height={8} />
-      <div className="legend-column">
-        <div className="symbols-row">
-          <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height="25" width="25" />
-          &nbsp;= Mit Übersetzung in Deutscher Gebärdensprache (DGS) durch Studierende des IDGS Hamburg.
-        </div>
-        <div className="symbols-row">
-          <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height="25" width="25" />
-          &nbsp;= Mit Kurzvortrag
-        </div>
-        <div className="symbols-row">
-          <Image src="/kinderprogramm.png" alt="Symbol Kinderprogramm" height="19" width="32" />
-          &nbsp;= (auch) für Kinder
-        </div>
-        <div className="symbols-row">
-          <Image src="/musik_color.png" alt="Farbe Musikbox" height="19" width="19" />
-          &nbsp;= Musikprogramm
-        </div>
-        <div className="symbols-row">
-          <Image src="/astro_color.png" alt="Farbe Astrobox" height="19" width="19" />
-          &nbsp;= Astroprogramm
+      <div className="boring-page-wrapper">
+        <div className="content-box">
+          <Image
+              src="/programm17.JPG"
+              alt="Ankündigung Sternstunden Festival 17. & 18. Juli"
+              width="1000"
+              height="877"
+              className="hom-image"
+          />
         </div>
 
-        <div>
-          <br />
-          Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell. Stand 14.07.2025
-          <br />
-          Fürs Smartphone haben wir auch eine 👉
-          <Link href="/mobile-app">
-            <strong>Festival App</strong>
-          </Link>
-          .
+        <div className="responsive-spacer-15"> </div>
+          <div className="responsive-spacer-15"> </div>
+
+        <div className="content-box">
+                <Image
+                    src="/programm18.JPG"
+                    alt="Ankündigung Sternstunden Festival 17. & 18. Juli"
+                    width="1000"
+                    height="877"
+                    className="hom-image"
+                />
+
+
+
         </div>
       </div>
-    </div>
   );
 };
 export default TimetablePage;

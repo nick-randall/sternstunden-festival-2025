@@ -80,49 +80,49 @@ export default async function Page() {
                 />
 
         </div>
-        <div className="responsive-spacer-15"></div>
-        <div className="content-box split-box">
-        <div className="text-box">
+      <div className="content-box split-box">
+      <div className="text-box">
           <div>
-            <h2 style={{ textAlign: "left" }}> Bald geht es los! </h2>
+              <h2 style={{ textAlign: "left" }}> Bald geht es los! </h2>
           </div>
-
-          <div>
               <p>  <strong>  Wann fangen wir an?</strong><br />
                   Am 17. Juli öffnen wir ab 15 Uhr die Pforten. Am 18. Juli haben wir ab 13:30 Uhr Einlass.
-              <br />
-              <br /> </p>
-          <p><strong>  Was erwartet euch?</strong>
-              <br />
-              Die Acts und Astroprogramm stehen schon fest.
-              Werft doch einen Blick ins <Link href=" /programm" target="_blank"> Programm </Link>. Ein genauer Timetable folgt bald!
-              <br />
-              <br /> </p>
-          <p> <strong> Ihr braucht noch ein Ticket? </strong><br />
-              <Link href=" /tickets" target="_blank"> Hier </Link> kommt ihr zum Shop.
-              <br /> </p>
-
-          </div>
+                  <br />
+                  <br /> </p>
+              <p><strong>  Was erwartet euch?</strong>
+                  <br />
+                  Die Acts und Astroprogramm stehen schon fest.
+                  Werft doch einen Blick ins <Link href=" /programm" target="_blank"> Programm </Link> oder in den <Link href="/timetable" target="_blank"> Timetable</Link>..
+                  <br />
+                  <br /> </p>
+              <p> <strong> Ihr braucht noch ein Ticket? </strong><br />
+                  <Link href=" /tickets" target="_blank"> Hier </Link> kommt ihr zum Shop.
+                  <br /> </p>
+      </div>
+          <div className="responsive-spacer-15"> </div>
+        <div className="text-box">
+                <h2 style={{ textAlign: "left" }}> Werde Teil der Sternstunden 2026! </h2>
+                <p> Damit unser Festival am 17. & 18. Juli auf dem Gelände der Hamburger Sternwarte gelingt, suchen wir noch helfende Hände - egal, ob für kurze Einsätze oder mehrere Schichten. Als Dankeschön gibt es - je nach Einsatz- freien Eintritt, Verpflegung und weitere Goodies.<br /> </p>
+                Jede Unterstützung ist willkommen!
+                <p>Du hast Zeit und Lust? Dann melde dich hier <a href="https://helfer.uhhmusik.de/login" target="_blank" title="Google Dokument">
+                <strong> Link.</strong></a>. Weitere Informationen findest du bei <Link href="/support-us" target="_blank"> Support Us</Link> unter<strong> Mithelfen </strong> .
+              </p>
+            </div>
         </div>
         <div className="responsive-spacer-15"> </div>
-        <div className="home-image-cropping-wrapper">
+
           <div className="home-image-wrapper">
                 <Link href="/programm" target="_blank" title="Programm 2026">
                     <Image
                         src="/Programmpost.png"
                         alt="Programm-Ankündigung Sternstundenfestival 2026"
-                        width="1700"
+                        width="1080"
                         height="1700"
                         className="home-image"
                     />
                 </Link>
           </div>
-        </div>
         <div className="responsive-spacer-15"></div>
-      </div>
-
-      <Spacer height={32} />
-
         {/* <div className="content-box">
         <Zoomable title="Musikalisches Lineup 2025">
           <Image

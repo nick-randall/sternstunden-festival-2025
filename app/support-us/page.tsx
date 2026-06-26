@@ -75,28 +75,22 @@ const Faqs = () => {
           text={
             <div>
               <h3>Hilf uns beim Festival!</h3>
-              Wir möchten unsere Verbindung zu unseren Nachbar:innen stärken. Hast du Lust uns zu unterstützen und dich für ein Projekt in deiner
-              Nachbarschaft einzusetzen? Sprich uns gerne an!
-              <br />
-              <br />
-              Wenn ihr Lust habt, uns beim <strong>Auf- und Abbau</strong> oder an den <strong>Festivaltagen selbst</strong> zu
-              unterstützen, freuen wir uns sehr über eure Hilfe! Meldet euch einfach über dieses{" "}
-              <a href="https://forms.cloud.microsoft/r/Ts38UzQxBk?origin=lprLink" target="_blank" title="Google Dokument">
-                <strong> Google Dokument &#10154;</strong>
-                </a>
 
-              <br />
-              <br />
-              Ein paar Beispiele, wie ihr euch einbringen könnt:
-              <br />
-              <ul>
-                <li>Flyer verteilen & Plakate aufhängen</li>
-                <li>Auf- und Abbau vor Ort</li>
-                <li>Snacks & Gerichte für Künstler:innen und Helfer:innen vorbereiten</li>
-                <li>...und vieles mehr! </li>
-              </ul>
-              <br />
-              <strong> Gemeinsam wird’s am schönsten – danke für euren Support! 💛 </strong>
+                <p> Vom <strong> 17.–18. Juli </strong> findet auf dem Gelände der Hamburger Sternwarte wieder das Sternstunden-Festival statt. Euch erwarten Live-Musik, Science Slams, Führungen durch die Sternwarte, Himmelsbeobachtung, Mitmachangebote und viele weitere Programmpunkte für Groß und Klein.
+                    <br />
+
+                Damit das Festival gelingt, suchen wir noch helfende Hände. Ob ihr ohnehin Teil der Sternstunden-Community seid, das Festival unterstützen möchtet oder direkt in der Nachbarschaft wohnt und ein paar Stunden Zeit habt – wir freuen uns über jede Unterstützung! <br />
+                Besonders schön: Wer in der Nähe wohnt, kann auch ganz unkompliziert kurze Schichten an Auf- und Abbau übernehmen. Natürlich sind aber ebenso längere Einsätze willkommen.  <br />Unterstützung wird unter anderem beim Einlass, an Infopunkten, bei Auf- und Abbau sowie an verschiedenen Stationen auf dem Gelände benötigt.
+                Für Helfende gibt es je nach Umfang des Einsatzes freien Eintritt, Verpflegung und weitere kleine Goodies.
+                Wenn ihr Lust habt, Teil der Sternstunden zu werden und einen Blick hinter die Kulissen zu werfen, meldet euch einfach über diesen
+
+                <a href="https://helfer.uhhmusik.de/login" target="_blank" title="Google Dokument">
+                    <strong> Link.</strong>
+                </a> Nach der Registrierung könnt ihr die passende Schicht für euch wählen.  <br />
+                <br /></p>
+
+               <strong> Wir freuen uns auf ein tolles Festival mit euch und danken euch schon jetzt für eure Unterstützung!</strong>
+
             </div>
           }
           isOpen={currOpen === 2}
