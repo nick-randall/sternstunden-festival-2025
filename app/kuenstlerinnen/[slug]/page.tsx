@@ -6,8 +6,8 @@ import { getReadableDETimeAndDayAbbr } from "@/helper_functions/helperFunctions"
 import Spacer from "@/components/Spacer";
 import ArtistBackButton from "@/components/ArtistBackButton";
 import { getPlaceholderImage } from "@/helper_functions/createBlurredImages";
-import artistsData from "../../../festival_data_2025/artists";
-import artistSlugs from "@/festival_data_2025/artist_slugs";
+// import artistsData from "../../../festival_data_2025/artists";
+// import artistSlugs from "@/festival_data_2025/artist_slugs";
 import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
@@ -21,7 +21,7 @@ export async function generateStaticParams() {
     const err = error as Error;
     console.error("Error fetching artists:", err.message);
   }
-  return artistsData.map((a: ArtistWithEvents) => ({
+  return artists.map((a: ArtistWithEvents) => ({
     slug: a.artist.code,
   }));
 }
