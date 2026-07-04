@@ -64,10 +64,12 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
         {`
           @media (max-width: 768px) {
             .featured-artist-card section {
+            background: linear-gradient(to right, rgba(255, 110, 0, 0.78), rgba(255, 110, 0, 0.6));
               flex-direction: column;
             }
             .featured-artist-card section .image-container {           
               flex-basis: auto;
+              background: linear-gradient(to right, rgba(255, 110, 0, 0.78), rgba(255, 110, 0, 0.6));
               width: unset;
               height: unset;
             }
