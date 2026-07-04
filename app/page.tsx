@@ -104,8 +104,8 @@ export default async function Page() {
                 <h2 style={{ textAlign: "left" }}> Werde Teil der Sternstunden 2026! </h2>
                 <p> Damit unser Festival am 17. & 18. Juli auf dem Gelände der Hamburger Sternwarte gelingt, suchen wir noch helfende Hände - egal, ob für kurze Einsätze oder mehrere Schichten. Als Dankeschön gibt es - je nach Einsatz- freien Eintritt, Verpflegung und weitere Goodies.<br /> </p>
                 Jede Unterstützung ist willkommen!
-                <p>Du hast Zeit und Lust? <br />Dann melde dich hier <a href="https://helfer.uhhmusik.de/login" target="_blank" title="Google Dokument">
-                <strong> Link.</strong></a>. Weitere Informationen findest du bei <Link href="/support-us" target="_blank"> Support Us</Link> unter<strong> Mithelfen </strong> .
+                <p>Du hast Zeit und Lust? <br />Dann melde dich  <a href="https://helfer.uhhmusik.de/login" target="_blank" title="Helferlink">
+                <strong> hier.</strong></a>. Weitere Informationen findest du bei <Link href="/support-us" target="_blank"> Support Us</Link> unter<strong> Mithelfen </strong> .
               </p>
             </div>
         </div>
