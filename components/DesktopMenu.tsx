@@ -84,11 +84,11 @@ const DesktopMenu: React.FC = () => {
         <div style={{ left, position: "relative", top: "100%" }}>
          {currDropdown === "programm" && (
             <ul className="menu-dropdown-list">
-              {/*<li>
+              <li>
                 <Link href="/kuenstlerinnen" className="menu-dropdown-link">
-                  Programm
+                  Artists
                 </Link>
-              </li>  */}
+              </li>
                   <li>
                 <Link href="/programm" className="menu-dropdown-link">
                   Programm

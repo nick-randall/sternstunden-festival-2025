@@ -9,10 +9,10 @@ const Lageplan = () => {
     return (
 
      <div className="content-box">
-        <Zoomable title="Musikalisches Lineup 2025">
+        <Zoomable title="Lageplan Sternstunden Festival 17. & 18. Juli">
           <Image
             src="/lageplan.jpg"
-            alt="Lageplan Sternstunden Festival 18. & 19. Juli"
+            alt="Lageplan Sternstunden Festival 17. & 18. Juli"
             width="1240"
             height="877"
             className="hom-image"

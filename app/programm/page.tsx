@@ -3,9 +3,10 @@ import "../../styles/boring-pages.css";
 import "../../styles/common.css";
 
 import Spacer from "@/components/Spacer";
-import Image from "next/image";
+
 
 import Link from "next/link";
+import React from "react";
 
 const ProgrammPage = () => {
   return (
@@ -26,47 +27,55 @@ const ProgrammPage = () => {
             Zwei Tage, fünf Bühnen, ein spannendes Line-up: Das Musikprogramm reicht von Kammermusik über Indiepop und Jazz bis hin zu Elektronik. Am Freitag ist ab 15:00 Uhr Einlass, am Samstag beginnen wir um 13:30 Uhr.
             <br/>Dieses Jahr dabei sind:<br/>
             <p> <strong>Freitags: </strong> <br/>
-             Skyliner Bigband &#9733;
-            <Link href= "https://www.youtube.com/watch?v=3enpYIQSQYE&t=290s" target="_blank" > Eversween</Link> &#9733;
-            <Link href="https://www.youtube.com/watch?v=rI0CsWG-jOQ" target="_blank"> Kurkapelle Sonnendeck </Link> &#9733;
-            Picture of a Red Seagull &#9733;
-            Hamburger Streichwerk &#9733;
-            Gletscher-Duo &#9733;
-            Holz Quartett &#9733;
-            Gregor in der Kuppel &#9733;
-            TREVA ENSEMBLE &#9733;
-            Protostellar core  &#9733;
-            <Link href="https://soundcloud.com/oletieden/sets/ueberall-hoert-der-himmel-auf/s-DSzl2VAPuXr" target="_blank">
-                Ole Tiden </Link>  &#9733;
-           <Link href="https://www.goerdamusic.com/musik" target="_blank"> Görda </Link>  &#9733;
-            <Link href="https://svelet.com/" target="_blank"> SVELET </Link> &#9733;
-            <Link href="https://www.youtube.com/watch?v=8nyPD0yaRoU" target="_blank"> Akleja </Link> &#9733;
-            <Link href="https://open.spotify.com/album/6F4zHBdwA5ZA23ebNHt6bN?si=RyalLU1FQnqGEmrWW1vmFQ" target="_blank"> Elom Volta  </Link> &#9733;
-            <Link href=" https://open.spotify.com/intl-de/artist/2fRwJZ7JQOzEOF7PMFXvFl?si=tQ9xlxKGR72vyNzWrPCjcg" target="_blank"> NANCY </Link>  &#9733;
-                <Link href="https://www.bananenfuchs.de/" target="_blank"> Bananenfuchs </Link>  &#9733;
+                <Link href="/kuenstlerinnen/skyliner-bigband" target="_blank"> Skyliner Bigband  </Link> &#9733;
+            <Link href= "/kuenstlerinnen/eversween" target="_blank" > Eversween </Link> &#9733;
+                <Link href= "/kuenstlerinnen/kurkapelle-sonnendeck" target="_blank" >  Kurkapelle Sonnendeck  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/picture-of-a-red-seagull" target="_blank" >  Picture of a Red Seagull  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/hamburger-streichwerk" target="_blank" >  Hamburger Streichwerk  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/quartett-franzadeus-mozbert" target="_blank" >  Quartett Franzadeus Mozbert  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/aufgetaut" target="_blank" >  Aufgetaut  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/windhauch-quartett" target="_blank" >  Windhauch-Quartett  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/gregor-in-der-kuppel" target="_blank" >  Gregor in der Kuppel   </Link> &#9733;
+                <Link href= "/kuenstlerinnen/treva-ensemble" target="_blank" >  Treva Ensemble   </Link> &#9733;
+                <Link href= "/kuenstlerinnen/protostellar-core" target="_blank" >  Protostellar core  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/bananenfuchs" target="_blank" >  Bananenfuchs  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/ole-tieden" target="_blank" >  Ole Tieden  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/gorda" target="_blank" >  Görda  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/Svelet" target="_blank" >  SVELET  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/akleja" target="_blank" > Akleja  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/elom-volta" target="_blank" > ELOM VOLTA  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/nancy" target="_blank" > NANCY  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/nil-b2b-spencer" target="_blank" > Nil b2b Spencer  </Link> &#9733;
+
+
                 </p>
                 <strong>Samstags: </strong>
             <p>
-            Forehead &#9733;
-            <Link href="https://open.spotify.com/track/5pTQmoMuqBkkpEDs3gIw8E?si=EULmPGqNTqyS3kpzmH62ZQ" target="_blank"> Takadoon </Link> &#9733;
-            <Link href="https://youtu.be/z1kLgj66UsM" target="_blank">Joshua Milo</Link> &#9733;
-            <Link href="https://www.duosu.de/" target="_blank">Duo SU </Link> &#9733;
-            Lanbo und CO &#9733;
-            Bow Brothers &#9733;
-            <Link href="https://www.youtube.com/watch?v=OO03kZ-Bibg" target="_blank"> Duty Free </Link> &#9733;
-            Jonas &#9733;
-            Duo constellation &#9733;
-            Canvas &#9733;
-            ChorChester Collab &#9733;
-            EoN &#9733;
-            Unihörner &#9733;
-            <Link href="https://www.bananenfuchs.de/" target="_blank"> Bananenfuchs </Link>  &#9733;
-            Lucid Robbery
-            <Link href="https://loosely-band.de/Musik/" target="_blank"> Loosely </Link>  &#9733;
-            <Link href="https://www.youtube.com/watch?v=Pu9m7ppzLxw&list=PLpuLyuMQ5OcpXnAu9EmOIR0L3e576DIkq" target="_blank"> Zoe Ardiles  </Link> &#9733;
-            Jean Konrad &#9733;
-            <Link href="https://bfan.link/florine" target="_blank"> Lyyla  </Link> &#9733;
-            JST ONE &#9733;
+                <Link href= "/kuenstlerinnen/Forehead" target="_blank" > Forehead </Link> &#9733;
+                <Link href= "/kuenstlerinnen/community-dance-mit-fravil" target="_blank" > Community Dance mit Fravil </Link> &#9733;
+                <Link href= "/kuenstlerinnen/takadoon" target="_blank" > Takadoon  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/joshua-milo" target="_blank" > Joshua Milo  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/quartett-zeitmaschine" target="_blank" > Quartett Zeitmaschine  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/ensemble-chinaklang" target="_blank" > Ensemble Chinaklang   </Link> &#9733;
+                <Link href= "/kuenstlerinnen/tillmann" target="_blank" > Tillmann   </Link> &#9733;
+                <Link href= "/kuenstlerinnen/bow-brothers" target="_blank" > Bow Brothers   </Link> &#9733;
+                <Link href= "/kuenstlerinnen/duty-free" target="_blank" > Duty Free   </Link> &#9733;
+                <Link href= "/kuenstlerinnen/jonas" target="_blank" > Jonas   </Link> &#9733;
+                <Link href= "/kuenstlerinnen/duo-constellation" target="_blank" > Duo Constellation   </Link> &#9733;
+                <Link href= "/kuenstlerinnen/canvas" target="_blank" > Canvas  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/chorchester-collab" target="_blank" > Chorchester Collab  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/mondsucht" target="_blank" > Mondsucht  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/mitternachtsblech" target="_blank" > Mitternachtsblech  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/my-way" target="_blank" > My Way  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/bananenfuchs" target="_blank" >  Bananenfuchs  </Link> &#9733;
+                <Link href= "/kuenstlerinnen/aim-trio" target="_blank" >  AIM TRIO </Link> &#9733;
+                <Link href= "/kuenstlerinnen/lucid-robbery" target="_blank" >  Lucid Robbery </Link> &#9733;
+                <Link href= "/kuenstlerinnen/loosely" target="_blank" >  Loosely </Link> &#9733;
+                <Link href= "/kuenstlerinnen/zoe-ardiles" target="_blank" >  Zoe Ardiles </Link> &#9733;
+                <Link href= "/kuenstlerinnen/laguna-gatto" target="_blank" > Laguna Gatto </Link> &#9733;
+                <Link href= "/kuenstlerinnen/jean-konrad" target="_blank" > Jean Konrad </Link> &#9733;
+                <Link href= "/kuenstlerinnen/lyyla" target="_blank" > Lyyla </Link> &#9733;
+
 
             </p>
 
@@ -82,29 +91,41 @@ const ProgrammPage = () => {
 
         <strong>Freitags: </strong>
         <p>
-            Erika Garutti -
-            Baden wir in Dunkler Materie?
-            &#9733;Erika Garutti - Cosmic Giants: The Universe&#39;s Largest Galaxies &#9733;
+
+            <Link href= "/kuenstlerinnen/vortrag-baden-wir-in-dunkler-materie" target="_blank" > Erika Rutting -
+                Baden wir in Dunkler Materie? </Link> &#9733;
+            <Link href= "/kuenstlerinnen/vortrag-engl-cosmic-giants-the-universes-largest-galaxies" target="_blank" >Erika Garutti - Cosmic Giants: The Universes Largest Galaxies
+               </Link> &#9733;
 
 
 
         </p>
         <strong>Samstags: </strong>
         <p>
-            Science Slam &#9733; Dieter Horns - Von Seekühen und Krebsen: Die extremsten Teilchenbeschleuniger in der Milchstraße &#9733; Lenard Kasselmann -
-            Das magnetische Universum
+
+            <Link href= "/kuenstlerinnen/science-slam" target="_blank" > Science Slam </Link> &#9733;
+            <Link href= "/kuenstlerinnen/vortrag-von-seekuhen-und-krebsen-die-extremsten-teilchenbeschleuniger-in-der-milchstrae" target="_blank" >  Dieter Horns - Von Seekühen und Krebsen: Die extremsten Teilchenbeschleuniger in der Milchstraße </Link> &#9733;
+            <Link href= "/kuenstlerinnen/vortrag-das-magnetische-universum" target="_blank" > Lenard Kasselmann - Das magnetische Universum</Link> &#9733;
+
+
 
         </p>
         <strong>An beiden Tagen: </strong>
         <p>
-            Sonnenbeobachtung
-             &#9733; Music of the Spheres
-            &#9733;Computer Vision Song Contest &#9733;Supercomputing /
-            Virtual reality – Reise zum Zentrum der Milchstraße &#9733; Zeichne dein Weltraumwesen
-            &#9733;
-            Mond- und Venusbeobachtung / Teleskopbesichtigung
 
-            &#9733;Die Farben des Universums
+            <Link href= "/kuenstlerinnen/music-of-spheres" target="_blank" > Music of the Spheres </Link> &#9733;
+            <Link href= "/kuenstlerinnen/ask-an-astronomer" target="_blank" > Ask an Astronomer </Link> &#9733;
+            <Link href= "/kuenstlerinnen/computer-vision-song-contest" target="_blank" > Computer Vision Song Contest </Link> &#9733;
+            <Link href= "/kuenstlerinnen/astronomisches-quiz" target="_blank" > Astronomisches Quiz </Link> &#9733;
+            <Link href= "/kuenstlerinnen/virtual-reality-reise-zum-zentrum-der-milchstrae" target="_blank" >  Virtual reality – Reise zum Zentrum der Milchstraße </Link> &#9733;
+            <Link href= "/kuenstlerinnen/supercomputing-in-der-astrophysik" target="_blank" >  Supercomputing in der Astrophysik </Link> &#9733;
+            <Link href= "/kuenstlerinnen/die-farben-des-universums" target="_blank" >  Die Farben des Universums </Link> &#9733;
+            <Link href= "/kuenstlerinnen/fuhrung" target="_blank" >  Führung </Link> &#9733;
+            <Link href= "/kuenstlerinnen/teleskopbesichtigung" target="_blank" >  Teleskopbesichtigung </Link> &#9733;
+            <Link href= "/kuenstlerinnen/zeichne-dein-weltraumwesen" target="_blank" >  Zeichne dein Weltraumwesen </Link> &#9733;
+            <Link href= "/kuenstlerinnen/ausstellungen" target="_blank" >  Austellungen </Link> &#9733;
+
+
 
 
         </p>
