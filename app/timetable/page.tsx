@@ -113,7 +113,7 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
                 <tbody>
                 {stageEvents.map((stageEvent, idx) => {
                     const stageRow = createStageRow(stageEvent, dayStartTime, numThirtyMinuteIntervals);
-                    if (idx === Math.floor(stageEvents.length / 2)) {
+                    /*if (idx === Math.floor(stageEvents.length / 2)) {
                         return (
                             <tr key={stageEvent.stage.id + "-header"}>
                                 <th></th>
@@ -124,7 +124,7 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
                                 ))}
                             </tr>
                         );
-                    }
+                    }*/
 
                     return (
                         <tr key={stageEvent.stage.id}>
@@ -138,7 +138,7 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
                                                 style={{
                                                     width: `${eventOnGrid.numCellsWide * 100}%`,
                                                     left: `${eventOnGrid.innerCellLeftOffset * 100}%`,
-                                                    backgroundColor: eventOnGrid.artist.attributes.astroprogramm ? "rgba(0, 140, 255, 0.45)" : "rgba(255, 181, 0, 1)",
+                                                    backgroundColor: eventOnGrid.artist.attributes.astroprogramm ? "rgba(0, 140, 255, 0.45)" : "rgba(255, 181, 0, 0.7)",
                                                     top: positionOverlappingEvents(
                                                         eventOnGrid.event,
                                                         stageEvents.flatMap(e => e.events)
