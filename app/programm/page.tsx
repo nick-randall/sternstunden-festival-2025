@@ -92,9 +92,9 @@ const ProgrammPage = () => {
         <strong>Freitags: </strong>
         <p>
 
-            <Link href= "/kuenstlerinnen/vortrag-baden-wir-in-dunkler-materie" target="_blank" > Erika Rutting -
+            <Link href= "/kuenstlerinnen/vortrag-baden-wir-in-dunkler-materie" target="_blank" > Erika Garutti -
                 Baden wir in Dunkler Materie? </Link> &#9733;
-            <Link href= "/kuenstlerinnen/vortrag-engl-cosmic-giants-the-universes-largest-galaxies" target="_blank" >Erika Garutti - Cosmic Giants: The Universes Largest Galaxies
+            <Link href= "/kuenstlerinnen/vortrag-engl-cosmic-giants-the-universes-largest-galaxies" target="_blank" > Martin Fournier - Cosmic Giants: The Universes Largest Galaxies
                </Link> &#9733;
 
 

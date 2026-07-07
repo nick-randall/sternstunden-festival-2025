@@ -6,7 +6,7 @@ import Link from "next/link";
 import { getReadableDETimeAndDayAbbr } from "@/helper_functions/helperFunctions";
 import { getPlaceholderImage } from "@/helper_functions/createBlurredImages";
 import FestivalAppPopup from "@/components/FestivalAppPopup";
-import artistsData from "../../festival_data_2025/artists";
+// import artistsData from "../../festival_data_2025/artists";
 
 const Artists: React.FC = async () => {
   let artistsData = [];
@@ -120,7 +120,9 @@ const Artists: React.FC = async () => {
                   <div className="artist-name">{a.artist.name}</div>
                   <Spacer height={5} />
                   {a.events &&
-                    a.events.map((e: FestivalEvent) => (
+                      [...a.events]
+                          .sort((a, b) => new Date(a.startDateTime).getTime() - new Date(b.startDateTime).getTime())
+                          .map((e: FestivalEvent) => (
                       <div key={e.id} className="artist-event">
                         <div className="artist-event-time">
                           {getReadableDETimeAndDayAbbr(e.startDateTime)}

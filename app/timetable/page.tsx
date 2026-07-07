@@ -224,10 +224,13 @@ const TimetablePage = async () => {
                     <Image src="/astro_color.png" alt="Farbe Astrobox" height="19" width="19" />
                     &nbsp;= Astroprogramm
                 </div>
-
+                <div className="symbols-row">
+                    <Image src="/kurzvortrag.png" alt="Kurzvortrag" height="19" width="19" />
+                    &nbsp;= Kurzvortrag zu Beginn des Konzerts
+                </div>
                 <div>
                     <br />
-                    Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell. Stand 30.06.
+                    Änderungen vorbehalten. Bitte prüft den Timetable tagesaktuell. Stand 07.07.2026
                     <br />
                     Fürs Smartphone haben wir auch eine 👉{" "}
                     <Link href="/mobile-app">

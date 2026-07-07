@@ -64,12 +64,10 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
         {`
           @media (max-width: 768px) {
             .featured-artist-card section {
-            background: linear-gradient(to right, rgba(255, 110, 0, 0.78), rgba(255, 110, 0, 0.6));
               flex-direction: column;
             }
             .featured-artist-card section .image-container {           
               flex-basis: auto;
-              background: linear-gradient(to right, rgba(255, 110, 0, 0.78), rgba(255, 110, 0, 0.6));
               width: unset;
               height: unset;
             }
@@ -98,7 +96,9 @@ const ArtistPage = async ({ params }: { params: Promise<{ slug: string }> }) => 
             <Spacer height={16} />
             <div className="divider" />
             {a.events &&
-              a.events.map((e: FestivalEvent) => (
+                [...a.events]
+                    .sort((a, b) => new Date(a.startDateTime).getTime() - new Date(b.startDateTime).getTime())
+                    .map((e: FestivalEvent) => (
                 <div key={e.id} className="artist-event">
                   <h2>{getReadableDETimeAndDayAbbr(e.startDateTime)}</h2>
                   <div className="artist-event-stage">{e.stage.name}</div>
