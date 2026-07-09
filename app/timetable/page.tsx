@@ -154,7 +154,7 @@ const DayTimetable = ({ dayAndEvents }: { dayAndEvents: DayAndEvents }) => {
                                                     {eventOnGrid.event.attributes.mit_gebardensprache && (
                                                         <Image src="/gebaerdensprache.png" alt="Symbol Gebärdensprache" height={25} width={25} />
                                                     )}
-                                                    {eventOnGrid.event.attributes.mit_kurzvortrag && (
+                                                    {eventOnGrid.event.attributes["mit-kurzvortrag"] && (
                                                         <Image src="/kurzvortrag.png" alt="Symbol Kurzvortrag" height={25} width={25} />
                                                     )}
                                                     {eventOnGrid.event.attributes.kinderprogramm && (
